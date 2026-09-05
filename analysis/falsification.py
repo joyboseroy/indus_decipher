@@ -4,10 +4,10 @@ analysis/falsification.py
 "Unit testing for decipherment" (see data/synthetic_civilizations.py):
 extract a small feature vector from a corpus using ONLY the statistical
 tools already in this repo (Zipf fit, positional asymmetry, conditional
-entropy, n-gram perplexity, minimal-pair paradigm classes) and test
-whether those features alone can distinguish a language-like generative
-system from a non-linguistic administrative code from a mixed system --
-on corpora where we, the experimenters, planted the ground truth.
+entropy, n-gram perplexity) and test whether those features alone can
+distinguish a language-like generative system from a non-linguistic
+administrative code from a mixed system -- on corpora where we, the
+experimenters, planted the ground truth.
 
 This is the falsification-engine half of the architecture: before trusting
 any statistical pattern found in a *real*, label-unknown corpus as
@@ -16,6 +16,27 @@ same pattern-finding pipeline can correctly separate known synthetic
 generators from each other. If it can't reliably do that, a claim like
 "the real corpus's entropy falls in the natural-language range" needs to
 be read with real caution.
+
+CORRECTION (see experiments/corpus_divergence.py): an earlier version of
+this feature set included `paradigm_classes_per_1000_inscriptions`, a
+minimal-pair-derived density statistic. It was removed after being
+identified as the sole cause of an apparent disagreement between two real
+corpora of different sizes (2,543 vs. 179 inscriptions): the statistic
+swung roughly 40-fold (61.5 to 1.6) across sample sizes drawn from the
+SAME corpus, while every other feature stayed flat, because raw
+connected-components counting mechanically produces fewer, larger merged
+classes as more inscriptions add more substitution edges, and dividing by
+N/1000 amplifies that shrinkage further. With this feature removed, the
+two previously-disagreeing real corpora, and every random subsample size
+tested from 50 to 2,543 inscriptions, all classify consistently as
+`civ_a_language_like`. This is documented here rather than silently
+patched because it is itself a finding worth knowing: a feature can look
+informative while actually just encoding sample size, and the leave-one-
+out self-test accuracy reported below does not by itself catch that,
+since the reference generators were all run at matched sample sizes.
+Any future feature added to this vector should be checked across a range
+of corpus sizes before being trusted, not just tested for self-test
+accuracy at one fixed size.
 
 Usage: run this module directly to print a labeled-classification
 accuracy report, then feed any other corpus (including data/loader's real
@@ -32,13 +53,12 @@ from data.loader import Corpus
 from analysis.positional import fit_zipf_mandelbrot, positional_asymmetry_report
 from analysis.entropy import conditional_entropy
 from analysis.ngram import cross_validated_perplexity
-from analysis.minimal_pairs import analyze_minimal_pairs
 
 
 FEATURE_NAMES = [
     "zipf_gamma", "zipf_r2", "conditional_entropy",
     "perplexity_ratio_n2_n1", "top_sign_final_share",
-    "mean_length", "paradigm_classes_per_1000_inscriptions",
+    "mean_length",
 ]
 
 
@@ -50,7 +70,6 @@ class FeatureVector:
     perplexity_ratio_n2_n1: float
     top_sign_final_share: float
     mean_length: float
-    paradigm_classes_per_1000_inscriptions: float
 
     def as_list(self) -> list[float]:
         return [getattr(self, name) for name in FEATURE_NAMES]
@@ -73,14 +92,10 @@ def extract_features(corpus: Corpus) -> FeatureVector:
     lens = [len(s) for s in sequences]
     mean_len = sum(lens) / len(lens) if lens else 0.0
 
-    mp = analyze_minimal_pairs(filtered, min_edge_weight=1)
-    n_ins = len(filtered) or 1
-    classes_per_1000 = mp.n_paradigm_classes / n_ins * 1000
-
     return FeatureVector(
         zipf_gamma=zipf.gamma, zipf_r2=zipf.r_squared(), conditional_entropy=cond_h,
         perplexity_ratio_n2_n1=ppl_ratio, top_sign_final_share=top_final_share,
-        mean_length=mean_len, paradigm_classes_per_1000_inscriptions=classes_per_1000,
+        mean_length=mean_len,
     )
 
 
