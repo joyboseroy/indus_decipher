@@ -1,0 +1,201 @@
+inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_direction
+SYN-00000,S001,Lothal,copper_plate,1,False,R-L
+SYN-00001,S011 S073 S108,Harappa,seal,1,False,R-L
+SYN-00002,S002 S001 S095 S002,Kalibangan,seal,1,False,R-L
+SYN-00003,S001 S058 S014 S077 S007 S001,Kalibangan,pottery,1,False,R-L
+SYN-00004,S051 S072 S004 S069 S007 S001 S001 S001 S001,Dholavira,pottery,2,False,R-L
+SYN-00005,S007 S106 S116 S001,Kalibangan,pottery,1,False,R-L
+SYN-00006,S001 S078,Dholavira,pottery,1,False,R-L
+SYN-00007,S005 S075 S047 S105 S001,Harappa,ivory,1,False,R-L
+SYN-00008,S005 S075 S053 S109 S025 S007 S002,Mohenjo-daro,seal,2,True,R-L
+SYN-00009,S010 S065 S053 S003 S001 S001,Lothal,seal,1,False,R-L
+SYN-00010,S074 S026 S050 S014 S067,Kalibangan,seal,1,False,R-L
+SYN-00011,S003 S020 S016 S001 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00012,S002 S004,Kalibangan,seal,1,False,R-L
+SYN-00013,S003 S010 S021 S014,Kalibangan,pottery,1,False,R-L
+SYN-00014,S004 S072 S001,Lothal,seal,1,False,R-L
+SYN-00015,S003 S003 S005 S001,Lothal,seal,1,False,R-L
+SYN-00016,S003 S008 S054 S115 S055 S002 S010 S006,Lothal,seal,1,False,R-L
+SYN-00017,S010,Kalibangan,seal,1,True,R-L
+SYN-00018,S004 S001 S005 S003 S051,Lothal,seal,1,False,R-L
+SYN-00019,S005 S075 S030 S001 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00020,S005 S001 S063 S090 S001,Harappa,seal,1,False,R-L
+SYN-00021,S089 S104 S004 S001,Harappa,seal,1,False,R-L
+SYN-00022,S003 S117 S001 S001,Kalibangan,seal,2,False,R-L
+SYN-00023,S002 S051 S072 S055,Harappa,ivory,1,False,R-L
+SYN-00024,S023 S001,Mohenjo-daro,tablet,1,True,R-L
+SYN-00025,S010 S001 S026 S008 S054 S104 S020 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00026,S003 S001 S069 S003 S003 S006 S065 S005 S075 S001,Harappa,seal,1,False,R-L
+SYN-00027,S003 S005 S001,Harappa,tablet,1,False,R-L
+SYN-00028,S004 S069 S013 S001,Kalibangan,tablet,1,False,R-L
+SYN-00029,S050,Kalibangan,tablet,1,False,R-L
+SYN-00030,S047 S032 S097 S024 S001 S001,Dholavira,pottery,2,False,R-L
+SYN-00031,S022 S022 S028 S001,Kalibangan,pottery,1,False,R-L
+SYN-00032,S011 S058 S004 S069 S004 S011,Lothal,pottery,1,False,R-L
+SYN-00033,S024 S074 S002 S004 S069 S001,Lothal,ivory,1,True,R-L
+SYN-00034,S005 S075 S011 S073 S002 S003,Mohenjo-daro,seal,2,False,R-L
+SYN-00035,S005 S010 S004 S069 S003,Kalibangan,seal,1,False,R-L
+SYN-00036,S005 S075 S001,Harappa,seal,1,False,R-L
+SYN-00037,S004 S069 S034 S009 S012 S029 S001 S001,Harappa,tablet,1,False,R-L
+SYN-00038,S004 S069 S065 S001 S084 S060,Lothal,tablet,1,False,R-L
+SYN-00039,S004 S069 S001,Mohenjo-daro,pottery,1,False,R-L
+SYN-00040,S016,Dholavira,seal,1,False,R-L
+SYN-00041,S024,Kalibangan,seal,1,False,R-L
+SYN-00042,S005 S075 S009,Dholavira,seal,1,False,R-L
+SYN-00043,S001 S013 S050 S016 S006,Kalibangan,seal,1,False,R-L
+SYN-00044,S003 S007 S049 S003 S001 S008,Lothal,seal,1,False,R-L
+SYN-00045,S004 S069 S007 S029 S045,Harappa,seal,1,False,R-L
+SYN-00046,S003 S002 S001,Dholavira,seal,2,False,R-L
+SYN-00047,S005 S105 S001 S001,Mohenjo-daro,copper_plate,1,False,R-L
+SYN-00048,S011 S073 S001 S004,Lothal,ivory,1,False,R-L
+SYN-00049,S015 S001,Kalibangan,seal,1,False,R-L
+SYN-00050,S005 S075 S011 S024,Harappa,seal,1,False,R-L
+SYN-00051,S004 S069 S005 S075 S013 S027 S009 S001,Mohenjo-daro,tablet,1,False,R-L
+SYN-00052,S003 S046 S036 S003,Harappa,seal,1,False,R-L
+SYN-00053,S004 S069 S021,Mohenjo-daro,copper_plate,1,False,R-L
+SYN-00054,S005 S075 S001 S001 S008 S069,Harappa,seal,2,False,R-L
+SYN-00055,S005 S075 S001 S026 S008 S001,Lothal,seal,1,False,R-L
+SYN-00056,S039,Lothal,pottery,1,False,R-L
+SYN-00057,S003 S031 S003 S015 S075 S001,Harappa,pottery,1,False,R-L
+SYN-00058,S003 S048 S001 S001 S001,Lothal,copper_plate,1,False,R-L
+SYN-00059,S004 S069 S006 S001 S001,Mohenjo-daro,seal,2,False,R-L
+SYN-00060,S096 S008 S054 S009 S085,Lothal,pottery,1,False,R-L
+SYN-00061,S020 S016 S006 S065 S043 S001 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00062,S003 S113 S001 S001,Dholavira,seal,1,False,R-L
+SYN-00063,S004 S069 S027 S058,Lothal,seal,1,False,R-L
+SYN-00064,S003 S004 S001 S001,Lothal,seal,1,False,R-L
+SYN-00065,S003 S013 S004 S025,Dholavira,pottery,1,False,R-L
+SYN-00066,S004 S069 S001 S020 S003,Harappa,seal,1,True,R-L
+SYN-00067,S005 S002 S019 S054 S003 S007 S001 S001,Harappa,pottery,1,False,R-L
+SYN-00068,S005 S075 S003 S046 S001,Kalibangan,seal,1,False,R-L
+SYN-00069,S005 S075 S009,Mohenjo-daro,seal,1,False,R-L
+SYN-00070,S004 S069 S001,Harappa,seal,1,False,R-L
+SYN-00071,S009 S011 S073 S001,Mohenjo-daro,tablet,2,False,R-L
+SYN-00072,S004 S069 S014 S084 S056 S012 S102,Mohenjo-daro,ivory,1,False,R-L
+SYN-00073,S003 S020 S001,Harappa,tablet,1,False,R-L
+SYN-00074,S003 S011 S073 S001 S089 S001,Harappa,seal,2,False,R-L
+SYN-00075,S039 S001,Kalibangan,pottery,1,False,R-L
+SYN-00076,S003 S009 S012 S029 S001 S001,Harappa,seal,1,False,R-L
+SYN-00077,S051 S049,Lothal,seal,1,False,R-L
+SYN-00078,S003 S001 S002 S083 S006 S001,Harappa,seal,1,False,R-L
+SYN-00079,S005 S075 S050 S003 S110 S097,Harappa,seal,1,False,R-L
+SYN-00080,S005 S001,Dholavira,seal,1,False,R-L
+SYN-00081,S005 S075 S007 S003 S008 S054 S001 S001,Lothal,seal,1,False,R-L
+SYN-00082,S004 S018,Kalibangan,tablet,1,False,R-L
+SYN-00083,S004 S069 S115 S007,Harappa,tablet,1,False,R-L
+SYN-00084,S004 S069 S111 S019 S054 S001 S001,Kalibangan,tablet,1,True,R-L
+SYN-00085,S004 S002 S004 S001,Mohenjo-daro,seal,1,True,R-L
+SYN-00086,S003 S001,Harappa,tablet,1,False,R-L
+SYN-00087,S003 S023 S065 S008,Kalibangan,pottery,1,False,R-L
+SYN-00088,S014 S002,Mohenjo-daro,seal,1,True,R-L
+SYN-00089,S003 S079 S001,Dholavira,seal,1,False,R-L
+SYN-00090,S050 S003 S001 S001,Dholavira,tablet,1,True,R-L
+SYN-00091,S004 S069 S036,Mohenjo-daro,seal,1,False,R-L
+SYN-00092,S084 S004 S069 S028,Lothal,seal,2,False,R-L
+SYN-00093,S072 S001 S013 S001,Harappa,tablet,1,False,R-L
+SYN-00094,S003 S001,Kalibangan,seal,2,False,R-L
+SYN-00095,S030 S061 S010 S034 S017 S005 S075 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00096,S030 S001 S002 S001,Kalibangan,pottery,1,True,R-L
+SYN-00097,S005 S001 S064 S092,Mohenjo-daro,seal,1,False,R-L
+SYN-00098,S001 S038 S023 S012 S029 S045 S054 S005 S001 S001,Mohenjo-daro,tablet,2,False,R-L
+SYN-00099,S004 S069 S012,Dholavira,seal,1,False,R-L
+SYN-00100,S003 S015 S001,Harappa,seal,1,False,R-L
+SYN-00101,S004 S069 S108 S001,Harappa,ivory,1,False,R-L
+SYN-00102,S005,Harappa,copper_plate,1,False,R-L
+SYN-00103,S003 S001,Kalibangan,pottery,1,False,R-L
+SYN-00104,S004 S037 S001,Dholavira,copper_plate,1,False,R-L
+SYN-00105,S004 S022 S002,Kalibangan,tablet,1,False,R-L
+SYN-00106,S004 S069 S003,Kalibangan,seal,1,False,R-L
+SYN-00107,S005 S004 S069 S005 S075 S002,Lothal,tablet,1,False,R-L
+SYN-00108,S004 S118 S077 S003,Lothal,tablet,1,False,R-L
+SYN-00109,S003 S002 S079 S005 S011 S001,Lothal,seal,1,False,R-L
+SYN-00110,S005 S075 S060 S030 S019 S058,Kalibangan,pottery,1,False,R-L
+SYN-00111,S024 S074 S006 S065 S002 S009 S032,Dholavira,seal,1,False,R-L
+SYN-00112,S005 S003 S025 S043 S008 S054 S106 S001,Harappa,seal,1,False,R-L
+SYN-00113,S005 S075 S003 S012 S001,Dholavira,seal,1,False,R-L
+SYN-00114,S002 S112 S007 S001 S001,Dholavira,copper_plate,1,False,R-L
+SYN-00115,S027 S018 S001 S001,Harappa,ivory,2,False,R-L
+SYN-00116,S003 S049 S023 S011 S073 S004 S007,Dholavira,seal,1,False,R-L
+SYN-00117,S005 S075 S043 S044,Lothal,ivory,1,False,R-L
+SYN-00118,S047 S007 S006,Mohenjo-daro,tablet,1,False,R-L
+SYN-00119,S004 S001,Harappa,seal,2,False,R-L
+SYN-00120,S003 S001 S001,Harappa,pottery,1,False,R-L
+SYN-00121,S003 S003 S008 S054 S021 S029 S001,Lothal,seal,1,False,R-L
+SYN-00122,S010 S069 S016 S001 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00123,S030 S001 S001,Harappa,pottery,1,False,R-L
+SYN-00124,S057 S001,Lothal,tablet,1,False,R-L
+SYN-00125,S005 S075 S036 S120 S001,Harappa,seal,1,False,R-L
+SYN-00126,S005 S075 S012 S041,Dholavira,seal,1,False,R-L
+SYN-00127,S004 S001,Lothal,pottery,1,False,R-L
+SYN-00128,S003 S006 S065 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00129,S009 S012 S029 S002 S001 S012,Kalibangan,copper_plate,1,False,R-L
+SYN-00130,S030 S028,Dholavira,tablet,1,False,R-L
+SYN-00131,S005 S075 S001,Lothal,pottery,1,False,R-L
+SYN-00132,S063 S090 S001 S001 S017 S079,Mohenjo-daro,pottery,1,False,R-L
+SYN-00133,S005 S010 S001 S008 S054 S110,Mohenjo-daro,seal,1,False,R-L
+SYN-00134,S009,Mohenjo-daro,seal,1,True,R-L
+SYN-00135,S004 S069 S033 S004 S003,Harappa,tablet,1,True,R-L
+SYN-00136,S011 S004 S033 S001 S001 S025 S001,Harappa,copper_plate,1,False,R-L
+SYN-00137,S020 S016 S094 S034 S011 S001,Harappa,tablet,2,False,R-L
+SYN-00138,S092 S044 S005,Kalibangan,seal,2,True,R-L
+SYN-00139,S108 S054 S020 S016 S001,Kalibangan,pottery,1,False,R-L
+SYN-00140,S006 S065 S002 S082 S044,Kalibangan,seal,1,False,R-L
+SYN-00141,S047 S016 S043 S013 S015 S075 S008,Harappa,seal,1,False,R-L
+SYN-00142,S084 S056 S001 S008 S054 S007,Kalibangan,pottery,1,True,R-L
+SYN-00143,S014 S012 S029 S003 S001 S001,Kalibangan,seal,1,False,R-L
+SYN-00144,S004 S069 S002 S023 S002,Kalibangan,tablet,1,False,R-L
+SYN-00145,S003,Dholavira,tablet,1,False,R-L
+SYN-00146,S003 S093 S041 S051 S004,Harappa,seal,1,True,R-L
+SYN-00147,S003 S016 S065 S011 S078 S001 S020 S016 S001,Mohenjo-daro,copper_plate,1,False,R-L
+SYN-00148,S003 S007 S001,Lothal,seal,2,False,R-L
+SYN-00149,S001 S081 S001,Dholavira,seal,1,False,R-L
+SYN-00150,S027 S005 S075 S039 S039 S001 S001,Harappa,seal,1,False,R-L
+SYN-00151,S080 S072 S011 S047 S002 S055 S001,Dholavira,copper_plate,1,False,R-L
+SYN-00152,S003 S010 S006 S012 S029 S001 S001,Kalibangan,pottery,1,True,R-L
+SYN-00153,S003 S004 S069 S001 S001,Harappa,seal,1,False,R-L
+SYN-00154,S003 S108 S001 S073 S026 S001,Harappa,ivory,1,False,R-L
+SYN-00155,S004 S084 S056 S005 S001 S005,Kalibangan,seal,1,False,R-L
+SYN-00156,S014 S003 S010 S003,Harappa,seal,1,False,R-L
+SYN-00157,S003 S003 S001 S001,Harappa,seal,1,False,R-L
+SYN-00158,S004 S069 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00159,S004 S063,Dholavira,seal,1,False,R-L
+SYN-00160,S112 S001 S031 S061,Kalibangan,seal,2,False,R-L
+SYN-00161,S003 S051 S006,Mohenjo-daro,seal,1,False,R-L
+SYN-00162,S003 S015 S075 S001 S103 S004 S001 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00163,S036 S004 S023 S011 S073 S001,Lothal,seal,1,False,R-L
+SYN-00164,S003 S001,Harappa,seal,1,False,R-L
+SYN-00165,S037 S002 S053 S008,Kalibangan,seal,1,False,R-L
+SYN-00166,S004 S069 S006 S065 S048,Kalibangan,seal,1,False,R-L
+SYN-00167,S005 S004 S069 S007,Dholavira,seal,1,False,R-L
+SYN-00168,S004 S069 S089 S049,Mohenjo-daro,pottery,1,False,R-L
+SYN-00169,S081 S022 S048,Mohenjo-daro,seal,1,True,R-L
+SYN-00170,S004,Mohenjo-daro,tablet,1,False,R-L
+SYN-00171,S014 S004 S069 S015 S075 S001 S001,Lothal,seal,1,False,R-L
+SYN-00172,S004 S069 S017 S003,Kalibangan,seal,1,False,R-L
+SYN-00173,S004,Harappa,seal,1,True,R-L
+SYN-00174,S004 S001,Lothal,seal,1,False,R-L
+SYN-00175,S005 S075 S002 S001 S065 S001 S001,Mohenjo-daro,seal,1,False,R-L
+SYN-00176,S009 S012 S029 S003 S021 S005 S002,Dholavira,seal,2,False,R-L
+SYN-00177,S023 S031 S009 S001,Dholavira,ivory,1,False,R-L
+SYN-00178,S066 S020 S001,Lothal,seal,1,False,R-L
+SYN-00179,S005 S075 S001,Dholavira,seal,1,False,R-L
+SYN-00180,S004,Lothal,seal,1,False,R-L
+SYN-00181,S056 S098 S054 S001,Kalibangan,pottery,1,True,R-L
+SYN-00182,S005 S014 S014 S008,Lothal,seal,1,False,R-L
+SYN-00183,S003 S014 S002 S007 S008 S054 S068,Dholavira,pottery,1,False,R-L
+SYN-00184,S037 S001 S007 S007 S001 S005 S001,Kalibangan,pottery,1,False,R-L
+SYN-00185,S003 S014 S003,Mohenjo-daro,tablet,1,False,R-L
+SYN-00186,S023 S001 S001,Mohenjo-daro,copper_plate,1,False,R-L
+SYN-00187,S003 S019 S003,Lothal,pottery,1,False,R-L
+SYN-00188,S003 S009 S012 S029 S039 S001 S001,Dholavira,tablet,1,False,R-L
+SYN-00189,S001 S001 S006,Harappa,seal,1,False,R-L
+SYN-00190,S001 S001,Dholavira,tablet,1,True,R-L
+SYN-00191,S010 S004,Harappa,seal,2,True,R-L
+SYN-00192,S005 S075 S070 S109 S001 S027 S018,Dholavira,seal,1,False,R-L
+SYN-00193,S001 S001,Dholavira,tablet,1,True,R-L
+SYN-00194,S004 S069 S100 S009 S016 S001,Lothal,tablet,1,False,R-L
+SYN-00195,S003 S004 S069 S003 S016 S016,Harappa,seal,1,False,R-L
+SYN-00196,S005 S001,Dholavira,tablet,1,False,R-L
+SYN-00197,S119 S001 S010 S115 S015 S075 S002,Mohenjo-daro,seal,1,False,R-L
+SYN-00198,S005 S075 S002 S001,Harappa,seal,1,False,R-L
+SYN-00199,S002 S017 S007 S013 S005 S075 S005 S001 S001,Dholavira,pottery,1,False,R-L

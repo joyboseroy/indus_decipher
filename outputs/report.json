@@ -1,0 +1,339 @@
+{
+  "corpus_summary": {
+    "n_inscriptions": 104,
+    "n_unique_signs": 142,
+    "total_sign_tokens": 523,
+    "mean_length": 5.028846153846154,
+    "min_length": 1,
+    "max_length": 11
+  },
+  "zipf_fit": {
+    "C": 87.02658267351137,
+    "q": 0.9458985790121168,
+    "gamma": 0.8954534278273274,
+    "r2": 0.9788736100334597
+  },
+  "positional_asymmetry": {
+    "top_signs": [
+      {
+        "sign": "P324",
+        "overall_freq": 47,
+        "overall_share": 0.08986615678776291,
+        "initial_count": 1,
+        "initial_share": 0.009615384615384616,
+        "final_count": 37,
+        "final_share": 0.3557692307692308
+      },
+      {
+        "sign": "P122",
+        "overall_freq": 39,
+        "overall_share": 0.0745697896749522,
+        "initial_count": 0,
+        "initial_share": 0.0,
+        "final_count": 0,
+        "final_share": 0.0
+      },
+      {
+        "sign": "P385",
+        "overall_freq": 20,
+        "overall_share": 0.03824091778202677,
+        "initial_count": 17,
+        "initial_share": 0.16346153846153846,
+        "final_count": 0,
+        "final_share": 0.0
+      },
+      {
+        "sign": "P086",
+        "overall_freq": 20,
+        "overall_share": 0.03824091778202677,
+        "initial_count": 1,
+        "initial_share": 0.009615384615384616,
+        "final_count": 13,
+        "final_share": 0.125
+      },
+      {
+        "sign": "P050",
+        "overall_freq": 15,
+        "overall_share": 0.028680688336520075,
+        "initial_count": 0,
+        "initial_share": 0.0,
+        "final_count": 1,
+        "final_share": 0.009615384615384616
+      },
+      {
+        "sign": "P217",
+        "overall_freq": 15,
+        "overall_share": 0.028680688336520075,
+        "initial_count": 2,
+        "initial_share": 0.019230769230769232,
+        "final_count": 12,
+        "final_share": 0.11538461538461539
+      },
+      {
+        "sign": "P230",
+        "overall_freq": 14,
+        "overall_share": 0.02676864244741874,
+        "initial_count": 2,
+        "initial_share": 0.019230769230769232,
+        "final_count": 0,
+        "final_share": 0.0
+      },
+      {
+        "sign": "P120",
+        "overall_freq": 12,
+        "overall_share": 0.022944550669216062,
+        "initial_count": 0,
+        "initial_share": 0.0,
+        "final_count": 0,
+        "final_share": 0.0
+      }
+    ],
+    "n_initial": 104,
+    "n_final": 104
+  },
+  "direction_diagnostic": {
+    "as_stored": {
+      "h_initial": 5.606674998835844,
+      "h_final": 3.479339176299526,
+      "final_minus_initial_gap": 2.127335822536318,
+      "n_distinct_initial": 69,
+      "n_distinct_final": 26,
+      "conditional_entropy": 1.7741534276093354
+    },
+    "reversed": {
+      "h_initial": 3.479339176299526,
+      "h_final": 5.606674998835844,
+      "final_minus_initial_gap": -2.127335822536318,
+      "n_distinct_initial": 26,
+      "n_distinct_final": 69,
+      "conditional_entropy": 2.190107249614813
+    },
+    "likely_direction": "as-stored",
+    "note": "As-stored orientation shows the published fingerprint (final position more constrained than initial) more strongly."
+  },
+  "doubling_rate_most_frequent_sign": {
+    "sign": "P324",
+    "total_occurrences": 47,
+    "doubled_occurrences": 0,
+    "doubling_rate": 0.0
+  },
+  "top_significant_bigrams": [
+    {
+      "sign_a": "P385",
+      "sign_b": "P122",
+      "count": 17,
+      "p_b_given_a": 0.85,
+      "g2": 79.87432046902819
+    },
+    {
+      "sign_a": "P316",
+      "sign_b": "P147",
+      "count": 5,
+      "p_b_given_a": 0.7142857142857143,
+      "g2": 42.67871700593891
+    },
+    {
+      "sign_a": "P230",
+      "sign_b": "P301",
+      "count": 4,
+      "p_b_given_a": 0.2857142857142857,
+      "g2": 30.204077316370693
+    },
+    {
+      "sign_a": "P276",
+      "sign_b": "P086",
+      "count": 4,
+      "p_b_given_a": 1.0,
+      "g2": 26.939528855230154
+    },
+    {
+      "sign_a": "P123",
+      "sign_b": "P004",
+      "count": 4,
+      "p_b_given_a": 0.36363636363636365,
+      "g2": 24.951279428149036
+    },
+    {
+      "sign_a": "P332",
+      "sign_b": "P324",
+      "count": 5,
+      "p_b_given_a": 1.0,
+      "g2": 24.598233806142424
+    },
+    {
+      "sign_a": "P201",
+      "sign_b": "P050",
+      "count": 4,
+      "p_b_given_a": 0.8,
+      "g2": 24.59703306592304
+    },
+    {
+      "sign_a": "P147",
+      "sign_b": "P217",
+      "count": 4,
+      "p_b_given_a": 0.6666666666666666,
+      "g2": 22.005857698331212
+    },
+    {
+      "sign_a": "P324",
+      "sign_b": "P013",
+      "count": 4,
+      "p_b_given_a": 0.0851063829787234,
+      "g2": 19.59531607461787
+    },
+    {
+      "sign_a": "P062",
+      "sign_b": "P230",
+      "count": 4,
+      "p_b_given_a": 0.4,
+      "g2": 16.97868782907396
+    }
+  ],
+  "perplexity_by_n": {
+    "1": 99.32534004436579,
+    "2": 94.82223475017543,
+    "3": 117.6131234049329,
+    "4": 123.75748697620693
+  },
+  "ngram_restoration_accuracy_strict_top1": 0.17666666666666667,
+  "ngram_restoration_accuracy_top90mass": {
+    "accuracy": 0.9033333333333333,
+    "mean_candidate_set_size": 122.36,
+    "vocab_size": 142,
+    "mass_threshold": 0.9
+  },
+  "entropy_vs_controls": {
+    "target_conditional_entropy": 1.7741534276093354,
+    "fully_random_control_entropy": 1.8054800354875844,
+    "rigid_fixed_control_entropy": 0.0,
+    "interpretation": "intermediate-between-controls (consistent with a rule-governed, flexible sign system)"
+  },
+  "transformer_training_losses": [
+    5.452079548937772,
+    5.088715623154599,
+    4.415999346815792,
+    4.5808281737174745,
+    4.22240283587815,
+    3.9902974607755968,
+    4.225865595495326,
+    3.798042264251805,
+    3.7373643589937333,
+    3.9473350082845626,
+    3.8862587622841835,
+    3.638503551357075,
+    3.5877604636500866,
+    3.743303159493098,
+    3.5543447981127265,
+    3.4154330800751738,
+    3.1046347343808387,
+    3.604138883870728,
+    3.11174844821812,
+    3.2368135943509126,
+    3.165721691546165,
+    3.028961330358436,
+    3.0940119230170566,
+    2.796232948594091,
+    2.9481503211001567,
+    3.216353689024463,
+    2.848871365533615,
+    2.8736743536499163,
+    2.834628340099157,
+    2.8468482640248847,
+    2.8818076961668564,
+    3.3009146228932127,
+    2.9048511436047497,
+    2.523048307092337,
+    2.8393341233606813,
+    2.8478894126524477,
+    2.3683075501675233,
+    2.7778967134937402,
+    2.626543489086235,
+    2.684685294529881,
+    2.7197778691220225,
+    2.3897067500407054,
+    2.1624639995006083,
+    2.4569805659750137,
+    2.6757037961167023,
+    2.575547262441576,
+    2.298000837203653,
+    2.4556995939523505,
+    2.8698717741834345,
+    2.3279038171271176,
+    2.2916817272138785,
+    2.219372594131615,
+    2.2658700375288725,
+    2.0090475608666676,
+    2.136296524880654,
+    2.4508228016753226,
+    2.4742964167201404,
+    2.2269404623013904,
+    2.2458948791041675,
+    2.2966569280669193
+  ],
+  "transformer_mlm_accuracy": 0.4,
+  "minimal_pairs": {
+    "n_total_pairs": 3,
+    "n_corroborated_pairs": 3,
+    "n_paradigm_classes": 3,
+    "position_distribution": {
+      "0": 3
+    },
+    "largest_classes": [
+      {
+        "size": 2,
+        "signs": [
+          "P000",
+          "P385"
+        ],
+        "example_substitutions": [
+          [
+            "P385",
+            "P000"
+          ]
+        ]
+      },
+      {
+        "size": 2,
+        "signs": [
+          "P095",
+          "P368"
+        ],
+        "example_substitutions": [
+          [
+            "P368",
+            "P095"
+          ]
+        ]
+      },
+      {
+        "size": 2,
+        "signs": [
+          "P123",
+          "P126"
+        ],
+        "example_substitutions": [
+          [
+            "P126",
+            "P123"
+          ]
+        ]
+      }
+    ]
+  },
+  "falsification_harness_self_test": {
+    "overall_accuracy": 1.0,
+    "per_label_accuracy": {
+      "civ_a_language_like": 1.0,
+      "civ_b_administrative_code": 1.0,
+      "civ_c_mixed": 1.0
+    }
+  },
+  "target_corpus_classification": {
+    "predicted_label": "civ_c_mixed",
+    "distances": {
+      "civ_a_language_like": 6.4625116768111655,
+      "civ_b_administrative_code": 8.585521941277943,
+      "civ_c_mixed": 6.306310001966071
+    }
+  }
+}

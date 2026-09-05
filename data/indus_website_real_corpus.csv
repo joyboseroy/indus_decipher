@@ -1,0 +1,2544 @@
+inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_direction,motif
+S1,G410 G17,SI7,unknown,1,False,R-L,unknown
+S2,G410 G17,SI7,unknown,1,False,R-L,unknown
+S3,G405 G17,SI7,unknown,1,False,R-L,unknown
+S5,G740 G235,SI8,unknown,1,False,L-R,Bull
+S6,G740 G390 G590,SI8,unknown,1,False,L-R,Bull1
+S7,G368 G390 G125 G33,SI8,unknown,1,False,L-R,Bull1:J
+S8,G740 G904 G33 G705 G235,SI8,unknown,1,False,L-R,Bull1:II
+S9,G740 G17 G495 G235 G741 G66,SI8,unknown,1,False,L-R,Bull1:II
+S10,G156 G460 G510,SI8,unknown,1,False,L-R,Bull1
+S11,G72 G170 G740 G840 G13,SI8,unknown,1,False,L-R,Rhin
+S16,G390 G415,SI9,unknown,1,False,R-L,unknown
+S17,G390 G34,SI10,unknown,1,False,R-L,unknown
+S18,G405 G844 G32 G840 G2 G861,SI11,unknown,1,False,L-R,unknown
+S19,G226 G3 G2 G297 G350 G125 G413,SI12,unknown,1,False,L-R,Bull1
+S20,G390 G717 G61 G2 G368 G634,SI12,unknown,1,False,L-R,Bull1
+S22,G527 G554 G298 G368 G634,SI12,unknown,1,False,L-R,Bull1:II
+S26,G520 G1,SI13,unknown,1,False,L-R,Goat:1
+S27,G90 G740 G220 G2 G368 G550 G821,SI13,unknown,1,False,L-R,Bull1:O
+S28,G220 G14,SI13,unknown,1,False,L-R,Bull1
+S29,G740 G797,SI13,unknown,1,False,L-R,Bull3
+S30,G2 G817,SI13,unknown,1,False,L-R,Bull3
+S31,G2 G817,SI13,unknown,1,False,L-R,Buff
+S32,G740 G61,SI13,unknown,1,False,L-R,Goat:4
+S33,G390 G4,SI13,unknown,1,False,L-R,Goat:3
+S36,G2 G817,SI13,unknown,1,False,L-R,Rhin
+S37,G236 G2 G308 G90,SI13,unknown,1,False,L-R,Htgr
+S39,G740 G803,SI13,unknown,1,False,L-R,unknown
+S40,G426 G3 G60 G692,SI13,unknown,1,False,L-R,unknown
+S50,G390 G3 G3,SI14,unknown,1,False,R-L,Buff
+S52,G236 G2 G820,SI14,unknown,1,False,L-R,Bull1
+S54,G740 G50 G705,SI15,unknown,1,False,L-R,unknown
+S57,G740 G405,SI16,unknown,1,False,L-R,unknown
+S58,G740 G386,SI16,unknown,1,False,R-L,Bull3
+S60,G892 G700,SI16,unknown,1,False,L-R,Bull1:W
+S61,G390 G3 G2 G817,SI16,unknown,1,False,L-R,Bull1:W
+S64,G842 G32 G31 G592 G31 G60 G920,SI16,unknown,1,False,L-R,Bull1:W
+S65,G740 G482 G235,SI16,unknown,1,False,L-R,Bull1:V
+S66,G390 G844 G60 G575 G717,SI16,unknown,1,False,L-R,Bull1:J
+S67,G740 G531 G60 G692,SI16,unknown,1,False,L-R,Elep
+S68,G740 G67 G741 G647 G892,SI16,unknown,1,False,L-R,Bull1
+S69,G740 G176 G32 G2 G861,SI16,unknown,1,False,L-R,Bull1:W
+S70,G32 G31 G0 G151 G740 G240 G235,SI16,unknown,1,False,L-R,Bull1:II
+S71,G32 G31 G0 G740 G222 G235 G2 G861,SI16,unknown,1,False,L-R,Bull1
+S72,G32 G31 G0 G850 G32 G530 G740 G741 G456,SI16,unknown,1,False,L-R,Gaur
+S73,G32 G31 G0 G740 G791 G713,SI16,unknown,1,False,L-R,Bull1
+S74,G32 G31 G0 G740 G222 G235 G2 G861,SI16,unknown,1,False,L-R,Bull1
+S75,G32 G0 G226 G32 G817,SI16,unknown,1,False,R-L,unknown
+S76,G125 G2 G861,SI16,unknown,1,False,L-R,Gaur
+S77,G151 G740 G100 G240,SI16,unknown,1,False,L-R,Bull1:W
+S79,G1 G368 G767,SI16,unknown,1,False,L-R,Bull1:I
+S80,G526 G388,SI16,unknown,1,False,L-R,Bull1
+S81,G740 G636 G240 G0 G2 G817,SI16,unknown,1,False,L-R,unknown
+S85,G161 G55,SI16,unknown,1,False,L-R,Bull1:S
+S87,G520 G233 G803 G2 G817,SI16,unknown,1,False,L-R,Bull1:S
+S88,G151 G690 G0 G32 G31,SI16,unknown,1,False,L-R,T-A-T
+S89,G31 G840 G140 G740 G101 G2 G365 G287 G34,SI16,unknown,1,False,L-R,Bull1
+S90,G740 G390 G590,SI16,unknown,1,False,L-R,Bull1:L
+S91,G740 G16 G2 G920 G317,SI16,unknown,1,False,L-R,Bull1:W
+S92,G520 G235 G803 G2 G817,SI16,unknown,1,False,L-R,Bull1:L
+S93,G740 G140 G717 G2 G298 G741,SI16,unknown,1,False,L-R,Bull1:I
+S94,G817 G521 G521 G0 G90 G740 G221 G2 G31 G500,SI16,unknown,1,False,L-R,Bull1:J
+S96,G740 G803 G233 G741 G250 G579,SI16,unknown,1,False,L-R,Bull1:J
+S97,G151 G233 G803 G33 G705 G240,SI16,unknown,1,False,L-R,Bull1:J
+S98,G740 G231 G220 G32 G2 G817,SI16,unknown,1,False,L-R,Bull1:W
+S99,G590 G615 G140 G0 G232 G240 G1 G60 G920,SI16,unknown,1,False,L-R,Bull1:I
+S100,G161 G390 G590 G31 G740 G60 G920,SI16,unknown,1,False,L-R,Bull1:L
+S103,G740 G400 G920 G31,SI16,unknown,1,False,L-R,Bull1:W
+S104,G429 G3 G741 G60 G920,SI16,unknown,1,False,L-R,Bull1:L
+S105,G740 G100,SI16,unknown,1,False,L-R,Bull1:I
+S107,G151 G790 G31 G790 G495,SI16,unknown,1,False,L-R,Bull1:I
+S108,G156 G230,SI16,unknown,1,False,L-R,Bull1:II
+S111,G390 G128 G702 G2 G0 G226 G32 G2 G1 G480 G850,SI16,unknown,1,False,L-R,Tigr
+S113,G822 G140 G15,SI16,unknown,1,False,L-R,unknown
+S114,G375 G400 G390 G632,SI16,unknown,1,False,L-R,Bull1:W
+S123,G740 G920 G320 G233 G240 G1 G2 G817,SI17,unknown,1,False,L-R,unknown
+S127,G151 G892 G32,SI3,unknown,1,False,L-R,Bull1:W
+S128,G156 G19,SI3,unknown,1,False,L-R,Bull1:S
+S129,G93 G808,SI3,unknown,1,False,L-R,Bull1:J
+S130,G244 G165 G0 G740 G879 G220 G416 G803 G2 G856,SI3,unknown,1,False,L-R,Bull1:W
+S131,G520 G460 G495,SI3,unknown,1,False,L-R,Bull1:S
+S132,G740 G416 G2 G861,SI3,unknown,1,False,L-R,Tigr
+S133,G520 G460,SI3,unknown,1,False,L-R,unknown
+S134,G154 G388 G717 G705,SI3,unknown,1,False,L-R,unknown
+S135,G590 G407 G790 G32,SI3,unknown,1,False,L-R,unknown
+S136,G390 G16 G2 G861,SI3,unknown,1,False,L-R,unknown
+S137,G617 G142,SI3,unknown,1,False,R-L,unknown
+S138,G520 G33 G706 G233,SI3,unknown,1,False,L-R,unknown
+S139,G740 G100 G407 G590,SI3,unknown,1,False,L-R,unknown
+S144,G798 G821 G1 G480 G850 G820 G388 G611 G820,SI3,unknown,1,False,L-R,unknown
+S145,G151 G382 G31 G2 G861,SI3,unknown,1,False,L-R,Bull1:J
+S149,G240 G220,SI18,unknown,1,False,R-L,Bull1
+S150,G740 G760 G445,SI18,unknown,1,False,L-R,Bull1
+S151,G220 G32,SI18,unknown,1,False,L-R,Buff
+S153,G390 G371,SI18,unknown,1,False,L-R,Bull1:J
+S157,G740 G923 G838,SI19,unknown,1,False,L-R,unknown
+S158,G236 G140 G893 G861,SI20,unknown,1,False,L-R,Bull1:I
+S160,G617 G117,SI21,unknown,1,False,L-R,Gaur
+S162,G33 G0 G0,SI2,unknown,1,False,L-R,unknown
+S170,G527 G740 G914,SI2,unknown,1,False,L-R,unknown
+S173,G220 G16,SI2,unknown,1,False,L-R,unknown
+S176,G235 G33,SI2,unknown,1,False,L-R,unknown
+S181,G740 G142,SI2,unknown,1,False,L-R,unknown
+S198,G740 G603 G240 G60 G692,SI2,unknown,1,False,L-R,unknown
+S199,G520 G220 G240 G798 G60 G692,SI2,unknown,1,False,L-R,Bull1
+S205,G740 G55 G806,SI2,unknown,1,False,L-R,unknown
+S212,G0 G0 G0 G0,SI2,unknown,1,False,L-R,unknown
+S217,G90 G740 G240 G220,SI2,unknown,1,False,L-R,S590
+S218,G0 G0 G740 G519,SI2,unknown,1,False,L-R,unknown
+S220,G400 G154 G440 G220,SI2,unknown,1,False,R-L,Fish
+S221,G520 G220 G415,SI2,unknown,1,False,L-R,Bult
+S222,G700 G34,SI2,unknown,1,False,L-R,Bult
+S225,G804 G740 G219,SI2,unknown,1,False,L-R,unknown
+S229,G740 G31 G904 G1 G32,SI2,unknown,1,False,L-R,unknown
+S232,G390 G35,SI2,unknown,1,False,R-L,Bult
+S233,G405 G4 G745 G905,SI2,unknown,1,False,L-R,Bull1:W
+S234,G400 G156 G435 G255,SI2,unknown,1,False,R-L,unknown
+S236,G60 G550,SI2,unknown,1,False,L-R,unknown
+S237,G400 G90 G740 G220 G3,SI2,unknown,1,False,L-R,Bull1
+S240,G151 G231,SI2,unknown,1,False,L-R,Bull1:I
+S244,G156 G384 G31 G400,SI2,unknown,1,False,L-R,unknown
+S246,G740 G900 G5 G2 G820,SI2,unknown,1,False,L-R,Bull1:U
+S248,G740 G554,SI2,unknown,1,False,L-R,unknown
+S249,G400 G892 G831,SI2,unknown,1,False,L-R,unknown
+S255,G400 G678,SI2,unknown,1,False,L-R,unknown
+S257,G156 G176 G741 G60 G920,SI2,unknown,1,False,R-L,unknown
+S258,G700 G33 G711 G817 G0,SI2,unknown,1,False,R-L,unknown
+S259,G400 G740 G575 G17 G920 G320 G798 G2 G861,SI2,unknown,1,False,L-R,Bull1:I
+S260,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S261,G503 G233 G240,SI2,unknown,1,False,L-R,Bull1
+S264,G400 G156 G140 G32,SI2,unknown,1,False,L-R,unknown
+S265,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S266,G400 G740 G760 G605,SI2,unknown,1,False,R-L,Gavi
+S268,G869 G0,SI2,unknown,1,False,L-R,unknown
+S273,G400 G740 G382,SI2,unknown,1,False,L-R,unknown
+S274,G154 G435 G255,SI2,unknown,1,False,L-R,unknown
+S280,G740 G904 G240 G2 G817,SI2,unknown,1,False,L-R,Bull
+S281,G400 G98,SI2,unknown,1,False,L-R,unknown
+S282,G520 G220,SI2,unknown,1,False,L-R,unknown
+S284,G90 G740 G103 G2 G861,SI2,unknown,1,False,L-R,Bull1:W
+S288,G740 G798 G820,SI2,unknown,1,False,L-R,unknown
+S290,G520 G0 G255,SI2,unknown,1,False,L-R,unknown
+S291,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S292,G740 G100 G140 G3,SI2,unknown,1,False,L-R,Bull1:W
+S293,G220 G500 G520 G2 G862 G32,SI2,unknown,1,False,L-R,Bull1:W
+S294,G740 G760 G70 G921 G315 G233,SI2,unknown,1,False,L-R,unknown
+S295,G740 G924,SI2,unknown,1,False,L-R,Bult
+S297,G400 G740 G455,SI2,unknown,1,False,L-R,unknown
+S300,G700 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S303,G151 G760 G220 G3 G2 G861,SI2,unknown,1,False,L-R,Bull1:W
+S306,G740 G100 G176,SI2,unknown,1,False,L-R,unknown
+S308,G0 G220,SI2,unknown,1,False,L-R,unknown
+S309,G740 G785 G4,SI2,unknown,1,False,R-L,Pipal
+S310,G416 G590 G33,SI2,unknown,1,False,L-R,unknown
+S311,G400 G740 G767 G220 G416,SI2,unknown,1,False,L-R,unknown
+S313,G525 G550 G220,SI2,unknown,1,False,L-R,unknown
+S315,G405 G5 G2,SI2,unknown,1,False,L-R,unknown
+S316,G740 G904 G240,SI2,unknown,1,False,L-R,unknown
+S317,G400 G226 G32,SI2,unknown,1,False,L-R,unknown
+S318,G220 G16,SI2,unknown,1,False,L-R,Bull1:W
+S319,G400 G255 G400 G165 G900 G1,SI2,unknown,1,False,L-R,unknown
+S321,G90 G740 G103 G741 G66,SI22,unknown,1,False,L-R,Bull1:J
+S322,G520 G33 G706 G231 G415 G803,SI2,unknown,1,False,L-R,Bull1:W
+S370,G700 G32 G740 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S371,G740 G31 G1 G140,SI2,unknown,1,False,R-L,Goat:4
+S373,G550 G3 G435,SI2,unknown,1,False,L-R,unknown
+S375,G415 G700 G33 G171,SI2,unknown,1,False,L-R,unknown
+S378,G740 G390 G590 G60 G550,SI2,unknown,1,False,L-R,Elep
+S379,G405 G5,SI2,unknown,1,False,L-R,unknown
+S382,G400 G740 G61 G140,SI2,unknown,1,False,L-R,unknown
+S383,G740 G31 G1 G140,SI2,unknown,1,False,R-L,Goat:4
+S386,G400 G617 G829,SI2,unknown,1,False,L-R,unknown
+S388,G2 G220 G455 G0,SI2,unknown,1,False,L-R,unknown
+S390,G400 G156 G435 G255,SI2,unknown,1,False,L-R,unknown
+S392,G400 G137,SI2,unknown,1,False,L-R,unknown
+S393,G0 G4 G745 G590,SI2,unknown,1,False,L-R,Tri4
+S394,G390 G4 G455 G371 G741 G590,SI2,unknown,1,False,L-R,unknown
+S396,G400 G775 G516,SI2,unknown,1,False,L-R,unknown
+S397,G565 G740 G176 G231,SI2,unknown,1,False,L-R,unknown
+S400,G740 G31 G1 G140,SI2,unknown,1,False,L-R,Goat:4
+S401,G390 G4 G2 G817,SI2,unknown,1,False,L-R,Mult
+S403,G740 G515 G126,SI2,unknown,1,False,L-R,unknown
+S405,G740 G630 G240 G33 G171,SI2,unknown,1,False,L-R,unknown
+S406,G400 G740 G100 G240,SI2,unknown,1,False,R-L,unknown
+S407,G740 G760 G840 G799,SI2,unknown,1,False,L-R,unknown
+S409,G405 G35 G2 G861,SI2,unknown,1,False,L-R,Bult
+S410,G400 G740 G904 G240,SI2,unknown,1,False,L-R,unknown
+S411,G740 G702 G61 G2 G0,SI2,unknown,1,False,L-R,unknown
+S414,G32 G920 G491,SI2,unknown,1,False,L-R,unknown
+S415,G400 G297 G352 G892 G590 G740 G176,SI2,unknown,1,False,L-R,unknown
+S416,G220 G233,SI2,unknown,1,False,L-R,Gavi
+S417,G400 G90,SI2,unknown,1,False,L-R,Mult
+S418,G565 G740 G176 G231,SI2,unknown,1,False,L-R,unknown
+S419,G400 G368 G741,SI2,unknown,1,False,L-R,unknown
+S420,G90 G100 G415 G717,SI2,unknown,1,False,L-R,Fish
+S422,G740 G384 G31,SI2,unknown,1,False,L-R,Bult
+S423,G400 G740 G176 G235,SI2,unknown,1,False,L-R,Mult
+S424,G740 G636 G240 G60 G692,SI2,unknown,1,False,L-R,unknown
+S425,G740 G143 G67,SI2,unknown,1,False,L-R,unknown
+S426,G407 G790 G32,SI2,unknown,1,False,L-R,unknown
+S427,G400 G740 G717,SI2,unknown,1,False,L-R,unknown
+S430,G405 G4 G104,SI2,unknown,1,False,L-R,Bull1:W
+S433,G700 G33,SI2,unknown,1,False,R-L,unknown
+S434,G700 G34 G1,SI2,unknown,1,False,L-R,unknown
+S437,G520 G240,SI2,unknown,1,False,R-L,unknown
+S448,G382 G760 G382 G2 G820,SI2,unknown,1,False,L-R,Mult
+S453,G740 G817 G491,SI2,unknown,1,False,L-R,unknown
+S454,G740 G817 G491,SI2,unknown,1,False,L-R,Gavi
+S455,G740 G760 G240,SI2,unknown,1,False,R-L,unknown
+S458,G400 G740 G67 G100,SI2,unknown,1,False,R-L,Bult
+S459,G740 G100 G415,SI2,unknown,1,False,L-R,unknown
+S461,G740 G892,SI2,unknown,1,False,L-R,unknown
+S463,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S464,G390 G3,SI2,unknown,1,False,L-R,Zebu
+S466,G861 G3,SI2,unknown,1,False,L-R,unknown
+S467,G740 G176 G220,SI2,unknown,1,False,R-L,unknown
+S468,G400 G775 G516,SI2,unknown,1,False,L-R,unknown
+S469,G740 G760 G240,SI2,unknown,1,False,R-L,unknown
+S470,G0,SI2,unknown,1,False,L-R,unknown
+S472,G824 G892 G413,SI2,unknown,1,False,L-R,unknown
+S476,G2 G861 G416,SI2,unknown,1,False,L-R,unknown
+S479,G520 G220 G415 G60 G920,SI2,unknown,1,False,L-R,Bull1:W
+S480,G400 G740 G760 G382,SI2,unknown,1,False,L-R,unknown
+S481,G110,SI2,unknown,1,False,L-R,unknown
+S484,G740 G760 G840 G799,SI2,unknown,1,False,L-R,Bult
+S485,G520 G220 G415 G240 G803,SI2,unknown,1,False,L-R,Zebu
+S488,G2 G861 G416,SI2,unknown,1,False,L-R,unknown
+S489,G390 G3,SI2,unknown,1,False,L-R,Bult
+S490,G400 G740 G32 G15,SI2,unknown,1,False,L-R,unknown
+S491,G504 G350 G741 G60 G920,SI2,unknown,1,False,L-R,unknown
+S494,G400 G740 G100 G176 G175,SI2,unknown,1,False,L-R,unknown
+S497,G400 G740 G0 G792,SI2,unknown,1,False,L-R,unknown
+S498,G0 G740 G233 G240,SI2,unknown,1,False,L-R,unknown
+S499,G700 G33 G400 G740 G388,SI2,unknown,1,False,R-L,unknown
+S501,G534 G556,SI2,unknown,1,False,L-R,unknown
+S502,G405 G3,SI2,unknown,1,False,L-R,Bull1:W
+S504,G400 G740 G0 G832 G0,SI2,unknown,1,False,L-R,Gavi
+S506,G151 G740 G221,SI2,unknown,1,False,L-R,unknown
+S508,G151 G740 G222,SI2,unknown,1,False,L-R,unknown
+S509,G151 G740 G222,SI2,unknown,1,False,L-R,unknown
+S510,G520 G70 G255 G832,SI2,unknown,1,False,L-R,unknown
+S513,G740 G61 G2 G455 G420 G32,SI2,unknown,1,False,L-R,Bull1:S
+S515,G520 G240,SI2,unknown,1,False,L-R,unknown
+S516,G740 G690 G435 G255,SI2,unknown,1,False,L-R,Bult
+S518,G2 G861 G416,SI2,unknown,1,False,L-R,unknown
+S519,G390 G4 G155 G390,SI2,unknown,1,False,L-R,unknown
+S520,G400 G98,SI2,unknown,1,False,L-R,Goat
+S526,G400 G520 G233,SI2,unknown,1,False,L-R,Gaur
+S530,G156 G140,SI2,unknown,1,False,L-R,Bull1
+S532,G700 G34 G400 G525 G550,SI2,unknown,1,False,L-R,unknown
+S533,G90 G740 G101 G31,SI2,unknown,1,False,L-R,Fish
+S534,G400 G740 G637,SI2,unknown,1,False,L-R,Gavi
+S535,G740 G32 G840,SI2,unknown,1,False,L-R,Mult
+S537,G740 G390 G590 G2 G861,SI2,unknown,1,False,L-R,unknown
+S542,G111 G33,SI2,unknown,1,False,L-R,unknown
+S544,G400 G740 G32 G28,SI2,unknown,1,False,L-R,unknown
+S548,G400 G740 G176 G791,SI2,unknown,1,False,L-R,Gavi
+S549,G400 G740 G32 G27,SI2,unknown,1,False,L-R,Fish
+S550,G400 G740 G176 G519,SI2,unknown,1,False,L-R,unknown
+S552,G617 G550 G3,SI2,unknown,1,False,L-R,Zebu
+S554,G400 G90 G740 G400 G90,SI2,unknown,1,False,L-R,unknown
+S556,G400 G740 G141,SI2,unknown,1,False,L-R,Bult
+S557,G400 G153 G118,SI2,unknown,1,False,L-R,unknown
+S559,G298 G350 G892 G590,SI2,unknown,1,False,L-R,unknown
+S560,G400 G236 G233,SI2,unknown,1,False,L-R,unknown
+S567,G400 G740 G32 G840,SI2,unknown,1,False,L-R,unknown
+S569,G400 G740 G275 G320 G235 G240 G798,SI2,unknown,1,False,L-R,unknown
+S570,G740 G690 G435 G255 G55,SI2,unknown,1,False,R-L,Bult
+S574,G90 G740 G240 G235,SI2,unknown,1,False,L-R,S590
+S578,G400 G90 G740 G100 G390 G231,SI2,unknown,1,False,L-R,unknown
+S581,G700 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S585,G400 G740 G176,SI2,unknown,1,False,L-R,Bull
+S589,G504 G350 G741 G60 G920,SI2,unknown,1,False,L-R,unknown
+S592,G400 G154 G806 G467,SI2,unknown,1,False,L-R,Mult
+S593,G740 G100 G175 G630 G705,SI2,unknown,1,False,L-R,unknown
+S594,G740 G752 G175 G2 G861,SI2,unknown,1,False,L-R,Phyt
+S596,G740 G176 G33 G705 G235,SI2,unknown,1,False,L-R,unknown
+S597,G740 G690 G436 G255,SI2,unknown,1,False,L-R,Fish
+S598,G400 G137,SI2,unknown,1,False,L-R,unknown
+S599,G740 G142 G62 G2 G817,SI2,unknown,1,False,L-R,unknown
+S601,G740 G752 G460 G495 G240 G415,SI2,unknown,1,False,L-R,Phyt
+S603,G158 G805 G480,SI2,unknown,1,False,L-R,unknown
+S609,G34 G705,SI2,unknown,1,False,L-R,unknown
+S613,G520 G235,SI2,unknown,1,False,L-R,unknown
+S621,G700 G34,SI2,unknown,1,False,L-R,unknown
+S622,G158 G838 G470,SI2,unknown,1,False,L-R,unknown
+S623,G405 G3 G2 G293 G360,SI2,unknown,1,False,L-R,unknown
+S624,G400 G525 G554,SI2,unknown,1,False,L-R,unknown
+S625,G3 G408,SI2,unknown,1,False,L-R,unknown
+S626,G33 G33 G0 G740 G142 G61 G140 G2 G546,SI2,unknown,1,False,L-R,Bull1:W
+S627,G400 G151 G97,SI2,unknown,1,False,L-R,unknown
+S628,G520 G33 G33,SI2,unknown,1,False,L-R,unknown
+S630,G400 G740 G32 G27,SI2,unknown,1,False,L-R,Fish
+S631,G740 G690 G435 G176 G233 G803,SI2,unknown,1,False,L-R,unknown
+S632,G0 G740 G242 G235,SI2,unknown,1,False,L-R,unknown
+S634,G390 G3 G2 G820,SI2,unknown,1,False,L-R,Bull1:W
+S635,G740 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S637,G400 G97,SI2,unknown,1,False,L-R,unknown
+S638,G400 G740 G32 G25,SI2,unknown,1,False,L-R,Fish
+S640,G400 G740 G32 G14,SI2,unknown,1,False,L-R,unknown
+S643,G700 G32,SI2,unknown,1,False,L-R,unknown
+S644,G400 G137,SI2,unknown,1,False,L-R,Mult
+S646,G740 G176 G31 G60 G201,SI2,unknown,1,False,L-R,unknown
+S647,G868 G705 G590,SI2,unknown,1,False,L-R,unknown
+S649,G400 G740 G798 G365 G415 G1,SI2,unknown,1,False,L-R,unknown
+S652,G740 G540 G204 G255,SI2,unknown,1,False,L-R,unknown
+S653,G700 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S654,G368 G91,SI2,unknown,1,False,R-L,unknown
+S658,G700 G125,SI2,unknown,1,False,L-R,unknown
+S659,G400 G740 G32 G27,SI2,unknown,1,False,L-R,Fish
+S662,G617 G550 G3 G790,SI2,unknown,1,False,L-R,Mult
+S664,G740 G760 G61 G60 G692,SI2,unknown,1,False,L-R,Scene
+S665,G2 G861 G416,SI2,unknown,1,False,L-R,unknown
+S666,G90 G740 G240 G235,SI2,unknown,1,False,L-R,S590
+S668,G740 G400 G142 G61 G33,SI2,unknown,1,False,L-R,Bull1:W
+S670,G700 G3,SI2,unknown,1,False,L-R,unknown
+S671,G400 G156 G435 G255,SI2,unknown,1,False,L-R,unknown
+S672,G876 G32 G578 G415,SI2,unknown,1,False,L-R,unknown
+S675,G740 G923 G235,SI2,unknown,1,False,L-R,unknown
+S677,G90 G740 G176 G741 G347,SI2,unknown,1,False,L-R,Mult
+S679,G257 G360,SI2,unknown,1,False,L-R,unknown
+S681,G869 G60 G820,SI2,unknown,1,False,L-R,unknown
+S682,G526 G554 G2 G820,SI2,unknown,1,False,L-R,unknown
+S686,G740 G603 G240 G60 G692,SI2,unknown,1,False,L-R,unknown
+S687,G700 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S688,G682 G413 G840 G0 G740 G61,SI2,unknown,1,False,L-R,Bull1
+S689,G700 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S690,G390 G0 G742 G0,SI2,unknown,1,False,L-R,Tri4
+S693,G156 G3,SI2,unknown,1,False,L-R,unknown
+S694,G740 G32 G840,SI2,unknown,1,False,L-R,unknown
+S701,G700 G33,SI2,unknown,1,False,R-L,unknown
+S702,G740 G176,SI2,unknown,1,False,L-R,unknown
+S703,G400 G852,SI2,unknown,1,False,L-R,unknown
+S715,G16 G220 G382,SI2,unknown,1,False,L-R,unknown
+S718,G740 G175 G415 G33 G1,SI2,unknown,1,False,L-R,unknown
+S719,G740 G176,SI2,unknown,1,False,L-R,unknown
+S729,G740 G482 G240 G2 G861,SI2,unknown,1,False,L-R,Bull1
+S730,G400 G740 G17 G503,SI2,unknown,1,False,L-R,Gavi
+S731,G740 G760 G33 G33 G240 G2 G824,SI2,unknown,1,False,L-R,Bull1:J
+S732,G368 G900,SI2,unknown,1,False,L-R,unknown
+S737,G400 G740 G16 G503,SI2,unknown,1,False,L-R,Gavi
+S740,G700 G34,SI2,unknown,1,False,L-R,unknown
+S742,G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S743,G700 G34,SI2,unknown,1,False,L-R,unknown
+S744,G740 G0 G220 G4 G2 G390 G95,SI2,unknown,1,False,L-R,unknown
+S745,G400 G158 G806 G475,SI2,unknown,1,False,L-R,Phyt
+S746,G400 G740 G176 G240,SI2,unknown,1,False,L-R,Fish
+S749,G400 G740 G575 G17 G798,SI2,unknown,1,False,L-R,unknown
+S751,G400 G236 G220,SI2,unknown,1,False,L-R,unknown
+S752,G90 G740 G792,SI2,unknown,1,False,L-R,unknown
+S753,G400 G740 G176 G240,SI2,unknown,1,False,L-R,Fish
+S755,G740 G630 G0,SI2,unknown,1,False,L-R,unknown
+S760,G740 G803 G60 G550,SI2,unknown,1,False,L-R,Fish
+S765,G511 G32 G142,SI2,unknown,1,False,R-L,Bult
+S768,G31 G893,SI2,unknown,1,False,L-R,unknown
+S769,G156 G3,SI2,unknown,1,False,L-R,unknown
+S771,G408 G817 G920 G2 G861,SI2,unknown,1,False,L-R,Gavi
+S772,G156 G176,SI2,unknown,1,False,L-R,unknown
+S773,G156 G176,SI2,unknown,1,False,L-R,unknown
+S774,G368 G91,SI2,unknown,1,False,L-R,unknown
+S775,G161 G97 G741 G140,SI2,unknown,1,False,L-R,Bull1:W
+S776,G712 G840 G400 G740 G440,SI2,unknown,1,False,L-R,Gavi
+S780,G400 G154 G690,SI2,unknown,1,False,L-R,unknown
+S784,G151 G740 G235,SI2,unknown,1,False,L-R,unknown
+S786,G416 G590 G33,SI2,unknown,1,False,L-R,unknown
+S787,G405 G4 G1 G2 G817,SI2,unknown,1,False,L-R,unknown
+S788,G637 G272 G317,SI2,unknown,1,False,L-R,Bird
+S789,G407 G4 G2 G861,SI2,unknown,1,False,L-R,Phyt
+S790,G400 G740 G440,SI2,unknown,1,False,L-R,Gavi
+S794,G154 G3,SI2,unknown,1,False,L-R,unknown
+S797,G400 G98,SI2,unknown,1,False,L-R,Goat
+S800,G90 G740 G176 G741 G347,SI2,unknown,1,False,L-R,Mult
+S801,G400 G740 G817 G491,SI2,unknown,1,False,L-R,unknown
+S805,G154 G806 G470 G2 G861,SI2,unknown,1,False,L-R,unknown
+S806,G400 G740 G152 G240,SI2,unknown,1,False,L-R,unknown
+S807,G90 G740 G176 G741 G347,SI2,unknown,1,False,L-R,Mult
+S810,G154 G3 G617 G33,SI2,unknown,1,False,L-R,Bull1
+S811,G400 G90 G740 G100 G415,SI2,unknown,1,False,L-R,Phyt
+S812,G400 G236,SI2,unknown,1,False,L-R,unknown
+S815,G400 G226,SI2,unknown,1,False,L-R,unknown
+S816,G869 G575,SI2,unknown,1,False,L-R,Bult
+S823,G365 G900,SI2,unknown,1,False,L-R,unknown
+S824,G220 G0 G700 G33,SI2,unknown,1,False,L-R,unknown
+S825,G892 G590,SI2,unknown,1,False,R-L,unknown
+S829,G700 G840 G32 G741,SI2,unknown,1,False,L-R,Bult
+S830,G400 G137,SI2,unknown,1,False,R-L,unknown
+S831,G520 G33 G33,SI2,unknown,1,False,L-R,unknown
+S832,G156 G3,SI2,unknown,1,False,L-R,unknown
+S834,G400 G158 G690,SI2,unknown,1,False,L-R,unknown
+S838,G861 G3,SI2,unknown,1,False,L-R,unknown
+S840,G861 G3,SI2,unknown,1,False,R-L,unknown
+S841,G700 G32,SI2,unknown,1,False,L-R,unknown
+S842,G90 G740 G176 G741 G347,SI2,unknown,1,False,L-R,Mult
+S843,G400 G740 G681,SI2,unknown,1,False,L-R,unknown
+S844,G156 G3,SI2,unknown,1,False,L-R,unknown
+S845,G156 G3,SI2,unknown,1,False,L-R,unknown
+S846,G156 G3,SI2,unknown,1,False,L-R,unknown
+S847,G156 G3,SI2,unknown,1,False,L-R,unknown
+S848,G590 G32 G645 G3,SI2,unknown,1,False,L-R,unknown
+S850,G156 G3,SI2,unknown,1,False,L-R,unknown
+S851,G156 G3,SI2,unknown,1,False,L-R,unknown
+S852,G156 G3,SI2,unknown,1,False,L-R,unknown
+S853,G156 G3,SI2,unknown,1,False,L-R,unknown
+S854,G156 G3,SI2,unknown,1,False,L-R,unknown
+S855,G156 G3,SI2,unknown,1,False,L-R,unknown
+S856,G156 G3,SI2,unknown,1,False,L-R,unknown
+S857,G156 G3,SI2,unknown,1,False,L-R,unknown
+S858,G156 G3,SI2,unknown,1,False,L-R,unknown
+S859,G156 G3,SI2,unknown,1,False,L-R,unknown
+S860,G156 G3,SI2,unknown,1,False,L-R,unknown
+S861,G156 G3,SI2,unknown,1,False,L-R,unknown
+S862,G400 G740 G817 G276,SI2,unknown,1,False,L-R,unknown
+S863,G400 G892 G831,SI2,unknown,1,False,L-R,unknown
+S867,G700 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S869,G400 G151 G142,SI2,unknown,1,False,L-R,unknown
+S870,G156 G3,SI2,unknown,1,False,L-R,unknown
+S871,G740 G32 G25,SI2,unknown,1,False,L-R,Fish
+S876,G520 G33 G33,SI2,unknown,1,False,L-R,unknown
+S878,G156 G3,SI2,unknown,1,False,L-R,unknown
+S880,G90 G740 G176 G741 G347,SI2,unknown,1,False,L-R,Mult
+S882,G90 G740 G176 G741 G347,SI2,unknown,1,False,L-R,Mult
+S884,G90 G740 G176 G741 G347,SI2,unknown,1,False,L-R,Mult
+S885,G740 G840 G13 G745 G31 G370,SI2,unknown,1,False,L-R,unknown
+S886,G90 G740 G176 G741 G347,SI2,unknown,1,False,L-R,Mult
+S890,G700 G34,SI2,unknown,1,False,L-R,unknown
+S892,G740 G416,SI2,unknown,1,False,L-R,unknown
+S894,G740 G920 G318 G700 G692,SI2,unknown,1,False,L-R,unknown
+S895,G700 G34,SI2,unknown,1,False,L-R,unknown
+S897,G869 G60 G1 G820,SI2,unknown,1,False,L-R,unknown
+S901,G158 G221,SI2,unknown,1,False,L-R,unknown
+S902,G690 G590 G32 G220,SI2,unknown,1,False,L-R,Gavi
+S904,G690 G590 G32 G220,SI2,unknown,1,False,L-R,Gavi
+S905,G400 G740 G717,SI2,unknown,1,False,L-R,unknown
+S907,G712 G840 G400 G740 G440,SI2,unknown,1,False,L-R,unknown
+S913,G520 G220 G415,SI2,unknown,1,False,L-R,Bull1
+S916,G700 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S917,G400 G520 G400 G352,SI2,unknown,1,False,L-R,Gavi
+S920,G520 G233 G240 G220 G32,SI2,unknown,1,False,L-R,Bull1:W
+S921,G400 G740 G61 G140,SI2,unknown,1,False,L-R,Bull2
+S922,G158 G3 G494,SI2,unknown,1,False,L-R,unknown
+S923,G400 G740 G388 G717 G705,SI2,unknown,1,False,L-R,Fish
+S927,G400 G236 G220,SI2,unknown,1,False,L-R,Bult
+S929,G740 G400 G142 G61,SI2,unknown,1,False,L-R,Bull1:W
+S930,G740 G790 G32,SI2,unknown,1,False,L-R,unknown
+S932,G90 G326 G700 G920 G125 G1 G55 G920 G140,SI2,unknown,1,False,L-R,unknown
+S937,G740 G482 G240 G2 G861,SI2,unknown,1,False,L-R,Bull1
+S938,G740 G690 G435 G255,SI2,unknown,1,False,L-R,Bult
+S939,G740 G904 G233 G240 G798 G60 G692,SI2,unknown,1,False,L-R,unknown
+S943,G740 G540 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S945,G526 G550 G233,SI2,unknown,1,False,R-L,unknown
+S951,G390 G4 G2 G817,SI3,unknown,1,False,L-R,Bull1:U
+S1004,G520 G233 G49 G2 G861,SI2,unknown,1,False,L-R,Gaur
+S1007,G740 G100 G692 G491 G2 G817,SI2,unknown,1,False,L-R,unknown
+S1011,G426 G3 G13 G817,SI2,unknown,1,False,L-R,unknown
+S1017,G220 G33,SI2,unknown,1,False,L-R,unknown
+S1018,G137 G413,SI2,unknown,1,False,L-R,unknown
+S1020,G740 G405 G590 G32 G900 G3 G806 G235 G220 G32 G2 G690 G921,SI2,unknown,1,False,L-R,Bull1:W
+S1021,G700 G32,SI2,unknown,1,False,L-R,Scene
+S1023,G700 G745,SI2,unknown,1,False,L-R,unknown
+S1024,G740 G803 G892 G31 G2 G861,SI2,unknown,1,False,L-R,unknown
+S1032,G220 G33,SI2,unknown,1,False,L-R,unknown
+S1034,G740 G158 G806 G467,SI2,unknown,1,False,L-R,Phyt
+S1052,G400 G740 G817 G491,SI2,unknown,1,False,L-R,unknown
+S1054,G740 G32 G165 G0,SI2,unknown,1,False,L-R,unknown
+S1057,G740 G390 G590 G240,SI2,unknown,1,False,L-R,unknown
+S1058,G740 G690 G636 G240,SI2,unknown,1,False,R-L,unknown
+S1060,G804 G235 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S1061,G527 G550 G233,SI2,unknown,1,False,L-R,unknown
+S1062,G820 G595 G575 G692,SI2,unknown,1,False,L-R,Bull1:W
+S1063,G232 G740 G176 G745 G440 G617,SI2,unknown,1,False,L-R,Bull1:W
+S1064,G740 G585 G17 G2 G611 G615 G703,SI2,unknown,1,False,L-R,Bull1:W
+S1065,G220 G63 G51,SI2,unknown,1,False,L-R,Bull1:W
+S1066,G920 G706 G193 G384 G32 G920 G140 G902,SI2,unknown,1,False,L-R,Bull1:W
+S1067,G317 G890 G1 G32 G776 G625,SI2,unknown,1,False,L-R,Bull1:W
+S1068,G920 G440 G692 G1 G542 G250,SI2,unknown,1,False,L-R,Bull1:W
+S1069,G354 G1 G740 G405 G590 G33 G706 G2 G690 G921,SI2,unknown,1,False,L-R,Bull1:W
+S1070,G220 G17,SI2,unknown,1,False,L-R,Bull1:W
+S1071,G820 G302 G596 G18 G125 G381,SI2,unknown,1,False,L-R,Bull1:W
+S1073,G740 G690 G435 G255 G803 G220 G240 G235 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S1074,G740 G760 G615 G503 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S1075,G740 G772 G240 G60 G415 G56,SI2,unknown,1,False,L-R,Bull1:W
+S1077,G520 G233 G240 G60 G201,SI2,unknown,1,False,L-R,Bull1:W
+S1080,G740 G176 G690 G435 G255 G220 G32 G806 G60 G550,SI2,unknown,1,False,L-R,Bull1:W
+S1081,G405 G61 G527 G555 G233 G235 G806 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S1082,G740 G920 G320 G233 G806 G2 G405 G321,SI2,unknown,1,False,L-R,Bull1:W
+S1084,G740 G626 G176 G33 G705 G233,SI2,unknown,1,False,L-R,Bull1:W
+S1085,G740 G900 G3 G806 G33 G705 G235 G55,SI2,unknown,1,False,L-R,Bull1:W
+S1086,G740 G388 G231 G240 G798 G1 G820,SI2,unknown,1,False,L-R,Bull1:W
+S1087,G154 G806 G468 G1 G740 G877 G760,SI2,unknown,1,False,L-R,Bull1:W
+S1089,G595 G140 G640,SI2,unknown,1,False,L-R,Bull1:W
+S1092,G740 G923,SI2,unknown,1,False,L-R,Bull1:W
+S1095,G740 G798 G220 G742 G146,SI2,unknown,1,False,L-R,Bull1:S
+S1096,G740 G531,SI2,unknown,1,False,L-R,Bull1:S
+S1097,G156 G803,SI2,unknown,1,False,L-R,Bull1:W
+S1098,G740 G390 G590 G231 G240 G235 G745 G60 G920,SI2,unknown,1,False,L-R,Bull1:W
+S1099,G740 G798 G235 G1 G368 G831 G165,SI2,unknown,1,False,L-R,Bull1:W
+S1101,G740 G380 G235 G2 G817,SI2,unknown,1,False,L-R,Bull1:J
+S1102,G405 G690 G32,SI2,unknown,1,False,L-R,Bull1:W
+S1103,G520 G33 G706 G235 G798 G803 G2 G31 G892,SI2,unknown,1,False,L-R,Bull1:W
+S1104,G90 G740 G101 G2 G820,SI2,unknown,1,False,L-R,Bull1:W
+S1105,G740 G920 G320 G235,SI2,unknown,1,False,L-R,Bull1:W
+S1106,G740 G752 G482,SI2,unknown,1,False,L-R,Bull1:W
+S1107,G430 G3,SI2,unknown,1,False,L-R,Bull1:W
+S1108,G617 G550 G3,SI2,unknown,1,False,L-R,Bull1:S
+S1109,G740 G406 G590 G741 G406 G125,SI2,unknown,1,False,L-R,Bull1:W
+S1110,G740 G639 G240 G2 G861,SI2,unknown,1,False,L-R,Bull1:W
+S1112,G520 G33 G706,SI2,unknown,1,False,L-R,Bull1:I
+S1113,G390 G3 G368 G817,SI2,unknown,1,False,L-R,Bull1:S
+S1114,G390 G4 G2 G861 G125,SI2,unknown,1,False,L-R,Bull1:X
+S1115,G740 G176 G60 G692,SI2,unknown,1,False,L-R,Bull1:I
+S1116,G159 G57,SI2,unknown,1,False,L-R,Bull1:W
+S1117,G158 G806 G468 G740 G752 G231 G235,SI2,unknown,1,False,L-R,Bull1:W
+S1118,G740 G910,SI2,unknown,1,False,L-R,Bull1
+S1119,G621 G740 G900 G3 G0 G2 G820,SI2,unknown,1,False,L-R,Bull1:II
+S1120,G740 G690 G435 G255 G1 G60 G201,SI2,unknown,1,False,L-R,Bull1:II
+S1121,G740 G100 G140 G3,SI2,unknown,1,False,L-R,Bull1:W
+S1122,G740 G100 G717,SI2,unknown,1,False,L-R,Bull1:W
+S1123,G520 G70 G921 G240,SI2,unknown,1,False,L-R,Bull1:W
+S1124,G740 G32 G28,SI2,unknown,1,False,L-R,Bull1:U
+S1125,G617 G243 G950,SI2,unknown,1,False,L-R,Bull1:W
+S1126,G592 G31,SI2,unknown,1,False,L-R,Bull1:II
+S1127,G90 G740 G220 G3 G2 G390 G72,SI2,unknown,1,False,L-R,Bull1:I
+S1128,G740 G61,SI2,unknown,1,False,L-R,Bull1:I
+S1129,G390 G3 G491,SI2,unknown,1,False,L-R,Bull1:I
+S1130,G390 G16,SI2,unknown,1,False,L-R,Bull1:I
+S1131,G617 G142,SI2,unknown,1,False,L-R,Bull1:W
+S1132,G2 G610 G125 G32,SI2,unknown,1,False,L-R,Bull1:J
+S1133,G400 G740 G390 G590,SI2,unknown,1,False,L-R,Bull1:I
+S1134,G740 G100 G240 G235 G741 G175 G132,SI2,unknown,1,False,L-R,Gaur
+S1136,G740 G910,SI2,unknown,1,False,L-R,Gaur
+S1137,G595 G820 G100 G415 G741 G315 G850,SI2,unknown,1,False,L-R,Gaur
+S1138,G156 G3,SI2,unknown,1,False,L-R,Gaur
+S1139,G390 G17 G2 G220 G455 G741,SI2,unknown,1,False,L-R,Gaur
+S1141,G520 G219 G2 G817,SI2,unknown,1,False,L-R,Zebu
+S1142,G520 G460 G31,SI2,unknown,1,False,L-R,Zebu
+S1143,G740 G615 G703,SI2,unknown,1,False,L-R,Buff
+S1144,G740 G32 G840 G820,SI2,unknown,1,False,L-R,Rhin
+S1145,G232 G240 G741 G60 G920,SI2,unknown,1,False,L-R,Elep
+S1146,G521 G368 G280 G192 G440,SI2,unknown,1,False,L-R,Elep
+S1147,G520 G70 G253 G60 G692,SI2,unknown,1,False,L-R,Elep
+S1148,G156 G176 G518 G220 G416 G2 G615,SI2,unknown,1,False,L-R,Elep
+S1149,G892 G700,SI2,unknown,1,False,L-R,Elep
+S1151,G368 G740 G870,SI2,unknown,1,False,L-R,CompBull
+S1153,G861 G920 G0 G520 G220 G16,SI2,unknown,1,False,L-R,unknown
+S1154,G400 G565,SI2,unknown,1,False,R-L,Othr
+S1158,G748 G530 G323 G316,SI2,unknown,1,False,L-R,unknown
+S1161,G740 G760 G440,SI2,unknown,1,False,R-L,unknown
+S1164,G407 G16 G1 G2 G861,SI2,unknown,1,False,L-R,unknown
+S1166,G556 G60 G550,SI2,unknown,1,False,L-R,Bult
+S1168,G740 G630 G240 G741 G861,SI2,unknown,1,False,L-R,Bull1:W
+S1169,G159 G97 G0 G520 G33 G705 G0 G740 G717 G220 G415 G806,SI2,unknown,1,False,L-R,unknown
+S1170,G409 G61 G740 G235 G220 G31 G2 G861 G244 G165,SI2,unknown,1,False,L-R,unknown
+S1171,G409 G32 G845 G33 G705 G231 G806 G2 G595 G812 G125 G717,SI2,unknown,1,False,L-R,unknown
+S1173,G154 G806 G471 G407 G845 G740 G233 G231 G798,SI2,unknown,1,False,L-R,unknown
+S1174,G740 G554 G220 G415 G798 G60 G692,SI2,unknown,1,False,L-R,unknown
+S1175,G740 G405 G590 G220 G3 G2 G861,SI2,unknown,1,False,L-R,unknown
+S1176,G740 G773 G231 G806 G2 G861,SI2,unknown,1,False,L-R,unknown
+S1178,G740 G443 G388 G33 G705 G233 G2 G817,SI2,unknown,1,False,L-R,unknown
+S1179,G740 G388,SI2,unknown,1,False,L-R,unknown
+S1180,G368 G861 G503,SI2,unknown,1,False,L-R,unknown
+S1181,G740 G384 G32 G2 G817,SI2,unknown,1,False,L-R,unknown
+S1182,G405 G32 G900 G3 G70 G2 G233 G235,SI2,unknown,1,False,L-R,unknown
+S1183,G740 G267 G811 G832 G60 G692,SI2,unknown,1,False,L-R,unknown
+S1184,G154 G806 G469 G1 G740 G877 G32,SI2,unknown,1,False,L-R,unknown
+S1185,G203 G892 G193,SI2,unknown,1,False,L-R,unknown
+S1187,G154 G806 G467 G31,SI2,unknown,1,False,L-R,unknown
+S1188,G740 G840 G13,SI2,unknown,1,False,L-R,unknown
+S1189,G520 G240 G235,SI2,unknown,1,False,L-R,unknown
+S1190,G405 G61 G33 G706 G794 G630 G220 G2 G820,SI2,unknown,1,False,L-R,unknown
+S1191,G63 G740 G918,SI2,unknown,1,False,L-R,unknown
+S1192,G407 G17 G60 G193,SI2,unknown,1,False,L-R,unknown
+S1193,G154 G806 G468,SI2,unknown,1,False,L-R,unknown
+S1194,G64 G706 G140,SI2,unknown,1,False,L-R,unknown
+S1195,G154 G806 G467 G1 G2 G817,SI2,unknown,1,False,L-R,unknown
+S1196,G740 G176 G1 G367 G861 G216,SI2,unknown,1,False,L-R,unknown
+S1197,G740 G49,SI2,unknown,1,False,L-R,unknown
+S1198,G154 G615 G503,SI2,unknown,1,False,L-R,unknown
+S1199,G154 G806 G472 G1 G740 G405 G590,SI2,unknown,1,False,L-R,unknown
+S1201,G400 G154 G806 G468,SI2,unknown,1,False,L-R,unknown
+S1204,G161 G97 G2 G817,SI2,unknown,1,False,L-R,unknown
+S1206,G740 G176 G798 G231,SI2,unknown,1,False,L-R,Bull
+S1207,G712 G840 G400 G740 G440,SI2,unknown,1,False,L-R,Gavi
+S1208,G400 G740 G17 G503,SI2,unknown,1,False,L-R,Gavi
+S1209,G167 G705 G368 G5 G741 G60 G920,SI2,unknown,1,False,L-R,Anth
+S1210,G740 G821,SI2,unknown,1,False,L-R,Scene
+S1211,G700 G33 G151 G706 G31 G2 G817,SI2,unknown,1,False,L-R,Scene
+S1212,G400 G740 G717,SI2,unknown,1,False,L-R,Anth
+S1213,G740 G100 G176,SI2,unknown,1,False,L-R,Scene
+S1214,G151 G390 G590 G741 G330 G368,SI2,unknown,1,False,L-R,Scene
+S1215,G740 G32 G840,SI2,unknown,1,False,L-R,Scene
+S1216,G400 G202 G892 G220 G920,SI2,unknown,1,False,L-R,Phyt
+S1217,G400 G202 G892 G220 G920,SI2,unknown,1,False,L-R,Phyt
+S1218,G617 G142,SI2,unknown,1,False,L-R,unknown
+S1219,G32 G840,SI2,unknown,1,False,L-R,Phyt
+S1220,G400 G740 G460 G495,SI2,unknown,1,False,L-R,Phyt
+S1221,G400 G90 G740 G100 G415,SI2,unknown,1,False,L-R,Phyt
+S1222,G400 G158 G806 G470,SI2,unknown,1,False,L-R,Othr
+S1223,G158 G806 G465,SI2,unknown,1,False,L-R,Phyt
+S1224,G740 G798 G460 G354,SI2,unknown,1,False,L-R,Phyt
+S1226,G740 G390 G590 G240,SI2,unknown,1,False,L-R,Phyt
+S1228,G142 G33,SI2,unknown,1,False,L-R,unknown
+S1229,G142 G33,SI2,unknown,1,False,L-R,unknown
+S1234,G400 G740 G220 G415 G798,SI2,unknown,1,False,L-R,unknown
+S1235,G400 G740 G405 G590 G235 G806,SI2,unknown,1,False,L-R,unknown
+S1236,G740 G48 G741 G850,SI2,unknown,1,False,L-R,unknown
+S1237,G740 G636 G240 G204 G705 G621,SI2,unknown,1,False,L-R,unknown
+S1239,G400 G158 G806 G472,SI2,unknown,1,False,L-R,unknown
+S1240,G400 G921 G690 G435 G255 G55,SI2,unknown,1,False,L-R,unknown
+S1242,G400 G740 G898 G617,SI2,unknown,1,False,L-R,unknown
+S1243,G400 G156 G118,SI2,unknown,1,False,L-R,unknown
+S1244,G400 G520 G400 G352,SI2,unknown,1,False,L-R,unknown
+S1245,G400 G520 G400 G353,SI2,unknown,1,False,R-L,unknown
+S1246,G400 G137,SI2,unknown,1,False,L-R,unknown
+S1247,G740 G337 G484,SI2,unknown,1,False,R-L,unknown
+S1248,G740 G337 G484,SI2,unknown,1,False,L-R,unknown
+S1249,G740 G336 G176,SI2,unknown,1,False,L-R,unknown
+S1250,G415 G35 G171,SI2,unknown,1,False,L-R,unknown
+S1253,G400 G158 G904 G736,SI2,unknown,1,False,L-R,Mult
+S1254,G400 G158 G904 G736,SI2,unknown,1,False,L-R,unknown
+S1255,G400 G158 G904 G736,SI2,unknown,1,False,L-R,Mult
+S1256,G400 G740 G892 G617,SI2,unknown,1,False,L-R,unknown
+S1257,G520 G72 G219,SI2,unknown,1,False,L-R,Phyt
+S1258,G520 G220 G240 G2 G820,SI2,unknown,1,False,L-R,unknown
+S1259,G400 G740 G177 G519,SI2,unknown,1,False,L-R,unknown
+S1260,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1262,G740 G32 G840 G679,SI2,unknown,1,False,L-R,unknown
+S1263,G740 G636 G240 G60 G692,SI2,unknown,1,False,R-L,unknown
+S1264,G390 G0 G740 G500 G91,SI2,unknown,1,False,L-R,unknown
+S1265,G740 G904 G32 G233 G803,SI2,unknown,1,False,L-R,unknown
+S1266,G1 G142,SI2,unknown,1,False,L-R,Turt
+S1268,G400 G520 G233,SI2,unknown,1,False,L-R,Pipal
+S1270,G700 G33,SI2,unknown,1,False,L-R,unknown
+S1271,G400 G804 G0 G233 G240,SI2,unknown,1,False,L-R,unknown
+S1272,G400 G740 G335 G0,SI2,unknown,1,False,L-R,unknown
+S1273,G400 G740 G920 G320 G233 G240 G798,SI2,unknown,1,False,L-R,unknown
+S1274,G520 G233,SI2,unknown,1,False,L-R,unknown
+S1276,G400 G740 G100 G240,SI2,unknown,1,False,L-R,Gaur
+S1277,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1278,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1279,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1280,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1281,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1282,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1283,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1284,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1285,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1
+S1286,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1287,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1288,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1289,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1290,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1
+S1293,G740 G585 G17 G33 G706 G803 G2 G220 G455 G920,SI2,unknown,1,False,L-R,Bull1:W
+S1294,G740 G482 G55 G220 G415 G798 G803 G742 G617,SI2,unknown,1,False,L-R,Bull1:W
+S1295,G595 G420 G717 G745,SI2,unknown,1,False,L-R,Bull1
+S1296,G740 G585 G17 G240 G2 G305 G32 G904,SI2,unknown,1,False,L-R,Bull1
+S1298,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1299,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1
+S1300,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1301,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1302,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1303,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1304,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1305,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1306,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1308,G400 G90,SI2,unknown,1,False,L-R,Goat:2
+S1309,G400 G740 G760 G605,SI2,unknown,1,False,R-L,Gavi
+S1310,G156 G3,SI2,unknown,1,False,L-R,Fish
+S1311,G740 G783 G4,SI2,unknown,1,False,R-L,Pipal
+S1312,G740 G783 G4,SI2,unknown,1,False,R-L,Pipal
+S1314,G2 G817,SI2,unknown,1,False,L-R,unknown
+S1315,G2 G817,SI2,unknown,1,False,L-R,unknown
+S1317,G511 G32,SI2,unknown,1,False,L-R,Bult
+S1318,G400 G740 G575 G17 G920,SI2,unknown,1,False,L-R,unknown
+S1319,G400 G151 G336 G630 G706,SI2,unknown,1,False,L-R,unknown
+S1320,G400 G740 G636 G240,SI2,unknown,1,False,L-R,unknown
+S1321,G400 G156 G435 G255,SI2,unknown,1,False,R-L,unknown
+S1322,G400 G740 G776 G495,SI2,unknown,1,False,L-R,unknown
+S1323,G400 G740 G636 G240 G31 G32 G171,SI2,unknown,1,False,L-R,unknown
+S1324,G400 G760 G740 G220 G416,SI2,unknown,1,False,L-R,unknown
+S1325,G400 G740 G32 G27,SI2,unknown,1,False,L-R,unknown
+S1326,G740 G32 G59,SI2,unknown,1,False,L-R,unknown
+S1327,G740 G255 G61,SI2,unknown,1,False,R-L,unknown
+S1328,G740 G32 G840,SI2,unknown,1,False,L-R,unknown
+S1329,G368 G900,SI2,unknown,1,False,L-R,unknown
+S1330,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1331,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1332,G740 G231 G3,SI2,unknown,1,False,L-R,unknown
+S1333,G400 G740 G178,SI2,unknown,1,False,L-R,unknown
+S1334,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1335,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1336,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1337,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1338,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1339,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1341,G520 G220 G415,SI2,unknown,1,False,L-R,unknown
+S1342,G520 G240 G0,SI2,unknown,1,False,L-R,unknown
+S1343,G740 G690 G630 G240,SI2,unknown,1,False,L-R,unknown
+S1344,G400 G740 G32 G28,SI2,unknown,1,False,L-R,unknown
+S1345,G740 G100 G240,SI2,unknown,1,False,L-R,unknown
+S1346,G400 G156 G384 G31,SI2,unknown,1,False,L-R,unknown
+S1348,G740 G840 G13,SI2,unknown,1,False,L-R,unknown
+S1349,G156 G0 G0,SI2,unknown,1,False,L-R,unknown
+S1350,G400 G741 G717 G235,SI2,unknown,1,False,L-R,unknown
+S1351,G520 G220,SI2,unknown,1,False,L-R,unknown
+S1353,G400 G892 G829,SI2,unknown,1,False,L-R,unknown
+S1355,G400 G892 G829,SI2,unknown,1,False,L-R,unknown
+S1356,G390 G34,SI2,unknown,1,False,L-R,unknown
+S1361,G13 G840 G32 G626 G0,SI2,unknown,1,False,L-R,unknown
+S1362,G400 G740 G336 G176,SI2,unknown,1,False,L-R,unknown
+S1363,G740 G861 G877,SI2,unknown,1,False,L-R,unknown
+S1364,G526 G550 G220,SI2,unknown,1,False,L-R,unknown
+S1365,G700 G33,SI2,unknown,1,False,L-R,unknown
+S1366,G520 G220 G415,SI2,unknown,1,False,L-R,unknown
+S1367,G400 G98,SI2,unknown,1,False,L-R,unknown
+S1369,G740 G690 G639 G240,SI2,unknown,1,False,L-R,Fish
+S1370,G400 G740 G32 G60 G13,SI2,unknown,1,False,L-R,unknown
+S1371,G400 G740 G176,SI2,unknown,1,False,L-R,Bult
+S1372,G400 G740 G176,SI2,unknown,1,False,L-R,Bult
+S1373,G400 G740 G176,SI2,unknown,1,False,L-R,Bult
+S1374,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1375,G400 G740 G176,SI2,unknown,1,False,L-R,Bult
+S1376,G400 G740 G176,SI2,unknown,1,False,L-R,Bult
+S1378,G526 G550 G220,SI2,unknown,1,False,L-R,Bult
+S1379,G740 G636 G240 G60 G692,SI2,unknown,1,False,L-R,Bult
+S1380,G740 G0 G0 G0,SI2,unknown,1,False,L-R,Bult
+S1381,G740 G760 G797,SI2,unknown,1,False,L-R,Bult
+S1382,G565 G741 G263,SI2,unknown,1,False,L-R,Mult
+S1383,G520 G220 G415,SI2,unknown,1,False,L-R,Fish
+S1385,G154 G3,SI2,unknown,1,False,L-R,Fish
+S1387,G400 G156 G384 G31,SI2,unknown,1,False,L-R,unknown
+S1388,G368 G33 G705 G31 G741 G390 G741,SI2,unknown,1,False,L-R,unknown
+S1390,G700 G36,SI2,unknown,1,False,R-L,unknown
+S1391,G700 G33,SI2,unknown,1,False,L-R,unknown
+S1396,G930 G632 G920,SI2,unknown,1,False,L-R,unknown
+S1397,G930 G632,SI2,unknown,1,False,L-R,unknown
+S1400,G527 G555 G740 G55 G240 G415 G798 G60 G201,SI2,unknown,1,False,L-R,Bull1:W
+S1401,G520 G33 G706 G231 G806 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S1402,G740 G405 G590 G235 G2 G31 G480 G625,SI2,unknown,1,False,L-R,Bull1:W
+S1404,G740 G31 G504 G235 G60 G920,SI2,unknown,1,False,L-R,Bull1:I
+S1410,G236 G806 G2 G863,SI2,unknown,1,False,L-R,Bull1:W
+S1412,G390 G3 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S1413,G740 G176 G240 G2 G702 G503,SI2,unknown,1,False,L-R,Bull1:W
+S1414,G368 G840 G830 G2 G861,SI2,unknown,1,False,L-R,Bull1:L
+S1415,G740 G440 G240 G1 G820,SI2,unknown,1,False,L-R,Bull1:J
+S1416,G161 G233 G220 G32 G741 G831,SI2,unknown,1,False,L-R,Bull1:I
+S1422,G407 G4 G1 G740 G443 G388 G140,SI2,unknown,1,False,L-R,Bull1:W
+S1423,G679 G740 G240 G60 G550,SI2,unknown,1,False,L-R,Bull1:W
+S1430,G90 G740 G240 G31,SI2,unknown,1,False,L-R,Bull1:W
+S1431,G740 G337 G484,SI2,unknown,1,False,L-R,Bull1:W
+S1434,G241 G220 G32 G2 G861,SI2,unknown,1,False,L-R,Bull1:W
+S1436,G740 G585 G798 G2 G861 G216,SI2,unknown,1,False,L-R,Bull1:J
+S1439,G740 G390 G590 G240 G741 G390 G728,SI2,unknown,1,False,L-R,Bull1:W
+S1440,G740 G100 G240 G741 G702 G900 G3,SI2,unknown,1,False,L-R,Bull1:J
+S1441,G740 G400 G142 G61,SI2,unknown,1,False,L-R,Bull1:W
+S1442,G740 G266,SI2,unknown,1,False,L-R,Bull1:L
+S1444,G740 G390 G590 G742 G700,SI2,unknown,1,False,L-R,Bull1:J
+S1445,G520 G33 G705 G2 G172 G32,SI2,unknown,1,False,L-R,Bull1:J
+S1446,G520 G33 G706 G2 G817 G808,SI2,unknown,1,False,L-R,Bull1:I
+S1447,G740 G798 G3 G2 G416,SI2,unknown,1,False,L-R,Bull1:J
+S1448,G368 G861 G575,SI2,unknown,1,False,L-R,Bull1:I
+S1449,G527 G555 G231 G2 G817,SI2,unknown,1,False,L-R,Bull1:T
+S1456,G740 G900 G3 G2 G940 G705,SI2,unknown,1,False,L-R,Bull1:J
+S1457,G740 G760 G840 G13,SI2,unknown,1,False,L-R,Bull1:J
+S1459,G740 G585 G900 G2 G2 G820,SI2,unknown,1,False,L-R,Bull1
+S1460,G861 G576 G545,SI2,unknown,1,False,L-R,Bull1:W
+S1461,G740 G900 G482 G484 G900,SI2,unknown,1,False,L-R,Bull1:W
+S1462,G740 G416,SI2,unknown,1,False,L-R,Bull1:W
+S1465,G138 G1 G595 G752 G455,SI2,unknown,1,False,L-R,Bull1:W
+S1466,G740 G770 G235 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S1467,G740 G405 G590 G790,SI2,unknown,1,False,L-R,Bull1:W
+S1471,G740 G32 G840 G233 G60 G550,SI2,unknown,1,False,L-R,Bull1
+S1478,G156 G3,SI2,unknown,1,False,L-R,Bull1:S
+S1479,G520 G233 G803 G2 G817,SI2,unknown,1,False,L-R,Bull1
+S1480,G90 G740 G220 G32,SI2,unknown,1,False,L-R,Bull1:J
+S1481,G520 G175,SI2,unknown,1,False,L-R,Bull1:J
+S1483,G527 G140,SI2,unknown,1,False,L-R,Bull1:I
+S1484,G294 G350 G595 G820 G2 G820,SI2,unknown,1,False,L-R,Bull1:I
+S1487,G740 G390 G590 G60 G795,SI2,unknown,1,False,L-R,Bull1:I
+S1488,G390 G871,SI2,unknown,1,False,L-R,Bull1:I
+S1489,G740 G900 G5,SI2,unknown,1,False,L-R,Bull1:I
+S1490,G111 G833 G528,SI2,unknown,1,False,L-R,Bull1:U
+S1491,G151 G220 G16 G2 G820,SI2,unknown,1,False,L-R,Bull1:W
+S1492,G740 G798 G460 G350 G741 G590 G32,SI2,unknown,1,False,L-R,Bull1:S
+S1493,G156 G31,SI2,unknown,1,False,L-R,Bull1:I
+S1495,G407 G4,SI2,unknown,1,False,L-R,Bull1:W
+S1496,G740 G904 G33 G741 G700,SI2,unknown,1,False,L-R,Bull1:L
+S1497,G740 G61,SI2,unknown,1,False,L-R,Bull1
+S1501,G520 G400 G350 G31,SI2,unknown,1,False,L-R,Bull1
+S1510,G520 G33 G706 G31,SI2,unknown,1,False,L-R,unknown
+S1518,G90 G740 G35 G171 G61,SI2,unknown,1,False,L-R,unknown
+S1530,G740 G269 G511 G60 G690,SI2,unknown,1,False,L-R,Gaur
+S1532,G400 G137,SI2,unknown,1,False,L-R,Gaur
+S1533,G740 G877 G32,SI2,unknown,1,False,L-R,Zebu
+S1534,G740 G900 G5 G33,SI2,unknown,1,False,L-R,Buff
+S1535,G400 G221 G31 G741,SI2,unknown,1,False,L-R,Elep
+S1536,G740 G575 G17 G220 G415 G803,SI2,unknown,1,False,L-R,Gaur
+S1539,G390 G3,SI2,unknown,1,False,R-L,unknown
+S1540,G740 G390 G590 G70 G32 G2 G861,SI2,unknown,1,False,L-R,Bull1:J
+S1543,G2 G368 G260,SI2,unknown,1,False,L-R,Bull1:I
+S1544,G740 G717 G233 G220 G32,SI2,unknown,1,False,L-R,Bull1
+S1548,G530 G0 G140 G220,SI2,unknown,1,False,L-R,unknown
+S1551,G527 G550 G2 G125 G590,SI2,unknown,1,False,L-R,unknown
+S1552,G740 G892 G590 G893 G1 G615,SI2,unknown,1,False,L-R,Bull1:L
+S1557,G1 G304 G354 G125 G812 G33,SI2,unknown,1,False,L-R,unknown
+S1560,G595 G632 G740 G550,SI2,unknown,1,False,L-R,unknown
+S1564,G520 G33 G705 G233 G240 G806 G2 G820,SI2,unknown,1,False,L-R,unknown
+S1569,G405 G61 G740 G806,SI2,unknown,1,False,L-R,unknown
+S1574,G407 G845 G140 G740 G233 G240 G798 G365 G263,SI2,unknown,1,False,L-R,unknown
+S1575,G520 G95 G33 G706 G240 G798,SI2,unknown,1,False,L-R,unknown
+S1576,G740 G590 G17,SI3,unknown,1,False,L-R,Bull1
+S1580,G407 G4 G60 G692,SI2,unknown,1,False,L-R,unknown
+S1581,G740 G7 G503 G626 G484,SI2,unknown,1,False,L-R,unknown
+S1583,G790 G740,SI2,unknown,1,False,L-R,unknown
+S1584,G740 G220 G32,SI2,unknown,1,False,L-R,unknown
+S1585,G154 G806 G468,SI2,unknown,1,False,L-R,unknown
+S1586,G565 G806,SI2,unknown,1,False,L-R,unknown
+S1587,G527 G554 G104,SI2,unknown,1,False,L-R,unknown
+S1588,G154 G806 G468,SI2,unknown,1,False,L-R,unknown
+S1594,G140 G820,SI2,unknown,1,False,L-R,unknown
+S1599,G740 G390 G590 G235 G368 G806,SI2,unknown,1,False,L-R,Bull1:S
+S1600,G740 G390 G590 G235 G368 G806,SI2,unknown,1,False,L-R,Bull1:S
+S1601,G740 G176,SI2,unknown,1,False,L-R,Bull1
+S1602,G740 G904 G240 G2 G817,SI2,unknown,1,False,L-R,Bull2
+S1603,G400 G520 G233,SI2,unknown,1,False,L-R,Gaur
+S1604,G740 G176 G798 G231,SI2,unknown,1,False,L-R,Zebu
+S1605,G740 G176 G798 G231,SI2,unknown,1,False,L-R,Zebu
+S1607,G137 G2 G820,SI2,unknown,1,False,L-R,Mult
+S1608,G435 G255 G55,SI2,unknown,1,False,L-R,Bull
+S1610,G712 G840 G400 G740 G440,SI2,unknown,1,False,L-R,Gavi
+S1611,G700 G33 G137 G2 G820,SI2,unknown,1,False,L-R,Gavi
+S1614,G400 G740 G16 G503,SI2,unknown,1,False,L-R,Gavi
+S1615,G400 G740 G16 G503,SI2,unknown,1,False,L-R,Gavi
+S1619,G526 G550 G60 G820,SI2,unknown,1,False,L-R,T-A-T
+S1620,G705 G904,SI2,unknown,1,False,L-R,unknown
+S1621,G1 G480 G165 G900,SI2,unknown,1,False,L-R,Phyt
+S1622,G405 G4 G2 G861,SI2,unknown,1,False,L-R,Phyt
+S1623,G740 G794,SI2,unknown,1,False,L-R,Phyt
+S1625,G740 G32 G840,SI2,unknown,1,False,L-R,Phyt
+S1626,G158 G806 G465,SI2,unknown,1,False,L-R,Phyt
+S1628,G158 G806 G465,SI2,unknown,1,False,L-R,Phyt
+S1630,G740 G798 G460 G15,SI2,unknown,1,False,L-R,Phyt
+S1631,G740 G798 G460 G354,SI2,unknown,1,False,L-R,Phyt
+S1633,G740 G390 G590 G240,SI2,unknown,1,False,L-R,unknown
+S1636,G400 G740 G100 G176 G175,SI2,unknown,1,False,L-R,unknown
+S1637,G740 G752 G482 G240,SI2,unknown,1,False,L-R,unknown
+S1639,G482 G240,SI2,unknown,1,False,L-R,unknown
+S1641,G400 G740 G220 G415 G798,SI2,unknown,1,False,L-R,unknown
+S1643,G400 G740 G405 G590 G235 G806,SI2,unknown,1,False,L-R,unknown
+S1644,G400 G740 G405 G590 G235 G806,SI2,unknown,1,False,L-R,unknown
+S1645,G400 G740 G405 G590 G235 G806,SI2,unknown,1,False,L-R,unknown
+S1646,G400 G740 G405 G590 G235 G806,SI2,unknown,1,False,L-R,unknown
+S1647,G400 G740 G405 G590 G235 G806,SI2,unknown,1,False,L-R,unknown
+S1649,G407 G5 G741 G500 G561,SI2,unknown,1,False,L-R,unknown
+S1650,G740 G100 G440,SI2,unknown,1,False,L-R,unknown
+S1651,G740 G100 G440,SI2,unknown,1,False,L-R,unknown
+S1653,G400 G154 G440 G220,SI2,unknown,1,False,L-R,unknown
+S1658,G65 G826,SI2,unknown,1,False,L-R,unknown
+S1659,G400 G740 G220 G415 G798,SI2,unknown,1,False,L-R,unknown
+S1660,G400 G740 G33 G705 G233 G235 G0,SI2,unknown,1,False,L-R,unknown
+S1662,G151 G840 G416,SI2,unknown,1,False,L-R,unknown
+S1663,G32 G257 G840,SI2,unknown,1,False,L-R,unknown
+S1665,G740 G798 G803 G2 G390 G530 G741,SI2,unknown,1,False,L-R,unknown
+S1666,G700 G33 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S1667,G740 G803 G741 G31 G32 G716,SI2,unknown,1,False,L-R,unknown
+S1668,G390 G4 G104,SI2,unknown,1,False,L-R,unknown
+S1669,G390 G4 G817,SI2,unknown,1,False,L-R,unknown
+S1670,G0 G0 G740 G233 G240,SI2,unknown,1,False,L-R,unknown
+S1671,G740 G400 G142 G61,SI2,unknown,1,False,L-R,unknown
+S1672,G740 G904 G240,SI2,unknown,1,False,L-R,unknown
+S1674,G400 G740 G690 G0,SI2,unknown,1,False,L-R,unknown
+S1676,G740 G255 G0,SI2,unknown,1,False,L-R,unknown
+S1677,G520 G220 G415,SI2,unknown,1,False,L-R,unknown
+S1678,G400 G740 G176 G700 G33,SI2,unknown,1,False,R-L,unknown
+S1679,G740 G255 G0,SI2,unknown,1,False,L-R,unknown
+S1680,G400 G520 G220 G16,SI2,unknown,1,False,L-R,unknown
+S1681,G400 G740 G384 G33,SI2,unknown,1,False,L-R,unknown
+S1683,G400 G154 G896,SI2,unknown,1,False,L-R,unknown
+S1684,G400 G154 G896,SI2,unknown,1,False,L-R,unknown
+S1685,G400 G232 G235,SI2,unknown,1,False,L-R,unknown
+S1686,G442 G0 G220 G0,SI2,unknown,1,False,L-R,unknown
+S1687,G455 G370,SI2,unknown,1,False,L-R,unknown
+S1689,G158 G792,SI2,unknown,1,False,L-R,unknown
+S1690,G32 G820 G100 G415,SI2,unknown,1,False,L-R,unknown
+S1691,G740 G337 G692 G490,SI2,unknown,1,False,L-R,unknown
+S1692,G415 G35 G171,SI2,unknown,1,False,L-R,unknown
+S1693,G400 G740 G337 G0,SI2,unknown,1,False,L-R,unknown
+S1695,G740 G176 G220 G235,SI2,unknown,1,False,L-R,unknown
+S1696,G740 G176 G220 G235,SI2,unknown,1,False,L-R,unknown
+S1697,G740 G176 G220 G235,SI2,unknown,1,False,L-R,unknown
+S1699,G400 G158 G904 G736,SI2,unknown,1,False,L-R,Mult
+S1700,G317 G740 G335 G740 G176 G2 G920 G491,SI2,unknown,1,False,L-R,unknown
+S1701,G368 G35,SI2,unknown,1,False,L-R,unknown
+S1702,G400 G892 G0,SI2,unknown,1,False,L-R,unknown
+S1703,G400 G820 G100 G415,SI2,unknown,1,False,R-L,unknown
+S1704,G520 G72 G219,SI2,unknown,1,False,L-R,Othr
+S1705,G400 G740 G390 G590,SI2,unknown,1,False,L-R,unknown
+S1706,G400 G740 G336 G18,SI2,unknown,1,False,L-R,unknown
+S1707,G740 G336 G18,SI2,unknown,1,False,L-R,unknown
+S1708,G520 G240,SI2,unknown,1,False,L-R,unknown
+S1710,G740 G636 G240 G1 G692,SI2,unknown,1,False,R-L,unknown
+S1711,G740 G636 G240 G1 G692,SI2,unknown,1,False,R-L,unknown
+S1712,G740 G636 G240 G60 G692,SI2,unknown,1,False,L-R,unknown
+S1715,G740 G32 G840,SI2,unknown,1,False,L-R,unknown
+S1716,G0 G0 G0,SI2,unknown,1,False,L-R,unknown
+S1717,G137 G2 G820,SI2,unknown,1,False,R-L,unknown
+S1719,G526 G554 G2 G820,SI2,unknown,1,False,L-R,unknown
+S1720,G400 G740 G690 G436 G255,SI2,unknown,1,False,L-R,unknown
+S1724,G740 G615 G495 G2 G817,SI2,unknown,1,False,L-R,unknown
+S1725,G400 G140,SI2,unknown,1,False,L-R,unknown
+S1727,G400 G740 G790,SI2,unknown,1,False,L-R,unknown
+S1728,G400 G740 G861,SI2,unknown,1,False,L-R,unknown
+S1729,G400 G527 G195,SI2,unknown,1,False,L-R,Xhch
+S1732,G400 G740 G100 G31 G705,SI2,unknown,1,False,L-R,Gavi
+S1734,G740 G100 G0 G0,SI2,unknown,1,False,L-R,unknown
+S1735,G400 G740 G892 G617,SI2,unknown,1,False,L-R,Fish
+S1736,G400 G740 G892 G617,SI2,unknown,1,False,L-R,Fish
+S1738,G740 G760 G268 G233 G220,SI2,unknown,1,False,L-R,Phyt
+S1739,G740 G177 G231,SI2,unknown,1,False,L-R,Bult
+S1740,G400 G740 G335 G3,SI2,unknown,1,False,R-L,Bult
+S1741,G740 G390 G590 G235,SI2,unknown,1,False,L-R,unknown
+S1742,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1743,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1744,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1745,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1746,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1747,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1748,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1749,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:U
+S1750,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:U
+S1751,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1752,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1753,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S1754,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1755,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1756,G740 G407 G590 G690 G436 G255 G920 G318 G220 G415 G803,SI2,unknown,1,False,L-R,Gavi
+S1758,G400 G740 G840 G13,SI2,unknown,1,False,L-R,unknown
+S1759,G200 G705 G380,SI2,unknown,1,False,L-R,unknown
+S1762,G400 G740 G760 G605,SI2,unknown,1,False,R-L,Gavi
+S1763,G400 G740 G760 G605,SI2,unknown,1,False,R-L,Gavi
+S1764,G400 G740 G760 G605,SI2,unknown,1,False,R-L,Gavi
+S1765,G400 G740 G760 G605,SI2,unknown,1,False,R-L,Gavi
+S1769,G2 G817,SI2,unknown,1,False,L-R,unknown
+S1770,G400 G234,SI2,unknown,1,False,L-R,Bult
+S1771,G400 G226,SI2,unknown,1,False,L-R,Bult
+S1772,G0 G711 G335 G575 G413,SI2,unknown,1,False,L-R,unknown
+S1773,G400 G740 G590 G17 G0,SI2,unknown,1,False,L-R,unknown
+S1774,G400 G740 G336 G176,SI2,unknown,1,False,L-R,unknown
+S1775,G400 G740 G337,SI2,unknown,1,False,L-R,unknown
+S1776,G700 G125,SI2,unknown,1,False,L-R,unknown
+S1778,G868 G705 G590,SI2,unknown,1,False,L-R,unknown
+S1779,G868 G706 G590,SI2,unknown,1,False,L-R,unknown
+S1781,G400 G520 G231 G240,SI2,unknown,1,False,L-R,unknown
+S1782,G400 G740 G817 G491,SI2,unknown,1,False,L-R,unknown
+S1785,G740 G760 G240,SI2,unknown,1,False,L-R,unknown
+S1786,G740 G32 G840 G2,SI2,unknown,1,False,L-R,unknown
+S1787,G400 G740 G636 G240 G31 G32 G171,SI2,unknown,1,False,L-R,unknown
+S1788,G151 G229,SI2,unknown,1,False,L-R,unknown
+S1792,G2 G861 G416,SI2,unknown,1,False,L-R,unknown
+S1793,G400 G740 G760 G220 G416,SI2,unknown,1,False,L-R,unknown
+S1794,G415 G33 G0,SI2,unknown,1,False,L-R,unknown
+S1796,G400 G740 G32 G59,SI2,unknown,1,False,L-R,unknown
+S1797,G400 G740 G32 G27,SI2,unknown,1,False,L-R,unknown
+S1798,G400 G740 G32 G0,SI2,unknown,1,False,L-R,unknown
+S1799,G740 G636 G240,SI2,unknown,1,False,L-R,unknown
+S1801,G740 G255 G61,SI2,unknown,1,False,L-R,unknown
+S1802,G520 G31,SI2,unknown,1,False,L-R,unknown
+S1803,G520 G31,SI2,unknown,1,False,L-R,unknown
+S1804,G740 G840 G13,SI2,unknown,1,False,L-R,unknown
+S1805,G740 G840 G13,SI2,unknown,1,False,L-R,unknown
+S1806,G400 G740 G840 G0 G220,SI2,unknown,1,False,L-R,unknown
+S1807,G368 G900,SI2,unknown,1,False,L-R,unknown
+S1808,G368 G900,SI2,unknown,1,False,L-R,unknown
+S1809,G368 G900,SI2,unknown,1,False,L-R,unknown
+S1810,G740 G900 G4,SI2,unknown,1,False,L-R,unknown
+S1811,G0 G0 G0,SI2,unknown,1,False,L-R,unknown
+S1813,G400 G740 G176,SI2,unknown,1,False,R-L,unknown
+S1814,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1815,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1816,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1818,G520 G220 G415,SI2,unknown,1,False,L-R,unknown
+S1819,G520 G220 G415,SI2,unknown,1,False,R-L,unknown
+S1821,G520 G220 G415,SI2,unknown,1,False,L-R,unknown
+S1822,G520 G220 G16,SI2,unknown,1,False,R-L,unknown
+S1823,G400 G158 G592,SI2,unknown,1,False,L-R,unknown
+S1824,G400 G158 G592,SI2,unknown,1,False,L-R,unknown
+S1825,G400 G234,SI2,unknown,1,False,L-R,unknown
+S1826,G400 G234,SI2,unknown,1,False,L-R,unknown
+S1827,G400 G236,SI2,unknown,1,False,L-R,unknown
+S1828,G700 G33,SI2,unknown,1,False,L-R,unknown
+S1829,G151 G229,SI2,unknown,1,False,L-R,unknown
+S1830,G710 G0 G220 G32,SI2,unknown,1,False,L-R,unknown
+S1831,G700 G33,SI2,unknown,1,False,L-R,unknown
+S1832,G740 G564,SI2,unknown,1,False,L-R,unknown
+S1833,G0 G550 G556,SI2,unknown,1,False,L-R,unknown
+S1834,G90 G740 G235 G240,SI2,unknown,1,False,L-R,unknown
+S1836,G400 G740 G178,SI2,unknown,1,False,L-R,unknown
+S1837,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1838,G0 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1839,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1840,G740 G176,SI2,unknown,1,False,L-R,unknown
+S1842,G740 G690 G636 G240,SI2,unknown,1,False,L-R,unknown
+S1843,G740 G690 G636 G240,SI2,unknown,1,False,L-R,unknown
+S1844,G400 G740 G32 G28,SI2,unknown,1,False,L-R,unknown
+S1845,G526 G550 G233,SI2,unknown,1,False,R-L,unknown
+S1846,G740 G0 G0,SI2,unknown,1,False,L-R,unknown
+S1852,G740 G760 G382,SI2,unknown,1,False,L-R,unknown
+S1853,G400 G137,SI2,unknown,1,False,L-R,Fish
+S1855,G400 G740 G176,SI2,unknown,1,False,L-R,Bult
+S1856,G400 G740 G176,SI2,unknown,1,False,L-R,Bult
+S1858,G740 G388 G31,SI2,unknown,1,False,L-R,Bult
+S1859,G400 G740 G637 G240,SI2,unknown,1,False,L-R,Bult
+S1861,G156 G435 G255,SI2,unknown,1,False,L-R,unknown
+S1863,G400 G740 G176,SI2,unknown,1,False,L-R,unknown
+S1864,G400 G740 G636 G240 G31 G32 G171,SI2,unknown,1,False,L-R,Bult
+S1874,G740 G407 G590,SI23,unknown,1,False,L-R,unknown
+S1875,G740 G803 G233 G2 G817,SI24,unknown,1,False,L-R,Bull1:J
+S1876,G400 G740 G776 G495,SI25,unknown,1,False,L-R,unknown
+S1877,G31 G504 G632 G32,SI25,unknown,1,False,L-R,Bull1:W
+S1879,G36 G269 G140 G2 G741 G60 G920,SI25,unknown,1,False,L-R,Bull1:W
+S1880,G520 G233 G240 G803 G741 G125,SI25,unknown,1,False,L-R,Bull1:W
+S1882,G740 G100 G176 G838 G1 G220 G455 G530 G741,SI25,unknown,1,False,L-R,Bull1:W
+S1884,G70 G740 G220 G3 G900,SI25,unknown,1,False,L-R,Bull1:W
+S1885,G740 G690 G435 G255 G2 G368 G861 G590 G32 G368,SI25,unknown,1,False,L-R,Bull1:I
+S1886,G740 G717 G415 G836 G900,SI25,unknown,1,False,L-R,Bull1:S
+S1888,G740 G585 G17 G741 G630,SI25,unknown,1,False,L-R,Bull1:J
+S1890,G871 G947 G0 G400 G740 G543 G350 G895 G785 G220 G335,SI25,unknown,1,False,L-R,Bull1:II
+S1891,G90 G740 G240 G0 G60 G820,SI25,unknown,1,False,L-R,Bull1:X
+S1892,G740 G531,SI25,unknown,1,False,L-R,Bull1:I
+S1894,G405 G5,SI25,unknown,1,False,L-R,Bull1:W
+S1895,G151 G216,SI25,unknown,1,False,L-R,Bull1:J
+S1896,G866 G151 G33 G33,SI25,unknown,1,False,L-R,Bull1:I
+S1897,G740 G441 G2 G820 G33,SI25,unknown,1,False,L-R,Bull1:I
+S1898,G740 G760 G93 G2 G252 G575,SI25,unknown,1,False,L-R,Bull1
+S1899,G520 G231 G2 G220 G65 G132 G82,SI25,unknown,1,False,L-R,Bull1
+S1901,G2 G817,SI25,unknown,1,False,L-R,Bull2
+S1902,G440 G411 G740 G335 G2 G285 G491,SI25,unknown,1,False,L-R,Gaur
+S1906,G226 G2 G861,SI25,unknown,1,False,L-R,Buff
+S1907,G590 G390,SI25,unknown,1,False,L-R,Rhin
+S1908,G760 G31 G2 G861 G791 G440 G717,SI25,unknown,1,False,L-R,Elep
+S1912,G151 G17 G3,SI25,unknown,1,False,L-R,T-A-T
+S1913,G390 G4,SI25,unknown,1,False,R-L,Comp
+S1914,G250 G255,SI25,unknown,1,False,L-R,unknown
+S1919,G740 G165 G60 G550,SI25,unknown,1,False,R-L,Bull1:I
+S1920,G15 G13 G31 G892,SI25,unknown,1,False,L-R,unknown
+S1922,G740 G690,SI25,unknown,1,False,R-L,unknown
+S1923,G740 G176 G233 G803,SI25,unknown,1,False,L-R,unknown
+S1926,G700 G32,SI25,unknown,1,False,L-R,Bull1
+S1927,G892 G890 G417 G2 G56 G91,SI25,unknown,1,False,L-R,Bull1
+S1928,G892 G890 G417 G2 G56 G91,SI25,unknown,1,False,L-R,Bull1
+S1929,G892 G890 G417 G2 G56 G91,SI25,unknown,1,False,L-R,unknown
+S1930,G892 G890 G417 G2 G56 G91,SI25,unknown,1,False,L-R,Bull1
+S1931,G892 G890 G417 G2 G56 G91,SI25,unknown,1,False,L-R,Bull1
+S1932,G892 G890 G417 G2 G56 G91,SI25,unknown,1,False,L-R,Bull1
+S1933,G892 G890 G417 G2 G56 G91,SI25,unknown,1,False,L-R,Bull1
+S1935,G740 G817 G390 G2 G820,SI25,unknown,1,False,L-R,Gavi
+S1938,G390 G3 G2 G861,SI25,unknown,1,False,L-R,Bull1
+S1940,G520 G33 G2 G861,SI25,unknown,1,False,L-R,Elep
+S1945,G32,SI25,unknown,1,False,L-R,unknown
+S1951,G405 G3,SI25,unknown,1,False,L-R,unknown
+S1957,G740 G180,SI25,unknown,1,False,L-R,unknown
+S1964,G390 G832 G3,SI25,unknown,1,False,L-R,unknown
+S1967,G520 G231,SI25,unknown,1,False,L-R,Zebu
+S1968,G215 G1 G480 G306 G813 G33 G60 G413 G346 G706,SI26,unknown,1,False,L-R,unknown
+S1969,G740 G575 G17,SI26,unknown,1,False,L-R,unknown
+S1971,G740 G390 G590 G220 G3 G60 G840 G416,SI27,unknown,1,False,L-R,Bull1:L
+S1981,G740 G760 G615 G104 G717 G235 G2 G392 G590 G125,SI28,unknown,1,False,L-R,Bull1:S
+S1984,G527 G550 G233 G2 G812 G95,SI29,unknown,1,False,L-R,Bull1:W
+S1986,G90 G740 G100 G233 G2 G575 G31,SI29,unknown,1,False,L-R,Bull1
+S1988,G526 G555 G235,SI29,unknown,1,False,L-R,Bull1:W
+S1990,G590 G705 G435 G255 G778 G2 G817,SI29,unknown,1,False,L-R,Bull1:L
+S1994,G154 G4,SI29,unknown,1,False,L-R,Bull1:W
+S1996,G415 G31 G2 G820,SI29,unknown,1,False,L-R,Bull1:S
+S1998,G390 G4 G491,SI29,unknown,1,False,L-R,Bull1:J
+S1999,G156 G142 G60 G820,SI29,unknown,1,False,L-R,Bull1:S
+S2000,G740 G840 G13,SI29,unknown,1,False,L-R,Bull1:U
+S2001,G740 G482 G235,SI29,unknown,1,False,L-R,Bull1:W
+S2003,G740 G798 G240 G60 G111 G166,SI29,unknown,1,False,L-R,Bull1:W
+S2005,G740 G406 G590 G741 G60 G920,SI29,unknown,1,False,L-R,Bull1:S
+S2006,G390 G3 G480 G368 G861,SI29,unknown,1,False,L-R,Bull1:O
+S2008,G740 G176 G233,SI29,unknown,1,False,L-R,Bull1:J
+S2009,G422 G3 G1 G60 G65 G405 G720,SI29,unknown,1,False,L-R,Bull1
+S2010,G104 G892 G390 G406,SI29,unknown,1,False,L-R,Bull1
+S2011,G151 G100 G220,SI29,unknown,1,False,L-R,Bull1:V
+S2012,G520 G315 G2 G861 G626,SI29,unknown,1,False,L-R,Bull1
+S2013,G90 G740 G233 G2 G817,SI29,unknown,1,False,L-R,Bull
+S2014,G156 G3,SI29,unknown,1,False,L-R,Bull1:S
+S2015,G151 G590 G390,SI29,unknown,1,False,L-R,Bull1:X
+S2016,G411 G440 G236 G220 G741 G634,SI29,unknown,1,False,L-R,Gaur
+S2017,G527 G388 G233 G740 G176 G2 G861 G392,SI29,unknown,1,False,L-R,Gaur
+S2018,G409 G190 G2 G798 G55,SI29,unknown,1,False,L-R,Bull1
+S2019,G865 G685 G0 G226 G32 G741 G390,SI29,unknown,1,False,L-R,Goat:2
+S2020,G527 G555 G231 G235,SI29,unknown,1,False,L-R,Misc
+S2021,G527 G550,SI29,unknown,1,False,R-L,unknown
+S2022,G740 G176 G233,SI29,unknown,1,False,L-R,unknown
+S2023,G740 G912,SI29,unknown,1,False,R-L,unknown
+S2025,G740 G550,SI29,unknown,1,False,L-R,unknown
+S2026,G740 G32 G840,SI29,unknown,1,False,L-R,unknown
+S2027,G740 G861 G140,SI29,unknown,1,False,R-L,unknown
+S2036,G806 G231 G2 G221,SI29,unknown,1,False,L-R,unknown
+S2037,G740 G806 G240 G2 G820,SI29,unknown,1,False,L-R,unknown
+S2041,G740 G32 G840 G233 G220 G32 G60 G825 G2,SI29,unknown,1,False,L-R,unknown
+S2042,G405 G5 G1 G63 G615 G262,SI29,unknown,1,False,L-R,unknown
+S2043,G527 G555 G235 G2 G861,SI29,unknown,1,False,L-R,unknown
+S2044,G423 G3 G60 G407 G140,SI29,unknown,1,False,L-R,unknown
+S2046,G520 G70 G255 G832 G2 G817,SI29,unknown,1,False,L-R,unknown
+S2051,G409 G15,SI29,unknown,1,False,L-R,unknown
+S2052,G520 G220 G415 G519,SI29,unknown,1,False,L-R,unknown
+S2053,G390 G700 G790 G32 G63,SI29,unknown,1,False,L-R,unknown
+S2054,G154 G5,SI29,unknown,1,False,L-R,unknown
+S2060,G740 G904 G240 G235,SI29,unknown,1,False,L-R,unknown
+S2061,G740 G760 G605 G2 G540 G590,SI29,unknown,1,False,L-R,unknown
+S2063,G740 G407 G590 G904 G220 G32 G803 G60 G920,SI29,unknown,1,False,L-R,unknown
+S2064,G575 G705 G56 G31,SI29,unknown,1,False,L-R,unknown
+S2066,G140 G32,SI29,unknown,1,False,R-L,unknown
+S2067,G527 G550 G740 G443 G60 G820,SI29,unknown,1,False,L-R,unknown
+S2068,G90 G740 G220 G55 G1 G741 G500 G705,SI29,unknown,1,False,L-R,unknown
+S2069,G90 G740 G220 G55 G1 G741 G500 G705,SI29,unknown,1,False,L-R,Bull1
+S2070,G90 G740 G220 G55 G1 G741 G500 G705,SI29,unknown,1,False,L-R,Bull1
+S2071,G90 G740 G220 G55 G1 G741 G500 G705,SI29,unknown,1,False,L-R,unknown
+S2072,G90 G740 G220 G55 G1 G741 G500 G705,SI29,unknown,1,False,L-R,unknown
+S2073,G236 G2 G861,SI29,unknown,1,False,L-R,Bull1
+S2074,G236 G2 G861,SI29,unknown,1,False,L-R,unknown
+S2077,G520 G233 G220 G240 G2 G617,SI29,unknown,1,False,L-R,unknown
+S2084,G140 G15 G1 G31 G692,SI29,unknown,1,False,L-R,Bull1
+S2085,G740 G388 G220 G4 G60 G920,SI29,unknown,1,False,L-R,Bull1
+S2087,G390 G415 G2 G550,SI29,unknown,1,False,L-R,Bull1
+S2088,G520 G33 G705,SI29,unknown,1,False,L-R,Bull1
+S2093,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2094,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2095,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2096,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2097,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2098,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2099,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2100,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2101,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2102,G740 G48 G2 G817,SI29,unknown,1,False,L-R,Elep
+S2112,G880,SI29,unknown,1,False,L-R,unknown
+S2117,G0 G0 G32 G0,SI29,unknown,1,False,L-R,unknown
+S2125,G90 G740 G220 G55 G1 G741 G500 G705,SI29,unknown,1,False,L-R,unknown
+S2126,G740 G482 G2 G820,SI29,unknown,1,False,L-R,Bull1
+S2134,G317 G590 G111,SI29,unknown,1,False,L-R,Bull1
+S2135,G233 G226 G32 G60 G220 G575,SI29,unknown,1,False,L-R,Bull1
+S2136,G100 G31 G2 G861,SI29,unknown,1,False,L-R,CompBull
+S2149,G156 G31 G240,SI29,unknown,1,False,R-L,unknown
+S2153,G831 G413 G840 G91,SI30,unknown,1,False,L-R,Gaur
+S2155,G740 G5,SI1,unknown,1,False,R-L,unknown
+S2158,G741 G32 G0 G31 G46,SI1,unknown,1,False,L-R,unknown
+S2159,G35 G171,SI1,unknown,1,False,L-R,unknown
+S2161,G742 G406 G0 G740 G482 G235 G1 G480,SI1,unknown,1,False,L-R,unknown
+S2162,G740 G142 G480,SI1,unknown,1,False,L-R,unknown
+S2176,G679 G740 G575 G17 G798,SI1,unknown,1,False,R-L,unknown
+S2177,G390 G4,SI1,unknown,1,False,L-R,Bull1:W
+S2178,G520 G33 G705 G220 G415 G2 G861,SI1,unknown,1,False,L-R,Bull1:II
+S2179,G151 G176 G2 G861,SI1,unknown,1,False,L-R,Gaur
+S2180,G740 G840 G416 G240 G741 G500 G91,SI3,unknown,1,False,L-R,Bull1:V
+S2181,G527 G550 G235,SI1,unknown,1,False,L-R,Bull1
+S2182,G740 G760 G240 G0 G740 G952 G740,SI1,unknown,1,False,L-R,Bull1:J
+S2183,G527 G388,SI1,unknown,1,False,L-R,Bull1
+S2184,G400 G703 G617,SI1,unknown,1,False,L-R,Bull1:W
+S2185,G565 G740 G235,SI1,unknown,1,False,L-R,Bull1:J
+S2188,G506 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S2189,G407 G845 G233 G806,SI1,unknown,1,False,L-R,unknown
+S2191,G390 G3,SI1,unknown,1,False,L-R,Bull1
+S2192,G740 G440 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:S
+S2193,G740 G32 G845 G240 G2 G269 G892 G810 G33,SI1,unknown,1,False,L-R,Bull1:W
+S2194,G740 G798 G235,SI1,unknown,1,False,L-R,Bull1:U
+S2195,G220 G455 G125 G31,SI1,unknown,1,False,L-R,Bull1:W
+S2196,G679 G60 G550,SI1,unknown,1,False,L-R,Bull1:W
+S2197,G90 G740 G101 G908 G545,SI1,unknown,1,False,L-R,Bull1:S
+S2199,G161 G924 G146,SI1,unknown,1,False,L-R,Bull1:W
+S2200,G740 G831 G820 G705,SI1,unknown,1,False,L-R,unknown
+S2204,G617 G142 G2 G817,SI1,unknown,1,False,L-R,unknown
+S2205,G407 G3,SI1,unknown,1,False,L-R,unknown
+S2206,G153 G803 G595,SI1,unknown,1,False,L-R,Bull1:W
+S2209,G158 G32,SI1,unknown,1,False,R-L,unknown
+S2210,G400 G740 G760 G435 G690,SI1,unknown,1,False,L-R,unknown
+S2212,G817 G740 G194 G0 G740 G760 G1 G741 G390 G32,SI1,unknown,1,False,L-R,Bull1:I
+S2213,G368 G1 G550 G0 G740 G543 G350 G2 G820,SI1,unknown,1,False,L-R,Gaur
+S2215,G740 G821,SI1,unknown,1,False,L-R,Bull1:L
+S2218,G155 G806 G467 G1 G692,SI1,unknown,1,False,L-R,Bull1:W
+S2219,G740 G100 G176 G741 G617,SI1,unknown,1,False,L-R,Gaur
+S2220,G621 G390 G844 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2221,G368 G501 G706 G0 G821 G1 G480 G850 G595 G391,SI1,unknown,1,False,L-R,Zebu
+S2222,G401 G698,SI1,unknown,1,False,L-R,Bull1:L
+S2223,G154 G806 G468,SI1,unknown,1,False,L-R,unknown
+S2224,G740 G760 G70 G255 G832 G240 G2 G595 G504 G803,SI1,unknown,1,False,L-R,Bull1:S
+S2225,G740 G760 G440 G90 G853 G16,SI1,unknown,1,False,L-R,Tigr
+S2226,G390 G600 G617 G2 G190 G125 G632 G32,SI1,unknown,1,False,L-R,Bull1:L
+S2227,G740 G752 G1 G595 G204 G920,SI1,unknown,1,False,L-R,unknown
+S2228,G390 G3 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2229,G740 G760 G72 G921 G32 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2230,G64 G840 G140 G740 G176,SI1,unknown,1,False,L-R,Bull1:J
+S2231,G125 G435 G255 G2 G286 G220 G31 G12 G31 G455 G33 G590,SI1,unknown,1,False,L-R,Bull1:S
+S2232,G740 G604 G142 G2 G518,SI1,unknown,1,False,L-R,Tigr
+S2233,G400 G892 G81 G518 G1 G31 G250,SI1,unknown,1,False,L-R,Bull1:L
+S2234,G740 G900 G790 G220 G415 G798 G806,SI1,unknown,1,False,L-R,unknown
+S2235,G35 G171,SI1,unknown,1,False,L-R,Mult
+S2236,G520 G382 G32 G2 G820 G1 G440 G12,SI1,unknown,1,False,L-R,Bull1:W
+S2240,G90 G740 G222 G231 G2 G861 G683,SI1,unknown,1,False,L-R,Bull1:J
+S2241,G390 G844,SI1,unknown,1,False,L-R,Bull1:S
+S2242,G740 G191,SI1,unknown,1,False,L-R,Bull1:W
+S2243,G527 G555 G2 G817,SI1,unknown,1,False,L-R,Bull1:J
+S2244,G400 G390 G844,SI1,unknown,1,False,L-R,Bull1:S
+S2246,G740 G630,SI1,unknown,1,False,L-R,Crs
+S2248,G400 G804 G233,SI1,unknown,1,False,L-R,Bull1:L
+S2249,G740 G42 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:J
+S2250,G400 G130 G746,SI1,unknown,1,False,L-R,unknown
+S2251,G740 G760 G605 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2252,G617 G142,SI1,unknown,1,False,L-R,unknown
+S2253,G527 G550,SI1,unknown,1,False,L-R,Bull1:W
+S2254,G151 G240 G235 G741 G892,SI1,unknown,1,False,L-R,Bull1:J
+S2255,G215 G31 G480 G140 G632 G705 G2 G93 G33,SI1,unknown,1,False,L-R,Bull1:W
+S2256,G740 G760 G519 G240 G2 G861,SI1,unknown,1,False,L-R,Bull1:L
+S2259,G740 G176,SI1,unknown,1,False,L-R,Bull1:I
+S2261,G740 G42 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2262,G520 G233,SI1,unknown,1,False,L-R,Bull1:I
+S2263,G740 G176 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S2264,G161 G803,SI1,unknown,1,False,L-R,Bull1:W
+S2265,G520 G220 G240 G741 G440,SI1,unknown,1,False,L-R,Bull1:S
+S2266,G740 G798 G235,SI1,unknown,1,False,L-R,Bull1:W
+S2267,G32 G29,SI1,unknown,1,False,L-R,Bull1:U
+S2268,G621 G520 G220 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S2270,G740 G773 G233 G803 G2 G320 G705 G125,SI1,unknown,1,False,L-R,Bull1:S
+S2271,G405 G371 G31,SI1,unknown,1,False,L-R,Bull1:W
+S2272,G740 G760 G17 G503 G368 G817,SI1,unknown,1,False,L-R,Bull1:J
+S2273,G151 G97,SI1,unknown,1,False,L-R,Bull1:I
+S2275,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S2276,G740 G615 G495 G240 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2277,G740 G760 G440 G240 G220 G2 G861,SI1,unknown,1,False,R-L,unknown
+S2278,G64 G31 G400 G521 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2280,G427 G3 G1 G165 G309,SI1,unknown,1,False,L-R,Bull1:W
+S2282,G740 G636 G240 G66 G556,SI1,unknown,1,False,L-R,Gaur
+S2283,G90 G740 G100 G415 G240 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S2285,G740 G923 G240 G235 G60 G820,SI1,unknown,1,False,L-R,Bull1:S
+S2288,G400 G158 G3,SI1,unknown,1,False,L-R,Bull1:I
+S2290,G740 G760 G268 G2 G840 G32,SI1,unknown,1,False,L-R,Bull1:J
+S2291,G390 G844 G741 G31 G371,SI1,unknown,1,False,L-R,Gaur
+S2292,G740 G803 G220 G32 G220 G2 G820,SI1,unknown,1,False,L-R,Bull1:I
+S2293,G740 G455 G240 G235 G60 G820,SI1,unknown,1,False,L-R,Bull1:J
+S2294,G400 G527 G555 G233 G235,SI1,unknown,1,False,L-R,Tigr
+S2296,G740 G760 G49 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S2297,G740 G400 G142 G61 G2 G798 G435 G255 G705,SI1,unknown,1,False,L-R,Bull1:I
+S2299,G740 G585 G17 G2 G817,SI1,unknown,1,False,L-R,Bull1:I
+S2302,G592 G31,SI1,unknown,1,False,L-R,Zebu
+S2304,G820 G590,SI1,unknown,1,False,L-R,Bull1:J
+S2305,G156 G142,SI1,unknown,1,False,L-R,Bull1:S
+S2306,G740 G100 G415,SI1,unknown,1,False,L-R,Gaur
+S2307,G156 G3,SI1,unknown,1,False,L-R,Bull1:J
+S2308,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S2309,G740 G923 G806,SI1,unknown,1,False,L-R,Bull1:W
+S2310,G740 G100 G140 G3 G2 G156 G920,SI1,unknown,1,False,L-R,Bull1:J
+S2312,G520 G240 G741 G590 G575,SI1,unknown,1,False,L-R,Zebu
+S2313,G416 G1 G565 G740 G220 G32 G2 G856,SI1,unknown,1,False,L-R,Bull1:W
+S2314,G400 G740 G17 G503 G240,SI1,unknown,1,False,L-R,Gaur
+S2316,G740 G838 G741 G390 G900 G140,SI1,unknown,1,False,L-R,Bull1:I
+S2317,G617 G142 G746 G140,SI1,unknown,1,False,L-R,unknown
+S2318,G2 G861 G96,SI1,unknown,1,False,R-L,unknown
+S2319,G520 G175,SI1,unknown,1,False,L-R,Bull1:I
+S2320,G740 G615 G503,SI1,unknown,1,False,L-R,Bull1:I
+S2321,G645 G202 G1 G820,SI1,unknown,1,False,L-R,Bull1:S
+S2322,G740 G690 G60 G550,SI1,unknown,1,False,L-R,unknown
+S2323,G740 G176 G2 G861,SI1,unknown,1,False,L-R,Bull1:L
+S2324,G740 G585 G17,SI1,unknown,1,False,L-R,Bull1:L
+S2325,G156 G31,SI1,unknown,1,False,L-R,Bull1:S
+S2327,G740 G405 G590,SI1,unknown,1,False,L-R,unknown
+S2328,G151 G97,SI1,unknown,1,False,L-R,Bull1
+S2329,G31 G32 G171 G745,SI1,unknown,1,False,L-R,Bull1:W
+S2332,G565 G31 G416 G140 G220 G1,SI1,unknown,1,False,L-R,Bull1:S
+S2335,G791 G575 G413 G0 G740 G222 G176 G60 G920,SI1,unknown,1,False,L-R,Bull1:J
+S2336,G865 G32 G0 G226 G32 G700 G605,SI1,unknown,1,False,L-R,Bull1:S
+S2337,G151 G55 G240 G235,SI1,unknown,1,False,L-R,Gaur
+S2338,G390 G920 G322 G803 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2339,G504 G350 G240 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:S
+S2340,G892 G590,SI1,unknown,1,False,L-R,Bull1
+S2342,G520 G70 G219 G2 G861 G32 G520 G919 G140,SI1,unknown,1,False,L-R,Bull1:W
+S2343,G592 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:J
+S2344,G151 G390 G590 G741 G60 G920,SI1,unknown,1,False,L-R,Zebu
+S2345,G740 G798 G231 G60 G820,SI1,unknown,1,False,L-R,Bull1:J
+S2346,G617 G243 G31 G700 G861,SI1,unknown,1,False,L-R,Bull1:U
+S2347,G740 G388 G235,SI1,unknown,1,False,L-R,Bull1:II
+S2348,G740 G772 G240,SI1,unknown,1,False,L-R,unknown
+S2349,G226 G32 G60 G891,SI1,unknown,1,False,L-R,Bull1:L
+S2350,G924 G132 G2 G861,SI1,unknown,1,False,L-R,Zebu
+S2351,G407 G5,SI1,unknown,1,False,R-L,unknown
+S2352,G360 G268 G252 G326,SI1,unknown,1,False,L-R,unknown
+S2353,G390 G16,SI1,unknown,1,False,L-R,Bull1:S
+S2354,G740 G176 G390 G90 G390,SI1,unknown,1,False,L-R,Bull1:U
+S2355,G390 G920 G323,SI1,unknown,1,False,L-R,Bull1:I
+S2356,G400 G740 G176 G140,SI1,unknown,1,False,L-R,unknown
+S2359,G527 G555 G33 G706 G235 G2 G817,SI1,unknown,1,False,L-R,Bull1
+S2363,G740 G615 G703,SI1,unknown,1,False,L-R,Bull1:I
+S2364,G740 G927 G33 G817,SI1,unknown,1,False,L-R,Zebu
+S2365,G740 G100 G240 G31,SI1,unknown,1,False,L-R,unknown
+S2366,G740 G455 G2 G368 G260,SI1,unknown,1,False,L-R,Bull1:I
+S2367,G167 G705,SI1,unknown,1,False,L-R,unknown
+S2368,G821 G1 G480 G850 G595 G391,SI1,unknown,1,False,L-R,unknown
+S2372,G151 G61,SI1,unknown,1,False,L-R,Bull1:S
+S2373,G740 G337 G484 G31 G60 G891,SI1,unknown,1,False,L-R,Bull1:J
+S2375,G740 G32 G840 G2 G768,SI1,unknown,1,False,L-R,Bull1:S
+S2377,G740 G760 G1 G220 G415 G798 G803,SI1,unknown,1,False,L-R,Bull1:W
+S2378,G820 G297 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2380,G90 G740 G240 G235 G590 G645 G104,SI1,unknown,1,False,L-R,Cros
+S2381,G740 G904 G220 G32 G2 G142,SI1,unknown,1,False,L-R,Bull1:W
+S2382,G740 G690 G60 G550,SI1,unknown,1,False,L-R,unknown
+S2385,G740 G923 G33 G705 G60 G692,SI1,unknown,1,False,L-R,Bull1:J
+S2386,G390 G3 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2388,G740 G637 G240 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S2389,G520 G72 G233 G740 G798 G2 G861 G832,SI1,unknown,1,False,L-R,Bull1:W
+S2390,G298 G350 G761 G32 G60 G572,SI1,unknown,1,False,L-R,Bull1:I
+S2391,G151 G219,SI1,unknown,1,False,L-R,Bull1
+S2393,G368 G821 G55 G31 G2 G31 G892,SI1,unknown,1,False,L-R,Bull1:L
+S2394,G400 G740 G585 G838 G240,SI1,unknown,1,False,L-R,unknown
+S2398,G90 G740 G35 G171 G61 G31 G2 G69,SI1,unknown,1,False,L-R,Gaur
+S2401,G740 G717 G220 G415,SI1,unknown,1,False,L-R,Bull1:W
+S2402,G151 G61 G0 G156 G2 G252 G692,SI1,unknown,1,False,L-R,Zebu
+S2403,G520 G70 G220 G32 G240 G838 G741 G958 G220 G278,SI1,unknown,1,False,L-R,Bull1:W
+S2405,G790 G0 G400 G296 G350 G892 G632 G32,SI1,unknown,1,False,L-R,Bull1:W
+S2406,G740 G460 G503,SI1,unknown,1,False,L-R,unknown
+S2407,G156 G3 G877,SI1,unknown,1,False,L-R,Gaur
+S2408,G390 G3,SI1,unknown,1,False,L-R,Bull1
+S2409,G621 G390 G531 G2 G820,SI1,unknown,1,False,L-R,Rhin
+S2410,G740 G690 G435 G255 G240 G741 G906,SI1,unknown,1,False,L-R,Bull1:L
+S2411,G400 G740 G100 G140 G3,SI1,unknown,1,False,L-R,Bull1:S
+S2413,G740 G32 G840 G740 G455 G861,SI1,unknown,1,False,L-R,Bull1:J
+S2414,G520 G240 G31 G1 G740 G121,SI1,unknown,1,False,L-R,Rhin
+S2417,G161 G55 G240 G220 G32 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2418,G390 G4 G2 G817,SI1,unknown,1,False,L-R,Bull1:U
+S2420,G520 G220 G415 G240,SI1,unknown,1,False,L-R,Bull1:S
+S2422,G740 G407 G590 G31 G752 G33 G705 G220 G415 G798 G2 G861,SI1,unknown,1,False,L-R,unknown
+S2423,G241 G832 G740 G176,SI1,unknown,1,False,L-R,Bull1:II
+S2426,G520 G233,SI1,unknown,1,False,L-R,Bull1:I
+S2427,G740 G798 G220 G60 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2428,G226 G240 G235 G60 G692,SI1,unknown,1,False,L-R,Bull1:S
+S2429,G390 G4 G741 G617,SI1,unknown,1,False,L-R,Bull1:J
+S2431,G817 G900 G241 G368 G260,SI1,unknown,1,False,L-R,Bull1:W
+S2432,G527 G550 G798 G220,SI1,unknown,1,False,L-R,Mult
+S2434,G740 G639 G240,SI1,unknown,1,False,L-R,Bull1:W
+S2435,G740 G388 G2 G820,SI1,unknown,1,False,L-R,Bull1:X
+S2436,G740 G760 G335 G803,SI1,unknown,1,False,L-R,unknown
+S2437,G527 G555,SI1,unknown,1,False,L-R,Bull1:S
+S2439,G740 G83 G235 G240,SI1,unknown,1,False,L-R,Gaur
+S2440,G740 G61 G877,SI1,unknown,1,False,L-R,Bull1:W
+S2441,G520 G220 G3,SI1,unknown,1,False,L-R,Elep
+S2442,G740 G384 G741 G859,SI1,unknown,1,False,L-R,Bull1:J
+S2443,G154 G806 G474 G1 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2445,G405 G61 G33 G705 G236,SI1,unknown,1,False,L-R,unknown
+S2448,G740 G390 G590 G32 G60 G201,SI1,unknown,1,False,L-R,Bull1:S
+S2449,G900 G4,SI1,unknown,1,False,L-R,unknown
+S2450,G390 G4 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2451,G520 G400 G350 G31 G741 G762,SI1,unknown,1,False,L-R,Bull1:L
+S2452,G740 G840 G13,SI1,unknown,1,False,L-R,Elep
+S2453,G390 G4 G2 G817,SI1,unknown,1,False,L-R,Bull1
+S2454,G390 G4 G260,SI1,unknown,1,False,L-R,Bull1:I
+S2455,G165 G741 G31 G60 G692,SI1,unknown,1,False,L-R,Bull1:S
+S2457,G740 G760 G19 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S2458,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S2460,G740 G460 G510,SI1,unknown,1,False,L-R,Bull1
+S2461,G32 G820 G140 G5,SI1,unknown,1,False,L-R,Bull1:I
+S2462,G740 G49,SI1,unknown,1,False,L-R,Bull1:W
+S2463,G450 G617 G33 G0 G740 G460 G510 G741 G252 G791,SI1,unknown,1,False,L-R,Bull1:J
+S2464,G740 G100 G415 G176 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2465,G749 G479,SI1,unknown,1,False,L-R,unknown
+S2466,G740 G717,SI1,unknown,1,False,L-R,Bull1:W
+S2467,G400 G740 G840 G13 G240,SI1,unknown,1,False,L-R,unknown
+S2468,G400 G520 G233 G803,SI1,unknown,1,False,L-R,Bull1:W
+S2470,G740 G455 G235 G798 G742 G460 G353,SI1,unknown,1,False,L-R,unknown
+S2471,G740 G861 G125,SI1,unknown,1,False,L-R,Buff
+S2472,G390 G5,SI1,unknown,1,False,L-R,unknown
+S2473,G520 G33 G705 G233 G240 G2 G610 G125 G32,SI1,unknown,1,False,L-R,Bull1:W
+S2474,G400 G740 G840 G13 G240,SI1,unknown,1,False,L-R,unknown
+S2475,G740 G760 G260 G0 G220 G255 G220 G63 G315,SI1,unknown,1,False,L-R,Bull1:J
+S2476,G740 G803 G235,SI1,unknown,1,False,L-R,Bull1:S
+S2478,G520 G33 G705 G233 G235 G60 G820,SI1,unknown,1,False,L-R,Rhin
+S2479,G740 G840 G13,SI1,unknown,1,False,L-R,Bull1:U
+S2480,G100 G904 G717 G220 G415 G806 G742,SI1,unknown,1,False,L-R,unknown
+S2481,G407 G63 G845 G240 G798,SI1,unknown,1,False,L-R,Unknown
+S2482,G390 G5 G2 G455 G511,SI1,unknown,1,False,L-R,Rhin
+S2484,G679 G740 G233 G240,SI1,unknown,1,False,L-R,Bull1:W
+S2485,G520 G220 G368 G817,SI1,unknown,1,False,L-R,Bull1:S
+S2486,G740 G32 G840 G33 G705 G798,SI1,unknown,1,False,L-R,Bull1:W
+S2487,G740 G255,SI1,unknown,1,False,L-R,Bull1
+S2488,G1 G740 G923 G33 G705,SI1,unknown,1,False,L-R,Comp
+S2489,G740 G390 G590 G2 G817,SI3,unknown,1,False,L-R,Bull1:V
+S2490,G740 G690 G435 G255 G220 G32 G2 G717 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2493,G740 G100 G1 G440 G742 G60 G920,SI1,unknown,1,False,L-R,Bull1:W
+S2495,G740 G645 G3 G741 G70 G255,SI1,unknown,1,False,L-R,Bull1:I
+S2498,G740 G760,SI1,unknown,1,False,L-R,Rhin
+S2499,G740 G17 G503,SI1,unknown,1,False,L-R,Bull1:U
+S2506,G520 G220 G240 G803 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2507,G740 G460 G510 G220 G65 G393,SI1,unknown,1,False,L-R,Bull1:S
+S2509,G390 G15 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S2511,G740 G32 G840,SI1,unknown,1,False,L-R,Scene
+S2512,G520 G72 G921,SI1,unknown,1,False,L-R,Bull1:W
+S2513,G520 G220 G803 G741 G262,SI1,unknown,1,False,L-R,Bull1:U
+S2514,G740 G803,SI1,unknown,1,False,L-R,Bull1:W
+S2516,G520 G220 G3 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:W
+S2517,G400 G125 G745,SI1,unknown,1,False,L-R,Bull1:W
+S2520,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S2521,G906 G200 G0 G740 G100 G415 G33 G702,SI1,unknown,1,False,L-R,Bull1:L
+S2522,G740 G615 G503,SI1,unknown,1,False,L-R,Rhin
+S2523,G407 G585 G33 G705 G233 G235 G806,SI1,unknown,1,False,L-R,Comp
+S2524,G151 G97 G232 G416,SI1,unknown,1,False,L-R,Bull1:W
+S2525,G740 G752,SI1,unknown,1,False,L-R,unknown
+S2527,G151 G97 G700 G34,SI1,unknown,1,False,L-R,unknown
+S2528,G406 G72 G2 G817,SI1,unknown,1,False,L-R,unknown
+S2530,G527 G556,SI1,unknown,1,False,L-R,unknown
+S2531,G1 G368 G861 G255 G371,SI1,unknown,1,False,L-R,Bull1:W
+S2532,G717 G32 G521,SI1,unknown,1,False,L-R,Bull1:W
+S2533,G298 G465 G33 G705 G231 G2 G564 G617 G33,SI1,unknown,1,False,L-R,Bull1:W
+S2534,G740 G773 G240 G235 G60 G692,SI1,unknown,1,False,L-R,Bull1:W
+S2535,G820 G880 G65 G244,SI1,unknown,1,False,L-R,Bull1:W
+S2536,G407 G845 G140 G740 G101 G923 G240 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2537,G706 G140 G632,SI1,unknown,1,False,L-R,Bull1:W
+S2538,G31 G311 G745,SI1,unknown,1,False,L-R,Bull1:W
+S2539,G405 G61 G70 G32 G33 G706 G235 G806 G2 G267 G455,SI1,unknown,1,False,L-R,Bull1:W
+S2540,G740 G390 G590 G233 G2 G368 G202 G892 G371,SI1,unknown,1,False,L-R,Bull1:W
+S2541,G368 G304 G125,SI1,unknown,1,False,L-R,Bull1:W
+S2542,G740 G776 G503 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S2543,G90 G740 G176 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2544,G820 G130 G35 G171,SI1,unknown,1,False,L-R,Bull1:W
+S2545,G390 G16 G2 G814 G560,SI1,unknown,1,False,L-R,Bull1:W
+S2546,G932 G740 G55,SI1,unknown,1,False,L-R,Bull1:W
+S2548,G390 G5 G2 G861 G36 G460 G513,SI1,unknown,1,False,L-R,Bull1:W
+S2549,G350 G1 G740 G362 G692 G32 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2551,G842 G871 G192 G368 G0 G740 G482 G60 G692 G520 G220 G235 G1 G920,SI1,unknown,1,False,L-R,Bull1:W
+S2552,G90 G740 G240 G235 G2 G906 G140,SI1,unknown,1,False,L-R,Bull1:W
+S2553,G617 G243 G706 G595,SI1,unknown,1,False,L-R,Bull1:J
+S2554,G90 G740 G531 G60 G692,SI1,unknown,1,False,L-R,Bull1:J
+S2556,G892 G374 G740 G760 G840 G416 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2557,G740 G55 G240 G235 G806 G2 G220 G455 G503,SI1,unknown,1,False,L-R,Bull1:W
+S2558,G740 G752 G17 G503 G240 G235 G806,SI1,unknown,1,False,L-R,Bull1:W
+S2559,G740 G269 G511 G233 G60 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2560,G390 G3 G2 G817,SI1,unknown,1,False,L-R,Bull1:J
+S2561,G740 G32 G923 G382 G233 G2 G112,SI1,unknown,1,False,L-R,Bull1:W
+S2562,G740 G336 G176 G2 G405 G372 G374,SI1,unknown,1,False,L-R,Bull1:W
+S2563,G740 G390 G590 G233 G231 G2 G107,SI1,unknown,1,False,L-R,Bull1:W
+S2564,G740 G794 G630 G220 G32 G2 G368 G906 G329,SI1,unknown,1,False,L-R,Bull1:S
+S2565,G520 G220 G415,SI1,unknown,1,False,L-R,Bull1:S
+S2566,G740 G690 G435 G255 G220 G32 G240 G235 G2 G390 G125 G632 G32,SI1,unknown,1,False,L-R,Bull1:J
+S2568,G391 G2 G527 G475 G5,SI1,unknown,1,False,L-R,Bull1:J
+S2569,G740 G636 G240 G233 G235 G2 G405 G125 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2570,G527 G550 G240 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S2571,G740 G798 G231 G2 G55 G373,SI1,unknown,1,False,L-R,Bull1:W
+S2572,G740 G760 G33 G705 G803 G2 G920 G317,SI1,unknown,1,False,L-R,Bull1:W
+S2573,G617 G831 G2 G1 G302 G840 G32,SI1,unknown,1,False,L-R,Bull1:W
+S2574,G740 G798 G240 G235 G2 G220 G65 G215,SI1,unknown,1,False,L-R,Bull1:W
+S2575,G740 G760 G235 G2 G861,SI1,unknown,1,False,L-R,Bull1:J
+S2576,G390 G820 G460 G60 G368 G920,SI1,unknown,1,False,L-R,Bull1:J
+S2577,G527 G550 G240 G220 G32 G2 G300 G350 G600 G190,SI1,unknown,1,False,L-R,Bull1:W
+S2578,G740 G585 G17 G33 G705 G240 G798 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2579,G740 G798 G460 G350 G235 G741 G390 G140,SI1,unknown,1,False,L-R,Bull1:J
+S2580,G740 G904 G32 G220 G415 G235 G803 G2 G504 G717,SI1,unknown,1,False,L-R,Bull1:W
+S2581,G90 G740 G220 G16 G2 G297 G190 G900 G140,SI1,unknown,1,False,L-R,Bull1:W
+S2582,G236 G240 G33 G705 G798 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2584,G740 G877 G32 G235 G60 G550 G611 G840,SI1,unknown,1,False,L-R,Bull1:W
+S2585,G226 G32 G231 G798 G2 G693,SI1,unknown,1,False,L-R,Bull1:W
+S2586,G740 G460 G503 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S2587,G368 G3 G742 G60 G920,SI1,unknown,1,False,L-R,Bull1:W
+S2591,G526 G555 G60 G550,SI1,unknown,1,False,L-R,Bull1:J
+S2592,G520 G33 G706 G60 G220 G4,SI1,unknown,1,False,L-R,Bull1:W
+S2593,G520 G220 G31 G1 G706 G575,SI1,unknown,1,False,L-R,Bull1:W
+S2595,G457 G0 G740 G165 G900 G60 G111 G575,SI1,unknown,1,False,L-R,Bull1:W
+S2596,G690 G518 G0 G90 G740 G176 G742 G60 G920,SI1,unknown,1,False,L-R,Bull1:J
+S2597,G740 G803 G231 G60 G692,SI1,unknown,1,False,L-R,Bull1:I
+S2598,G226 G32 G2 G390 G692,SI1,unknown,1,False,L-R,Bull1:T
+S2599,G151 G279 G142 G2 G390 G95,SI1,unknown,1,False,L-R,Bull1:J
+S2600,G740 G255 G705 G140 G3 G2 G861,SI1,unknown,1,False,L-R,Bull1:V
+S2601,G400 G520 G897,SI1,unknown,1,False,L-R,Bull1:W
+S2602,G595 G575 G704 G140,SI1,unknown,1,False,L-R,Bull1:U
+S2603,G520 G220 G4 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S2604,G832 G390 G803 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2605,G740 G344 G32 G545,SI1,unknown,1,False,L-R,Bull1:S
+S2606,G688 G0 G740 G100 G240 G233 G2 G861,SI1,unknown,1,False,L-R,Bull1:J
+S2607,G156 G3 G60 G368 G817,SI1,unknown,1,False,L-R,Bull1:J
+S2608,G527 G555 G240 G2 G617 G70,SI1,unknown,1,False,L-R,Bull1:S
+S2609,G740 G222 G2 G207 G550 G390,SI1,unknown,1,False,L-R,Bull1:I
+S2610,G390 G18 G796,SI1,unknown,1,False,L-R,Bull1:W
+S2611,G740 G765 G240 G1 G368 G920,SI1,unknown,1,False,L-R,Bull1:W
+S2612,G520 G233 G741 G81 G272,SI1,unknown,1,False,L-R,Bull1:W
+S2613,G520 G33 G705 G231 G2 G820 G700,SI1,unknown,1,False,L-R,Bull1:S
+S2614,G400 G890 G104,SI1,unknown,1,False,L-R,Bull1:S
+S2615,G527 G388 G233,SI1,unknown,1,False,L-R,Bull1:J
+S2616,G740 G794 G734 G32 G235,SI1,unknown,1,False,L-R,Bull1:J
+S2617,G740 G840 G13 G31 G2 G817,SI1,unknown,1,False,L-R,Bull1:J
+S2618,G740 G100 G798 G220 G32 G2 G861 G255 G416,SI1,unknown,1,False,L-R,Bull1:S
+S2619,G740 G798 G460 G350 G2 G814 G84,SI1,unknown,1,False,L-R,Bull1:S
+S2620,G156 G3 G240 G741 G345,SI1,unknown,1,False,L-R,Bull1:J
+S2621,G740 G390 G590 G220 G3,SI1,unknown,1,False,L-R,Bull1:S
+S2622,G390 G3 G2 G111 G165,SI1,unknown,1,False,L-R,Bull1:S
+S2623,G156 G4,SI1,unknown,1,False,L-R,Bull1:J
+S2624,G156 G435 G255,SI1,unknown,1,False,L-R,Bull1:J
+S2625,G740 G585 G17 G900,SI1,unknown,1,False,L-R,Bull1:J
+S2626,G740 G215 G2 G368 G119,SI1,unknown,1,False,L-R,Bull1:S
+S2627,G90 G740 G255 G705 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S2628,G390 G503 G740 G168 G2 G817,SI1,unknown,1,False,L-R,Bull1:J
+S2629,G154 G3 G900 G545,SI1,unknown,1,False,L-R,Bull1:J
+S2630,G390 G4 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S2631,G90 G740 G220 G235 G853,SI1,unknown,1,False,L-R,Bull1:J
+S2634,G740 G565 G233 G2 G940 G260,SI1,unknown,1,False,L-R,Bull1:S
+S2635,G413 G820 G220 G65 G798 G550 G820,SI1,unknown,1,False,L-R,Bull1:S
+S2636,G740 G879 G220 G415 G2 G287 G140,SI1,unknown,1,False,L-R,Bull1:S
+S2638,G740 G920 G320 G233 G1 G821,SI1,unknown,1,False,L-R,Bull1:J
+S2639,G740 G760 G220 G16 G382 G741 G572 G684,SI1,unknown,1,False,L-R,Bull1:J
+S2640,G740 G32 G840 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:J
+S2641,G740 G760 G440 G2 G297 G416,SI1,unknown,1,False,L-R,Bull1:S
+S2642,G390 G844 G140 G176 G803 G2 G301 G190,SI1,unknown,1,False,L-R,Bull1
+S2643,G740 G100 G176 G840 G13 G2 G817,SI1,unknown,1,False,L-R,Bull1:I
+S2644,G520 G33 G705 G220 G803 G55 G2 G820,SI1,unknown,1,False,L-R,Bull1:S
+S2645,G740 G772 G33 G705 G233 G803 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2646,G151 G337 G484 G2 G390 G125 G632 G32 G900 G563,SI1,unknown,1,False,L-R,Bull1:S
+S2647,G858 G0 G740 G100 G585 G741 G840 G346,SI1,unknown,1,False,L-R,Bull1:S
+S2648,G740 G900 G790 G233 G798,SI1,unknown,1,False,L-R,Bull1:W
+S2649,G520 G33 G705,SI1,unknown,1,False,L-R,Bull1:J
+S2650,G400 G93 G368 G72,SI1,unknown,1,False,L-R,Bull1:W
+S2651,G740 G923 G220 G32,SI1,unknown,1,False,L-R,Bull1:W
+S2653,G520 G552 G60 G692,SI1,unknown,1,False,L-R,Bull1:U
+S2654,G565 G740 G220 G741 G176,SI1,unknown,1,False,L-R,Bull1:J
+S2655,G740 G923 G803 G741 G500 G705,SI1,unknown,1,False,L-R,Bull1:J
+S2656,G520 G233 G240 G235 G741 G360,SI1,unknown,1,False,L-R,Bull1:W
+S2657,G740 G94 G220 G32 G2 G144,SI1,unknown,1,False,L-R,Bull1:J
+S2658,G740 G390 G590 G741 G390 G790,SI1,unknown,1,False,L-R,Bull1:W
+S2659,G156 G3 G545,SI1,unknown,1,False,L-R,Bull1:W
+S2660,G527 G550 G240 G220 G255 G812 G906 G388,SI1,unknown,1,False,L-R,Bull1:W
+S2661,G872 G32 G692,SI1,unknown,1,False,L-R,Bull1:W
+S2662,G520 G33 G705 G31,SI1,unknown,1,False,L-R,Bull1:J
+S2663,G90 G740 G220 G16 G31 G908 G545,SI1,unknown,1,False,L-R,Bull1:S
+S2665,G740 G900 G5,SI1,unknown,1,False,L-R,Bull1:J
+S2666,G33 G832 G236 G741 G361,SI1,unknown,1,False,L-R,Bull1:J
+S2667,G740 G336 G2 G220 G65 G440 G455,SI1,unknown,1,False,L-R,Bull1:S
+S2669,G136 G140 G2 G861,SI1,unknown,1,False,L-R,Bull1:J
+S2670,G740 G205 G32 G2 G252 G840,SI1,unknown,1,False,L-R,Bull1:J
+S2671,G740 G100 G415 G240 G2 G817,SI1,unknown,1,False,L-R,Bull1:J
+S2672,G740 G400 G142 G880,SI1,unknown,1,False,L-R,Bull1:U
+S2673,G740 G255 G920 G60 G692,SI1,unknown,1,False,L-R,Bull1:J
+S2674,G226 G803 G2 G220 G455 G520,SI1,unknown,1,False,L-R,Bull1:J
+S2675,G740 G817 G556,SI1,unknown,1,False,L-R,Bull1:J
+S2676,G740 G760 G440 G60 G550,SI1,unknown,1,False,L-R,Bull1:J
+S2677,G740 G832,SI1,unknown,1,False,L-R,Bull1:J
+S2678,G220 G65 G864,SI1,unknown,1,False,L-R,Bull1:J
+S2679,G740 G772 G2 G861,SI1,unknown,1,False,L-R,Bull1:J
+S2680,G269 G130 G190,SI1,unknown,1,False,L-R,Bull1:J
+S2681,G621 G0 G520 G220 G415 G2 G257 G898,SI1,unknown,1,False,L-R,Bull1:J
+S2682,G740 G176 G31,SI1,unknown,1,False,L-R,Bull1:J
+S2683,G740 G900 G790 G233 G798 G1 G820,SI1,unknown,1,False,L-R,Bull1:J
+S2684,G390 G16 G60 G550,SI1,unknown,1,False,L-R,Bull1:I
+S2685,G740 G48 G741 G250 G579,SI1,unknown,1,False,L-R,Bull1:S
+S2686,G151 G243 G31 G2 G820 G741,SI1,unknown,1,False,L-R,Bull1:W
+S2687,G617 G122 G3,SI1,unknown,1,False,L-R,Bull1:V
+S2688,G740 G760 G840 G552 G3,SI1,unknown,1,False,L-R,Bull1:X
+S2689,G520 G220 G415 G60 G820,SI1,unknown,1,False,L-R,Bull1:J
+S2690,G740 G142 G61 G2 G817,SI1,unknown,1,False,L-R,Bull1:X
+S2691,G390 G844 G240 G806 G2 G861,SI1,unknown,1,False,L-R,Bull1:I
+S2695,G740 G923 G406 G61 G70 G32 G741 G861,SI1,unknown,1,False,L-R,Bull1:W
+S2696,G407 G61 G740 G923 G233 G806 G60 G692,SI1,unknown,1,False,L-R,Bull1:W
+S2697,G405 G18 G1 G220 G786 G850,SI1,unknown,1,False,L-R,Bull1:W
+S2698,G740 G388 G900 G320 G806,SI1,unknown,1,False,L-R,Bull1:W
+S2699,G740 G923 G220 G32 G2 G820,SI1,unknown,1,False,L-R,Bull1:T
+S2701,G740 G690,SI1,unknown,1,False,L-R,Bull1:J
+S2702,G390 G3 G2 G803,SI1,unknown,1,False,L-R,Bull1:S
+S2704,G390 G16,SI1,unknown,1,False,L-R,Bull1:L
+S2705,G390 G3,SI1,unknown,1,False,L-R,Bull1:S
+S2706,G740 G621,SI1,unknown,1,False,L-R,Bull1:J
+S2707,G520 G175 G2 G295 G502,SI1,unknown,1,False,L-R,Bull1:J
+S2708,G520 G233 G60 G297,SI1,unknown,1,False,L-R,Bull1:S
+S2709,G90 G740 G101 G853,SI1,unknown,1,False,L-R,Bull1:J
+S2710,G520 G220,SI1,unknown,1,False,L-R,Bull1:L
+S2711,G520 G240,SI1,unknown,1,False,L-R,Bull1:J
+S2712,G156 G5,SI1,unknown,1,False,L-R,Bull1:S
+S2713,G156 G31,SI1,unknown,1,False,L-R,Bull1:S
+S2714,G436 G740 G176,SI1,unknown,1,False,L-R,Bull1:J
+S2715,G156 G843,SI1,unknown,1,False,L-R,Bull1:W
+S2716,G90 G125,SI1,unknown,1,False,L-R,Bull1:L
+S2717,G700 G521 G702,SI1,unknown,1,False,L-R,Bull1:S
+S2718,G156 G5,SI1,unknown,1,False,L-R,Bull1:W
+S2719,G90 G740 G900 G5,SI1,unknown,1,False,L-R,Bull1:S
+S2720,G298 G350 G590 G32 G900 G853,SI1,unknown,1,False,L-R,Bull1:W
+S2721,G861 G495 G368 G836 G741,SI1,unknown,1,False,L-R,Bull1:U
+S2722,G161 G97,SI1,unknown,1,False,L-R,Bull1:L
+S2723,G740 G760 G840 G552 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S2724,G90 G740 G100 G415 G240 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S2725,G740 G222 G2 G820,SI1,unknown,1,False,L-R,Bull1:J
+S2726,G151 G61,SI1,unknown,1,False,L-R,Bull1:W
+S2727,G400 G241 G31 G60 G820,SI1,unknown,1,False,L-R,Bull1:U
+S2728,G740 G390 G590 G741 G81 G220,SI1,unknown,1,False,L-R,Bull1:J
+S2729,G740 G61 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S2730,G832 G904 G1 G820,SI1,unknown,1,False,L-R,Bull1:L
+S2731,G892 G831,SI1,unknown,1,False,L-R,Bull1:J
+S2732,G520 G240,SI1,unknown,1,False,L-R,Bull1:J
+S2733,G151 G740 G231,SI1,unknown,1,False,L-R,Bull1:J
+S2734,G368 G861 G903,SI1,unknown,1,False,L-R,Bull1:J
+S2735,G90 G740 G100 G220 G2 G31 G165,SI1,unknown,1,False,L-R,Bull1:S
+S2736,G413 G33 G0 G740 G388,SI1,unknown,1,False,L-R,Bull1:S
+S2737,G740 G384 G2 G390 G346,SI1,unknown,1,False,L-R,Bull1:J
+S2738,G400 G267 G820,SI1,unknown,1,False,L-R,Bull1:I
+S2739,G151 G33,SI1,unknown,1,False,L-R,Bull1:I
+S2740,G151 G717,SI1,unknown,1,False,L-R,Bull1:U
+S2741,G740 G877 G32 G233,SI1,unknown,1,False,L-R,Bull1
+S2742,G400 G220 G428,SI1,unknown,1,False,L-R,Bull1:J
+S2743,G527 G456,SI1,unknown,1,False,L-R,Bull1:S
+S2745,G740 G760 G335 G220 G32 G2 G820,SI1,unknown,1,False,L-R,Bull1:I
+S2746,G244 G277 G255,SI1,unknown,1,False,L-R,Bull1:S
+S2747,G740 G705,SI1,unknown,1,False,R-L,Bull1:S
+S2748,G405 G5,SI1,unknown,1,False,L-R,Bull1:W
+S2749,G241 G2 G880,SI1,unknown,1,False,L-R,Bull1:S
+S2750,G740 G368 G278 G61,SI1,unknown,1,False,L-R,Bull1:S
+S2752,G740 G636 G240,SI1,unknown,1,False,L-R,Bull1:J
+S2753,G156 G31,SI1,unknown,1,False,L-R,Bull1:J
+S2754,G90 G740 G176 G233,SI1,unknown,1,False,L-R,Bull1:I
+S2755,G400 G740 G100 G415,SI1,unknown,1,False,L-R,Bull1:I
+S2756,G236 G2 G390 G707,SI1,unknown,1,False,L-R,Bull2
+S2757,G842 G535 G99 G4 G0 G740 G483 G60 G692 G520 G220 G235 G1 G920,SI1,unknown,1,False,L-R,Gaur
+S2759,G520 G33 G706 G240 G233 G803,SI1,unknown,1,False,L-R,Gaur
+S2761,G740 G803 G233,SI1,unknown,1,False,L-R,Gaur
+S2762,G740 G760 G921 G235 G2 G112,SI1,unknown,1,False,L-R,Gaur
+S2763,G520 G240 G220 G32 G2 G861 G603,SI1,unknown,1,False,L-R,Gaur
+S2764,G90 G740 G32 G840 G741 G572 G683,SI1,unknown,1,False,L-R,Gaur
+S2765,G740 G721 G2 G301 G350,SI1,unknown,1,False,L-R,Gaur
+S2766,G892 G590 G894 G140 G545,SI1,unknown,1,False,L-R,Gaur
+S2768,G740 G760 G70 G921 G460 G503 G2 G817,SI1,unknown,1,False,L-R,Gaur
+S2769,G740 G503 G235 G233 G2 G817,SI1,unknown,1,False,L-R,Gaur
+S2770,G390 G17 G741 G60 G920,SI1,unknown,1,False,L-R,Gaur
+S2771,G740 G100 G415 G2 G705 G590,SI1,unknown,1,False,L-R,Gaur
+S2772,G140 G165 G740 G176 G220 G803,SI1,unknown,1,False,L-R,Gaur
+S2773,G804 G233 G231,SI1,unknown,1,False,L-R,Gaur
+S2774,G390 G3 G2 G125 G350,SI1,unknown,1,False,L-R,Gaur
+S2775,G400 G150 G617 G55 G1 G150 G243,SI1,unknown,1,False,L-R,Gaur
+S2776,G527 G550 G803 G2 G368 G518,SI1,unknown,1,False,L-R,Gaur
+S2777,G435 G255 G390 G5,SI1,unknown,1,False,L-R,Gaur
+S2778,G740 G879 G233,SI1,unknown,1,False,L-R,Gaur
+S2779,G930 G0 G804 G220 G60 G550,SI1,unknown,1,False,L-R,Zebu
+S2780,G600 G740 G60 G920,SI1,unknown,1,False,L-R,Zebu
+S2781,G384 G575 G0 G892 G706 G717 G2 G861,SI1,unknown,1,False,L-R,Zebu
+S2782,G520 G231 G2 G817,SI1,unknown,1,False,L-R,Zebu
+S2783,G90 G740 G220 G14 G2 G820,SI1,unknown,1,False,L-R,Zebu
+S2784,G740 G61 G1 G694,SI1,unknown,1,False,L-R,Zebu
+S2786,G90 G740 G400 G350 G31 G545,SI1,unknown,1,False,L-R,Zebu
+S2787,G740 G519,SI1,unknown,1,False,L-R,Zebu
+S2788,G90 G740 G35 G171 G61,SI1,unknown,1,False,L-R,Zebu
+S2789,G565 G740 G798 G235 G233 G1 G2 G269 G632,SI1,unknown,1,False,L-R,Buff
+S2790,G740 G630 G155 G2 G679,SI1,unknown,1,False,L-R,Buff
+S2791,G215 G1 G480 G90 G820,SI1,unknown,1,False,L-R,Buff
+S2792,G740 G615 G495,SI1,unknown,1,False,L-R,Buff
+S2793,G2 G818,SI1,unknown,1,False,L-R,Goat:6
+S2795,G740 G760 G264 G231 G742 G315 G32,SI1,unknown,1,False,L-R,Rhin
+S2796,G90 G740 G760 G717 G853,SI1,unknown,1,False,L-R,Rhin
+S2797,G520 G33 G705 G176,SI1,unknown,1,False,L-R,Rhin
+S2799,G621 G390 G4 G2 G817,SI1,unknown,1,False,L-R,Elep
+S2801,G740 G482 G240 G2 G944 G920 G140,SI1,unknown,1,False,L-R,Elep
+S2802,G740 G460 G510 G250 G853,SI1,unknown,1,False,L-R,Elep
+S2803,G156 G142 G368 G817,SI1,unknown,1,False,L-R,Elep
+S2804,G390 G18,SI1,unknown,1,False,L-R,Elep
+S2806,G504 G350 G240 G2 G861,SI1,unknown,1,False,L-R,Elep
+S2807,G740 G255 G705,SI1,unknown,1,False,L-R,Elep
+S2808,G820 G0 G90 G740 G176 G741 G65 G123,SI1,unknown,1,False,L-R,Tigr
+S2809,G740 G176 G240 G2 G817,SI1,unknown,1,False,L-R,Tigr
+S2810,G400 G345 G279,SI1,unknown,1,False,L-R,Tigr
+S2811,G740 G890 G692,SI1,unknown,1,False,L-R,Othr
+S2812,G390 G3 G60 G920,SI1,unknown,1,False,L-R,Gavi
+S2813,G151 G416 G741 G849,SI1,unknown,1,False,L-R,Gavi
+S2814,G740 G220 G3,SI1,unknown,1,False,L-R,Scene
+S2815,G621 G0 G90 G740 G2 G861,SI1,unknown,1,False,L-R,Comp
+S2816,G621 G520 G220 G60 G880,SI1,unknown,1,False,L-R,Othr
+S2817,G90 G740 G240 G575 G703 G60,SI1,unknown,1,False,L-R,Othr
+S2819,G740 G390 G590 G1 G0 G60 G820,SI1,unknown,1,False,L-R,CompBull
+S2820,G740 G176,SI1,unknown,1,False,L-R,CompBull
+S2821,G520 G231 G235,SI1,unknown,1,False,L-R,CompBull
+S2822,G520 G33 G705 G60 G820,SI1,unknown,1,False,L-R,CompBull
+S2823,G90 G740 G220 G742 G534 G550 G90,SI1,unknown,1,False,L-R,Scene
+S2825,G621 G740 G798 G838 G741 G92 G850,SI1,unknown,1,False,L-R,T-M-T
+S2826,G740 G904 G32 G60 G550,SI1,unknown,1,False,L-R,T-M-T
+S2827,G520 G220 G2 G727 G317,SI1,unknown,1,False,L-R,T-M-T
+S2828,G224 G740 G61 G2 G824,SI1,unknown,1,False,L-R,T-A-T
+S2829,G621 G0 G740 G482 G1 G550,SI1,unknown,1,False,L-R,T-A-T
+S2830,G401 G2 G368 G165,SI1,unknown,1,False,L-R,Comp
+S2832,G953 G817 G390 G125 G308 G809 G33 G0 G740 G760 G706 G466 G0 G520 G231 G240 G235 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2833,G390 G34 G2 G374 G228 G741,SI1,unknown,1,False,L-R,unknown
+S2834,G367 G390 G710 G2 G861,SI1,unknown,1,False,R-L,unknown
+S2835,G255 G60 G692 G401 G920,SI1,unknown,1,False,L-R,Bull1
+S2836,G31 G575,SI1,unknown,1,False,L-R,Zebu
+S2837,G740 G812 G33 G240 G220 G32,SI1,unknown,1,False,L-R,Tigr
+S2838,G740 G176 G741 G390 G125,SI1,unknown,1,False,L-R,Bull1:W
+S2839,G617 G831,SI1,unknown,1,False,L-R,Bull1:J
+S2840,G740 G61 G60 G820,SI1,unknown,1,False,L-R,Bull1:J
+S2841,G520 G220 G415 G235,SI1,unknown,1,False,L-R,Bull1:L
+S2842,G740 G215,SI1,unknown,1,False,L-R,Mult
+S2843,G241 G803 G2 G850 G491,SI1,unknown,1,False,L-R,Bull1:L
+S2844,G740 G904 G235 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:S
+S2845,G740 G519 G2 G861,SI1,unknown,1,False,L-R,Bull1:J
+S2846,G157 G142,SI1,unknown,1,False,L-R,Zebu
+S2847,G2 G861 G698,SI1,unknown,1,False,L-R,unknown
+S2848,G156 G176,SI1,unknown,1,False,L-R,unknown
+S2850,G740 G729 G407 G845 G236 G2 G906 G125,SI1,unknown,1,False,L-R,unknown
+S2851,G740 G877 G32 G33 G705 G231 G235 G2 G861 G360 G520 G919 G140,SI1,unknown,1,False,L-R,unknown
+S2852,G400 G595 G420 G125 G32 G820 G920 G140,SI1,unknown,1,False,L-R,unknown
+S2853,G740 G100 G806 G472 G240 G806 G1 G820,SI1,unknown,1,False,L-R,unknown
+S2854,G3 G1 G520 G240 G806 G2 G502 G31,SI1,unknown,1,False,L-R,unknown
+S2855,G740 G405 G590 G220 G235 G803 G2 G388 G385 G705 G632,SI1,unknown,1,False,L-R,unknown
+S2856,G90 G740 G717 G770 G235,SI1,unknown,1,False,L-R,unknown
+S2857,G820 G64 G104,SI1,unknown,1,False,L-R,unknown
+S2858,G740 G7 G503 G2 G817,SI1,unknown,1,False,L-R,unknown
+S2859,G740 G100 G415 G745 G60 G920,SI1,unknown,1,False,L-R,unknown
+S2860,G740 G354 G2 G817,SI1,unknown,1,False,L-R,unknown
+S2861,G527 G550 G33 G705 G220 G415 G60 G550,SI1,unknown,1,False,L-R,unknown
+S2862,G423 G3 G263 G104 G745 G55,SI1,unknown,1,False,L-R,unknown
+S2865,G740 G690 G435 G255 G240 G220 G415 G806 G742 G60 G920,SI1,unknown,1,False,L-R,unknown
+S2866,G832 G904 G740 G444 G388 G233 G798 G806,SI1,unknown,1,False,L-R,unknown
+S2867,G617 G142 G384 G32 G154 G806 G467,SI1,unknown,1,False,L-R,unknown
+S2868,G740 G338 G605 G176 G1 G820,SI1,unknown,1,False,L-R,unknown
+S2870,G740 G900 G3 G615 G503,SI1,unknown,1,False,L-R,unknown
+S2871,G740 G100 G233 G220 G32 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2872,G740 G100 G176 G2 G861 G533 G717,SI1,unknown,1,False,L-R,unknown
+S2873,G740 G690 G435 G255 G240 G235,SI1,unknown,1,False,L-R,unknown
+S2874,G407 G5 G1 G746 G740 G590,SI1,unknown,1,False,L-R,unknown
+S2875,G154 G798 G460 G353,SI1,unknown,1,False,L-R,unknown
+S2876,G137 G3 G1 G740 G920 G322,SI1,unknown,1,False,L-R,unknown
+S2877,G740 G55 G220 G32 G798 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2878,G617 G142,SI1,unknown,1,False,L-R,unknown
+S2879,G617 G145,SI1,unknown,1,False,L-R,unknown
+S2880,G740 G900 G3 G803 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2881,G407 G4 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2882,G405 G4 G1 G137,SI1,unknown,1,False,L-R,unknown
+S2883,G226 G32 G798 G742 G60 G920,SI1,unknown,1,False,L-R,unknown
+S2884,G740 G519,SI1,unknown,1,False,L-R,unknown
+S2885,G740 G861 G383 G31,SI1,unknown,1,False,L-R,unknown
+S2886,G250 G605 G626 G60 G820,SI1,unknown,1,False,L-R,unknown
+S2887,G405 G845 G686 G740 G793 G3 G233 G805 G2 G861 G533 G717,SI1,unknown,1,False,L-R,unknown
+S2888,G740 G405 G590 G220 G32 G806,SI1,unknown,1,False,L-R,unknown
+S2889,G679 G740 G575 G17 G240 G806 G2 G540,SI1,unknown,1,False,L-R,unknown
+S2890,G740 G752 G1 G33 G706,SI1,unknown,1,False,L-R,unknown
+S2891,G520 G220 G415 G798,SI1,unknown,1,False,L-R,unknown
+S2892,G204 G630 G233 G832 G904 G794 G630 G235 G60 G550,SI1,unknown,1,False,L-R,unknown
+S2893,G740 G752 G55 G233,SI1,unknown,1,False,L-R,unknown
+S2894,G740 G920 G323,SI1,unknown,1,False,L-R,unknown
+S2895,G740 G55 G33 G706 G235,SI1,unknown,1,False,L-R,unknown
+S2896,G617 G142 G1 G2 G820,SI1,unknown,1,False,L-R,unknown
+S2897,G617 G550 G3,SI1,unknown,1,False,L-R,unknown
+S2898,G494 G615 G179 G100 G1 G33 G426,SI1,unknown,1,False,L-R,unknown
+S2899,G407 G63 G520 G95,SI1,unknown,1,False,L-R,unknown
+S2900,G405 G5,SI1,unknown,1,False,L-R,unknown
+S2901,G740 G923 G240 G235 G806,SI1,unknown,1,False,L-R,unknown
+S2903,G740 G923 G235 G742 G380,SI1,unknown,1,False,L-R,unknown
+S2904,G407 G61 G2 G817,SI1,unknown,1,False,L-R,unknown
+S2905,G45 G740 G806,SI1,unknown,1,False,L-R,unknown
+S2907,G390 G840 G233 G240 G744 G33 G272,SI1,unknown,1,False,L-R,unknown
+S2908,G31 G625 G140 G220 G415,SI1,unknown,1,False,L-R,unknown
+S2911,G256 G832,SI1,unknown,1,False,L-R,Gaur
+S2912,G324 G255 G1 G405 G16,SI1,unknown,1,False,L-R,Gaur
+S2914,G405 G4 G747,SI1,unknown,1,False,R-L,unknown
+S2918,G740 G792,SI1,unknown,1,False,L-R,unknown
+S2921,G740 G100 G415 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1
+S2923,G156 G3,SI1,unknown,1,False,L-R,Bull1
+S2925,G740 G390 G590 G33 G705,SI1,unknown,1,False,L-R,unknown
+S2926,G740 G390 G590 G33 G705,SI1,unknown,1,False,L-R,unknown
+S2929,G740 G390 G590 G2 G820,SI1,unknown,1,False,L-R,Zebu
+S2930,G740 G100,SI1,unknown,1,False,L-R,unknown
+S2931,G740 G176 G235,SI1,unknown,1,False,L-R,Bull1
+S2934,G167 G706,SI1,unknown,1,False,L-R,Mult
+S2938,G740 G32 G840 G220 G2 G861,SI1,unknown,1,False,L-R,Scene
+S2940,G740 G690 G435 G255,SI1,unknown,1,False,L-R,Scene
+S2942,G621 G740 G514,SI3,unknown,1,False,L-R,Bull1:U
+S2944,G740 G630,SI1,unknown,1,False,L-R,Crs
+S2945,G740 G630,SI1,unknown,1,False,L-R,Crs
+S2946,G740 G630,SI1,unknown,1,False,L-R,Cros
+S2948,G740 G630,SI1,unknown,1,False,L-R,Xcrs
+S2949,G90 G740 G240 G235 G590 G645 G104,SI1,unknown,1,False,L-R,Cros
+S2950,G90 G740 G240 G235 G590 G645 G104,SI1,unknown,1,False,L-R,Cros
+S2951,G90 G740 G240 G235 G590 G645 G104,SI1,unknown,1,False,L-R,Cros
+S2952,G90 G740 G240 G235 G590 G645 G104,SI1,unknown,1,False,L-R,Cros
+S2953,G400 G740 G220 G415 G798,SI1,unknown,1,False,L-R,Box
+S2954,G400 G740 G220 G415 G798,SI1,unknown,1,False,L-R,Xhch
+S2956,G740 G100 G415 G191 G2 G817,SI1,unknown,1,False,L-R,unknown
+S2957,G400 G740 G405 G590 G235 G806,SI1,unknown,1,False,L-R,unknown
+S2958,G740 G100 G220,SI1,unknown,1,False,L-R,unknown
+S2960,G617 G142,SI1,unknown,1,False,L-R,unknown
+S2962,G400 G97 G700 G4,SI1,unknown,1,False,L-R,Mult
+S2963,G400 G97 G700 G4,SI1,unknown,1,False,L-R,Mult
+S2964,G400 G97 G700 G4,SI1,unknown,1,False,L-R,Mult
+S2965,G103 G740 G803 G60 G540,SI1,unknown,1,False,L-R,Anth
+S2966,G400 G740 G803,SI1,unknown,1,False,L-R,Mult
+S2971,G617 G55 G435 G255 G400 G136 G140,SI1,unknown,1,False,L-R,Mult
+S2972,G850 G140 G803 G2 G840 G16,SI1,unknown,1,False,L-R,Scene
+S2973,G850 G140 G803 G2 G840 G16,SI1,unknown,1,False,L-R,Scene
+S2975,G390 G697 G151 G740 G176 G798 G838,SI1,unknown,1,False,L-R,unknown
+S2976,G740 G100 G415 G904 G17 G32 G820 G740 G904 G741,SI1,unknown,1,False,L-R,unknown
+S2978,G740 G690 G60 G550,SI1,unknown,1,False,L-R,unknown
+S2980,G740 G176 G233 G806,SI1,unknown,1,False,L-R,unknown
+S2981,G740 G384 G233 G806,SI1,unknown,1,False,L-R,Othr
+S2983,G407 G845 G220 G415,SI1,unknown,1,False,L-R,Loop
+S2984,G407 G845 G220 G415,SI1,unknown,1,False,L-R,Loop
+S2985,G165 G900 G790,SI1,unknown,1,False,L-R,unknown
+S2986,G165 G900 G790,SI1,unknown,1,False,L-R,unknown
+S2987,G740 G176 G220 G32,SI1,unknown,1,False,L-R,unknown
+S2988,G740 G176 G220 G32,SI1,unknown,1,False,L-R,unknown
+S2989,G706 G5,SI1,unknown,1,False,L-R,unknown
+S2990,G706 G5,SI1,unknown,1,False,L-R,unknown
+S2991,G706 G5,SI1,unknown,1,False,L-R,unknown
+S2992,G341,SI1,unknown,1,False,L-R,unknown
+S2993,G341,SI1,unknown,1,False,L-R,unknown
+S2994,G617 G142 G1 G595 G95 G760 G744,SI1,unknown,1,False,L-R,Bull1:W
+S2995,G617 G142 G1 G595 G95 G760 G744,SI1,unknown,1,False,L-R,Bull1:W
+S2997,G595 G343 G615,SI1,unknown,1,False,L-R,Gaur
+S2998,G407 G71 G32,SI1,unknown,1,False,L-R,Gaur
+S2999,G407 G71 G32,SI1,unknown,1,False,L-R,Gaur
+S3000,G423 G3 G1 G900 G740 G690 G435 G255,SI1,unknown,1,False,L-R,Gaur
+S3001,G1 G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3002,G1 G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3003,G1 G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3004,G1 G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3006,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3007,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3008,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3009,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3010,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3011,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3013,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3014,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3015,G790 G740 G100 G176 G421 G3,SI1,unknown,1,False,L-R,Goat:8
+S3016,G790 G740 G100 G176 G421 G3,SI1,unknown,1,False,L-R,Goat:8
+S3017,G790 G740 G100 G176 G421 G3,SI1,unknown,1,False,L-R,Goat:8
+S3019,G407 G32 G520 G95 G585 G17 G231,SI1,unknown,1,False,L-R,Othr
+S3020,G407 G32 G520 G95 G585 G17 G231,SI1,unknown,1,False,L-R,Goat:8
+S3021,G407 G32 G520 G95 G585 G17 G231,SI1,unknown,1,False,L-R,unknown
+S3022,G740 G100 G233 G3,SI1,unknown,1,False,L-R,Comp
+S3023,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3024,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3025,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3026,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3027,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3028,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3029,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3030,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3031,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3032,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3033,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3034,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3035,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3036,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3037,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3038,G407 G61 G845 G240 G798,SI1,unknown,1,False,L-R,Gaur
+S3039,G407 G61 G845 G240 G798,SI1,unknown,1,False,L-R,Tigr
+S3040,G407 G61 G845 G240 G798,SI1,unknown,1,False,L-R,unknown
+S3041,G740 G773 G220 G32,SI1,unknown,1,False,L-R,Comp
+S3042,G740 G222 G233 G235,SI1,unknown,1,False,L-R,Othr
+S3043,G740 G222 G233 G235 G0 G617 G142 G1 G368 G861,SI1,unknown,1,False,L-R,Othr
+S3044,G740 G222 G233 G235,SI1,unknown,1,False,L-R,Othr
+S3045,G617 G142 G597 G32 G905,SI1,unknown,1,False,L-R,Othr
+S3046,G617 G142 G597 G32 G905,SI1,unknown,1,False,L-R,Othr
+S3047,G617 G142 G597 G32 G905 G0 G407 G4 G2 G365 G460 G495,SI1,unknown,1,False,L-R,Othr
+S3048,G740 G388 G585 G17,SI1,unknown,1,False,L-R,Comp
+S3050,G740 G388 G585 G17,SI1,unknown,1,False,L-R,Othr
+S3051,G740 G388 G585 G17,SI1,unknown,1,False,L-R,Othr
+S3052,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3053,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3054,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3055,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3056,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3057,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3059,G749,SI1,unknown,1,False,L-R,unknown
+S3063,G781,SI1,unknown,1,False,L-R,unknown
+S3064,G777,SI1,unknown,1,False,L-R,unknown
+S3065,G777,SI1,unknown,1,False,L-R,unknown
+S3071,G840 G32,SI1,unknown,1,False,L-R,unknown
+S3074,G740 G760 G175 G176 G220 G415 G798 G2 G299 G530 G820,SI1,unknown,1,False,L-R,Bull1:W
+S3075,G190 G125 G575,SI1,unknown,1,False,L-R,Bull1:W
+S3077,G842 G374 G125 G0 G740 G803 G60 G692 G740 G690 G435 G255 G60 G692,SI1,unknown,1,False,L-R,Bull1:J
+S3078,G617 G243 G741 G615 G440 G220,SI1,unknown,1,False,L-R,Bull1:W
+S3079,G740 G560 G233 G2 G291 G690 G564,SI1,unknown,1,False,L-R,Bull1:W
+S3080,G679 G740 G176 G240 G798 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S3081,G520 G33 G706 G240 G220 G32 G368 G263,SI1,unknown,1,False,L-R,Bull1:W
+S3084,G679 G740 G220 G415 G1 G820 G812 G820 G140 G820,SI1,unknown,1,False,L-R,Bull1
+S3087,G740 G482 G55 G240 G235 G745 G740 G590,SI1,unknown,1,False,L-R,unknown
+S3088,G226 G415 G2 G190 G751,SI1,unknown,1,False,L-R,Bull1
+S3089,G740 G585 G17 G740 G240 G2 G817 G90 G370,SI1,unknown,1,False,L-R,Bull1:W
+S3091,G740 G100 G235 G233 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:S
+S3092,G90 G740 G100 G220 G32 G741 G361,SI1,unknown,1,False,L-R,Bull1:J
+S3093,G820 G571,SI1,unknown,1,False,L-R,Bull1:X
+S3094,G520 G220 G415 G519 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S3095,G740 G717 G220 G240 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S3096,G679 G740 G235 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S3097,G740 G717 G233 G2 G220 G880 G689,SI1,unknown,1,False,L-R,Bull1
+S3098,G520 G240,SI1,unknown,1,False,L-R,Bull1:W
+S3100,G740 G798 G220 G415 G741 G72,SI1,unknown,1,False,L-R,Bull1:W
+S3101,G390 G704 G1 G820,SI1,unknown,1,False,L-R,Bull1:W
+S3103,G151 G62 G820 G500 G706,SI1,unknown,1,False,L-R,Bull1:S
+S3104,G871 G740 G637 G0 G740 G798 G460 G350 G2 G374 G575,SI1,unknown,1,False,L-R,Bull1
+S3105,G740 G440 G231 G60 G692,SI1,unknown,1,False,L-R,Bull1
+S3109,G154 G31 G1 G520 G33 G705,SI1,unknown,1,False,L-R,Bull1:W
+S3110,G740 G690 G435 G255 G240 G235 G745 G60 G920,SI1,unknown,1,False,L-R,Bull1:W
+S3111,G740 G405 G590 G235,SI1,unknown,1,False,L-R,Bull1:W
+S3112,G405 G17,SI1,unknown,1,False,L-R,Bull1:W
+S3113,G520 G33 G706 G220 G415,SI1,unknown,1,False,L-R,Bull1:W
+S3114,G740 G388 G807 G33 G706 G233 G235 G168 G32,SI1,unknown,1,False,L-R,Bull1:W
+S3115,G740 G923 G70 G32 G33 G706 G231 G242 G2 G861 G901,SI1,unknown,1,False,L-R,Bull1:L
+S3116,G740 G752 G6 G503 G236 G806 G2 G31 G502,SI1,unknown,1,False,L-R,Bull1:W
+S3118,G520 G70 G255 G832 G220 G3 G853,SI22,unknown,1,False,L-R,Gaur
+S3119,G740 G798 G231 G2 G298 G460 G32,SI1,unknown,1,False,L-R,Bull1
+S3122,G520 G235 G806,SI1,unknown,1,False,L-R,unknown
+S3126,G740 G100 G415 G2 G130 G35 G171,SI1,unknown,1,False,L-R,Bull1:W
+S3127,G740 G760 G820 G368 G263,SI1,unknown,1,False,L-R,Bull1:J
+S3131,G400 G131,SI1,unknown,1,False,L-R,Bull1:W
+S3132,G740 G772 G240 G803,SI1,unknown,1,False,L-R,Bull1:W
+S3133,G740 G773 G240 G2 G861 G31,SI1,unknown,1,False,L-R,Bull1:W
+S3134,G740 G61 G2 G390 G140,SI1,unknown,1,False,L-R,Bull1:W
+S3135,G400 G390 G4,SI1,unknown,1,False,L-R,Bull1:J
+S3137,G390 G3 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S3138,G226 G803 G717 G2 G764,SI1,unknown,1,False,L-R,Bull1
+S3139,G740 G585 G17 G33 G705 G233 G798 G803 G2 G861 G603,SI1,unknown,1,False,L-R,Bull1:W
+S3142,G740 G142 G61 G2 G861,SI1,unknown,1,False,L-R,Bull1:J
+S3146,G740 G585 G240 G220 G32 G2 G817,SI1,unknown,1,False,L-R,Bull1
+S3147,G740 G460 G510 G235 G220 G32 G2 G861,SI1,unknown,1,False,L-R,Bull1
+S3148,G390 G721 G790 G2 G861,SI1,unknown,1,False,L-R,Bull1:J
+S3149,G90 G740 G220 G3 G741 G252 G530,SI1,unknown,1,False,L-R,Bull1:J
+S3150,G31 G850 G140 G236 G220 G32 G803 G2 G820,SI1,unknown,1,False,L-R,Bull1:T
+S3151,G740 G100 G415 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S3152,G740 G575 G17 G2 G820,SI1,unknown,1,False,L-R,Bull1:V
+S3153,G234 G415,SI1,unknown,1,False,L-R,Bull1:I
+S3154,G740 G384 G90 G351 G741 G33 G272,SI1,unknown,1,False,L-R,Bull1:J
+S3155,G151 G220,SI1,unknown,1,False,L-R,Bull1:I
+S3156,G520 G400 G350 G2 G817,SI1,unknown,1,False,L-R,Bull1:V
+S3157,G151 G740 G760 G220 G0 G892 G590 G850 G32,SI1,unknown,1,False,L-R,Bull1:W
+S3158,G33 G33 G368 G390 G590,SI1,unknown,1,False,L-R,Bull1:S
+S3159,G740 G760 G235 G2 G390 G125 G195,SI1,unknown,1,False,L-R,Bull1:U
+S3163,G90 G740 G100 G415 G2 G31 G350 G550 G692,SI1,unknown,1,False,L-R,Bull1:J
+S3164,G226 G491 G742 G705 G575,SI1,unknown,1,False,L-R,Bull1:J
+S3165,G151 G416,SI1,unknown,1,False,L-R,Bull1:I
+S3166,G90 G850 G32 G60 G573,SI1,unknown,1,False,L-R,Bull1:W
+S3168,G307 G350 G617 G741,SI1,unknown,1,False,L-R,Bull1
+S3169,G740 G440 G220 G32 G741 G390 G590 G32,SI1,unknown,1,False,L-R,Bull1:I
+S3171,G828 G0 G400 G798 G243,SI1,unknown,1,False,L-R,Bull1
+S3172,G408 G4,SI1,unknown,1,False,R-L,Bull1:W
+S3173,G740 G773 G60 G820,SI1,unknown,1,False,L-R,Bull1:W
+S3176,G520 G33 G706 G806,SI1,unknown,1,False,L-R,Bull1:W
+S3177,G740 G760 G705 G742 G60 G920,SI1,unknown,1,False,L-R,Bull1
+S3178,G740 G337 G484 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1
+S3179,G740 G100 G176 G2 G812 G31,SI1,unknown,1,False,L-R,Bull1:W
+S3180,G520 G33 G705 G233 G235 G808,SI1,unknown,1,False,L-R,Bull1
+S3181,G740 G760 G1 G240 G742 G530 G786,SI1,unknown,1,False,L-R,Bull1:W
+S3182,G520 G240 G806,SI1,unknown,1,False,L-R,unknown
+S3185,G226 G140 G2,SI1,unknown,1,False,L-R,Bull1:I
+S3190,G740 G32 G840 G585 G17 G2 G817,SI1,unknown,1,False,L-R,Bull1:J
+S3191,G173 G520 G235 G60 G550,SI1,unknown,1,False,L-R,Bull1:J
+S3193,G520 G70 G921,SI1,unknown,1,False,L-R,Bull1:L
+S3194,G740 G773 G156 G2 G820,SI1,unknown,1,False,L-R,Bull1:W
+S3195,G520 G33 G706 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S3196,G740 G912 G1 G740 G621,SI1,unknown,1,False,L-R,Bull1:S
+S3197,G151 G61 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S3198,G368 G390 G710,SI1,unknown,1,False,L-R,Bull1:S
+S3199,G740 G255 G705 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S3200,G740 G798 G233 G741 G175,SI1,unknown,1,False,L-R,Bull1:S
+S3202,G740 G482 G235 G2 G824,SI1,unknown,1,False,L-R,Bull1:J
+S3206,G679 G740 G575 G17 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S3207,G740 G388 G235 G240 G798 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S3208,G804 G231 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S3209,G156 G260 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S3210,G368 G140 G706,SI1,unknown,1,False,L-R,Bull1:W
+S3212,G585 G831 G91,SI1,unknown,1,False,L-R,Bull1:W
+S3214,G234 G803 G741 G82 G350,SI1,unknown,1,False,L-R,Bull1:W
+S3216,G106 G741 G500 G209,SI1,unknown,1,False,L-R,Bull1:W
+S3217,G390 G5 G2 G817,SI1,unknown,1,False,L-R,Bull1
+S3219,G520 G235 G803 G1 G368 G861,SI1,unknown,1,False,L-R,Bull1:S
+S3222,G520 G460 G495 G2 G595 G906,SI1,unknown,1,False,L-R,Bull1
+S3223,G740 G731,SI1,unknown,1,False,L-R,Bull1:J
+S3224,G226 G32 G803,SI1,unknown,1,False,L-R,Bull1:J
+S3225,G740 G58,SI1,unknown,1,False,L-R,Bull1:J
+S3226,G161 G390 G590 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S3227,G740 G176 G33 G705 G240 G235 G803,SI1,unknown,1,False,L-R,Bull1:S
+S3228,G520 G70 G233 G798 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S3229,G740 G690 G435 G255 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S3230,G520 G382 G878,SI1,unknown,1,False,L-R,Bull1:S
+S3232,G520 G233 G240 G803 G2 G817,SI1,unknown,1,False,L-R,Bull1:J
+S3235,G390 G16,SI1,unknown,1,False,L-R,Bull1:S
+S3236,G740 G61 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S3237,G368 G390 G831,SI1,unknown,1,False,L-R,Bull1:J
+S3240,G590 G165 G32 G840,SI1,unknown,1,False,L-R,Bull1
+S3242,G400 G97,SI1,unknown,1,False,L-R,Bull1
+S3244,G740 G337 G176,SI1,unknown,1,False,L-R,Bull1:S
+S3245,G527 G550 G740 G240 G2 G808,SI1,unknown,1,False,L-R,Bull1:W
+S3246,G151 G390 G590 G900 G2 G861,SI1,unknown,1,False,L-R,Bull1:J
+S3248,G400 G368 G55,SI1,unknown,1,False,L-R,Bull1:W
+S3249,G740 G142 G61 G31 G741 G125 G575,SI1,unknown,1,False,L-R,Bull1:S
+S3250,G156 G3,SI1,unknown,1,False,L-R,Bull1:L
+S3251,G740 G100 G415 G2 G817,SI1,unknown,1,False,L-R,Bull1:L
+S3252,G32 G316 G33 G705 G233 G1 G920 G374,SI1,unknown,1,False,L-R,Bull1:T
+S3258,G740 G923,SI1,unknown,1,False,L-R,Bull1
+S3259,G740 G55 G232 G233,SI1,unknown,1,False,L-R,Bull1
+S3260,G406 G125 G176,SI1,unknown,1,False,L-R,Bull1
+S3261,G151 G350 G2 G550 G615,SI1,unknown,1,False,L-R,Bull1:J
+S3262,G740 G100 G415 G2 G861,SI1,unknown,1,False,L-R,Bull1:L
+S3263,G621 G740 G390 G590 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S3264,G892 G590 G794 G732 G33 G853,SI1,unknown,1,False,L-R,Bull1:W
+S3265,G90 G740 G792 G2 G817,SI1,unknown,1,False,L-R,Bull1:S
+S3266,G592 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1
+S3267,G856 G260 G832 G390 G590 G2 G817 G690 G544,SI1,unknown,1,False,L-R,Bull1
+S3268,G740 G575 G17 G60 G220 G65 G374,SI1,unknown,1,False,L-R,Bull1
+S3269,G740 G690 G435 G255,SI1,unknown,1,False,L-R,Bull1
+S3271,G520 G33 G705 G240,SI1,unknown,1,False,L-R,Bull1:S
+S3272,G740 G7 G503,SI1,unknown,1,False,L-R,Bull1:S
+S3273,G740 G760 G742,SI1,unknown,1,False,L-R,Bull1:S
+S3274,G740 G255 G705 G741 G412,SI1,unknown,1,False,L-R,Bull1:L
+S3276,G90 G740 G240 G235 G1 G820,SI1,unknown,1,False,L-R,Bull1:W
+S3278,G520 G33 G705 G231 G220 G2 G817,SI1,unknown,1,False,L-R,Bull1:W
+S3279,G740 G100 G415 G2 G861,SI1,unknown,1,False,L-R,Bull1:S
+S3280,G740 G460 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:L
+S3281,G390 G16 G2 G824,SI1,unknown,1,False,L-R,Bull1:I
+S3282,G520 G33 G705 G231 G60 G550,SI1,unknown,1,False,L-R,Bull1:X
+S3283,G400 G159 G877,SI1,unknown,1,False,L-R,Bull1:W
+S3284,G105 G31 G60 G820,SI1,unknown,1,False,L-R,Bull1:J
+S3286,G740 G900 G5 G741 G390 G125,SI1,unknown,1,False,L-R,Bull1:J
+S3287,G740 G400 G142 G61,SI1,unknown,1,False,L-R,Bull1:J
+S3288,G740 G861 G877 G741 G705 G319,SI1,unknown,1,False,L-R,Bull1:S
+S3291,G617 G16,SI1,unknown,1,False,L-R,Bull1:S
+S3295,G740 G384 G32 G803 G2 G820,SI1,unknown,1,False,L-R,Bull1:I
+S3296,G740 G927 G32 G741 G208,SI1,unknown,1,False,L-R,Bull1
+S3299,G892 G70 G590 G495 G520 G231 G368 G861,SI1,unknown,1,False,L-R,Bull1:I
+S3300,G740 G48 G2 G817,SI1,unknown,1,False,L-R,Bull1
+S3301,G151 G31 G90 G32 G1 G505,SI1,unknown,1,False,L-R,Bull1
+S3302,G527 G550 G235 G2 G817,SI1,unknown,1,False,L-R,Bull1
+S3303,G621 G46,SI1,unknown,1,False,L-R,Bull1:W
+S3304,G154 G160 G363,SI1,unknown,1,False,L-R,Bull1:W
+S3305,G740 G390 G590 G233 G220 G415 G798 G838 G2 G820,SI1,unknown,1,False,L-R,Bull1
+S3306,G90 G125 G2 G861,SI1,unknown,1,False,L-R,Bull1
+S3308,G740 G772 G2 G817,SI1,unknown,1,False,L-R,Bull1
+S3311,G520 G920 G320 G220 G415,SI1,unknown,1,False,L-R,Bull1:W
+S3312,G151 G97 G31,SI1,unknown,1,False,L-R,Bull1:W
+S3313,G400 G806 G805,SI1,unknown,1,False,L-R,Bull1:J
+S3314,G740 G923 G803,SI1,unknown,1,False,L-R,Bull1:W
+S3315,G390 G869 G2 G861,SI1,unknown,1,False,L-R,Bull1
+S3316,G156 G3,SI1,unknown,1,False,L-R,Bull1
+S3317,G267 G413 G575,SI1,unknown,1,False,L-R,Bull1:S
+S3318,G550 G740 G220 G60 G297 G630,SI1,unknown,1,False,L-R,Bull1:L
+S3322,G740 G269 G792 G741 G345,SI1,unknown,1,False,L-R,Bull1:S
+S3324,G243 G705 G31,SI1,unknown,1,False,L-R,Bull1
+S3326,G520 G233 G803 G60 G820,SI1,unknown,1,False,L-R,Bull1:W
+S3327,G740 G705 G171 G360 G64,SI1,unknown,1,False,L-R,Bull1:S
+S3328,G740 G390 G590 G741 G821,SI1,unknown,1,False,L-R,Bull1:L
+S3329,G526 G555 G235 G2 G861,SI1,unknown,1,False,L-R,Bull1:W
+S3330,G740 G920 G320,SI1,unknown,1,False,L-R,Bull1:S
+S3331,G520 G460,SI1,unknown,1,False,L-R,Bull1:J
+S3332,G740 G460 G503 G31 G2 G900 G615,SI1,unknown,1,False,L-R,Bull1:J
+S3333,G740 G416,SI1,unknown,1,False,L-R,Bull1:W
+S3334,G527 G550,SI1,unknown,1,False,L-R,Bull1:J
+S3335,G740 G205 G32 G2 G390 G590 G32,SI22,unknown,1,False,L-R,Bull1:J
+S3338,G740 G176 G220 G415 G798,SI1,unknown,1,False,L-R,Bull1:W
+S3339,G90 G740 G233 G60 G368 G817,SI1,unknown,1,False,L-R,Bull1:W
+S3340,G740 G923 G233,SI1,unknown,1,False,L-R,Bull1:S
+S3341,G740 G910,SI1,unknown,1,False,L-R,Bull1:S
+S3342,G400 G90 G740 G35 G171 G61,SI1,unknown,1,False,L-R,Bull1
+S3343,G426 G3 G2 G388 G31,SI1,unknown,1,False,L-R,Bull1
+S3345,G740 G690 G435 G255,SI1,unknown,1,False,L-R,Bull1
+S3346,G740 G927 G240 G31,SI1,unknown,1,False,L-R,Bull1:S
+S3348,G740 G792,SI1,unknown,1,False,L-R,Bull1:J
+S3349,G481 G740 G255 G360,SI1,unknown,1,False,L-R,Bull1
+S3350,G31 G31 G550 G3,SI1,unknown,1,False,L-R,Bull1:U
+S3351,G400 G520 G33 G705 G233,SI1,unknown,1,False,L-R,Bull1:J
+S3352,G740 G760 G705 G2 G577,SI1,unknown,1,False,L-R,Bull1
+S3353,G740 G772 G240 G2 G900 G3 G590,SI1,unknown,1,False,L-R,Bull1:J
+S3354,G520 G33 G705 G236 G803,SI1,unknown,1,False,L-R,Bull1
+S3355,G520 G240 G740 G590 G575,SI1,unknown,1,False,L-R,Bull1
+S3356,G400 G158 G460 G503,SI1,unknown,1,False,L-R,Bull1:X
+S3357,G520 G220 G240 G235,SI1,unknown,1,False,L-R,Bull1:W
+S3358,G527 G550 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:J
+S3359,G740 G390 G590 G32 G741 G527,SI1,unknown,1,False,L-R,Bull1:I
+S3360,G401 G861 G440 G220,SI1,unknown,1,False,L-R,Bull1:W
+S3361,G740 G923 G741 G390 G590,SI1,unknown,1,False,L-R,Bull1:J
+S3362,G151 G243,SI1,unknown,1,False,L-R,Bull1:S
+S3364,G740 G416 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:J
+S3365,G740 G142 G61,SI1,unknown,1,False,L-R,Bull1:J
+S3366,G621 G226,SI1,unknown,1,False,L-R,Bull1:J
+S3367,G740 G927 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1:I
+S3368,G680 G297 G741 G910,SI1,unknown,1,False,L-R,Bull1:S
+S3369,G286 G645 G1 G368 G817,SI1,unknown,1,False,L-R,Bull1
+S3370,G740 G803,SI1,unknown,1,False,R-L,Bull1:X
+S3371,G520 G220,SI1,unknown,1,False,L-R,Bull1
+S3372,G740 G773 G240 G0 G2 G900 G3 G590,SI1,unknown,1,False,L-R,Bull1:J
+S3373,G740 G617 G550 G61 G435 G93 G740 G100 G415,SI1,unknown,1,False,L-R,Bull1
+S3374,G617 G142 G1 G407 G371,SI1,unknown,1,False,L-R,Bull1:W
+S3375,G740 G825 G2,SI1,unknown,1,False,L-R,Bull1:U
+S3378,G520 G70 G33 G705 G233 G235 G803,SI1,unknown,1,False,L-R,Bull1
+S3379,G740 G760 G605,SI1,unknown,1,False,L-R,Bull1
+S3380,G390 G16,SI1,unknown,1,False,L-R,Bull1
+S3381,G151 G55,SI1,unknown,1,False,L-R,unknown
+S3383,G156 G31 G133,SI1,unknown,1,False,L-R,Bull1:W
+S3384,G368 G803 G31,SI1,unknown,1,False,L-R,Bull1:S
+S3385,G435 G1 G31,SI1,unknown,1,False,L-R,Bull1
+S3386,G740 G904 G690,SI1,unknown,1,False,L-R,Bull1
+S3387,G156 G31,SI1,unknown,1,False,L-R,Bull1:X
+S3389,G590 G705 G575 G920 G140,SI1,unknown,1,False,L-R,Bull1
+S3390,G820 G390 G590,SI1,unknown,1,False,L-R,Bull1:I
+S3393,G740 G482 G235,SI1,unknown,1,False,L-R,Bull1:L
+S3394,G740 G373 G31 G2 G315 G850,SI1,unknown,1,False,L-R,Bull1
+S3421,G520 G220 G32 G2 G861,SI1,unknown,1,False,L-R,Bull
+S3427,G679 G740 G220 G32 G806 G1 G595 G575 G1 G95,SI1,unknown,1,False,L-R,unknown
+S3437,G407 G4 G2 G861,SI1,unknown,1,False,L-R,unknown
+S3453,G740 G760 G33 G706 G233 G803,SI1,unknown,1,False,L-R,Gaur
+S3454,G617 G550 G33,SI1,unknown,1,False,L-R,Gaur
+S3455,G527 G555 G55 G233 G235 G741 G831 G518,SI1,unknown,1,False,L-R,Gaur
+S3459,G740 G100 G415 G798 G460 G350 G2 G817,SI1,unknown,1,False,L-R,Gaur
+S3460,G241 G235,SI1,unknown,1,False,L-R,Gaur
+S3461,G527 G554 G1 G297 G190,SI1,unknown,1,False,L-R,Gaur
+S3462,G740 G540 G2 G820,SI1,unknown,1,False,L-R,Gaur
+S3463,G151 G390 G590 G2 G374 G840,SI1,unknown,1,False,L-R,Gaur
+S3465,G241 G156 G590 G706 G794 G732,SI1,unknown,1,False,L-R,Gaur
+S3467,G861 G292 G590 G520 G70 G503,SI1,unknown,1,False,L-R,Gaur
+S3468,G740 G455 G240 G235,SI1,unknown,1,False,L-R,Gaur
+S3469,G808 G347 G61,SI1,unknown,1,False,L-R,Gaur
+S3472,G740 G760 G315,SI1,unknown,1,False,L-R,unknown
+S3474,G1 G820 G595 G760 G706 G635,SI1,unknown,1,False,L-R,Zebu
+S3475,G740 G564 G60 G820,SI1,unknown,1,False,L-R,Zebu
+S3479,G740 G100 G140 G3,SI1,unknown,1,False,L-R,Zebu
+S3480,G520 G231 G2 G820,SI1,unknown,1,False,L-R,Zebu
+S3481,G740 G615 G104 G2 G817,SI1,unknown,1,False,L-R,Zebu
+S3482,G740 G798 G745 G924 G692,SI1,unknown,1,False,L-R,Zebu
+S3483,G740 G585 G220 G0 G2 G130 G35 G171,SI1,unknown,1,False,L-R,Zebu
+S3484,G550 G233 G235,SI1,unknown,1,False,L-R,Zebu
+S3485,G740 G140 G2 G741 G60 G920,SI1,unknown,1,False,L-R,Zebu
+S3486,G740 G335 G233 G2 G861,SI1,unknown,1,False,L-R,Zebu
+S3487,G874 G543 G350 G0 G520 G1 G741 G794 G324,SI1,unknown,1,False,L-R,Zebu
+S3488,G855 G297 G892,SI1,unknown,1,False,L-R,Zebu
+S3490,G740 G803 G2 G820 G741,SI1,unknown,1,False,L-R,Zebu
+S3494,G156 G389,SI1,unknown,1,False,L-R,Zebu
+S3496,G60 G692 G0 G740 G269 G140 G2,SI1,unknown,1,False,L-R,Buff
+S3497,G920 G388,SI1,unknown,1,False,L-R,Buff
+S3498,G740 G544 G0 G353 G741 G455 G920,SI1,unknown,1,False,L-R,Goat:7
+S3501,G820 G595 G813 G541,SI1,unknown,1,False,L-R,Rhin
+S3502,G740 G61 G2 G400 G703,SI1,unknown,1,False,L-R,Rhin
+S3504,G740 G904 G2 G820,SI1,unknown,1,False,L-R,unknown
+S3505,G740 G585 G17 G2 G820,SI1,unknown,1,False,L-R,Rhin
+S3506,G740 G416 G621 G2 G820,SI1,unknown,1,False,L-R,Rhin
+S3508,G740 G772 G235,SI1,unknown,1,False,L-R,Elep
+S3509,G520 G220 G2 G861,SI1,unknown,1,False,L-R,Elep
+S3511,G621 G520 G231 G240 G2 G456,SI1,unknown,1,False,L-R,Elep
+S3512,G241 G742 G41,SI1,unknown,1,False,L-R,Elep
+S3513,G740 G32 G840 G235 G2 G861,SI1,unknown,1,False,L-R,Elep
+S3516,G740 G760 G335 G2 G33 G705,SI1,unknown,1,False,L-R,Elep
+S3517,G740 G690 G435 G255 G233,SI1,unknown,1,False,L-R,Elep
+S3519,G232 G220 G32 G2 G168 G32,SI1,unknown,1,False,L-R,Elep
+S3521,G520 G233 G31 G2 G861,SI1,unknown,1,False,L-R,Elep
+S3525,G90 G740 G920 G140 G60 G692,SI1,unknown,1,False,L-R,Tigr
+S3526,G740 G923 G240 G2 G817,SI1,unknown,1,False,L-R,Tigr
+S3528,G740 G482,SI1,unknown,1,False,L-R,Htgr
+S3529,G520 G33 G705 G220 G32 G0 G231 G72 G2 G270 G633 G32,SI1,unknown,1,False,L-R,Comp
+S3533,G740 G760 G2 G817,SI1,unknown,1,False,L-R,CompBull
+S3535,G740 G927,SI1,unknown,1,False,L-R,Goat:3
+S3536,G35 G171 G158,SI1,unknown,1,False,L-R,Goat:3
+S3537,G740 G927 G231 G60 G692,SI1,unknown,1,False,L-R,Anth
+S3544,G143 G96,SI1,unknown,1,False,L-R,unknown
+S3546,G740 G176,SI1,unknown,1,False,L-R,unknown
+S3548,G435 G1 G3,SI1,unknown,1,False,L-R,unknown
+S3550,G740 G48 G232,SI1,unknown,1,False,L-R,Bull1:I
+S3551,G740 G255 G704 G176,SI1,unknown,1,False,L-R,Bull1
+S3552,G790 G0 G740 G100 G415 G740 G257 G840,SI1,unknown,1,False,L-R,Gaur
+S3553,G706,SI1,unknown,1,False,L-R,Bull1:W
+S3556,G740 G690 G435 G255 G2 G861,SI1,unknown,1,False,L-R,Gaur
+S3557,G90 G740 G100 G320 G1 G300 G632,SI1,unknown,1,False,L-R,Bull1
+S3558,G151 G416,SI1,unknown,1,False,L-R,Bull1
+S3559,G401 G390 G16 G853,SI1,unknown,1,False,L-R,Mult
+S3560,G740 G900 G5 G877,SI1,unknown,1,False,L-R,Gaur
+S3561,G520 G33 G705 G235 G233 G2 G817,SI1,unknown,1,False,L-R,Gaur
+S3562,G1 G368 G351,SI1,unknown,1,False,L-R,unknown
+S3564,G156 G3,SI1,unknown,1,False,R-L,unknown
+S3566,G156 G31,SI1,unknown,1,False,L-R,unknown
+S3569,G407 G4 G1 G745 G561 G586,SI1,unknown,1,False,L-R,unknown
+S3571,G740 G100 G456 G1 G820,SI1,unknown,1,False,L-R,unknown
+S3572,G740 G55 G240 G220 G32 G806,SI1,unknown,1,False,L-R,unknown
+S3573,G740 G483 G233 G235 G55,SI1,unknown,1,False,L-R,unknown
+S3574,G416 G1 G740 G720 G175 G2 G861,SI1,unknown,1,False,L-R,unknown
+S3575,G740 G455 G176 G2 G817,SI1,unknown,1,False,L-R,unknown
+S3576,G520 G33 G706 G240 G235,SI1,unknown,1,False,L-R,unknown
+S3577,G154 G388 G717 G706,SI1,unknown,1,False,L-R,unknown
+S3578,G400 G456 G503 G337 G484 G920 G140,SI1,unknown,1,False,L-R,unknown
+S3579,G520 G70 G921 G742 G615 G920,SI1,unknown,1,False,L-R,unknown
+S3580,G740 G55 G2 G861 G603,SI1,unknown,1,False,L-R,unknown
+S3581,G130 G32 G905,SI1,unknown,1,False,L-R,unknown
+S3582,G740 G752 G440 G220 G32 G798,SI1,unknown,1,False,L-R,unknown
+S3583,G159 G243 G1 G740 G325,SI1,unknown,1,False,L-R,unknown
+S3584,G32 G905,SI1,unknown,1,False,R-L,unknown
+S3589,G416 G1 G520 G240 G806 G2 G502 G31,SI1,unknown,1,False,L-R,unknown
+S3595,G595 G820 G706,SI1,unknown,1,False,L-R,unknown
+S3604,G527 G550 G33 G705 G233 G2 G817,SI1,unknown,1,False,L-R,unknown
+S3610,G400 G159 G877,SI1,unknown,1,False,L-R,unknown
+S3611,G740 G405 G590 G806 G2 G820,SI1,unknown,1,False,L-R,unknown
+S3612,G740 G460 G503,SI1,unknown,1,False,L-R,unknown
+S3613,G740 G32 G55 G1 G407 G4,SI1,unknown,1,False,L-R,unknown
+S3615,G407 G4 G1 G740 G407 G590 G235,SI1,unknown,1,False,L-R,unknown
+S3616,G520 G400 G354 G2 G817,SI1,unknown,1,False,L-R,unknown
+S3617,G400 G740 G220,SI1,unknown,1,False,L-R,unknown
+S3619,G407 G16 G1 G740 G923,SI1,unknown,1,False,L-R,unknown
+S3620,G617 G142 G240,SI1,unknown,1,False,L-R,unknown
+S3621,G127 G381 G292 G590 G32 G901 G620,SI1,unknown,1,False,L-R,unknown
+S3622,G154 G384,SI1,unknown,1,False,L-R,unknown
+S3623,G740 G460 G503 G2 G880,SI1,unknown,1,False,L-R,unknown
+S3625,G527 G555 G231 G240 G798,SI1,unknown,1,False,L-R,unknown
+S3627,G423 G3 G491,SI1,unknown,1,False,L-R,unknown
+S3628,G740 G798 G405 G590 G33 G706 G806,SI1,unknown,1,False,L-R,unknown
+S3646,G16 G2 G504 G342 G632,SI1,unknown,1,False,L-R,unknown
+S3647,G740 G680 G90 G585 G17,SI1,unknown,1,False,L-R,unknown
+S3648,G740 G390 G590 G235 G2 G861,SI1,unknown,1,False,L-R,unknown
+S3650,G740 G861 G32 G233 G803 G2 G820,SI1,unknown,1,False,L-R,unknown
+S3651,G406 G371 G220 G415 G803 G742 G920 G320,SI1,unknown,1,False,L-R,unknown
+S3652,G527 G555 G235,SI1,unknown,1,False,L-R,unknown
+S3657,G32 G2 G900 G285,SI1,unknown,1,False,L-R,unknown
+S3658,G520 G33 G705,SI1,unknown,1,False,L-R,unknown
+S3663,G740 G923 G33 G705 G0,SI1,unknown,1,False,L-R,unknown
+S3664,G390 G16,SI1,unknown,1,False,R-L,Othr
+S3665,G740 G483 G803 G626 G61,SI1,unknown,1,False,L-R,unknown
+S3667,G740 G900 G5,SI1,unknown,1,False,L-R,unknown
+S3670,G527 G550 G2 G370,SI1,unknown,1,False,L-R,unknown
+S3671,G154 G101,SI1,unknown,1,False,L-R,unknown
+S3673,G790 G32 G33 G705,SI1,unknown,1,False,L-R,unknown
+S3675,G740 G540 G920,SI1,unknown,1,False,L-R,unknown
+S3677,G527 G550 G2 G370,SI1,unknown,1,False,L-R,unknown
+S3678,G740 G792,SI1,unknown,1,False,L-R,unknown
+S3679,G740 G575 G17 G31 G741 G60 G920,SI1,unknown,1,False,L-R,Bull1
+S3680,G904 G4 G821 G1 G480 G850 G595 G391,SI1,unknown,1,False,L-R,unknown
+S3681,G0 G0,SI1,unknown,1,False,L-R,Bull1
+S3683,G156 G3,SI1,unknown,1,False,L-R,Bull1
+S3684,G400 G525 G550,SI1,unknown,1,False,L-R,Mult
+S3688,G520 G33 G705 G803 G853,SI1,unknown,1,False,L-R,Bull1
+S3690,G167 G704,SI1,unknown,1,False,L-R,Mult
+S3696,G740 G760 G335 G803,SI1,unknown,1,False,L-R,unknown
+S3697,G400 G740 G33 G503,SI1,unknown,1,False,L-R,unknown
+S3698,G740 G630,SI1,unknown,1,False,L-R,Crs
+S3699,G740 G630,SI1,unknown,1,False,L-R,unknown
+S3700,G740 G630,SI1,unknown,1,False,L-R,unknown
+S3701,G740 G630,SI1,unknown,1,False,L-R,Crs
+S3703,G90 G740 G240 G235 G590 G645 G104,SI1,unknown,1,False,L-R,Cros
+S3704,G90 G740 G240 G235 G590 G645 G104,SI1,unknown,1,False,L-R,Cros
+S3705,G740 G100 G415 G240,SI1,unknown,1,False,L-R,unknown
+S3709,G740 G482 G803 G745 G450 G575,SI1,unknown,1,False,L-R,Gaur
+S3710,G400 G97 G700 G4,SI1,unknown,1,False,L-R,Mult
+S3711,G740 G760 G33 G33 G220 G415 G798 G2 G861,SI1,unknown,1,False,L-R,unknown
+S3712,G1 G484 G140 G2 G220 G627 G615 G906 G388,SI1,unknown,1,False,L-R,Bull1
+S3713,G90 G740 G792 G740 G220 G3 G803,SI1,unknown,1,False,L-R,Mult
+S3714,G740 G384,SI1,unknown,1,False,L-R,Mult
+S3719,G400 G740 G923 G226 G32,SI1,unknown,1,False,L-R,unknown
+S3720,G740 G220 G3,SI1,unknown,1,False,L-R,unknown
+S3722,G740 G220 G3,SI1,unknown,1,False,L-R,unknown
+S3723,G740 G220 G3,SI1,unknown,1,False,L-R,unknown
+S3724,G740 G220 G3,SI1,unknown,1,False,L-R,unknown
+S3725,G740 G690 G60 G550,SI1,unknown,1,False,L-R,unknown
+S3726,G690 G323,SI1,unknown,1,False,L-R,unknown
+S3727,G740 G176 G233 G831,SI1,unknown,1,False,L-R,Othr
+S3728,G740 G176 G233 G806,SI1,unknown,1,False,L-R,Othr
+S3730,G740 G176 G231 G806,SI1,unknown,1,False,L-R,Othr
+S3733,G407 G845 G220 G415,SI1,unknown,1,False,L-R,Loop
+S3734,G790 G740 G100 G405 G590,SI1,unknown,1,False,L-R,Loop
+S3735,G165 G900 G790,SI1,unknown,1,False,L-R,unknown
+S3736,G165 G900 G0,SI1,unknown,1,False,L-R,unknown
+S3738,G617 G142 G1 G595 G95 G717 G747,SI1,unknown,1,False,L-R,Bull1:W
+S3741,G424 G3 G1 G900 G740 G690 G435 G255,SI1,unknown,1,False,L-R,Buff
+S3742,G422 G3 G900 G740 G690 G435 G255,SI1,unknown,1,False,L-R,Buff
+S3745,G422 G3 G900 G740 G690 G435 G255,SI1,unknown,1,False,L-R,unknown
+S3746,G422 G3 G900 G740 G690 G435 G255,SI1,unknown,1,False,L-R,unknown
+S3747,G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3748,G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3749,G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3750,G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3751,G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3752,G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S3753,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3754,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3755,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3756,G407 G321 G407 G845 G33 G705 G235,SI1,unknown,1,False,L-R,Hare
+S3757,G740 G100 G176 G422 G3,SI1,unknown,1,False,L-R,unknown
+S3759,G740 G100 G176 G422 G3,SI1,unknown,1,False,L-R,Othr
+S3760,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3761,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3762,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3763,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3764,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3765,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3766,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3767,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3768,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Othr
+S3769,G740 G400 G61 G299 G350 G125 G176,SI31,unknown,1,False,L-R,unknown
+S3770,G407 G61 G845 G240 G798,SI1,unknown,1,False,L-R,Othr
+S3771,G407 G61 G845 G240 G798,SI1,unknown,1,False,L-R,Othr
+S3772,G407 G61 G845 G240 G798,SI1,unknown,1,False,L-R,Tigr
+S3773,G740 G222 G220 G235,SI1,unknown,1,False,L-R,Othr
+S3774,G740 G222 G233 G235,SI1,unknown,1,False,L-R,Rhin
+S3775,G740 G222 G233 G235,SI1,unknown,1,False,L-R,Rhin
+S3776,G407 G585 G33 G705 G233 G235 G806,SI1,unknown,1,False,L-R,Comp
+S3777,G407 G585 G33 G705 G233 G235 G806,SI1,unknown,1,False,L-R,unknown
+S3778,G617 G142 G597 G32 G905,SI1,unknown,1,False,L-R,unknown
+S3779,G617 G142 G597 G32 G904,SI1,unknown,1,False,L-R,Comp
+S3780,G617 G142 G597 G32 G905,SI1,unknown,1,False,L-R,Othr
+S3781,G617 G142 G597 G32 G905,SI1,unknown,1,False,L-R,Othr
+S3782,G617 G142 G597 G32 G905,SI1,unknown,1,False,L-R,Othr
+S3783,G740 G388 G585 G17,SI1,unknown,1,False,L-R,Othr
+S3784,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3785,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3786,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S3787,G753,SI1,unknown,1,False,L-R,unknown
+S3788,G749 G479,SI1,unknown,1,False,L-R,unknown
+S3790,G749,SI1,unknown,1,False,L-R,unknown
+S3791,G777,SI1,unknown,1,False,L-R,unknown
+S3792,G777,SI1,unknown,1,False,L-R,unknown
+S3793,G777,SI1,unknown,1,False,L-R,unknown
+S3794,G777,SI1,unknown,1,False,L-R,unknown
+S3798,G904 G32 G904,SI1,unknown,1,False,L-R,unknown
+S3800,G241 G220 G235 G803,SI1,unknown,1,False,L-R,unknown
+S3801,G740 G31 G226,SI1,unknown,1,False,L-R,unknown
+S3814,G740 G900 G3 G0 G741 G2,SI1,unknown,1,False,L-R,unknown
+S3815,G740 G920 G320,SI1,unknown,1,False,L-R,unknown
+S3820,G151 G33,SI1,unknown,1,False,R-L,unknown
+S3823,G705 G32 G595 G90 G175,SI1,unknown,1,False,L-R,unknown
+S3841,G400 G740 G585 G838 G240,SI1,unknown,1,False,L-R,unknown
+S3842,G31 G645 G645 G31,SI1,unknown,1,False,L-R,unknown
+S3843,G740 G100 G31,SI1,unknown,1,False,L-R,Bult
+S3844,G0 G16 G2 G861,SI1,unknown,1,False,L-R,unknown
+S3845,G740 G416,SI1,unknown,1,False,L-R,Bull1:S
+S3848,G740 G760 G17 G503,SI1,unknown,1,False,L-R,Bull1
+S3853,G90 G740 G220 G16 G2 G820,SI32,unknown,1,False,L-R,Bull1:J
+S3854,G520 G240 G60 G922,SI32,unknown,1,False,L-R,Bull1:J
+S3855,G390 G3 G2 G820,SI32,unknown,1,False,L-R,Bull1:J
+S3856,G740 G33 G495,SI32,unknown,1,False,L-R,Bull1
+S3859,G400 G798 G255,SI33,unknown,1,False,L-R,Bull1:W
+S3863,G160 G90 G55 G60 G190,SI34,unknown,1,False,R-L,Gaur
+S3865,G405 G4,SI35,unknown,1,False,L-R,unknown
+S3868,G130 G32 G820,SI4,unknown,1,False,L-R,Bull1
+S3869,G740 G760 G335 G741 G60 G920,SI4,unknown,1,False,L-R,Bull1:J
+S3872,G740 G877 G32 G235,SI36,unknown,1,False,L-R,Bull1:J
+S3873,G400 G226 G415,SI36,unknown,1,False,R-L,Bult
+S3874,G426 G3,SI37,unknown,1,False,L-R,Rhin
+S3875,G390 G4 G2 G390 G125 G820,SI38,unknown,1,False,L-R,Bull1
+S3876,G740 G60 G390 G803 G740,SI38,unknown,1,False,L-R,unknown
+S3882,G416 G150 G2 G55 G31 G319 G1 G924,SI39,unknown,1,False,L-R,Gaur
+S3884,G390 G4 G2 G705 G127,SI40,unknown,1,False,L-R,Bull1
+S3889,G740 G740 G1 G550 G467,SI22,unknown,1,False,L-R,Gaur
+S3890,G740 G585 G231 G240 G60 G820,SI22,unknown,1,False,L-R,Bull1:W
+S3891,G740 G100 G415 G927 G60 G920 G31,SI22,unknown,1,False,L-R,Bull1:J
+S3892,G2 G368 G590 G900,SI22,unknown,1,False,L-R,unknown
+S3894,G555 G233 G2 G820,SI22,unknown,1,False,L-R,unknown
+S3895,G700 G32,SI22,unknown,1,False,L-R,unknown
+S3896,G740 G222 G235 G2 G820,SI22,unknown,1,False,L-R,Bull1:W
+S3897,G93 G340 G924 G220 G528,SI41,unknown,1,False,L-R,Gaur
+S3898,G2 G4 G328 G1 G803 G415,SI41,unknown,1,False,L-R,Gaur
+S3900,G413 G933 G31,SI42,unknown,1,False,L-R,Bull1
+S3901,G136 G31,SI42,unknown,1,False,L-R,Bull1
+S3902,G931 G0,SI42,unknown,1,False,L-R,Bull1
+S3903,G740 G912,SI1,unknown,1,False,L-R,Bull1:W
+S3905,G812 G500 G60 G920,SI1,unknown,1,False,L-R,Bull1:W
+S3906,G740 G690 G435 G255 G742 G615 G380,SI1,unknown,1,False,L-R,Bull1:W
+S3907,G740 G390,SI1,unknown,1,False,R-L,Bull1:W
+S3908,G740 G760 G1 G233 G2 G861,SI1,unknown,1,False,L-R,Bull1:II
+S3909,G740 G482 G33 G705 G2 G861 G803,SI1,unknown,1,False,L-R,Bull1:W
+S3912,G31 G700,SI2,unknown,1,False,L-R,unknown
+S3915,G90 G740 G235 G741 G572 G368,SI2,unknown,1,False,L-R,Bull1:W
+S3916,G368 G861 G501 G31,SI2,unknown,1,False,L-R,Bull1:W
+S3918,G740 G443 G388 G231,SI2,unknown,1,False,L-R,Bull1:W
+S3921,G153 G31 G700,SI2,unknown,1,False,L-R,Bull1
+S3924,G151 G390 G590,SI2,unknown,1,False,L-R,Bull1:W
+S3925,G740 G32 G840 G235 G2 G817,SI2,unknown,1,False,L-R,Bull1:W
+S3926,G405 G4 G2 G933,SI2,unknown,1,False,L-R,Bull1:W
+S3927,G742 G440 G556,SI2,unknown,1,False,L-R,unknown
+S3930,G740 G611 G706 G2 G820,SI2,unknown,1,False,L-R,unknown
+S3932,G740 G100 G176,SI2,unknown,1,False,L-R,unknown
+S3934,G34 G32 G32,SI2,unknown,1,False,L-R,unknown
+S3935,G34 G999 G34,SI2,unknown,1,False,L-R,unknown
+S3949,G740 G850,SI2,unknown,1,False,L-R,unknown
+S3950,G220 G32,SI2,unknown,1,False,L-R,unknown
+S3952,G740 G220,SI3,unknown,1,False,R-L,unknown
+S3953,G365 G527,SI43,unknown,1,False,R-L,Goat:6
+S3959,G700 G32,SI2,unknown,1,False,L-R,Bull2
+S3960,G400 G740 G405 G590 G235 G806,SI2,unknown,1,False,L-R,unknown
+S3965,G158 G806 G465,SI2,unknown,1,False,L-R,Phyt
+S3966,G158 G806 G465,SI2,unknown,1,False,L-R,Phyt
+S3967,G740 G390 G590 G235,SI2,unknown,1,False,L-R,Phyt
+S3969,G700 G33,SI2,unknown,1,False,L-R,unknown
+S3970,G740 G176 G220 G235,SI2,unknown,1,False,L-R,unknown
+S3971,G740 G176 G220 G235,SI2,unknown,1,False,L-R,unknown
+S3975,G740 G603 G240 G60 G692,SI2,unknown,1,False,L-R,unknown
+S3976,G740 G32 G840 G0,SI2,unknown,1,False,L-R,unknown
+S3978,G615 G352,SI2,unknown,1,False,L-R,unknown
+S3979,G400 G740 G790,SI2,unknown,1,False,L-R,unknown
+S3984,G520 G70 G503 G240,SI1,unknown,1,False,L-R,Bull1:W
+S3985,G520 G33 G705 G235 G240 G741 G903 G903,SI1,unknown,1,False,L-R,Bull1:S
+S3987,G740 G752 G460 G510,SI1,unknown,1,False,L-R,Bull1
+S3988,G740 G384,SI1,unknown,1,False,L-R,Bull1
+S3990,G390 G3 G2 G820,SI1,unknown,1,False,L-R,Bull1:S
+S3991,G390 G4 G2 G31 G376,SI1,unknown,1,False,L-R,Bull1:S
+S3992,G157 G31 G2 G390 G705,SI1,unknown,1,False,L-R,Bull1
+S3993,G154 G900 G4 G1 G390 G32,SI1,unknown,1,False,L-R,Bull1:O
+S3995,G520 G220 G1 G820 G220 G63 G315,SI1,unknown,1,False,L-R,Bull1:I
+S3996,G740 G900 G5,SI1,unknown,1,False,L-R,Bull1
+S3997,G740 G61,SI1,unknown,1,False,L-R,Bull1
+S4001,G740 G440 G233 G2 G413 G368 G31,SI1,unknown,1,False,L-R,Zebu
+S4002,G368 G5 G2 G590 G455,SI1,unknown,1,False,L-R,Rhin
+S4004,G400 G804,SI1,unknown,1,False,L-R,unknown
+S4005,G740 G903 G850 G33 G706 G235,SI1,unknown,1,False,L-R,unknown
+S4007,G155 G806 G468,SI1,unknown,1,False,L-R,unknown
+S4010,G740 G575 G17 G233 G550 G2 G861,SI1,unknown,1,False,L-R,unknown
+S4011,G740 G923 G13 G820,SI1,unknown,1,False,L-R,unknown
+S4014,G790 G5 G956,SI1,unknown,1,False,L-R,Bull1
+S4015,G740 G900 G5 G2 G570,SI1,unknown,1,False,L-R,Bull1
+S4016,G740 G927,SI1,unknown,1,False,L-R,Mult
+S4020,G455 G66 G942 G90,SI1,unknown,1,False,L-R,unknown
+S4022,G136 G140 G861 G455 G922,SI1,unknown,1,False,L-R,Scene
+S4023,G740 G923 G33 G706,SI1,unknown,1,False,L-R,Elep
+S4025,G740 G752 G615 G503,SI1,unknown,1,False,L-R,Gaur
+S4029,G740 G900 G850 G407 G61 G845 G806,SI1,unknown,1,False,L-R,Anth
+S4030,G2 G407 G125 G590 G831,SI1,unknown,1,False,L-R,unknown
+S4031,G700 G125,SI2,unknown,1,False,L-R,unknown
+S4032,G840 G705,SI1,unknown,1,False,L-R,unknown
+S4033,G740 G482 G838,SI1,unknown,1,False,L-R,unknown
+S4036,G400 G740 G176,SI1,unknown,1,False,L-R,unknown
+S4039,G723 G66 G828,SI1,unknown,1,False,L-R,unknown
+S4040,G740 G482 G838,SI1,unknown,1,False,L-R,unknown
+S4047,G41 G705 G2 G905,SI1,unknown,1,False,L-R,unknown
+S4052,G868 G706 G590,SI2,unknown,1,False,L-R,unknown
+S4056,G220 G700 G4,SI2,unknown,1,False,L-R,unknown
+S4059,G700 G33,SI2,unknown,1,False,L-R,unknown
+S4068,G0,SI2,unknown,1,False,L-R,unknown
+S4069,G700 G34,SI2,unknown,1,False,R-L,unknown
+S4072,G700 G32,SI2,unknown,1,False,L-R,unknown
+S4073,G700 G33,SI2,unknown,1,False,R-L,unknown
+S4074,G0 G0 G0,SI2,unknown,1,False,L-R,unknown
+S4077,G700 G33,SI2,unknown,1,False,R-L,unknown
+S4082,G400 G98,SI2,unknown,1,False,L-R,unknown
+S4084,G90 G740 G220,SI2,unknown,1,False,L-R,Gavi+Bult
+S4085,G700 G33,SI2,unknown,1,False,L-R,Bult
+S4086,G400 G740 G176,SI2,unknown,1,False,L-R,Bult
+S4087,G700 G33,SI2,unknown,1,False,L-R,Bult
+S4088,G700 G33,SI2,unknown,1,False,L-R,Bult
+S4090,G226 G32,SI2,unknown,1,False,L-R,Bult
+S4097,G480 G3 G31,SI2,unknown,1,False,L-R,unknown
+S4124,G482 G33,SI2,unknown,1,False,L-R,unknown
+S4138,G413 G530,SI2,unknown,1,False,L-R,unknown
+S4139,G740 G554,SI2,unknown,1,False,L-R,unknown
+S4143,G645 G3 G900,SI2,unknown,1,False,L-R,unknown
+S4149,G520 G33 G33,SI3,unknown,1,False,L-R,Bull1:S
+S4153,G520 G73,SI4,unknown,1,False,L-R,Rhin
+S4155,G740 G390 G590 G125 G220 G235 G2 G285,SI5,unknown,1,False,L-R,Elep
+S4159,G368 G5 G741 G60 G920,SI3,unknown,1,False,L-R,Bull1:J
+S4161,G64 G4 G2 G1 G740 G176,SI3,unknown,1,False,L-R,unknown
+S4162,G740 G760 G1 G233,SI3,unknown,1,False,L-R,Bull1
+S4164,G423 G3 G1 G423 G2 G31 G104,SI3,unknown,1,False,R-L,unknown
+S4165,G740 G840 G416,SI3,unknown,1,False,L-R,Bull1:V
+S4166,G776 G440 G3 G421,SI3,unknown,1,False,L-R,unknown
+S4167,G520 G33 G706,SI3,unknown,1,False,L-R,unknown
+S4172,G90 G160,SI3,unknown,1,False,L-R,Bull1:W
+S4173,G392 G4 G2 G278 G595,SI6,unknown,1,False,L-R,Gaur
+S4175,G156 G142 G741 G60 G920,SI3,unknown,1,False,L-R,Bull1:W
+S4181,G817 G130,SI3,unknown,1,False,L-R,Bull1:W
+S4182,G740 G390 G590 G231 G2 G705 G530 G904,SI3,unknown,1,False,L-R,Bull1
+S4183,G740 G798 G233 G742 G175,SI3,unknown,1,False,L-R,Bull1
+S4184,G740 G32 G840 G803,SI3,unknown,1,False,L-R,Bull1
+S4187,G231 G850,SI3,unknown,1,False,L-R,unknown
+S4190,G5 G408,SI3,unknown,1,False,R-L,unknown
+S4194,G154 G806 G472 G1 G2 G220 G455 G806,SI3,unknown,1,False,L-R,unknown
+S4195,G820 G390 G590 G2 G861,SI3,unknown,1,False,L-R,Bull1:V
+S4196,G391 G2 G365 G550,SI3,unknown,1,False,L-R,Bull1:J
+S4198,G390 G550 G452 G60 G690,SI3,unknown,1,False,L-R,Bull1:V
+S4201,G832 G140 G2 G1 G547,SI3,unknown,1,False,L-R,unknown
+S4203,G460 G513 G0 G390 G17 G2 G460 G575,SI3,unknown,1,False,L-R,Bull1:I
+S4208,G740 G176 G1 G741 G703 G900 G3,SI3,unknown,1,False,L-R,Gaur
+S4209,G740 G384 G2 G629 G279,SI3,unknown,1,False,L-R,Gaur
+S4211,G740 G100 G235 G2 G817,SI3,unknown,1,False,L-R,unknown
+S4220,G520 G742 G861,SI3,unknown,1,False,L-R,Bull1
+S4221,G740 G760 G234 G741 G740 G590,SI3,unknown,1,False,L-R,Bull1:U
+S4223,G31 G151,SI3,unknown,1,False,L-R,Elep
+S4224,G740 G235 G220,SI3,unknown,1,False,L-R,Bull1
+S4225,G156 G19,SI3,unknown,1,False,L-R,Bull1:S
+S4226,G400 G740 G920,SI3,unknown,1,False,L-R,Bull1
+S4227,G740 G630 G98 G368 G824,SI3,unknown,1,False,L-R,Bull1
+S4229,G740 G390 G590 G220 G460 G240 G1 G820 G60,SI3,unknown,1,False,L-R,Bull1:V
+S4232,G520 G235,SI3,unknown,1,False,L-R,Bull1:J
+S4236,G740 G760 G175 G220 G255,SI3,unknown,1,False,L-R,Bull1:S
+S4237,G151 G32 G388 G2 G390 G705,SI3,unknown,1,False,L-R,Bull1:I
+S4239,G90 G95 G741 G374 G132,SI3,unknown,1,False,L-R,Bull1:I
+S4240,G151 G142,SI3,unknown,1,False,L-R,Bull1:I
+S4242,G4 G408,SI3,unknown,1,False,L-R,unknown
+S4244,G233 G776,SI3,unknown,1,False,L-R,unknown
+S4250,G520 G90 G803 G564 G741 G798 G892,SI3,unknown,1,False,L-R,unknown
+S4254,G561 G92 G625 G900,SI3,unknown,1,False,R-L,unknown
+S4258,G892 G33,SI3,unknown,1,False,L-R,unknown
+S4260,G390 G16 G2 G861,SI3,unknown,1,False,L-R,unknown
+S4269,G422 G3,SI3,unknown,1,False,L-R,unknown
+S4272,G405 G16 G2 G861,SI3,unknown,1,False,L-R,unknown
+S4274,G832 G1 G740 G176,SI3,unknown,1,False,L-R,unknown
+S4277,G740 G67 G900 G2 G3,SI3,unknown,1,False,L-R,unknown
+S4284,G590 G407 G790 G1 G746,SI3,unknown,1,False,L-R,unknown
+S4286,G153 G220 G32,SI3,unknown,1,False,L-R,unknown
+S4287,G740 G798 G706 G61 G60 G550,SI3,unknown,1,False,L-R,unknown
+S4290,G700 G33,SI44,unknown,1,False,L-R,Maze
+S4301,G136 G33,SI3,unknown,1,False,L-R,unknown
+S4302,G740 G519 G2 G900 G630,SI3,unknown,1,False,L-R,Scene
+S4580,G520 G240 G2 G405 G501,SI2,unknown,1,False,L-R,Bull1:I
+S4597,G400 G90,SI2,unknown,1,False,L-R,Mult
+S4676,G66 G33,SI2,unknown,1,False,L-R,unknown
+S4894,G111 G3 G250,SI32,unknown,1,False,L-R,Bull1:I
+S4935,G740 G32 G840 G679,SI2,unknown,1,False,L-R,Fish
+S5215,G155 G5,SI20,unknown,1,False,L-R,Bull1:L
+S5218,G520 G70 G495 G240 G60 G297 G368 G632 G32,SI20,unknown,1,False,L-R,Bull1:I
+S5219,G292 G352 G125 G741 G900 G322,SI20,unknown,1,False,L-R,Bull1:I
+S5220,G520 G460 G510,SI14,unknown,1,False,L-R,Bull1:II
+S5227,G220 G455 G31 G91,SI45,unknown,1,False,L-R,Gaur
+S5228,G33 G1 G32 G91,SI45,unknown,1,False,L-R,Gaur
+S5229,G31 G93 G1 G91 G220 G55,SI46,unknown,1,False,L-R,unknown
+S5234,G740 G61,SI47,unknown,1,False,L-R,Bull1:S
+S5235,G740 G32 G29 G2 G281,SI47,unknown,1,False,L-R,Bull1:S
+S5236,G740 G405 G590 G60 G146,SI47,unknown,1,False,L-R,Bull1:W
+S5244,G740 G706,SI47,unknown,1,False,L-R,Bull1
+S5245,G740 G706,SI47,unknown,1,False,L-R,Bull1
+S5252,G740 G900 G803,SI48,unknown,1,False,L-R,unknown
+S5271,G740 G177,SI16,unknown,1,False,L-R,unknown
+S5272,G909,SI16,unknown,1,False,L-R,unknown
+S5273,G740 G585 G231 G220 G32 G2 G820,SI25,unknown,1,False,L-R,Bull1:J
+S5277,G520 G220 G6,SI25,unknown,1,False,L-R,Gaur
+S5280,G151 G61,SI25,unknown,1,False,L-R,unknown
+S5281,G892 G890 G417 G2 G56 G91,SI25,unknown,1,False,L-R,Bull1
+S5284,G740 G798,SI25,unknown,1,False,L-R,unknown
+S5316,G390 G17,SI25,unknown,1,False,L-R,unknown
+S5341,G31 G817,SI25,unknown,1,False,L-R,unknown
+S5353,G390 G790,SI32,unknown,1,False,R-L,Bull1
+S5355,G861 G111 G391 G60 G692,SI32,unknown,1,False,L-R,Bull1:I
+S5356,G740 G222 G2 G817,SI32,unknown,1,False,L-R,Bull1:J
+S5357,G526 G554 G2 G880,SI32,unknown,1,False,L-R,Bull1:J
+S5358,G861 G111 G606 G2 G820,SI32,unknown,1,False,L-R,Bull1:I
+S5359,G740 G760 G32,SI32,unknown,1,False,L-R,Gaur
+S5360,G520 G220 G742 G60 G920,SI32,unknown,1,False,L-R,Zebu
+S5361,G407 G63 G740 G176 G236 G798 G2 G297 G350 G125 G413,SI32,unknown,1,False,L-R,unknown
+S5364,G795 G400 G740,SI32,unknown,1,False,R-L,unknown
+S5369,G740 G861,SI32,unknown,1,False,L-R,unknown
+S5383,G741 G794,SI32,unknown,1,False,L-R,unknown
+S5384,G740 G384 G31 G950 G1 G741 G257 G840,SI32,unknown,1,False,L-R,Bull1
+S5388,G90 G740 G220 G55 G1 G741 G500 G705,SI29,unknown,1,False,L-R,Bull1
+S5389,G400 G740 G32,SI2,unknown,1,False,L-R,unknown
+S5396,G400 G137,SI2,unknown,1,False,L-R,Mult
+S5421,G520 G31,SI42,unknown,1,False,L-R,Ass
+S5428,G151 G400 G142,SI22,unknown,1,False,L-R,Bull1:J
+S5442,G740 G742,SI49,unknown,1,False,R-L,Bull1:I
+S5444,G520 G13,SI49,unknown,1,False,R-L,Bull3
+S5451,G335 G220 G98 G921 G861,SI50,unknown,1,False,R-L,Rhin
+S5453,G415 G820,SI51,unknown,1,False,L-R,Bull1:W
+S5455,G390 G16 G13 G820,SI26,unknown,1,False,L-R,Bull1:W
+S5456,G520 G235 G220 G32,SI52,unknown,1,False,L-R,Bull1
+S5462,G400 G158 G806 G472,SI2,unknown,1,False,L-R,unknown
+S5465,G390 G840 G741 G31 G370,SI22,unknown,1,False,L-R,Gaur
+S5470,G700 G33,SI2,unknown,1,False,L-R,unknown
+S5495,G740 G840 G2,SI25,unknown,1,False,L-R,unknown
+S5523,G215 G2 G2,SI1,unknown,1,False,R-L,unknown
+S5527,G740 G424,SI1,unknown,1,False,R-L,unknown
