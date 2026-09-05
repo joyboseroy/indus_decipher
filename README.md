@@ -30,7 +30,8 @@ what this is.
 
 ## How this was built
 
-This codebase was developed iteratively with the help of Claude (Anthropic) under human
+This codebase was developed iteratively with Claude (Anthropic) doing the
+implementation, debugging, literature search, and drafting, under human
 direction and review at every step, including the decision of which
 statistical tests to run, which data sources to trust, and how to word
 every caveat in this document. Several of the more interesting findings
@@ -79,6 +80,8 @@ data/
                                 structure, used by the falsification harness
   adversarial_null_model.py    statistics-matched non-linguistic generator
                                 (see "The adversarial null-model test")
+  permutation_nulls.py         four permutation-based controls (see
+                                "Permutation controls")
   convert_indus_website_sql_to_csv.py   real-data converter (see below)
   convert_cisi_to_csv.py                real-data converter (see below)
   indus_website_real_corpus.csv         real data (2,543 inscriptions)
@@ -93,6 +96,8 @@ analysis/
   direction_test.py      reading-direction diagnostic (see below)
   minimal_pairs.py        seal-twin mining with three corroboration tiers,
                          including real iconographic motif matching
+  substitution_graph.py    weighted, attributed substitution graph and
+                         cross-site stability testing (networkx-based)
   falsification.py        feature-vector classification against three known
                          synthetic generative systems
 models/
@@ -105,6 +110,14 @@ experiments/
                          matched-subsample test)
   adversarial_null_test.py  the statistics-matched null-model discrimination
                          test (see "The adversarial null-model test")
+  permutation_controls.py  four permutation-based controls locating where
+                         the classifiable signal lives (see "Permutation
+                         controls")
+  bootstrap_classification_ci.py  proper confidence intervals on
+                         classification, and the leakage bug found while
+                         building it (see "Bootstrap confidence intervals")
+  substitution_graph_analysis.py  runs substitution_graph.py on the large
+                         corpus, including the cross-site stability test
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -359,6 +372,137 @@ standing behind.
 
 Run it yourself with `python3 experiments/adversarial_null_test.py`.
 
+## Permutation controls: locating where the signal lives
+
+The adversarial null model above tests one thing: real corpus versus a
+system with no sequential dependency at all. `experiments/permutation_controls.py`
+sharpens this into four controls, each destroying a different, precisely
+scoped piece of structure while operating directly on the real corpus's
+own tokens rather than resampled marginals:
+
+1. `within_inscription_shuffle`: shuffle each inscription's own signs into
+   a new order. Destroys all within-inscription order.
+2. `global_shuffle`: pool every sign token corpus-wide and reshuffle,
+   re-cut using the original length sequence. Destroys order AND which
+   specific signs co-occurred in the same inscription.
+3. `position_preserving_shuffle`: hold each inscription's own observed
+   initial and final sign fixed, shuffle only the middle. Destroys only
+   middle-sequence order.
+4. `bigram_markov_null`: generate fresh sequences by sampling forward
+   through the REAL empirical bigram transition table, including a
+   trained end-of-sequence token so that stopping behavior itself comes
+   from real data rather than an externally fixed length. Destroys only
+   dependency beyond order-1 (trigram and higher).
+
+An earlier version of control 4 fixed each generated sequence's length to
+a real observed value and let the chain run exactly that many steps. That
+produced a large, misleading gap on the `top_sign_final_share` feature
+(a bigram-generated sequence stopped by external fiat has no way to
+reproduce a real closing-sign tendency that is actually encoded in real
+P(END | current sign) probabilities). Adding a proper trained END token
+fixed this: with real stopping behavior included, five of six features
+came within 10% between real and this control.
+
+Result: even against the fairest version of the bigram-order control,
+the classifier still discriminates real data from it at 93.8% accuracy
+(chance is 50%). That is the most specific finding in this project so
+far: the real corpus contains sequential structure beyond what a bigram
+(order-1) model explains. It does not by itself say what that higher-order
+structure is, only that it exists.
+
+Run it yourself with `python3 experiments/permutation_controls.py`.
+
+## Bootstrap confidence intervals, and a leakage bug found along the way
+
+Every classification reported above until this point was a single point
+estimate on one corpus. `experiments/bootstrap_classification_ci.py` was
+built to replace that with a proper confidence interval, and its first,
+textbook-standard version produced an alarming result worth documenting
+rather than hiding: resampling the large corpus WITH replacement at its
+own full size (the standard nonparametric bootstrap) flipped its
+classification from language-like, its result in every other test in
+this project, to mixed in 97% of resamples.
+
+Direct investigation traced this to a real bug in combining
+with-replacement bootstrap with this project's cross-validated perplexity
+feature. Resampling with replacement at full size produces roughly 37 to
+49% exact duplicate sequences. When a duplicate lands in both a training
+fold and the held-out fold of the internal k-fold split, a bigram model
+can effectively memorize it from training and then predict it correctly
+in the held-out fold, a leak that a unigram model, unable to memorize
+whole sequences, benefits from far less. Measured directly on one
+resample: bigram cross-validated perplexity dropped 26% purely from this
+leakage, while unigram perplexity dropped only 5%, comfortably enough of
+a gap to flip `perplexity_ratio_n2_n1` and change the nearest-centroid
+label.
+
+The fix is subsampling WITHOUT replacement at a fixed fraction (80% by
+default) of each corpus, which produces genuine resample-to-resample
+variability without ever creating a duplicate that could leak across a
+fold boundary. With that fix, the results are tight and consistent:
+
+| Corpus | N | P(language-like) | 95% CI |
+|---|---|---|---|
+| Large corpus (indus_website) | 2,543 | 1.000 | [0.981, 1.000] |
+| CISI corpus | 104 | 0.990 | [0.964, 0.997] |
+| Mohenjo-daro + unicorn matched subset | 638 | 1.000 | [0.981, 1.000] |
+
+This both confirms the earlier point-estimate finding and gives it a
+real confidence level, and it is a second concrete instance (after the
+`paradigm_classes_per_1000_inscriptions` bug) of this project's central
+methodological lesson: a resampling or feature-engineering choice that
+looks standard can silently interact with a downstream pipeline step
+(here, k-fold cross-validation) in a way that produces a confident,
+wrong-looking answer, and the only way to catch it is to notice when a
+result contradicts everything else you already know and go find out why
+rather than reporting it.
+
+Run it yourself with `python3 experiments/bootstrap_classification_ci.py`.
+
+## The substitution graph upgrade, and a cross-site stability finding
+
+`analysis/substitution_graph.py` turns the motif-corroborated minimal
+pairs into a proper weighted graph (via networkx) instead of a plain
+connected-components view: edges carry a weight (raw pair count) and a
+`distinct_contexts` count (the number of unique site+motif combinations
+supporting that edge, a conservative proxy for independent corroborating
+evidence, since five pairs from one site+motif combination are one piece
+of evidence, not five). Greedy modularity community detection is offered
+alongside plain connected components, since the latter is known from
+`minimal_pairs.py`'s own documentation to over-merge at low thresholds;
+on the large corpus, modularity splits what connectivity sees as 18
+components into 19 communities, resolving at least one additional
+genuine sub-structure that raw connectivity had merged.
+
+`experiments/substitution_graph_analysis.py` then asks the harder
+question: do these classes survive being recomputed independently on a
+single site's own data? For the five largest communities, restricted to
+signs that actually appear in each site's own vocabulary, and compared by
+Jaccard overlap against whatever class the same procedure finds when run
+on that site alone:
+
+| Community | Size | Mohenjo-daro Jaccard | Harappa Jaccard |
+|---|---|---|---|
+| 0 | 15 | 0.64 | 0.17 |
+| 1 | 12 | 0.92 | 0.30 |
+| 2 | 11 | 0.80 | 0.44 |
+| 3 | 8 | 0.71 | 0.38 |
+| 4 | 6 | 1.00 | 0.00 |
+
+Every community replicates far better at Mohenjo-daro than at Harappa,
+one community (community 4) not replicating there at all. Mohenjo-daro
+supplies the plurality of the corpus (1,202 of 2,543 inscriptions) and of
+the motif-labeled subset these classes are built from, so at least part
+of this gap is likely an ordinary sample-size effect rather than a
+genuine site-specific grammatical difference, but that has not been
+tested directly yet (see "Extending this toolkit"). Read this table as
+what it is: most of the current motif-corroborated substitution classes
+are substantially better supported by Mohenjo-daro material than shown to
+be corpus-general, and that qualifier belongs on any claim made about
+them until it is checked further.
+
+Run it yourself with `python3 experiments/substitution_graph_analysis.py`.
+
 ## Known limitations and other honesty notes
 
 - **The transformer is small and NumPy-only on purpose.** It is a full,
@@ -424,11 +568,19 @@ Run it yourself with `python3 experiments/adversarial_null_test.py`.
 Roughly in order of effort, and reflecting several concrete suggestions
 this project received during external review of the resolved corpus
 disagreement above:
-- **Report classification with a confidence interval, not a point
-  estimate.** `experiments/corpus_divergence.py`'s repeated-subsample
-  approach already produces the raw material (proportions across 30
-  trials per size); wrapping that into a proper bootstrap CI per corpus
-  is a small step from here.
+- ~~Report classification with a confidence interval, not a point
+  estimate~~ **Done, see "Bootstrap confidence intervals" above** (and
+  note the leakage bug documented there before trusting a naive version
+  of this).
+- **Test whether Harappa's weaker class-stability is a sample-size
+  effect.** The cross-site stability table above shows every substitution
+  class replicating worse at Harappa than at Mohenjo-daro, and
+  Mohenjo-daro supplies more of the corpus. Before concluding anything
+  site-specific, subsample Mohenjo-daro DOWN to Harappa's motif-labeled
+  count and see whether the gap shrinks or persists. This is the same
+  logic as "Resolved: why the two real corpora used to disagree" above,
+  applied to the substitution-graph result instead of the falsification
+  harness.
 - **Make the synthetic controls harder.** The three civilizations are
   deliberately quite distinct from each other, which is why the
   self-test hits 100%. A useful next test is a continuum between
@@ -438,7 +590,13 @@ disagreement above:
   independent generator variants per class, so the classifier is checked
   against variation within a category, not just between categories.
 - ~~Build an adversarial, statistics-matched null model~~ **Done, see
-  "The adversarial null-model test" below.**
+  "The adversarial null-model test" above.**
+- ~~Add permutation controls to locate where the classifiable signal
+  lives~~ **Done, see "Permutation controls" above.**
+- ~~Upgrade minimal pairs into a weighted substitution graph with
+  cross-site stability testing~~ **Done, see "The substitution graph
+  upgrade" above** (though see the follow-up bullet above about
+  Mohenjo-daro sample-size confound).
 - **Add real external control corpora** (Sumerian, Old Tamil, Vedic
   Sanskrit) to `analysis/entropy.py`'s comparisons via
   `external_control_entropy()`, replacing or supplementing the synthetic
@@ -452,11 +610,13 @@ disagreement above:
 - **Keep a lightweight experiment log** (corpus, N, direction, features,
   seed, result, timestamp) for every run that produces a number quoted
   anywhere outside this repo, so any reported figure can be traced back
-  to the exact run that produced it. `experiments/corpus_divergence.py`'s
+  to the exact run that produced it. Every `experiments/*.py` script's
   JSON output is a first, informal version of this.
 - Add a proper PyTorch transformer once more real data is in hand, sized
   to the corpus (still likely small; a few thousand four-to-five-sign
-  sequences is not much training data).
+  sequences is not much training data). Compare it against unigram
+  through 4-gram baselines on an identical train/test split, not in
+  isolation, so any improvement is measured rather than assumed.
 - Build the CNN/YOLO seal-image segmentation pipeline (ASR-Net/MI-Net
   style) separately. That needs actual seal photographs, a different
   data-acquisition problem from the text-sequence work here.
