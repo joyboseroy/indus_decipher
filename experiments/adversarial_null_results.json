@@ -1,0 +1,44 @@
+{
+  "n_instances": 8,
+  "n_per_instance": 500,
+  "feature_summary": {
+    "zipf_gamma": {
+      "real_mean": 0.8301644551125552,
+      "null_mean": 0.9314056436757434,
+      "pct_diff": 12.19531718296811
+    },
+    "zipf_r2": {
+      "real_mean": 0.970254851183867,
+      "null_mean": 0.9461718321336543,
+      "pct_diff": 2.4821333277546835
+    },
+    "conditional_entropy": {
+      "real_mean": 2.508443129496683,
+      "null_mean": 3.2909583097711215,
+      "pct_diff": 31.195252974281985
+    },
+    "perplexity_ratio_n2_n1": {
+      "real_mean": 1.053918394314157,
+      "null_mean": 1.7729985454184074,
+      "pct_diff": 68.22920581909983
+    },
+    "top_sign_final_share": {
+      "real_mean": 0.31325000000000003,
+      "null_mean": 0.319,
+      "pct_diff": 1.8355945671648939
+    },
+    "mean_length": {
+      "real_mean": 4.43175,
+      "null_mean": 4.398,
+      "pct_diff": 0.7615501775232106
+    }
+  },
+  "leave_one_out_accuracy": {
+    "overall_accuracy": 1.0,
+    "per_label_accuracy": {
+      "real": 1.0,
+      "null_matched": 1.0
+    }
+  },
+  "verdict": "The classifier CAN reliably tell the real corpus apart from a statistics-matched non-linguistic system. Check the feature table above: if conditional_entropy and perplexity_ratio_n2_n1 show the largest gaps, that's consistent with the real corpus having genuine sequential structure beyond position and frequency effects, which is what this test was designed to detect."
+}
