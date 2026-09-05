@@ -1,0 +1,158 @@
+{
+  "within_inscription_shuffle": {
+    "feature_summary": {
+      "zipf_gamma": {
+        "real_mean": 0.8301644551125552,
+        "control_mean": 0.8301644551125552,
+        "pct_diff": 0.0
+      },
+      "zipf_r2": {
+        "real_mean": 0.970254851183867,
+        "control_mean": 0.970254851183867,
+        "pct_diff": 0.0
+      },
+      "conditional_entropy": {
+        "real_mean": 2.508443129496683,
+        "control_mean": 3.4523248951363756,
+        "pct_diff": 37.628190735693494
+      },
+      "perplexity_ratio_n2_n1": {
+        "real_mean": 1.053918394314157,
+        "control_mean": 1.615674599947302,
+        "pct_diff": 53.301679535225674
+      },
+      "top_sign_final_share": {
+        "real_mean": 0.31325000000000003,
+        "control_mean": 0.11850000000000001,
+        "pct_diff": 62.1707899052808
+      },
+      "mean_length": {
+        "real_mean": 4.43175,
+        "control_mean": 4.43175,
+        "pct_diff": 0.0
+      }
+    },
+    "discrimination_accuracy": 1.0,
+    "per_label_accuracy": {
+      "real": 1.0,
+      "within_inscription_shuffle": 1.0
+    }
+  },
+  "global_shuffle": {
+    "feature_summary": {
+      "zipf_gamma": {
+        "real_mean": 0.8301644551125552,
+        "control_mean": 0.8301644551125552,
+        "pct_diff": 0.0
+      },
+      "zipf_r2": {
+        "real_mean": 0.970254851183867,
+        "control_mean": 0.970254851183867,
+        "pct_diff": 0.0
+      },
+      "conditional_entropy": {
+        "real_mean": 2.508443129496683,
+        "control_mean": 3.573348331363815,
+        "pct_diff": 42.452834147221665
+      },
+      "perplexity_ratio_n2_n1": {
+        "real_mean": 1.053918394314157,
+        "control_mean": 1.7688215781205479,
+        "pct_diff": 67.83287842634998
+      },
+      "top_sign_final_share": {
+        "real_mean": 0.31325000000000003,
+        "control_mean": 0.1105,
+        "pct_diff": 64.72466060742327
+      },
+      "mean_length": {
+        "real_mean": 4.43175,
+        "control_mean": 4.43175,
+        "pct_diff": 0.0
+      }
+    },
+    "discrimination_accuracy": 1.0,
+    "per_label_accuracy": {
+      "real": 1.0,
+      "global_shuffle": 1.0
+    }
+  },
+  "position_preserving_shuffle": {
+    "feature_summary": {
+      "zipf_gamma": {
+        "real_mean": 0.8301644551125552,
+        "control_mean": 0.8301644551125552,
+        "pct_diff": 0.0
+      },
+      "zipf_r2": {
+        "real_mean": 0.970254851183867,
+        "control_mean": 0.970254851183867,
+        "pct_diff": 0.0
+      },
+      "conditional_entropy": {
+        "real_mean": 2.508443129496683,
+        "control_mean": 3.155866968421847,
+        "pct_diff": 25.809787395776894
+      },
+      "perplexity_ratio_n2_n1": {
+        "real_mean": 1.053918394314157,
+        "control_mean": 1.5365761490096683,
+        "pct_diff": 45.796501592672016
+      },
+      "top_sign_final_share": {
+        "real_mean": 0.31325000000000003,
+        "control_mean": 0.31325000000000003,
+        "pct_diff": 0.0
+      },
+      "mean_length": {
+        "real_mean": 4.43175,
+        "control_mean": 4.43175,
+        "pct_diff": 0.0
+      }
+    },
+    "discrimination_accuracy": 1.0,
+    "per_label_accuracy": {
+      "real": 1.0,
+      "position_preserving_shuffle": 1.0
+    }
+  },
+  "bigram_markov_null": {
+    "feature_summary": {
+      "zipf_gamma": {
+        "real_mean": 0.8301644551125552,
+        "control_mean": 0.8292100807066851,
+        "pct_diff": 0.11496208960079828
+      },
+      "zipf_r2": {
+        "real_mean": 0.970254851183867,
+        "control_mean": 0.9659073472312542,
+        "pct_diff": 0.4480785582084349
+      },
+      "conditional_entropy": {
+        "real_mean": 2.508443129496683,
+        "control_mean": 2.4329450792058096,
+        "pct_diff": 3.00975730216871
+      },
+      "perplexity_ratio_n2_n1": {
+        "real_mean": 1.053918394314157,
+        "control_mean": 0.9515060266165056,
+        "pct_diff": 9.717295774795145
+      },
+      "top_sign_final_share": {
+        "real_mean": 0.31325000000000003,
+        "control_mean": 0.313,
+        "pct_diff": 0.07980845944196116
+      },
+      "mean_length": {
+        "real_mean": 4.43175,
+        "control_mean": 4.4407499999999995,
+        "pct_diff": 0.20308004733950816
+      }
+    },
+    "discrimination_accuracy": 0.9375,
+    "per_label_accuracy": {
+      "real": 1.0,
+      "bigram_markov_null": 0.875
+    }
+  }
+}
