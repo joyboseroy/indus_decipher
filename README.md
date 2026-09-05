@@ -30,7 +30,8 @@ what this is.
 
 ## How this was built
 
-This codebase was developed iteratively with help of Claude (Anthropic), under human
+This codebase was developed iteratively with Claude (Anthropic) doing the
+implementation, debugging, literature search, and drafting, under human
 direction and review at every step, including the decision of which
 statistical tests to run, which data sources to trust, and how to word
 every caveat in this document. Several of the more interesting findings
@@ -44,9 +45,9 @@ earned by being wrong first and checking.
 ## Status
 
 Active exploration, not a finished study. Two real corpora are integrated
-(see "Real data" below) and the pipeline runs cleanly on both, but the
-question of what their disagreement means is still open (see the
-"Known open questions" section).
+(see "Real data" below) and the pipeline runs cleanly on both. An earlier
+disagreement between them on the falsification harness was investigated
+and resolved; see "Resolved: why the two real corpora used to disagree."
 
 ## Quick start
 
@@ -97,6 +98,10 @@ models/
   transformer_mlm.py     small NumPy, zero-dependency masked-language
                          transformer for bidirectional sign prediction
 main.py                  end-to-end pipeline / report generator
+experiments/
+  corpus_divergence.py   investigates and resolves the two-real-corpora
+                         disagreement described below (sample-size curve,
+                         matched-subsample test)
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -133,8 +138,8 @@ GitHub repositories. Full citation and license detail is in
   [mayig/indus-valley-script-corpus](https://github.com/mayig/indus-valley-script-corpus),
   a smaller, transparently documented, in-progress hand-transcription of
   Parpola's CISI corpus. Every inscription in this set happens to be a
-  unicorn-motif seal from Mohenjo-daro; see "Known open questions" for
-  why that matters.
+  unicorn-motif seal from Mohenjo-daro; see "Resolved: why the two real
+  corpora used to disagree" for why that matters.
 
 Regenerate either CSV from a local copy of its source repo with
 `python3 data/convert_indus_website_sql_to_csv.py <sql_path> <out.csv>` or
@@ -198,17 +203,18 @@ whether its own pipeline can tell three known synthetic generators apart:
 
 `python3 -m analysis.falsification` runs a leave-one-out classification
 test across several instances of each and reports accuracy, currently
-100% on the seven features used (see the module docstring for the exact
-list). `main.py --extended` additionally classifies whichever corpus you
-loaded against these three reference families and reports the nearest
-match with distances, not a verdict: "resembles the language-like
-generator most closely" is a statement about a nearest-centroid distance
-to three specific synthetic corpora, not a claim about the real script.
+100% on the six features used (see the module docstring for the exact
+list, and for a correction made to this feature set, described below).
+`main.py --extended` additionally classifies whichever corpus you loaded
+against these three reference families and reports the nearest match
+with distances, not a verdict: "resembles the language-like generator
+most closely" is a statement about a nearest-centroid distance to three
+specific synthetic corpora, not a claim about the real script.
 
-**Open finding:** after the reading-direction fix, the large real corpus
-now classifies as `civ_a_language_like`, while the small CISI corpus
-still classifies as `civ_c_mixed`, and only by a narrow margin. See
-"Known open questions" below.
+Both real corpora currently classify as `civ_a_language_like`. See
+"Resolved: why the two real corpora used to disagree" below for how that
+became a consistent answer, and read it before treating this
+classification as strong evidence either way.
 
 ## Seal-twin minimal-pair mining, with iconographic corroboration
 
@@ -234,19 +240,75 @@ classes into a few large blobs; motif corroboration removes exactly those
 noise edges. The CISI corpus is too small (3 total minimal pairs) for
 this tier to show anything.
 
-## Known open questions
+**Important methodological note, discovered while investigating the
+corpus disagreement below:** a raw count of these paradigm classes is
+NOT a stable per-corpus statistic. It depends heavily on corpus size,
+because more inscriptions add more substitution edges, which mechanically
+merges what would otherwise be several separate classes into fewer,
+larger ones. A "paradigm classes per 1,000 inscriptions" density
+statistic was originally included as a falsification-harness feature and
+had to be removed once this size dependence was traced as the actual
+cause of an apparent disagreement between the two real corpora (see
+below). The minimal-pair mining itself is still useful, and the
+motif-corroboration finding above is unaffected, but any summary
+statistic built from raw paradigm-class counts should be checked across a
+range of corpus sizes before being trusted, not used as-is.
 
-**Why do the two real corpora disagree on the falsification harness?**
-After the direction fix, the 2,543-inscription corpus reads as
-language-like; the 104-inscription CISI corpus (after filtering damaged
-entries) reads as mixed, narrowly. Candidate explanations, not yet
-distinguished: this could be ordinary sample-size noise given how much
-smaller the CISI set is; it could reflect that CISI's slice is
-exclusively unicorn-motif Mohenjo-daro seals, a genuinely narrower and
-more homogeneous subset than the full corpus, rather than a random
-sample; or it could reflect a real difference between how M77-derived
-transcription conventions and this SQL dump's ICIT-derived conventions
-segment or encode signs. This is under active investigation.
+## Resolved: why the two real corpora used to disagree
+
+Earlier versions of this project reported that after the reading-direction
+fix, the large corpus classified as `civ_a_language_like` while the small
+CISI corpus classified as `civ_c_mixed`, and treated this as an open
+question with several candidate explanations (sample size, CISI's
+unicorn/Mohenjo-daro homogeneity, or transcription convention
+differences).
+
+`experiments/corpus_divergence.py` tested these directly:
+
+- **Sample-size curve:** random subsamples of the large corpus at sizes
+  from 50 to 2,543 were classified 30 times each. The result was highly
+  unstable at small and medium sizes (P(language-like) bounced between
+  0.03 and 0.57 for N below 1,000) and only became consistently
+  language-like once N reached roughly 1,500, far above either real
+  corpus's actual usable size other than the large corpus's own full
+  count.
+- **Matched subsample:** filtering the large corpus to
+  site == "Mohenjo-daro" and motif starting with "Bull1" (this scheme's
+  field-symbol code for the "unicorn," the single most common Indus seal
+  motif in the literature) produced 638 inscriptions that classified as
+  mixed, same as CISI. But RANDOM same-size (638) subsamples of the large
+  corpus, with no site or motif restriction at all, also classified as
+  mixed 30 out of 30 times. That ruled out CISI's unicorn/Mohenjo-daro
+  composition as the driver: an unrestricted random sample of the same
+  size behaved identically.
+
+That pointed squarely at sample size, and inspecting the seven individual
+features directly confirmed it: six of the seven were essentially flat
+across sample sizes from 179 to 2,543, but
+`paradigm_classes_per_1000_inscriptions` swung roughly 40-fold (61.5 at
+N=179 down to 1.6 at N=2,543). Removing that single feature from the
+classifier and rerunning every test above made the disagreement vanish
+entirely: both real corpora, and every random subsample size from 50 to
+2,543, now classify consistently as `civ_a_language_like`.
+
+`analysis/falsification.py` has been corrected accordingly (six features,
+not seven; see that module's docstring for the full account). The
+takeaway kept for future work: a feature that reaches 100% self-test
+accuracy on matched-size synthetic reference corpora can still silently
+encode sample size rather than the property it's named after, and that
+will not show up in a self-test that only ever compares corpora of the
+same size to each other. Any future feature added to this classifier
+should be checked across a range of real corpus sizes, the way this one
+eventually was, before being trusted.
+
+This does not mean "the Indus script is language-like" is now
+established. It means one specific artifact that was producing an
+apparent disagreement between two real corpora has been found, explained,
+and fixed, and with it removed, the two corpora currently agree with each
+other on this one nearest-centroid statistical test against three
+specific synthetic generators. That is a narrower and more defensible
+claim, and it's the one this project is making.
+
 
 ## Known limitations and other honesty notes
 
@@ -310,10 +372,43 @@ segment or encode signs. This is under active investigation.
 
 ## Extending this toolkit
 
-Roughly in order of effort:
-- Resolve the open question above: does the two-corpora disagreement
-  survive controlling for sample size, or for CISI's motif/site
-  homogeneity?
+Roughly in order of effort, and reflecting several concrete suggestions
+this project received during external review of the resolved corpus
+disagreement above:
+- **Report classification with a confidence interval, not a point
+  estimate.** `experiments/corpus_divergence.py`'s repeated-subsample
+  approach already produces the raw material (proportions across 30
+  trials per size); wrapping that into a proper bootstrap CI per corpus
+  is a small step from here.
+- **Make the synthetic controls harder.** The three civilizations are
+  deliberately quite distinct from each other, which is why the
+  self-test hits 100%. A useful next test is a continuum between
+  `civ_a_language_like` and `civ_b_administrative_code` (mixing
+  parameter alpha from 0 to 1) to find the point at which this
+  classifier's features stop being able to tell them apart, and multiple
+  independent generator variants per class, so the classifier is checked
+  against variation within a category, not just between categories.
+- **Build an adversarial, statistics-matched null model:** a
+  non-linguistic generator explicitly tuned to match the real corpus's
+  own length distribution, vocabulary size, sign frequencies, and
+  positional statistics, then test whether this classifier can still
+  tell it apart from the real corpus. If it can't, that is a much more
+  informative negative result than the current three-civilization setup.
+- **Add real external control corpora** (Sumerian, Old Tamil, Vedic
+  Sanskrit) to `analysis/entropy.py`'s comparisons via
+  `external_control_entropy()`, replacing or supplementing the synthetic
+  random/rigid controls, for a result directly comparable to Rao et
+  al.'s original entropy figures.
+- **Implement Witten-Bell smoothing** in `analysis/ngram.py` alongside
+  the current add-alpha smoothing, so the top-90%-mass restoration metric
+  can be compared to Yadav et al.'s published ~75% figure on genuinely
+  equal terms, rather than with the "large candidate-set size" caveat
+  this toolkit currently has to attach to that number.
+- **Keep a lightweight experiment log** (corpus, N, direction, features,
+  seed, result, timestamp) for every run that produces a number quoted
+  anywhere outside this repo, so any reported figure can be traced back
+  to the exact run that produced it. `experiments/corpus_divergence.py`'s
+  JSON output is a first, informal version of this.
 - Add a proper PyTorch transformer once more real data is in hand, sized
   to the corpus (still likely small; a few thousand four-to-five-sign
   sequences is not much training data).
@@ -323,6 +418,20 @@ Roughly in order of effort:
 - Sign-image visual similarity clustering against other Bronze Age
   scripts (Proto-Elamite, Sumerian) needs glyph image data per script,
   harder to source than text sequences. Treat as a stretch goal.
+
+A few things intentionally NOT on this list yet: candidate-language
+testing (Dravidian/Indo-Aryan/Munda hypothesis comparison), LLM-driven
+hypothesis generation over sign functions, and anything framed as working
+toward "decipherment." Those are reasonable long-run directions once the
+falsification and structural-analysis layers above are considerably more
+battle-tested than they are today, but reaching for them now would be
+the same kind of premature confidence this project's own README argues
+against elsewhere. The corpus-disagreement investigation above is a
+concrete example of why that order matters: the more exciting-looking
+result (a real corpus reads as "language-like") turned out to depend on
+a bug in one feature, not on anything about the script. The next
+result that looks exciting deserves the same scrutiny before being
+treated as a finding.
 
 ## Citations
 
