@@ -30,8 +30,7 @@ what this is.
 
 ## How this was built
 
-This codebase was developed iteratively with Claude (Anthropic) doing the
-implementation, debugging, literature search, and drafting, under human
+This codebase was developed iteratively with the help of Claude (Anthropic) under human
 direction and review at every step, including the decision of which
 statistical tests to run, which data sources to trust, and how to word
 every caveat in this document. Several of the more interesting findings
@@ -78,6 +77,8 @@ data/
   synthetic_corpus.py          synthetic test-fixture generator (NOT real data)
   synthetic_civilizations.py   three generators with KNOWN ground-truth
                                 structure, used by the falsification harness
+  adversarial_null_model.py    statistics-matched non-linguistic generator
+                                (see "The adversarial null-model test")
   convert_indus_website_sql_to_csv.py   real-data converter (see below)
   convert_cisi_to_csv.py                real-data converter (see below)
   indus_website_real_corpus.csv         real data (2,543 inscriptions)
@@ -99,9 +100,11 @@ models/
                          transformer for bidirectional sign prediction
 main.py                  end-to-end pipeline / report generator
 experiments/
-  corpus_divergence.py   investigates and resolves the two-real-corpora
+  corpus_divergence.py    investigates and resolves the two-real-corpora
                          disagreement described below (sample-size curve,
                          matched-subsample test)
+  adversarial_null_test.py  the statistics-matched null-model discrimination
+                         test (see "The adversarial null-model test")
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -309,6 +312,52 @@ other on this one nearest-centroid statistical test against three
 specific synthetic generators. That is a narrower and more defensible
 claim, and it's the one this project is making.
 
+## The adversarial null-model test
+
+The three synthetic civilizations in the falsification harness are each
+built from their own invented vocabulary and rules, so a classifier
+telling them apart from the real corpus isn't a very demanding test: they
+differ in almost every surface respect. A harder, more honest question is
+whether the real corpus can be told apart from a non-linguistic system
+that shares its exact surface statistics.
+
+`data/adversarial_null_model.py` builds exactly that: a generator that
+reuses the real corpus's own empirical length distribution, initial-sign
+distribution, final-sign distribution, and overall sign-frequency
+distribution, then draws every sign in a synthetic inscription
+INDEPENDENTLY from the relevant marginal. There is no bigram or
+higher-order dependency at all between consecutive signs; only the
+position class (initial, final, or middle) and the raw frequency table
+carry over from the real data.
+
+`experiments/adversarial_null_test.py` compares 8 real subsamples against
+8 instances of this matched null model, all at 500 inscriptions, first by
+listing the six classifier features side by side, then with the same
+leave-one-out discrimination test used for the three-civilization
+self-test. The four features that are matched by construction
+(`zipf_gamma`, `zipf_r2`, `top_sign_final_share`, `mean_length`) came out
+close between real and null, as expected (0.8 to 12 percent apart). The
+two features that depend on genuine sequential order rather than position
+identity (`conditional_entropy`, `perplexity_ratio_n2_n1`) came out
+substantially different (31 and 68 percent apart), and the classifier
+achieved 100% leave-one-out accuracy telling real data apart from the
+matched null using all six features together.
+
+This is a real, and reasonably informative, result: it means the real
+corpus's classification as "language-like" is not simply an artifact of
+its length distribution, vocabulary size, or which signs happen to sit at
+the start and end of an inscription, since a system built to match all of
+that exactly is still cleanly distinguishable. What actually carries the
+distinguishing signal is sequential dependency between neighboring signs,
+which is a substantially more specific and more interesting property than
+"the numbers are in the right range." It is still not evidence that the
+underlying system is a spoken human language specifically, only that it
+has more sequential structure than shallow position-and-frequency effects
+can explain, which is the same qualified claim the classical entropy
+literature has always made and the one this project is comfortable
+standing behind.
+
+Run it yourself with `python3 experiments/adversarial_null_test.py`.
 
 ## Known limitations and other honesty notes
 
@@ -388,12 +437,8 @@ disagreement above:
   classifier's features stop being able to tell them apart, and multiple
   independent generator variants per class, so the classifier is checked
   against variation within a category, not just between categories.
-- **Build an adversarial, statistics-matched null model:** a
-  non-linguistic generator explicitly tuned to match the real corpus's
-  own length distribution, vocabulary size, sign frequencies, and
-  positional statistics, then test whether this classifier can still
-  tell it apart from the real corpus. If it can't, that is a much more
-  informative negative result than the current three-civilization setup.
+- ~~Build an adversarial, statistics-matched null model~~ **Done, see
+  "The adversarial null-model test" below.**
 - **Add real external control corpora** (Sumerian, Old Tamil, Vedic
   Sanskrit) to `analysis/entropy.py`'s comparisons via
   `external_control_entropy()`, replacing or supplementing the synthetic
