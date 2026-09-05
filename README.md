@@ -30,8 +30,7 @@ what this is.
 
 ## How this was built
 
-This codebase was developed iteratively with Claude (Anthropic) doing the
-implementation, debugging, literature search, and drafting, under human
+This codebase was developed iteratively with the help of Claude (Anthropic) under human
 direction and review at every step, including the decision of which
 statistical tests to run, which data sources to trust, and how to word
 every caveat in this document. Several of the more interesting findings
