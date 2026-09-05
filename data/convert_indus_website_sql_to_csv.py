@@ -52,10 +52,18 @@ def convert(sql_path: str, output_csv: str):
     def block_after(marker: str) -> str:
         return content.split(marker)[1].split("INSERT INTO")[0]
 
+    # SITE: SITEID, NAME -- resolves codes like "SI1" to real names like
+    # "Mohenjo-daro". Resolving this at conversion time (rather than
+    # leaving raw codes in the CSV) is what makes site-matched comparisons
+    # across corpora (e.g. against the CISI corpus's "Mohenjo-daro" label)
+    # possible without a second lookup table.
+    site_rows = _parse_tuples(block_after("INSERT INTO SITE ("), n_fields=2)
+    site_name_by_id = {r[0]: r[1] for r in site_rows}
+
     seal_rows = _parse_tuples(
         block_after("INSERT INTO SEAL ("), n_fields=8)
     # SEAL: SEALID, SITEID, MATERIAL, CISI, MUSEUM, WIDTH, HEIGHT, THICKNESS
-    site_by_seal = {r[0]: r[1] for r in seal_rows}
+    site_by_seal = {r[0]: site_name_by_id.get(r[1], r[1]) for r in seal_rows}
 
     insc_rows = _parse_tuples(
         block_after("INSERT INTO INSCRIPTION ("), n_fields=3)
