@@ -30,8 +30,7 @@ what this is.
 
 ## How this was built
 
-This codebase was developed iteratively with the help of Claude (Anthropic), under human
-direction and review at every step, including the decision of which
+This codebase was developed iteratively with the help of Claude (Anthropic), including the decision of which
 statistical tests to run, which data sources to trust, and how to word
 every caveat in this document. Several of the more interesting findings
 below (the reading-direction correction, the two real corpora landing on
@@ -79,6 +78,8 @@ data/
                                 structure, used by the falsification harness
   adversarial_null_model.py    statistics-matched non-linguistic generator
                                 (see "The adversarial null-model test")
+  stratified_null_model.py     motif/site-stratified non-linguistic
+                                generators (see "Stage 2" section)
   permutation_nulls.py         four permutation-based controls (see
                                 "Permutation controls")
   convert_indus_website_sql_to_csv.py   real-data converter (see below)
@@ -120,6 +121,8 @@ experiments/
   dependency_order_curve.py  order-1..6 information-gain curve, and the
                          n-gram sparsity wall it hit (see "The
                          dependency-order curve")
+  stratified_dependency_test.py  Stage 2: does motif/site composition
+                         explain the order-3 signal? (see "Stage 2")
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -406,7 +409,7 @@ own tokens rather than resampled marginals:
 5. `trigram_markov_null`: same idea one order higher, sampling from the
    real order-2 transition table with backoff to bigram then unigram
    statistics for the many order-2 contexts too sparse to estimate
-   directly (added later, alongside "Where the complexity ladder stops"
+   directly (added later, alongside "Order 3 is validated; order 4 and beyond is inconclusive"
    below). Destroys only dependency beyond order-2.
 
 An earlier version of control 4 fixed each generated sequence's length to
@@ -440,8 +443,9 @@ order the distinguishing information lives at. See "The dependency-order
 curve" below for the direct attempt to settle this, and why it could not.
 
 **Follow-up confirming why this classifier is the wrong tool for the
-order question at all:** once `trigram_markov_null` existed (see "Where
-the complexity ladder stops" below), it was added to this same test.
+order question at all:** once `trigram_markov_null` existed (see "Order
+3 is validated; order 4 and beyond is inconclusive" below), it was added
+to this same test.
 It also scores 93.8%, identical to the bigram-order null, despite having
 real order-1 AND order-2 dependency built in. If this classifier were
 tracking the order of missing structure, a null with MORE real structure
@@ -517,7 +521,7 @@ survive discount values from, say, 0.5 to 0.9) has not been run yet and
 would be a reasonable next step before treating +0.143 bits as a precise
 number rather than a directionally clear one.
 
-## Where the complexity ladder stops: order 3, not further (so far)
+## Order 3 is validated; order 4 and beyond is inconclusive, not "saturated"
 
 The natural follow-up to the order-3 finding is whether it keeps going:
 does real data still show an edge at order 4 over a null that already
@@ -526,7 +530,16 @@ gained a `trigram_markov_null` generator for exactly this (same design as
 `bigram_markov_null`, one order higher, with backoff to bigram then
 unigram statistics for the many order-2 contexts too sparse to estimate
 directly, the generation-side version of the same sparsity problem
-Kneser-Ney solves on the evaluation side).
+Kneser-Ney solves on the evaluation side). More precisely, per external
+review, this is a **backoff second-order Markov null**, not a pure
+trigram Markov chain: its predictions fall back through bigram and
+unigram statistics whenever a specific two-sign context was never
+observed, which is necessary given the corpus size but means it isn't
+the textbook uniform-context trigram model the shorter name might
+suggest. The code keeps the shorter `trigram_markov_null` name (it is
+still generating from real order-2 conditional statistics wherever
+they're available), but this is the precise description for anyone
+citing this result.
 
 The result at order 4 is not a clean three-way split the way order 3
 was. All four corpora (real, trigram-order null, bigram-order null,
@@ -538,15 +551,24 @@ validated positive signal here: real data does not clearly separate from
 a null that already has real order-1-and-2 structure built in, the way
 it clearly separated from bigram-only and no-dependency nulls at order 3.
 
-Read plainly: this project's evidence for real sequential structure is
-validated specifically at order 3, and genuinely inconclusive, not
-refuted, at order 4 and beyond. Building 4-gram and 5-gram null
-generators to chase this further is probably not worth the effort
-without a specific reason to expect a real order-4 effect first; the
-data as it currently stands is most simply read as saturating around
-order 3. If a future finding (a structural or archaeological hypothesis)
-predicts a specific order-4+ pattern, that would be a reason to revisit
-this with a targeted test rather than another blind extension of the
+The precise, defensible summary, worth stating exactly rather than in
+shorthand: **evidence for higher-order sequential structure is
+statistically validated at order 3, relative to independently generated
+no-dependency and first-order Markov controls; evidence beyond order 3
+is currently inconclusive, not absent.** An earlier draft of this
+section used the phrase "saturating around order 3," which reads as a
+positive claim that structure stops there. That overstates what a
+negative result can show: the order-4 negative gain is equally
+consistent with real order-4 structure that estimation limitations
+(sparsity, even under Kneser-Ney, at this corpus size) simply cannot
+detect yet, not with structure being genuinely absent. Building 4-gram
+and 5-gram null generators to chase this further is probably not worth
+the effort without a specific reason to expect a real order-4 effect
+first, which is a claim about priority, not about what the data has
+established. If a future finding (a structural or archaeological
+hypothesis) predicts a specific order-4+ pattern, that would be a reason
+to revisit this with a targeted test rather than another blind extension
+of the
 curve.
 
 Run it yourself with `python3 experiments/dependency_order_curve.py`.
@@ -694,6 +716,60 @@ more data or a principled middle granularity (e.g. only splitting an
 allograph out when it is independently well-attested, rather than
 splitting on every distinct feature combination), neither of which is
 built yet; see "Extending this toolkit."
+
+## Stage 2: does archaeological composition explain the order-3 signal, or does it survive conditioning on it?
+
+The validated order-3 finding has three candidate explanations, per a
+design proposed in external review:
+
+- **H1 (linguistic/sequential):** the signal is intrinsic to sign
+  sequencing, independent of which motif or site an inscription belongs to.
+- **H2 (archaeological/compositional):** different motifs or sites simply
+  favor different signs, and pooling these different populations together
+  is itself enough to manufacture the appearance of trigram structure,
+  with no real within-group sequential dependency at all.
+- **H3 (mixed):** both contribute.
+
+`data/stratified_null_model.py` tests this directly. It uses the exact
+same zero-dependency generation logic as the original adversarial null
+(every sign in a generated inscription is still drawn independently, no
+real sequencing at all) but now computes the marginal distributions
+SEPARATELY PER STRATUM (motif, site, or site+motif jointly) rather than
+pooled across the whole corpus. If H2 were doing real work, a null that
+captures "different groups prefer different signs," even with zero real
+sequential dependency, should be able to reproduce more of the real
+corpus's apparent order-3 structure than the original single pooled null
+could. Strata with fewer than 20 real inscriptions fall back to the
+corpus-wide pooled marginals rather than trusting a small sample's own
+statistics, the same kind of backoff used elsewhere in this project.
+
+Result: real data's order-3 information gain (+0.143 bits) exceeds every
+one of the four nulls tested, including the site+motif-stratified one:
+
+| Null | Order-3 gain |
+|---|---|
+| Real corpus | **+0.143 bits** |
+| Pooled adversarial null (no stratification) | -0.179 bits |
+| Motif-stratified null | -0.185 bits |
+| Site-stratified null | -0.177 bits |
+| Site+motif-stratified null | -0.180 bits |
+
+Notably, stratification barely moved the null's own behavior at all,
+four numbers within 0.008 bits of each other regardless of how much
+archaeological context each null was given to work with. If H2 had any
+real purchase, giving the null more archaeological structure to exploit
+should have pushed at least one of these closer to zero or positive; none
+did. Since each stratified null had every opportunity H2 would need to
+succeed and none came close, this is real, specific evidence favoring
+H1: the order-3 signal is intrinsic to sign sequencing, not an artifact
+of pooling archaeologically distinct sign-frequency populations together.
+
+This does not rule out H3 (some archaeological contribution alongside
+real sequential structure) -- it rules out H2 being SUFFICIENT on its
+own, which is the relevant test here, not a claim that motif and site
+are irrelevant to everything in this corpus.
+
+Run it yourself with `python3 experiments/stratified_dependency_test.py`.
 
 ## Known limitations and other honesty notes
 
