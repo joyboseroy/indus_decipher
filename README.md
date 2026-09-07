@@ -436,42 +436,70 @@ curve" below for the direct attempt to settle this, and why it could not.
 
 Run it yourself with `python3 experiments/permutation_controls.py`.
 
-## The dependency-order curve: an attempt to settle the above, and why it couldn't
+## The dependency-order curve: a real trigram-level finding, after fixing the method that first hid it
 
 The natural next question after the correction above is direct: does
 predictive information keep increasing as more context (order 3, 4, 5...)
-is added, or does it saturate at order 2? `experiments/dependency_order_curve.py`
-computes cross-validated held-out entropy at orders 1 through 6 for the
-real corpus and, as controls, the bigram-order null above and the
-adversarial (no-dependency) null.
+is added, or does it saturate at order 2? The first attempt at this,
+using this project's existing add-alpha smoothing, produced a genuine
+negative finding about the METHOD rather than the script: held-out
+entropy for ALL THREE corpora tested (real data, the bigram-order null,
+and the adversarial no-dependency null), including the null that by
+construction has zero real dependency at any order, started RISING at
+order 3 and kept rising through order 6. That is the textbook signature
+of n-gram sparsity: add-alpha smoothing cannot handle the exploding
+number of distinct order-3+ contexts on a corpus this size, most seen
+zero or one times, and backs off toward something close to a uniform,
+uninformative distribution instead of a real higher-order estimate.
+Since even the zero-dependency null showed the identical rising curve,
+nothing about order 3 and up was interpretable this way, for any corpus.
 
-The result is a genuine negative finding about the METHOD, not about the
-script. Held-out entropy for ALL THREE corpora, including the
-adversarial null, which by construction has zero real dependency at any
-order, starts RISING at order 3 and keeps rising through order 6. That
-is the textbook signature of n-gram sparsity: this project's simple
-add-alpha smoothing cannot handle the exploding number of distinct
-order-3+ contexts on a corpus this size, most of which are seen zero or
-one times, and it backs off toward something close to a uniform,
-uninformative distribution rather than a genuine higher-order estimate.
-Since even a null model with NO real structure beyond order-1 shows the
-same rising curve, nothing about orders 3 and up is currently
-interpretable from this method, for any corpus tested.
+This motivated implementing interpolated Kneser-Ney smoothing in
+`analysis/ngram.py` (`KneserNeyModel`), the standard fix for exactly this
+sparsity failure mode in n-gram language modeling, and rerunning the
+same three-corpus comparison. The first version of that implementation
+had a real bug of its own, caught the same way every bug in this project
+has been caught: it returned IDENTICAL perplexity at every order from 1
+through 6, which is only possible if every order was silently computing
+the same thing. The cause was an off-by-one context-length mismatch in
+the recursive backoff, fixed and documented in the class's own
+docstring.
 
-What the same curve DOES support, restricted to the order-1-to-2 step
-where sparsity has not yet taken over: going from unigram to bigram
-genuinely helps for the real corpus (information gain +0.355 bits) and
-for the bigram-order null built to have real order-1 structure (+0.766
-bits), while it genuinely HURTS for the adversarial no-dependency null
-(-0.770 bits, meaning a bigram model overfits noise on data with no real
-bigram signal to find). That three-way pattern is a clean, small,
-defensible confirmation that this project's tools correctly detect real
-order-1 dependency when it exists and correctly fail to invent it when
-it doesn't. It just cannot yet be extended to ask whether order-3+
-dependency exists on top of that, which needs either substantially more
-data or a smarter smoothing method (interpolated or Kneser-Ney n-grams,
-already queued in "Extending this toolkit") before that question can be
-asked honestly.
+With that fixed, a real, three-way-validated finding emerged:
+
+| Corpus | Information gain at order 3 (trigram) |
+|---|---|
+| Real corpus | **+0.143 bits** |
+| Bigram-order null (real order-1 dependency only) | -0.140 bits |
+| Adversarial null (no dependency at all) | -0.179 bits |
+
+Real data shows a genuine POSITIVE gain from adding a third sign of
+context. Both nulls, which have no real trigram-level dependency by
+construction, show a NEGATIVE gain at the identical order using the
+identical method, the expected sparsity cost with no real signal to
+offset it. This is not asserted from one curve: it is a three-way
+comparison where two independently-constructed controls both behave as
+predicted and only the real data breaks the pattern.
+
+This restores, on firmer and more specific footing than before, a claim
+close to what the original (pre-correction) permutation-controls section
+asserted: **there is real structure in the corpus beyond what a bigram
+model captures, and it is visible specifically at trigram order.** Beyond
+order 3, the real corpus's own curve turns negative again (order 4
+through 6 all show small negative gains), consistent with sparsity
+reasserting itself even under Kneser-Ney smoothing at these higher
+orders on a corpus this size, so this result should be read as "genuine
+trigram-level structure, evidenced concretely," not "structure at every
+order we could compute."
+
+One important caveat: the discount parameter (0.75) is the standard
+default from the n-gram literature, not tuned against this corpus via
+held-out data. A discount sensitivity check (does the order-3 finding
+survive discount values from, say, 0.5 to 0.9) has not been run yet and
+would be a reasonable next step before treating +0.143 bits as a precise
+number rather than a directionally clear one.
+
+Run it yourself with `python3 experiments/dependency_order_curve.py`.
 
 Run it yourself with `python3 experiments/dependency_order_curve.py`.
 
@@ -724,16 +752,25 @@ disagreement above:
   `external_control_entropy()`, replacing or supplementing the synthetic
   random/rigid controls, for a result directly comparable to Rao et
   al.'s original entropy figures.
-- **Implement Witten-Bell or Kneser-Ney smoothing** in `analysis/ngram.py`
-  alongside the current add-alpha smoothing. Now has two independent
-  reasons, not one: it would let the top-90%-mass restoration metric be
-  compared to Yadav et al.'s published ~75% figure on genuinely equal
-  terms, AND it is very likely a precondition for "The dependency-order
-  curve" above to say anything meaningful about order-3+ structure,
-  since that experiment's current add-alpha smoothing was shown to break
-  down from sparsity for every corpus tested, real and null alike,
-  starting at order 3. This is now the more time-sensitive of the two
-  reasons.
+- ~~Implement Kneser-Ney smoothing~~ **Done, see "The dependency-order
+  curve" above.** Two follow-ups remain: (1) a discount-sensitivity check
+  (does the order-3 finding survive discounts from ~0.5 to ~0.9, not just
+  the default 0.75) before treating the +0.143 bits figure as precise
+  rather than directional; (2) rerunning the top-90%-mass restoration
+  metric with `KneserNeyModel` instead of add-alpha, for a fairer
+  comparison to Yadav et al.'s published ~75% figure than this project's
+  current add-alpha-based version allows.
+- **Add a proper pytest test suite.** Every result in this project has so
+  far been checked by manually rerunning each script and confirming a
+  clean exit code plus a by-eye read of the printed numbers. That has
+  worked, but it doesn't scale and depends on remembering to do it.
+  Converting the sanity checks already implicit in this process (does
+  main.py run on all three corpora, does the falsification harness still
+  hit 100% self-test, does KneserNeyModel give non-identical perplexity
+  across orders, the exact kind of check that caught that bug) into real
+  automated tests would catch a regression the next time a shared module
+  like analysis/ngram.py or data/loader.py changes, rather than relying
+  on remembering to rerun everything by hand.
 - **Keep a lightweight experiment log** (corpus, N, direction, features,
   seed, result, timestamp) for every run that produces a number quoted
   anywhere outside this repo, so any reported figure can be traced back
