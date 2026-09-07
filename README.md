@@ -5,10 +5,14 @@ undeciphered Indus Valley script. It implements the established
 methodology from Rao, Yadav, Vahia, Adhikari and Mahadevan's published
 work (unigram/Zipf-Mandelbrot statistics, positional asymmetry, n-gram
 Markov modeling, conditional entropy against non-linguistic controls),
-plus a few extensions built for this project: a synthetic-civilization
-falsification harness, seal-twin minimal-pair mining with iconographic
-corroboration, a reading-direction diagnostic, and a small from-scratch
-transformer for masked-sign prediction.
+plus substantial extensions built for this project: a synthetic-civilization
+falsification harness (now a five-mechanism continuum, not just three
+civilizations), seal-twin minimal-pair mining with iconographic
+corroboration and a weighted, cross-site-validated substitution graph, a
+reading-direction diagnostic, Kneser-Ney smoothing and an order-of-
+dependency curve, three genuine external-language calibration corpora
+(Sumerian, Sanskrit, Old Tamil), a 28-test automated suite, and a small
+from-scratch transformer for masked-sign prediction.
 
 ## What this project is, and is not
 
@@ -45,20 +49,32 @@ earned by being wrong first and checking.
 
 ## Status
 
-Active exploration, not a finished study. Two real corpora are integrated
-(see "Real data" below) and the pipeline runs cleanly on both. An earlier
-disagreement between them on the falsification harness was investigated
-and resolved; see "Resolved: why the two real corpora used to disagree."
+Active exploration, not a finished study, but no longer an early-stage
+one. Three real corpora anchor the analysis: `indus_website` (2,543
+inscriptions, 93% now linked to real Mahadevan/CISI catalog numbers)
+and CISI at three granularities. Three genuine external-language
+calibration corpora (Sumerian, Sanskrit, Old Tamil) are integrated
+alongside a five-civilization synthetic continuum. The headline finding
+-- real order-2-conditioned sequential structure at order 3, validated
+against independent nulls, archaeological stratification, and two real
+languages at matched scale -- has survived several rounds of adversarial
+self-checking, including two corrections where the initial framing
+overstated what the evidence showed (see "The synthetic continuum" and
+the note after "Order 3 is validated..." below). A 28-test automated
+suite (`pytest tests/`) now guards the shared modules. M77/EBUDS itself,
+the classic literature's actual corpus, is still not directly obtained;
+see "Other real-data leads" for what was tried and what came of it.
 
 ## Quick start
 
 ```bash
-pip install numpy scipy pandas matplotlib
+pip install -r requirements.txt
 python3 main.py                      # runs on the synthetic demo corpus
 python3 main.py --csv mydata.csv     # runs on your own corpus
 python3 main.py --extended           # adds minimal-pair mining, the
                                       # falsification harness, and the
                                       # reading-direction diagnostic
+pytest tests/                        # 28 tests covering the shared modules
 ```
 
 Output: a console report, `outputs/report.json`, and three plots
@@ -68,7 +84,15 @@ Real data ships with the repo, so this also works immediately:
 ```bash
 python3 main.py --csv data/indus_website_real_corpus.csv --extended
 python3 main.py --csv data/cisi_real_corpus.csv --extended
+python3 main.py --csv data/cisi_real_corpus_hierarchical.csv --extended
+python3 main.py --csv data/cisi_real_corpus_allograph.csv --extended
 ```
+
+The three external-language calibration corpora (ETCSL, Sanskrit, Old
+Tamil) are NOT shipped, due to their source licenses; regenerate them
+locally via `data/convert_etcsl_to_csv.py`, `data/convert_dcs_sanskrit_to_csv.py`,
+and `data/convert_tamil_to_csv.py` (each script's docstring has the
+source and license details; see also CITATIONS.md).
 
 ## Project layout
 
@@ -225,22 +249,71 @@ Regenerate either CSV from a local copy of its source repo with
 `python3 data/convert_indus_website_sql_to_csv.py <sql_path> <out.csv>` or
 `python3 data/convert_cisi_to_csv.py <json_glob> <out.csv>`.
 
-## Other real-data leads (not yet integrated)
+## Other real-data leads (M77/EBUDS: extensively investigated, still not directly obtained)
 
-- **Mahadevan's M77 concordance / EBUDS** (2,906 texts, 417 signs), the
-  corpus behind Yadav et al. 2010 and Rao et al. 2009. No public download
-  found; the papers' corresponding authors are the most direct route
-  (see `CITATIONS.md` for contact info found in the published papers).
-- **ICIT** (Wells and Fuls, roughly 700 signs, 4,500+ objects),
-  historically access-by-request via Andreas Fuls at TU Berlin.
-- **tpsatish95/indus-script-ocr**, real CNN weights from Palaniappan and
-  Adhikari's deep-learning seal-segmentation pipeline. This is the
-  vision/OCR layer, not sign-sequence data, and would only matter if this
-  project extends into image processing.
+**Mahadevan's M77 concordance / EBUDS** (2,906 texts, 417 signs), the
+corpus behind Yadav et al. 2010 and Rao et al. 2009, remains the single
+highest-value missing piece: every headline statistical claim in the
+classic literature was made on this exact corpus, not on either corpus
+this project currently has. This was investigated substantially, not
+just noted as a gap, and it is worth recording what was actually tried
+and what came of each attempt, since several leads that looked
+promising did not pan out and future effort shouldn't repeat them:
 
-Once you have any other real export, converting it into the schema in
-`data/loader.py` is the only integration work needed. Nothing else in
-the codebase changes.
+- **Sukii/decipher-ivc** (GitHub): real repository, but contains scanned
+  PDF pages and a handful of PNG images, not machine-readable sequence
+  data, and the README frames its own separate Proto-Dravidian
+  decipherment claim as settled fact. Not a data source; not used.
+- **PLOS Figshare's "EBUDS entropy and mutual information dataset"** and
+  the uploaded `Table_4.xls`: both confirmed to be the published paper's
+  derived summary statistics (values embedded as image-rendered
+  equations in the .xls case), not the underlying 1,548-sequence corpus.
+- **A claimed Kaggle dataset** ("IM-417-150"): no evidence found that it
+  exists at all; treated as unverified, not pursued.
+- **indusscript.in** (the RMRL/Indus Research Centre's official portal):
+  confirmed real and confirmed to host the actual IM77/IDF-80 data, but
+  it is a Google-login-gated interactive web application with no public
+  bulk export. Extracting a usable subset requires either manual
+  copy-paste through the UI or a scripted session reusing real login
+  cookies (Playwright/Selenium) -- both are tasks for a human with
+  browser access, not something this environment can do; the sandbox
+  this project has been developed in also cannot reach the domain
+  directly regardless.
+- **CISI photographic plates** (uploaded directly, Mohenjo-daro seals
+  M-1 through M-52): genuine primary-source photographs with real,
+  visible sign impressions. Transcribing them into correct Mahadevan
+  sign-ID sequences needs real paleographic skill neither this project
+  nor the tools available to it have; a wrong-but-confident transcription
+  would be worse than no data, so none was attempted. If a human with
+  that skill transcribes even a small batch, this project can build the
+  crosswalk and comparison work around it immediately.
+- **CISI concordance crosswalk table** (uploaded directly): real,
+  legitimate metadata linking CISI numbers to FC (Finnish Concordance),
+  excavation, and museum numbers for the same physical objects -- but a
+  pure identifier crosswalk, not sign-sequence content.
+- **The actual breakthrough came from data already in hand, not from a
+  new source.** Checking the crosswalk table against this project's own
+  corpus led to discovering that the `indus_website` SQL dump's `SEAL`
+  table has a `CISI` column that an earlier version of this project's
+  own converter never extracted, despite its own comments already
+  documenting the column's existence. Fixed: **2,375 of 2,543
+  inscriptions (93%) now carry a real, verifiable Mahadevan/CISI catalog
+  number.** Full details, the spot-check against the uploaded plates,
+  and what this changes going forward are in "Real CISI/Mahadevan
+  numbers recovered for the core corpus" below; not repeated here.
+
+**ICIT** (Wells and Fuls, roughly 700 signs, 4,500+ objects),
+historically access-by-request via Andreas Fuls at TU Berlin: not
+re-investigated this round; status unchanged from earlier.
+
+**tpsatish95/indus-script-ocr**, real CNN weights from Palaniappan and
+Adhikari's deep-learning seal-segmentation pipeline. This is the
+vision/OCR layer, not sign-sequence data, and would only matter if this
+project extends into image processing.
+
+Once a real bulk M77/EBUDS export is obtained by any route, converting
+it into the schema in `data/loader.py` is the only integration work
+needed. Nothing else in the codebase changes.
 
 ## The reading-direction diagnostic
 
@@ -1253,11 +1326,19 @@ the always-available synthetic corpus already provide.
   identity only. It has no notion of "these two signs are probably
   damage versus clean variants of the same glyph," which would need to
   be fed in from allograph or damage annotations.
-- **Conditional-entropy comparisons use synthetic random and rigid
-  controls**, not the real Sumerian, Tamil, Sanskrit, or DNA control
-  corpora used in the literature. Supply your own tokenized reference
-  corpora via `analysis.entropy.external_control_entropy()` for a
-  literature-comparable result.
+- **Conditional-entropy comparisons in `analysis/entropy.py` itself still
+  use synthetic random and rigid controls, not the real external-language
+  corpora.** This is narrower than it used to be: real Sumerian, Sanskrit,
+  and Old Tamil corpora WERE integrated (see "Real external-language
+  calibration," "A second real language: Sanskrit," and "Old Tamil:
+  located, tried..." below) and used for the order-3 Kneser-Ney test and
+  WUCS-style network statistics specifically. What was not done: plumbing
+  those same three real corpora into `analysis.entropy.external_control_entropy()`
+  itself, so the plain conditional-entropy comparison (as opposed to the
+  order-3 test) still only has synthetic controls. Given the actual
+  calibration work already done elsewhere, this is a real but narrow gap,
+  not the "still entirely synthetic" limitation this bullet used to
+  describe.
 - **The reading-direction diagnostic is a heuristic**, not a verified
   ground truth for either source project's actual conventions. See its
   section above.
