@@ -1,0 +1,591 @@
+{
+  "n_communities_tested": 10,
+  "n_slot_like": 3,
+  "results": [
+    {
+      "community_index": 0,
+      "size": 15,
+      "position_concentration_all_lengths": {
+        "n_pairs": 109,
+        "top_position": 0,
+        "top_position_share": 0.926605504587156,
+        "histogram": {
+          "0": 101,
+          "1": 6,
+          "3": 1,
+          "2": 1
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 15,
+        "top_position": 0,
+        "top_position_share": 0.8,
+        "histogram": {
+          "0": 12,
+          "1": 1,
+          "3": 1,
+          "2": 1
+        }
+      },
+      "individual_profiles": {
+        "n_members_profiled": 15,
+        "final_share_mean": 0.05018185377817186,
+        "final_share_std": 0.08775314708180958,
+        "initial_share_mean": 0.3635876454225631,
+        "initial_share_std": 0.19922717250569053,
+        "profiles": {
+          "G717": {
+            "final_share": 0.02857142857142857,
+            "initial_share": 0.37142857142857144
+          },
+          "G803": {
+            "final_share": 0.009708737864077669,
+            "initial_share": 0.4077669902912621
+          },
+          "G97": {
+            "final_share": 0.0,
+            "initial_share": 0.375
+          },
+          "G912": {
+            "final_share": 0.3333333333333333,
+            "initial_share": 0.3333333333333333
+          },
+          "G806": {
+            "final_share": 0.00980392156862745,
+            "initial_share": 0.45098039215686275
+          },
+          "G220": {
+            "final_share": 0.07042253521126761,
+            "initial_share": 0.09507042253521127
+          },
+          "G49": {
+            "final_share": 0.0,
+            "initial_share": 0.5
+          },
+          "G235": {
+            "final_share": 0.005376344086021506,
+            "initial_share": 0.3978494623655914
+          },
+          "G416": {
+            "final_share": 0.16666666666666666,
+            "initial_share": 0.5833333333333334
+          },
+          "G42": {
+            "final_share": 0.0,
+            "initial_share": 0.0
+          },
+          "G219": {
+            "final_share": 0.0,
+            "initial_share": 0.6666666666666666
+          },
+          "G33": {
+            "final_share": 0.05741626794258373,
+            "initial_share": 0.20095693779904306
+          },
+          "G879": {
+            "final_share": 0.0,
+            "initial_share": 0.0
+          },
+          "G191": {
+            "final_share": 0.0,
+            "initial_share": 0.5
+          },
+          "G831": {
+            "final_share": 0.07142857142857142,
+            "initial_share": 0.5714285714285714
+          }
+        }
+      },
+      "slot_like_call": true
+    },
+    {
+      "community_index": 1,
+      "size": 12,
+      "position_concentration_all_lengths": {
+        "n_pairs": 552,
+        "top_position": 0,
+        "top_position_share": 0.9221014492753623,
+        "histogram": {
+          "1": 14,
+          "0": 509,
+          "2": 28,
+          "4": 1
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 40,
+        "top_position": 2,
+        "top_position_share": 0.7,
+        "histogram": {
+          "1": 7,
+          "0": 4,
+          "2": 28,
+          "4": 1
+        }
+      },
+      "individual_profiles": {
+        "n_members_profiled": 12,
+        "final_share_mean": 0.2232833235598748,
+        "final_share_std": 0.30689144031772303,
+        "initial_share_mean": 0.32953486896821027,
+        "initial_share_std": 0.25268945023190786,
+        "profiles": {
+          "G31": {
+            "final_share": 0.09655172413793103,
+            "initial_share": 0.33793103448275863
+          },
+          "G161": {
+            "final_share": 1.0,
+            "initial_share": 0.0
+          },
+          "G4": {
+            "final_share": 0.09230769230769231,
+            "initial_share": 0.24615384615384617
+          },
+          "G16": {
+            "final_share": 0.10526315789473684,
+            "initial_share": 0.3684210526315789
+          },
+          "G17": {
+            "final_share": 0.05555555555555555,
+            "initial_share": 0.2037037037037037
+          },
+          "G5": {
+            "final_share": 0.05128205128205128,
+            "initial_share": 0.5384615384615384
+          },
+          "G843": {
+            "final_share": 0.0,
+            "initial_share": 1.0
+          },
+          "G871": {
+            "final_share": 0.5,
+            "initial_share": 0.25
+          },
+          "G740": {
+            "final_share": 0.6606156274664562,
+            "initial_share": 0.025256511444356748
+          },
+          "G3": {
+            "final_share": 0.04375,
+            "initial_share": 0.49375
+          },
+          "G142": {
+            "final_share": 0.07407407407407407,
+            "initial_share": 0.24074074074074073
+          },
+          "G844": {
+            "final_share": 0.0,
+            "initial_share": 0.25
+          }
+        }
+      },
+      "slot_like_call": false
+    },
+    {
+      "community_index": 2,
+      "size": 11,
+      "position_concentration_all_lengths": {
+        "n_pairs": 266,
+        "top_position": 0,
+        "top_position_share": 0.9360902255639098,
+        "histogram": {
+          "0": 249,
+          "1": 10,
+          "2": 6,
+          "3": 1
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 44,
+        "top_position": 0,
+        "top_position_share": 0.6136363636363636,
+        "histogram": {
+          "0": 27,
+          "1": 10,
+          "2": 6,
+          "3": 1
+        }
+      },
+      "individual_profiles": {
+        "n_members_profiled": 11,
+        "final_share_mean": 0.06070620624923568,
+        "final_share_std": 0.11997508213848236,
+        "initial_share_mean": 0.40111081937129,
+        "initial_share_std": 0.29726519306301724,
+        "profiles": {
+          "G910": {
+            "final_share": 0.0,
+            "initial_share": 1.0
+          },
+          "G388": {
+            "final_share": 0.030303030303030304,
+            "initial_share": 0.21212121212121213
+          },
+          "G923": {
+            "final_share": 0.0,
+            "initial_share": 0.08108108108108109
+          },
+          "G141": {
+            "final_share": 0.0,
+            "initial_share": 1.0
+          },
+          "G243": {
+            "final_share": 0.1,
+            "initial_share": 0.3
+          },
+          "G927": {
+            "final_share": 0.0,
+            "initial_share": 0.25
+          },
+          "G61": {
+            "final_share": 0.0136986301369863,
+            "initial_share": 0.2876712328767123
+          },
+          "G215": {
+            "final_share": 0.42857142857142855,
+            "initial_share": 0.42857142857142855
+          },
+          "G384": {
+            "final_share": 0.05263157894736842,
+            "initial_share": 0.15789473684210525
+          },
+          "G176": {
+            "final_share": 0.00684931506849315,
+            "initial_share": 0.3972602739726027
+          },
+          "G255": {
+            "final_share": 0.03571428571428571,
+            "initial_share": 0.2976190476190476
+          }
+        }
+      },
+      "slot_like_call": true
+    },
+    {
+      "community_index": 3,
+      "size": 8,
+      "position_concentration_all_lengths": {
+        "n_pairs": 438,
+        "top_position": 1,
+        "top_position_share": 0.9726027397260274,
+        "histogram": {
+          "1": 426,
+          "0": 3,
+          "2": 4,
+          "3": 5
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 16,
+        "top_position": 1,
+        "top_position_share": 0.4375,
+        "histogram": {
+          "1": 7,
+          "2": 4,
+          "3": 5
+        }
+      },
+      "individual_profiles": {
+        "n_members_profiled": 8,
+        "final_share_mean": 0.6115537790099184,
+        "final_share_std": 0.22471076320579594,
+        "initial_share_mean": 0.06470606789183013,
+        "initial_share_std": 0.07177011460080636,
+        "profiles": {
+          "G430": {
+            "final_share": 1.0,
+            "initial_share": 0.0
+          },
+          "G617": {
+            "final_share": 0.6440677966101694,
+            "initial_share": 0.1864406779661017
+          },
+          "G405": {
+            "final_share": 0.33707865168539325,
+            "initial_share": 0.033707865168539325
+          },
+          "G154": {
+            "final_share": 0.7837837837837838,
+            "initial_share": 0.0
+          },
+          "G156": {
+            "final_share": 0.8125,
+            "initial_share": 0.0375
+          },
+          "G390": {
+            "final_share": 0.455,
+            "initial_share": 0.07
+          },
+          "G407": {
+            "final_share": 0.52,
+            "initial_share": 0.01
+          },
+          "G892": {
+            "final_share": 0.34,
+            "initial_share": 0.18
+          }
+        }
+      },
+      "slot_like_call": false
+    },
+    {
+      "community_index": 4,
+      "size": 6,
+      "position_concentration_all_lengths": {
+        "n_pairs": 25,
+        "top_position": 0,
+        "top_position_share": 1.0,
+        "histogram": {
+          "0": 25
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 0,
+        "top_position_share": NaN,
+        "histogram": {}
+      },
+      "individual_profiles": {
+        "n_members_profiled": 6,
+        "final_share_mean": 0.18751589117721842,
+        "final_share_std": 0.2848387019141744,
+        "initial_share_mean": 0.5227561657767608,
+        "initial_share_std": 0.38391501323699884,
+        "profiles": {
+          "G792": {
+            "final_share": 0.0,
+            "initial_share": 0.6666666666666666
+          },
+          "G832": {
+            "final_share": 0.2631578947368421,
+            "initial_share": 0.21052631578947367
+          },
+          "G690": {
+            "final_share": 0.07246376811594203,
+            "initial_share": 0.10144927536231885
+          },
+          "G621": {
+            "final_share": 0.7894736842105263,
+            "initial_share": 0.15789473684210525
+          },
+          "G58": {
+            "final_share": 0.0,
+            "initial_share": 1.0
+          },
+          "G731": {
+            "final_share": 0.0,
+            "initial_share": 1.0
+          }
+        }
+      },
+      "slot_like_call": false
+    },
+    {
+      "community_index": 5,
+      "size": 3,
+      "position_concentration_all_lengths": {
+        "n_pairs": 12,
+        "top_position": 0,
+        "top_position_share": 0.9166666666666666,
+        "histogram": {
+          "0": 11,
+          "1": 1
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 1,
+        "top_position": 1,
+        "top_position_share": 1.0,
+        "histogram": {
+          "1": 1
+        }
+      },
+      "individual_profiles": {
+        "n_members_profiled": 3,
+        "final_share_mean": 0.01507936507936508,
+        "final_share_std": 0.011718113539867778,
+        "initial_share_mean": 0.3007936507936508,
+        "initial_share_std": 0.12019028333275934,
+        "profiles": {
+          "G233": {
+            "final_share": 0.02857142857142857,
+            "initial_share": 0.18571428571428572
+          },
+          "G231": {
+            "final_share": 0.016666666666666666,
+            "initial_share": 0.25
+          },
+          "G175": {
+            "final_share": 0.0,
+            "initial_share": 0.4666666666666667
+          }
+        }
+      },
+      "slot_like_call": false
+    },
+    {
+      "community_index": 6,
+      "size": 3,
+      "position_concentration_all_lengths": {
+        "n_pairs": 47,
+        "top_position": 0,
+        "top_position_share": 1.0,
+        "histogram": {
+          "0": 47
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 47,
+        "top_position": 0,
+        "top_position_share": 1.0,
+        "histogram": {
+          "0": 47
+        }
+      },
+      "individual_profiles": {
+        "n_members_profiled": 3,
+        "final_share_mean": 0.060791354595946666,
+        "final_share_std": 0.019959145923572785,
+        "initial_share_mean": 0.773229086658947,
+        "initial_share_std": 0.07480100450976813,
+        "profiles": {
+          "G817": {
+            "final_share": 0.034482758620689655,
+            "initial_share": 0.8689655172413793
+          },
+          "G820": {
+            "final_share": 0.08280254777070063,
+            "initial_share": 0.7643312101910829
+          },
+          "G861": {
+            "final_share": 0.0650887573964497,
+            "initial_share": 0.6863905325443787
+          }
+        }
+      },
+      "slot_like_call": true
+    },
+    {
+      "community_index": 7,
+      "size": 3,
+      "position_concentration_all_lengths": {
+        "n_pairs": 2,
+        "top_position": 2,
+        "top_position_share": 1.0,
+        "histogram": {
+          "2": 2
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 2,
+        "top_position": 2,
+        "top_position_share": 1.0,
+        "histogram": {
+          "2": 2
+        }
+      },
+      "individual_profiles": {
+        "n_members_profiled": 3,
+        "final_share_mean": 0.0,
+        "final_share_std": 0.0,
+        "initial_share_mean": 0.19999999999999998,
+        "initial_share_std": 0.282842712474619,
+        "profiles": {
+          "G772": {
+            "final_share": 0.0,
+            "initial_share": 0.0
+          },
+          "G519": {
+            "final_share": 0.0,
+            "initial_share": 0.6
+          },
+          "G48": {
+            "final_share": 0.0,
+            "initial_share": 0.0
+          }
+        }
+      },
+      "slot_like_call": false
+    },
+    {
+      "community_index": 8,
+      "size": 3,
+      "position_concentration_all_lengths": {
+        "n_pairs": 13,
+        "top_position": 0,
+        "top_position_share": 0.7692307692307693,
+        "histogram": {
+          "0": 10,
+          "1": 2,
+          "3": 1
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 3,
+        "top_position": 1,
+        "top_position_share": 0.6666666666666666,
+        "histogram": {
+          "1": 2,
+          "3": 1
+        }
+      },
+      "individual_profiles": {
+        "n_members_profiled": 3,
+        "final_share_mean": 0.07170138888888888,
+        "final_share_std": 0.06715362159069987,
+        "initial_share_mean": 0.13862847222222222,
+        "initial_share_std": 0.06406332335363701,
+        "profiles": {
+          "G460": {
+            "final_share": 0.025,
+            "initial_share": 0.05
+          },
+          "G776": {
+            "final_share": 0.16666666666666666,
+            "initial_share": 0.16666666666666666
+          },
+          "G240": {
+            "final_share": 0.0234375,
+            "initial_share": 0.19921875
+          }
+        }
+      },
+      "slot_like_call": false
+    },
+    {
+      "community_index": 9,
+      "size": 2,
+      "position_concentration_all_lengths": {
+        "n_pairs": 13,
+        "top_position": 0,
+        "top_position_share": 1.0,
+        "histogram": {
+          "0": 13
+        }
+      },
+      "position_concentration_length_controlled": {
+        "n_pairs": 0,
+        "top_position_share": NaN,
+        "histogram": {}
+      },
+      "individual_profiles": {
+        "n_members_profiled": 2,
+        "final_share_mean": 0.5190039318479686,
+        "final_share_std": 0.23328964613368286,
+        "initial_share_mean": 0.3535386631716907,
+        "initial_share_std": 0.28931847968545216,
+        "profiles": {
+          "G137": {
+            "final_share": 0.2857142857142857,
+            "initial_share": 0.6428571428571429
+          },
+          "G90": {
+            "final_share": 0.7522935779816514,
+            "initial_share": 0.06422018348623854
+          }
+        }
+      },
+      "slot_like_call": false
+    }
+  ]
+}
