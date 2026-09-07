@@ -1,0 +1,84 @@
+{
+  "classification_results": {
+    "civ_d_markov_no_morphology": {
+      "predicted_label": "civ_c_mixed",
+      "distances": {
+        "civ_a_language_like": 6.235031511655349,
+        "civ_b_administrative_code": 6.438585233404038,
+        "civ_c_mixed": 5.721720251824122
+      }
+    },
+    "civ_e_hierarchical_administrative": {
+      "predicted_label": "civ_c_mixed",
+      "distances": {
+        "civ_a_language_like": 5.909227103469176,
+        "civ_b_administrative_code": 6.042834399138006,
+        "civ_c_mixed": 5.029447844631568
+      }
+    }
+  },
+  "order_3_gains": {
+    "civ_a_language_like": {
+      "mean": -0.05699681868812192,
+      "min": -0.07735355795956611,
+      "max": -0.036241827555143935,
+      "all_seeds": [
+        -0.06878866691696661,
+        -0.07735355795956611,
+        -0.058082648762846745,
+        -0.036241827555143935,
+        -0.044517392246086196
+      ]
+    },
+    "civ_b_administrative_code": {
+      "mean": -0.04091554453127255,
+      "min": -0.0494710859951244,
+      "max": -0.027535359255897784,
+      "all_seeds": [
+        -0.035654183450977595,
+        -0.045339153672326216,
+        -0.0494710859951244,
+        -0.04657794028203677,
+        -0.027535359255897784
+      ]
+    },
+    "civ_c_mixed": {
+      "mean": 0.0035859914552826668,
+      "min": -0.017081333354274086,
+      "max": 0.019235015492172103,
+      "all_seeds": [
+        -0.008949493898863459,
+        0.017020883941254894,
+        0.019235015492172103,
+        0.007704885096123881,
+        -0.017081333354274086
+      ]
+    },
+    "civ_d_markov_no_morphology": {
+      "mean": -0.14029623026860225,
+      "min": -0.15709426820440253,
+      "max": -0.1293015464825915,
+      "all_seeds": [
+        -0.1377206737308896,
+        -0.15709426820440253,
+        -0.13712078046665166,
+        -0.1293015464825915,
+        -0.14024388245847597
+      ]
+    },
+    "civ_e_hierarchical_administrative": {
+      "mean": 0.009454806747155509,
+      "min": 7.785080214217643e-05,
+      "max": 0.01767170788086636,
+      "all_seeds": [
+        0.012315491144395008,
+        7.785080214217643e-05,
+        0.01767170788086636,
+        0.011493313434531416,
+        0.005715670473842582
+      ]
+    }
+  },
+  "real_corpus_order_3_gain_reference": 0.143,
+  "verdict": "This is a more complicated and more important result than a simple 'non-linguistic system also shows order-3 gain' finding. BOTH directions of the expected pattern broke: civ_a, the falsification harness's OWN reference 'language-like' generator, does NOT reliably show positive order-3 gain (confirmed stable and negative across 5 seeds, -0.036 to -0.077 bits), while civ_e (hierarchical administrative), which have no linguistic motivation at all, DO show small but consistent positive gain (also confirmed stable across 5 seeds). Order-3 Kneser-Ney gain, as measured here, does not cleanly track 'morphological' in either direction on these synthetic generators. It is likely sensitive to specific structural properties (e.g. how much predictive power concentrates at order-1 versus is genuinely distributed to order-2, which civ_a's root-then-suffix design may not produce as strongly as a nested administrative nesting structure does) rather than to 'linguistic-ness' as a category. The real corpus's +0.143 bits finding should be described accordingly going forward: evidence of real order-2-conditioned sequential structure, full stop, without the implicit gloss that this specifically indicates language or morphology, since this project's own reference language-like generator does not reliably produce the same signature."
+}
