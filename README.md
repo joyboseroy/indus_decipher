@@ -154,7 +154,15 @@ GitHub repositories. Full citation and license detail is in
   a smaller, transparently documented, in-progress hand-transcription of
   Parpola's CISI corpus. Every inscription in this set happens to be a
   unicorn-motif seal from Mohenjo-daro; see "Resolved: why the two real
-  corpora used to disagree" for why that matters.
+  corpora used to disagree" for why that matters. This source data is
+  genuinely richer than a flat sign sequence: each grapheme carries a
+  damage code, a line number, and a 0-100 subjective uncertainty score
+  (now captured in this project's schema as `mean_uncertainty`, distinct
+  from `damaged`), plus per-sign allograph feature vectors. A second
+  export, `data/cisi_real_corpus_allograph.csv`, represents each
+  grapheme at that finer allograph level instead of collapsing to a bare
+  primary sign ID; see "Allograph granularity" below for what changes,
+  and does not cleanly resolve, when using it.
 
 Regenerate either CSV from a local copy of its source repo with
 `python3 data/convert_indus_website_sql_to_csv.py <sql_path> <out.csv>` or
@@ -502,6 +510,57 @@ them until it is checked further.
 
 Run it yourself with `python3 experiments/substitution_graph_analysis.py`.
 
+## Allograph granularity: an inconclusive robustness check, reported honestly
+
+The mayig/CISI source data (see CITATIONS.md) carries more than plain
+sign IDs: each grapheme has a documented feature vector, damage and line
+number and a 0-100 subjective uncertainty score as defaults, then extra
+allograph-specific features per sign (for example, sign P086's own
+feature file defines branch_factor, branch_count, branch_direction, and
+final_branch_shape). Earlier versions of `convert_cisi_to_csv.py`
+collapsed every allograph of a sign down to its bare primary ID,
+discarding this. Two things were added:
+
+- `mean_uncertainty`, a real field now carried through the schema
+  (`data/loader.py`), separate from `damaged`: a grapheme can be fully
+  undamaged but still visually ambiguous to the annotator, and 78 of 179
+  CISI inscriptions carry a nonzero uncertainty score that was previously
+  silently dropped.
+- A second output, `data/cisi_real_corpus_allograph.csv`, generated with
+  `python3 data/convert_cisi_to_csv.py <input> <output> allograph`,
+  where each grapheme becomes its primary sign ID plus its own
+  allograph-specific feature values as a suffix (e.g. `P086_3-1-0-0`),
+  so two visually distinct allographs of the same primary sign become
+  distinct sign identities instead of being silently treated as one.
+
+This was built specifically to check a real methodological concern: does
+this project's classification of the CISI corpus survive being computed
+on this finer representation, where allographs are NOT collapsed? It
+does not, straightforwardly. At allograph granularity, the CISI corpus's
+classification flips from `civ_a_language_like` to `civ_c_mixed`.
+
+Before reading that as a real finding about allographs mattering,
+inspect the vocabulary: naive full fragmentation (every distinct feature
+combination becomes its own sign, with no minimum-count floor) takes a
+142-sign vocabulary over 104 non-damaged inscriptions to a 230-sign
+vocabulary over the same 104 inscriptions, meaning 61% of allograph-level
+signs occur exactly once in the entire corpus. `top_sign_final_share`,
+one of the six classifier features, literally requires one sign to
+concentrate at the final position, and collapses to exactly 0.0000 at
+this granularity, which is close to certain to be a data-sparsity
+artifact (fragmenting a single real dominant sign's occurrences across
+many now-distinct allograph variants) rather than evidence the corpus's
+underlying final-position constraint disappeared.
+
+This is reported as inconclusive, not resolved, because it plausibly is
+both: allograph choices may genuinely matter, AND naive full
+fragmentation on a 104-inscription corpus is close to certain to be too
+sparse to trust regardless. Untangling which requires either substantially
+more data or a principled middle granularity (e.g. only splitting an
+allograph out when it is independently well-attested, rather than
+splitting on every distinct feature combination), neither of which is
+built yet; see "Extending this toolkit."
+
 ## Known limitations and other honesty notes
 
 - **The transformer is small and NumPy-only on purpose.** It is a full,
@@ -580,6 +639,14 @@ disagreement above:
   logic as "Resolved: why the two real corpora used to disagree" above,
   applied to the substitution-graph result instead of the falsification
   harness.
+- **Resolve the allograph-granularity ambiguity properly.** Naive full
+  fragmentation (see "Allograph granularity" above) is too sparse to
+  trust on 104 inscriptions. A principled middle ground, splitting an
+  allograph out only when it is independently well-attested (e.g. seen
+  at least 3 times) rather than on every distinct feature combination,
+  would need building and would need re-running every headline result
+  against it before the current allograph-level "mixed" flip can be
+  interpreted either way.
 - **Make the synthetic controls harder.** The three civilizations are
   deliberately quite distinct from each other, which is why the
   self-test hits 100%. A useful next test is a continuum between
