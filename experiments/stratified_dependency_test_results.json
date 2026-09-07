@@ -1,0 +1,46 @@
+{
+  "results": {
+    "real": {
+      "entropy": {
+        "1": 7.491331359616426,
+        "2": 6.0104811591477265,
+        "3": 5.867173301762292
+      },
+      "order_3_gain": 0.14330785738543472
+    },
+    "pooled_adversarial_null (original, no stratification)": {
+      "entropy": {
+        "1": 7.16029856187862,
+        "2": 7.245815518867792,
+        "3": 7.424712723246582
+      },
+      "order_3_gain": -0.17889720437879042
+    },
+    "motif_stratified_null (H2: motif composition alone)": {
+      "entropy": {
+        "1": 7.174903684383705,
+        "2": 7.260787320281503,
+        "3": 7.4459529340469635
+      },
+      "order_3_gain": -0.18516561376546026
+    },
+    "site_stratified_null (H2: site composition alone)": {
+      "entropy": {
+        "1": 7.137053640887325,
+        "2": 7.218778508902424,
+        "3": 7.3954510156362065
+      },
+      "order_3_gain": -0.17667250673378287
+    },
+    "site_motif_stratified_null (H2: site+motif composition alone)": {
+      "entropy": {
+        "1": 7.133503120664931,
+        "2": 7.191051134345961,
+        "3": 7.371113412746226
+      },
+      "order_3_gain": -0.180062278400265
+    }
+  },
+  "all_beat": true,
+  "verdict": "Real data's order-3 information gain exceeds EVERY stratified null, including the one that captures site+motif composition jointly. Since each stratified null had every opportunity H2 (archaeological composition alone) would need to succeed, and none did, this is real evidence favoring H1: the order-3 signal is intrinsic to sign sequencing, not an artifact of pooling archaeologically distinct sign-frequency populations together."
+}
