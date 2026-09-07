@@ -1,0 +1,35 @@
+{
+  "primary": {
+    "n_signs": 142,
+    "top_sign_final_share": 0.3557692307692308,
+    "classification": "civ_a_language_like",
+    "distances": {
+      "civ_a_language_like": 5.259019556345842,
+      "civ_b_administrative_code": 7.720389665845832,
+      "civ_c_mixed": 5.3724950477252
+    },
+    "order_3_gain": -0.011983536488727964
+  },
+  "hierarchical (min_count=3)": {
+    "n_signs": 185,
+    "top_sign_final_share": 0.0,
+    "classification": "civ_c_mixed",
+    "distances": {
+      "civ_a_language_like": 5.508511708112673,
+      "civ_b_administrative_code": 6.984733736990772,
+      "civ_c_mixed": 4.801129237562307
+    },
+    "order_3_gain": -0.03669539351457196
+  },
+  "full_allograph": {
+    "n_signs": 230,
+    "top_sign_final_share": 0.0,
+    "classification": "civ_c_mixed",
+    "distances": {
+      "civ_a_language_like": 5.52744158158261,
+      "civ_b_administrative_code": 6.947575524827539,
+      "civ_c_mixed": 4.761299977640569
+    },
+    "order_3_gain": -0.020961607390969306
+  }
+}
