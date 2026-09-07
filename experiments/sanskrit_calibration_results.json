@@ -1,0 +1,47 @@
+{
+  "indus": {
+    "order_3_gain": 0.14330785738543472,
+    "network_stats": {
+      "n_sequences": 2543,
+      "n_signs": 592,
+      "reciprocity_empirical": 0.1905697445972495,
+      "reciprocity_random_mean": 0.39779592281895193,
+      "reciprocity_random_std": 0.00565704025294714,
+      "connectivity_empirical": 0.008714161796932067,
+      "connectivity_random_mean": 0.012926434669466764,
+      "connectivity_random_std": 6.67885911739615e-05,
+      "n_solo_signs": 6,
+      "n_beginners_empirical": 115,
+      "n_beginners_random_mean": 52.1,
+      "n_beginners_random_std": 5.4580216195980755,
+      "n_enders_empirical": 44,
+      "n_enders_random_mean": 50.15,
+      "n_enders_random_std": 4.552746423863293
+    }
+  },
+  "sanskrit_full": {
+    "order_3_gain": 0.1567937976463103,
+    "n_sentences": 21231
+  },
+  "sanskrit_matched": {
+    "order_3_gain": -0.029906552938959052,
+    "network_stats": {
+      "n_sequences": 2543,
+      "n_signs": 3305,
+      "reciprocity_empirical": 0.11676564010495788,
+      "reciprocity_random_mean": 0.12729530384331622,
+      "reciprocity_random_std": 0.0030077914567951183,
+      "connectivity_empirical": 0.00132582320373706,
+      "connectivity_random_mean": 0.001436763167712241,
+      "connectivity_random_std": 2.3577566348084935e-06,
+      "n_solo_signs": 0,
+      "n_beginners_empirical": 210,
+      "n_beginners_random_mean": 222.65,
+      "n_beginners_random_std": 10.859442895471204,
+      "n_enders_empirical": 293,
+      "n_enders_random_mean": 220.55,
+      "n_enders_random_std": 10.655866928598535
+    },
+    "n_sentences": 2543
+  }
+}
