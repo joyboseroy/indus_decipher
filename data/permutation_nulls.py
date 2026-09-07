@@ -45,6 +45,7 @@ one leaves a different piece of real structure intact:
 """
 from __future__ import annotations
 import random
+from collections import Counter, defaultdict
 
 from data.loader import Corpus, Inscription
 from analysis.ngram import bigram_counts
@@ -164,6 +165,93 @@ def bigram_markov_null(real_corpus: Corpus, n_inscriptions: int, seed: int = 0,
             continue
         inscriptions.append(Inscription(
             inscription_id=f"BIMARKOV-{i:05d}", signs=seq,
+            site="permuted", object_type="unknown",
+            reading_direction="R-L", motif="unknown",
+        ))
+    return Corpus(inscriptions)
+
+
+def trigram_markov_null(real_corpus: Corpus, n_inscriptions: int, seed: int = 0,
+                          max_length: int = 40) -> Corpus:
+    """Same idea as bigram_markov_null, one order higher: generates from
+    the real order-2 (trigram) transition table P(next | prev, prev2),
+    with a trained END token so real stopping behavior transfers. Used to
+    test whether real data still beats a null with real order-1 AND
+    order-2 dependency baked in -- the decisive version of "does the
+    corpus's structure extend beyond trigram order," since if real data
+    is no longer distinguishable from THIS null, that is direct evidence
+    the complexity ladder saturates at order 3.
+
+    Context sparsity is a real concern here (see analysis/ngram.py's
+    KneserNeyModel docstring for the scale of the problem): most 2-sign
+    contexts are seen only zero or a few times in a corpus this size, so
+    this generator backs off to the real bigram table, then to the real
+    unigram table, whenever a specific trigram context was never observed
+    -- the same backoff logic as KneserNeyModel, applied here to
+    GENERATION rather than evaluation, for the same reason.
+    """
+    rng = random.Random(seed)
+    filtered = real_corpus.filter(exclude_damaged=True)
+    sequences = filtered.sequences(normalized=True)
+    sequences = [s for s in sequences if len(s) >= 1]
+
+    END = "<END>"
+    initial_signs = [s[0] for s in sequences]
+    initial_bigrams = [(s[0], s[1]) for s in sequences if len(s) >= 2]
+
+    uni_counts, bi_counts = bigram_counts(sequences)
+
+    tri_counts: dict[tuple, Counter] = defaultdict(Counter)
+    for s in sequences:
+        padded = list(s) + [END]
+        for i in range(len(padded) - 2):
+            ctx = (padded[i], padded[i + 1])
+            tri_counts[ctx][padded[i + 2]] += 1
+        if len(s) == 1:
+            tri_counts[(s[0],)][END] += 1  # degenerate length-1 case
+
+    bi_transitions: dict[str, list[tuple[str, int]]] = defaultdict(list)
+    end_augmented_bi = dict(bi_counts)
+    for s in sequences:
+        end_augmented_bi[(s[-1], END)] = end_augmented_bi.get((s[-1], END), 0) + 1
+    for (a, b), c in end_augmented_bi.items():
+        bi_transitions[a].append((b, c))
+
+    all_signs = list(uni_counts.keys())
+    all_weights = list(uni_counts.values())
+
+    def next_from_bigram(prev: str) -> str:
+        options = bi_transitions.get(prev)
+        if not options:
+            return rng.choices(all_signs, weights=all_weights, k=1)[0]
+        signs, weights = zip(*options)
+        return rng.choices(signs, weights=weights, k=1)[0]
+
+    def next_from_trigram(prev2: str, prev: str) -> str:
+        options = tri_counts.get((prev2, prev))
+        if not options:
+            return next_from_bigram(prev)  # backoff: unseen trigram context
+        signs, weights = zip(*options.items())
+        return rng.choices(signs, weights=weights, k=1)[0]
+
+    inscriptions = []
+    for i in range(n_inscriptions):
+        if rng.random() < 0.9 and initial_bigrams:
+            seq = list(rng.choice(initial_bigrams))
+        else:
+            seq = [rng.choice(initial_signs)]
+        while len(seq) < max_length:
+            if len(seq) >= 2:
+                nxt = next_from_trigram(seq[-2], seq[-1])
+            else:
+                nxt = next_from_bigram(seq[-1])
+            if nxt == END:
+                break
+            seq.append(nxt)
+        if not seq:
+            continue
+        inscriptions.append(Inscription(
+            inscription_id=f"TRIMARKOV-{i:05d}", signs=seq,
             site="permuted", object_type="unknown",
             reading_direction="R-L", motif="unknown",
         ))
