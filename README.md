@@ -134,6 +134,8 @@ experiments/
   cross_site_held_out_validation.py  discovery/evaluation split across
                          sites, the independence fix (see "Cross-site
                          held-out validation")
+  functional_class_signature_test.py  do communities have positional
+                         signatures? (see "Functional-class signature")
   discount_sensitivity_test.py  sweeps the Kneser-Ney discount 0.5-0.9
                          (see note after "Order 3 is validated...")
   matched_size_harappa_test.py  resolves the Harappa/Mohenjo-daro gap
@@ -961,6 +963,51 @@ other; both are worth citing together, but as two separate lines of
 evidence, not as a single confirmed claim.
 
 Run it yourself with `python3 experiments/cross_site_held_out_validation.py`.
+
+## Functional-class signature: what kind of real are these communities?
+
+Every test up to this point asked whether the substitution-graph
+communities are real (embedding-corroborated, cross-site validated,
+robust to the Harappa sample-size confound). The next question is what
+kind of real: a morphological paradigm (a family of suffix variants,
+say) should occupy a consistent SLOT, roughly the same relative position
+in an inscription, across its members. A semantic or lexical class has
+no reason to share a slot at all.
+
+`experiments/functional_class_signature_test.py` tests two signals per
+community: how concentrated its underlying minimal-pair substitutions
+are at one specific position index, and how similar its members'
+individual final-position usage is across the whole corpus (low spread
+= shared positional tendency).
+
+The first version of this test, run without controlling for inscription
+length, found 92 to 97 percent position concentration for several
+communities, including the two largest and most pair-rich. That looked
+like a strong, clean signal. Checking why before trusting it found a
+real confound: minimal pairs only ever compare same-length inscriptions,
+and 93 to 96 percent of those two communities' pairs came from
+length-2 inscriptions specifically, which have only 2 possible differing
+positions to begin with. Concentration there is close to mechanical, not
+evidence of a grammatical slot.
+
+Restricting to inscriptions of at least 3 signs (removing the confound,
+at the cost of far fewer usable pairs for communities whose evidence
+skews short) drops the result from 6 of 10 tested communities looking
+"slot-like" to **3 of 10**, and specifically deflates the two
+previously most convincing-looking communities (community 1: 92% to
+70%; community 3: 97% to 44%, no longer meeting the threshold at all).
+The three that survive length control with reasonable sample sizes
+(communities 0, 2, and 6, with 15, 44, and 47 length-controlled pairs
+respectively) are a real, if modest, set of candidates.
+
+This is reported as a coarse, threshold-based heuristic, not a
+statistical test with a null distribution, and it does not distinguish a
+genuine grammatical slot from a coincidental positional habit shared for
+unrelated reasons. Three candidates worth a closer look is what this
+test actually supports; "these communities are morphological paradigms"
+is not a claim this test makes.
+
+Run it yourself with `python3 experiments/functional_class_signature_test.py`.
 
 ## Automated tests
 
