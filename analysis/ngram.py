@@ -90,6 +90,144 @@ class NgramModel:
         return (c_ctx.get(sign, 0) + alpha) / (self.context_totals.get(context, 0) + alpha * vocab_size)
 
 
+@dataclass
+class KneserNeyModel:
+    """Interpolated Kneser-Ney smoothing with a fixed absolute discount
+    (D=0.75, the standard default from Chen & Goodman 1999 in the absence
+    of held-out tuning). Built specifically because add-alpha smoothing
+    was shown (experiments/dependency_order_curve.py) to make held-out
+    entropy RISE at order 3+ on this corpus, for every corpus tested
+    including nulls with zero real higher-order structure -- the
+    signature of context-count sparsity overwhelming a smoothing method
+    with no principled backoff. Kneser-Ney's recursive interpolation to
+    lower-order continuation statistics is the standard fix for exactly
+    this failure mode in n-gram language modeling.
+
+    This is "interpolated Kneser-Ney," not "modified Kneser-Ney": it uses
+    true continuation counts only at the unigram base case (the
+    standard, well-documented simplification -- see Chen & Goodman 1999)
+    rather than continuation counts recursively at every order. This is
+    a reasonable, standard choice, not a shortcut unique to this project.
+    """
+    max_order: int
+    counts_by_order: dict[int, dict[tuple, Counter]]       # order -> context -> Counter[word]
+    context_totals_by_order: dict[int, Counter]             # order -> context -> total count
+    distinct_continuations_by_order: dict[int, Counter]     # order -> context -> #distinct words following
+    continuation_counts_unigram: Counter                    # word -> #distinct single preceding contexts
+    total_bigram_types: int
+    discount: float = 0.75
+
+    def _prob_order(self, context: tuple, word: str, order: int) -> float:
+        if order == 0:
+            # base case: true continuation probability, not raw frequency
+            if self.total_bigram_types == 0:
+                return 1.0 / max(len(self.continuation_counts_unigram), 1)
+            return self.continuation_counts_unigram.get(word, 0) / self.total_bigram_types
+
+        # counts_by_order[order] was built using a context of length
+        # (order - 1) -- e.g. order=2 (bigram) means one token of context.
+        # An earlier version of this method sliced `context[-(order):]`,
+        # one token too long, which meant the lookup NEVER matched
+        # anything in counts_by_order[order] except by accident, silently
+        # falling back to order 0 every time regardless of the requested
+        # order. That bug was caught by testing this against add-alpha
+        # results before trusting it (see the test in
+        # experiments/dependency_order_curve.py's rerun): every order
+        # from 1 to 6 returned an IDENTICAL perplexity, which is only
+        # possible if every order was secretly hitting the same code path.
+        ctx_len = order - 1
+        ctx = context[-ctx_len:] if ctx_len > 0 else ()
+        c_ctx = self.counts_by_order[order].get(ctx)
+        total = self.context_totals_by_order[order].get(ctx, 0)
+        if total == 0:
+            return self._prob_order(context, word, order - 1)
+
+        raw_count = c_ctx.get(word, 0) if c_ctx else 0
+        discounted = max(raw_count - self.discount, 0.0) / total
+        n_distinct = self.distinct_continuations_by_order[order].get(ctx, 0)
+        lam = (self.discount * n_distinct) / total
+        return discounted + lam * self._prob_order(context, word, order - 1)
+
+    def prob(self, context: tuple, word: str) -> float:
+        return self._prob_order(context, word, self.max_order)
+
+
+def train_kneser_ney(sequences: list[list[str]], max_order: int, discount: float = 0.75) -> KneserNeyModel:
+    counts_by_order: dict[int, dict[tuple, Counter]] = {}
+    context_totals_by_order: dict[int, Counter] = {}
+    distinct_continuations_by_order: dict[int, Counter] = {}
+
+    for order in range(1, max_order + 1):
+        counts: dict[tuple, Counter] = defaultdict(Counter)
+        for seq in sequences:
+            padded = ["<S>"] * (order - 1) + seq
+            for i in range(len(padded) - (order - 1)):
+                context = tuple(padded[i:i + order - 1])
+                word = padded[i + order - 1]
+                counts[context][word] += 1
+        totals = Counter({ctx: sum(c.values()) for ctx, c in counts.items()})
+        distinct = Counter({ctx: len(c) for ctx, c in counts.items()})
+        counts_by_order[order] = dict(counts)
+        context_totals_by_order[order] = totals
+        distinct_continuations_by_order[order] = distinct
+
+    # unigram continuation counts: for each word, how many DISTINCT single
+    # preceding words does it follow anywhere in the corpus (bigram types
+    # ending in that word), used only for the order-0 base case
+    bigram_types = set()
+    continuation_counts_unigram = Counter()
+    for seq in sequences:
+        padded = ["<S>"] + seq
+        for a, b in zip(padded, padded[1:]):
+            if (a, b) not in bigram_types:
+                bigram_types.add((a, b))
+                continuation_counts_unigram[b] += 1
+
+    return KneserNeyModel(
+        max_order=max_order, counts_by_order=counts_by_order,
+        context_totals_by_order=context_totals_by_order,
+        distinct_continuations_by_order=distinct_continuations_by_order,
+        continuation_counts_unigram=continuation_counts_unigram,
+        total_bigram_types=len(bigram_types), discount=discount,
+    )
+
+
+def kn_perplexity(model: KneserNeyModel, sequences: list[list[str]]) -> float:
+    n = model.max_order
+    log_prob_sum = 0.0
+    count = 0
+    for seq in sequences:
+        padded = ["<S>"] * (n - 1) + seq
+        for i in range(len(padded) - (n - 1)):
+            context = tuple(padded[i:i + n - 1])
+            word = padded[i + n - 1]
+            p = model.prob(context, word)
+            p = max(p, 1e-12)  # guard against log(0) from an edge case
+            log_prob_sum += math.log2(p)
+            count += 1
+    if count == 0:
+        return float("inf")
+    return 2 ** (-log_prob_sum / count)
+
+
+def kn_cross_validated_perplexity(sequences: list[list[str]], n: int, k_folds: int = 5,
+                                    discount: float = 0.75, seed: int = 0) -> dict:
+    rng = random.Random(seed)
+    seqs = sequences[:]
+    rng.shuffle(seqs)
+    fold_size = max(1, len(seqs) // k_folds)
+    ppls = []
+    for k in range(k_folds):
+        held_out = seqs[k * fold_size:(k + 1) * fold_size]
+        train = seqs[:k * fold_size] + seqs[(k + 1) * fold_size:]
+        if not held_out or not train:
+            continue
+        model = train_kneser_ney(train, n, discount=discount)
+        ppls.append(kn_perplexity(model, held_out))
+    return {"n": n, "fold_perplexities": ppls,
+            "mean_perplexity": sum(ppls) / len(ppls) if ppls else float("nan")}
+
+
 def train_ngram(sequences: list[list[str]], n: int) -> NgramModel:
     counts: dict[tuple, Counter] = defaultdict(Counter)
     context_totals = Counter()
