@@ -90,6 +90,8 @@ data/
                                 "Permutation controls")
   convert_indus_website_sql_to_csv.py   real-data converter (see below)
   convert_cisi_to_csv.py                real-data converter (see below)
+  convert_etcsl_to_csv.py               real Sumerian converter (see
+                                         "Real external-language calibration")
   indus_website_real_corpus.csv         real data (2,543 inscriptions)
   cisi_real_corpus.csv                  real data (179 inscriptions)
 analysis/
@@ -143,6 +145,11 @@ experiments/
                          signatures? (see "Functional-class signature")
   synthetic_continuum_test.py  the order-3 finding's most important
                          correction (see "The synthetic continuum")
+  wucs_comparison_test.py  external validation against a published,
+                         independent corpus (see "External validation")
+  etcsl_calibration_test.py  real Sumerian calibration, the biggest
+                         remaining gap this project had (see "Real
+                         external-language calibration")
   discount_sensitivity_test.py  sweeps the Kneser-Ney discount 0.5-0.9
                          (see note after "Order 3 is validated...")
   matched_size_harappa_test.py  resolves the Harappa/Mohenjo-daro gap
@@ -1101,6 +1108,17 @@ in this project's history: not a bug this time, but a case where the
 metric works exactly as designed and still doesn't support as specific a
 claim as it looked like it did.
 
+**Update, once real Sumerian became available (see "Real
+external-language calibration" below): this needed one more layer of
+nuance, not a reversal.** civ_a's negative result was re-tested against
+real attested language at matched and larger sample sizes specifically
+to rule out a sample-size explanation. It survived that test: civ_a
+stays negative from N=800 through N=33,000, while real Sumerian swings
+from no signal to a strong positive signal over the identical range.
+civ_a's design genuinely differs from real Sumerian grammar in whatever
+this test is sensitive to; it is not merely under-sampled. Read both
+sections together for the fully qualified picture.
+
 One more honest number worth keeping in view: civ_e's positive gain
 (+0.009 mean) is roughly 16 times smaller than the real corpus's +0.143.
 None of the five synthetic civilizations tested come close to real
@@ -1264,11 +1282,16 @@ disagreement above:
   cross-site stability testing~~ **Done, see "The substitution graph
   upgrade" above** (though see the follow-up bullet above about
   Mohenjo-daro sample-size confound).
-- **Add real external control corpora** (Sumerian, Old Tamil, Vedic
+- **Add real external control corpora** ~~(Sumerian~~, Old Tamil, Vedic
   Sanskrit) to `analysis/entropy.py`'s comparisons via
-  `external_control_entropy()`, replacing or supplementing the synthetic
-  random/rigid controls, for a result directly comparable to Rao et
-  al.'s original entropy figures.
+  `external_control_entropy()`. Sumerian is done, see "Real
+  external-language calibration" above, and it went well beyond a simple
+  entropy comparison (order-3 gain, WUCS-style network statistics). Old
+  Tamil and Vedic Sanskrit are still open, and are now higher-value than
+  before: with genuine Sumerian data showing how much the order-3 test's
+  sample-size sensitivity matters, a second and third real language
+  would help establish whether that sensitivity is a general property of
+  the method or specific to Sumerian's particular structure.
 - ~~Implement Kneser-Ney smoothing~~ **Done, see "The dependency-order
   curve" above.** ~~Discount-sensitivity check~~ **Done, see the note
   right after "Order 3 is validated..." above.** One follow-up remains:
@@ -1307,6 +1330,134 @@ result (a real corpus reads as "language-like") turned out to depend on
 a bug in one feature, not on anything about the script. The next
 result that looks exciting deserves the same scrutiny before being
 treated as a finding.
+
+## Real external-language calibration: genuine Sumerian, not a synthetic control
+
+This is the piece flagged throughout this project as the biggest
+remaining gap, and it changed how "The synthetic continuum" section
+above should be read. `data/convert_etcsl_to_csv.py` converts the real
+ETCSL corpus (Black et al. 1998-2006, University of Oxford, 394 literary
+compositions, CC BY-NC-SA 3.0) into this project's schema: each Sumerian
+line becomes one comparison unit (clause-length, matching Indus
+inscriptions far better than whole compositions would), each word's
+dictionary-lemma becomes the sign-equivalent token. The length match
+turned out to be remarkably close without being engineered: ETCSL lines
+average 4.46 tokens; Indus inscriptions average 4.44 signs.
+
+The order-3 test, run three ways:
+
+| Corpus | N | Order-3 gain |
+|---|---|---|
+| Indus | 2,543 | +0.143 |
+| ETCSL, full scale | 33,338 | **+0.370** |
+| ETCSL, subsampled to Indus's size | 2,543 | -0.019 |
+
+Real Sumerian, an unambiguously linguistic system, shows a strongly
+positive order-3 signal at its full scale, more than double Indus's own.
+But subsampled down to Indus's actual corpus size, that signal vanishes.
+This means the order-3 Kneser-Ney test has genuinely limited statistical
+power at a sample size around 2,500 short sequences, for real language,
+not only for synthetic controls.
+
+This forced a direct follow-up on "The synthetic continuum" section's
+civ_a result (this project's own reference language-like generator,
+which showed a persistent negative gain): is civ_a's negative result
+also just a sample-size artifact? Tested directly at civ_a's own N=800,
+2543, 10000, and 33000: the gain stays negative at every size tested
+(-0.069 at 800, drifting only to -0.014 even at 33,000), never
+approaching the dramatic positive swing real Sumerian showed over the
+identical size range. **Sample size does not explain civ_a's result.**
+Its root-then-suffix design genuinely does not concentrate as much real
+dependency at order-2 as actual Sumerian grammar does, at any scale
+tested, which is different from and more specific than simply lacking
+statistical power.
+
+Putting both results together gives a more precise, more defensible
+picture than either "The synthetic continuum" or this section could
+alone:
+
+- The order-3 Kneser-Ney test has real, demonstrated sample-size
+  sensitivity: real, unambiguous language can fail to show a positive
+  signal at Indus-corpus scale, not because the underlying dependency
+  isn't there, but because roughly 2,500 examples of average length ~4.4
+  is a genuinely hard regime for this specific method to detect it in.
+- That sensitivity does NOT explain away civ_a's negative result, which
+  persists at every scale tested including scales where real Sumerian's
+  signal is unambiguous and strong. civ_a's specific morphological
+  design differs from real Sumerian grammar in some way this test is
+  sensitive to, not merely under-sampled.
+- Indus's own positive result at its native scale (+0.143, N=2,543) is,
+  in light of this, more informative than it looked in isolation: it is
+  a positive detection at a sample size where even real attested
+  language mostly fails to produce one. That does not make it evidence
+  of language specifically (civ_e, non-linguistic, also produced a small
+  positive signal, and the mechanism generating Indus's actual structure
+  remains unknown), but it does mean the Indus signal is comparatively
+  strong for the amount of data available, which is worth stating
+  plainly rather than letting the civ_a comparison alone suggest the
+  opposite.
+
+The WUCS-style network statistics (see "External validation against an
+independently published corpus" below) were also run on ETCSL, adding a
+third independent data point to that comparison table:
+
+| Metric | WUCS (published) | Indus (ours) | ETCSL (Sumerian) |
+|---|---|---|---|
+| Reciprocity | 0.148 | 0.191 | 0.111 |
+| Connectivity | 0.0077 | 0.0087 | 0.0027 |
+| Beginners (empirical) | 128 | 115 | 291 |
+| Enders (empirical) | 43 | 44 | 97 |
+
+All three corpora show the same low-reciprocity, low-connectivity
+qualitative regime, though the exact values differ more between Indus
+and ETCSL than between Indus and WUCS, unsurprising given ETCSL's much
+larger vocabulary (4,168 lemmas vs. 592 Indus signs) and genuinely
+open-class natural-language structure, unlike a closed sign catalog.
+
+Run it yourself with `python3 experiments/etcsl_calibration_test.py`
+(needs `data/etcsl_real_corpus.csv`, generated via
+`python3 data/convert_etcsl_to_csv.py`; the raw ETCSL XML files
+themselves are not redistributed in this repository, see CITATIONS.md
+for how to obtain them).
+
+## External validation against an independently published corpus
+
+The highest-priority missing piece remains M77/EBUDS itself (see
+CITATIONS.md and "Other real-data leads"), which needs either a
+successful data request or a bulk download the sandbox environment this
+project has been developed in cannot reach directly. While that's
+pending, `experiments/wucs_comparison_test.py` does something achievable
+right now: Sinha, Izhar, Pan and Wells (2010, arXiv:1005.4997) published
+exact network statistics computed on the WUCS corpus (Wells Unique
+Complete Single-line dataset, 1,821 sequences, 593 signs, compiled
+independently by Bryan Wells from site reports and photographic
+catalogs, using an entirely different sign encoding scheme than this
+project's indus_website corpus). Their paper reports reciprocity,
+connectivity, and beginner/ender sign counts, both empirical and against
+a within-sequence-shuffle randomized baseline. That's directly
+reproducible on this project's own corpus with no new data needed.
+
+Result: **4 of 4 qualitative patterns match.** Reciprocity below random
+in both, connectivity below random in both, a real excess of "beginner"
+signs (occur initially, never elsewhere) above random in both, and a
+real deficit of "ender" signs (occur finally, never elsewhere) below
+random in both, the same asymmetric direction the original paper treated
+as significant evidence of syntactic constraint. The quantitative values
+land close too, given how independent the two corpora are: 592 signs
+here versus 593 in WUCS; connectivity 0.0087 versus 0.0077.
+
+This is not a substitute for running this project's own toolkit on the
+actual classic M77/EBUDS corpus, which remains the single most valuable
+still-missing piece (every headline statistical claim in the field's
+literature was made on that corpus specifically, not on WUCS or on
+either corpus this project currently has). But it is real, independently
+useful evidence: the qualitative structural patterns this project has
+been finding are not an artifact of the indus_website corpus's specific
+digitization choices, since a corpus built by a completely different
+research group, with a completely different sign encoding scheme, shows
+the identical pattern using the identical method.
+
+Run it yourself with `python3 experiments/wucs_comparison_test.py`.
 
 ## Citations
 
