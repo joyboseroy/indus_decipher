@@ -1,0 +1,59 @@
+{
+  "harappa_motif_count": 414,
+  "mohenjo_daro_motif_count": 948,
+  "n_trials": 100,
+  "results": [
+    {
+      "community_index": 0,
+      "size": 15,
+      "harappa_jaccard": 0.16666666666666666,
+      "md_subsampled_mean": 0.23763203463203464,
+      "md_subsampled_min": 0.0,
+      "md_subsampled_max": 0.5714285714285714,
+      "md_subsampled_n_trials": 100,
+      "sample_size_explains": true
+    },
+    {
+      "community_index": 1,
+      "size": 12,
+      "harappa_jaccard": 0.3,
+      "md_subsampled_mean": 0.23853535353535352,
+      "md_subsampled_min": 0.0,
+      "md_subsampled_max": 0.6666666666666666,
+      "md_subsampled_n_trials": 100,
+      "sample_size_explains": true
+    },
+    {
+      "community_index": 2,
+      "size": 11,
+      "harappa_jaccard": 0.4444444444444444,
+      "md_subsampled_mean": 0.18878907203907203,
+      "md_subsampled_min": 0.0,
+      "md_subsampled_max": 0.5,
+      "md_subsampled_n_trials": 100,
+      "sample_size_explains": true
+    },
+    {
+      "community_index": 3,
+      "size": 8,
+      "harappa_jaccard": 0.375,
+      "md_subsampled_mean": 0.17476190476190476,
+      "md_subsampled_min": 0.0,
+      "md_subsampled_max": 0.5714285714285714,
+      "md_subsampled_n_trials": 100,
+      "sample_size_explains": true
+    },
+    {
+      "community_index": 4,
+      "size": 6,
+      "harappa_jaccard": 0.0,
+      "md_subsampled_mean": 0.3821666666666667,
+      "md_subsampled_min": 0.0,
+      "md_subsampled_max": 1.0,
+      "md_subsampled_n_trials": 100,
+      "sample_size_explains": true
+    }
+  ],
+  "n_explained": 5,
+  "verdict": "Sample size explains most of the apparent Harappa/Mohenjo-daro gap. When Mohenjo-daro is subsampled down to Harappa's own motif-labeled count, it produces similarly weak Jaccard scores. This resolves the open question: the earlier cross-site stability finding was primarily a data-density artifact of minimal-pair mining, not evidence of a genuine site-specific difference in how signs substitute."
+}

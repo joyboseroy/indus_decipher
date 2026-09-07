@@ -1,0 +1,42 @@
+{
+  "results": {
+    "0.5": {
+      "real_gain": 0.04207420304708798,
+      "bigram_null_gain": -0.2986030933057702,
+      "adv_null_gain": -0.3673991464368065,
+      "pattern_holds": true
+    },
+    "0.6": {
+      "real_gain": 0.09112510593174239,
+      "bigram_null_gain": -0.22517148958234134,
+      "adv_null_gain": -0.28104320196620414,
+      "pattern_holds": true
+    },
+    "0.7": {
+      "real_gain": 0.12865166314444743,
+      "bigram_null_gain": -0.16540739458674114,
+      "adv_null_gain": -0.20981838442854528,
+      "pattern_holds": true
+    },
+    "0.75": {
+      "real_gain": 0.14330785738543472,
+      "bigram_null_gain": -0.13997403783569862,
+      "adv_null_gain": -0.17889720437879042,
+      "pattern_holds": true
+    },
+    "0.8": {
+      "real_gain": 0.15496279370709676,
+      "bigram_null_gain": -0.11744584832121596,
+      "adv_null_gain": -0.15088042503962473,
+      "pattern_holds": true
+    },
+    "0.9": {
+      "real_gain": 0.1657462036518904,
+      "bigram_null_gain": -0.08256490366176283,
+      "adv_null_gain": -0.10426167851158308,
+      "pattern_holds": true
+    }
+  },
+  "all_hold": true,
+  "verdict": "The three-way pattern (real positive, both nulls negative) holds at EVERY discount value tested from 0.5 to 0.9. The order-3 finding is not an artifact of the specific default discount (0.75) chosen; it is robust across the range a reasonable analyst might have picked without tuning."
+}
