@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or its bundled corpora, please cite it as
+  below. See CITATIONS.md for citing the individual data sources
+  (yajnadevam/indus-website, mayig/indus-valley-script-corpus,
+  indusscript.in/M77, ETCSL, the Digital Corpus of Sanskrit, and the
+  Sangam Literature Corpus), which is separate from citing this
+  toolkit itself.
+title: >-
+  Indus Script Computational Analysis Toolkit: A Falsification-Oriented
+  Statistical Framework
+type: software
+authors:
+  - family-names: Bose
+    given-names: Joy
+repository-code: 'https://github.com/joyboseroy/indus_decipher'
+license: MIT
+keywords:
+  - indus script
+  - indus valley civilization
+  - undeciphered scripts
+  - computational epigraphy
+  - historical linguistics
+  - falsification testing
+  - null models
+abstract: >-
+  A statistical, falsification-oriented toolkit for computational
+  analysis of the undeciphered Indus Valley script: entropy and n-gram
+  replication of the published literature, a synthetic-civilization
+  falsification harness, adversarial and stratified null models,
+  substitution-graph and distributional-embedding analysis, and
+  external-language calibration against real Sumerian, Sanskrit, and
+  Old Tamil corpora. Developed with Claude (Anthropic) doing
+  implementation, debugging, and drafting under human direction and
+  review at every step (see the repository's README, "How this was
+  built"); this file's author metadata reflects the human research
+  direction, not the implementation labor, and anyone citing this work
+  should feel free to describe that division of labor explicitly rather
+  than assume a conventional single-author model applies.
