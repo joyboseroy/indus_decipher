@@ -117,6 +117,9 @@ experiments/
                          building it (see "Bootstrap confidence intervals")
   substitution_graph_analysis.py  runs substitution_graph.py on the large
                          corpus, including the cross-site stability test
+  dependency_order_curve.py  order-1..6 information-gain curve, and the
+                         n-gram sparsity wall it hit (see "The
+                         dependency-order curve")
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -412,12 +415,65 @@ came within 10% between real and this control.
 
 Result: even against the fairest version of the bigram-order control,
 the classifier still discriminates real data from it at 93.8% accuracy
-(chance is 50%). That is the most specific finding in this project so
-far: the real corpus contains sequential structure beyond what a bigram
-(order-1) model explains. It does not by itself say what that higher-order
-structure is, only that it exists.
+(chance is 50%).
+
+**Correction, added after building `experiments/dependency_order_curve.py`
+(see below):** this section originally stated that 93.8% figure as
+evidence the real corpus "contains sequential structure beyond what a
+bigram model explains." That claim was too strong. The discriminating
+signal in this test is concentrated in `perplexity_ratio_n2_n1` and
+`conditional_entropy`, both of which compare only order-1 against
+order-2 statistics; nothing in this test actually measures order-3 or
+higher. A genuine order-3+ effect is one possible explanation for that
+93.8%, but so is a subtler difference in how precisely order-1/2
+statistics transfer between the real corpus and a freshly-generated,
+same-size synthetic sample, which is a real effect but a much narrower
+one than "beyond bigram structure." The defensible claim from this
+section alone is: **the real corpus is distinguishable from a
+bigram-order-matched null**, full stop, without a claim about which
+order the distinguishing information lives at. See "The dependency-order
+curve" below for the direct attempt to settle this, and why it could not.
 
 Run it yourself with `python3 experiments/permutation_controls.py`.
+
+## The dependency-order curve: an attempt to settle the above, and why it couldn't
+
+The natural next question after the correction above is direct: does
+predictive information keep increasing as more context (order 3, 4, 5...)
+is added, or does it saturate at order 2? `experiments/dependency_order_curve.py`
+computes cross-validated held-out entropy at orders 1 through 6 for the
+real corpus and, as controls, the bigram-order null above and the
+adversarial (no-dependency) null.
+
+The result is a genuine negative finding about the METHOD, not about the
+script. Held-out entropy for ALL THREE corpora, including the
+adversarial null, which by construction has zero real dependency at any
+order, starts RISING at order 3 and keeps rising through order 6. That
+is the textbook signature of n-gram sparsity: this project's simple
+add-alpha smoothing cannot handle the exploding number of distinct
+order-3+ contexts on a corpus this size, most of which are seen zero or
+one times, and it backs off toward something close to a uniform,
+uninformative distribution rather than a genuine higher-order estimate.
+Since even a null model with NO real structure beyond order-1 shows the
+same rising curve, nothing about orders 3 and up is currently
+interpretable from this method, for any corpus tested.
+
+What the same curve DOES support, restricted to the order-1-to-2 step
+where sparsity has not yet taken over: going from unigram to bigram
+genuinely helps for the real corpus (information gain +0.355 bits) and
+for the bigram-order null built to have real order-1 structure (+0.766
+bits), while it genuinely HURTS for the adversarial no-dependency null
+(-0.770 bits, meaning a bigram model overfits noise on data with no real
+bigram signal to find). That three-way pattern is a clean, small,
+defensible confirmation that this project's tools correctly detect real
+order-1 dependency when it exists and correctly fail to invent it when
+it doesn't. It just cannot yet be extended to ask whether order-3+
+dependency exists on top of that, which needs either substantially more
+data or a smarter smoothing method (interpolated or Kneser-Ney n-grams,
+already queued in "Extending this toolkit") before that question can be
+asked honestly.
+
+Run it yourself with `python3 experiments/dependency_order_curve.py`.
 
 ## Bootstrap confidence intervals, and a leakage bug found along the way
 
@@ -668,11 +724,16 @@ disagreement above:
   `external_control_entropy()`, replacing or supplementing the synthetic
   random/rigid controls, for a result directly comparable to Rao et
   al.'s original entropy figures.
-- **Implement Witten-Bell smoothing** in `analysis/ngram.py` alongside
-  the current add-alpha smoothing, so the top-90%-mass restoration metric
-  can be compared to Yadav et al.'s published ~75% figure on genuinely
-  equal terms, rather than with the "large candidate-set size" caveat
-  this toolkit currently has to attach to that number.
+- **Implement Witten-Bell or Kneser-Ney smoothing** in `analysis/ngram.py`
+  alongside the current add-alpha smoothing. Now has two independent
+  reasons, not one: it would let the top-90%-mass restoration metric be
+  compared to Yadav et al.'s published ~75% figure on genuinely equal
+  terms, AND it is very likely a precondition for "The dependency-order
+  curve" above to say anything meaningful about order-3+ structure,
+  since that experiment's current add-alpha smoothing was shown to break
+  down from sparsity for every corpus tested, real and null alike,
+  starting at order 3. This is now the more time-sensitive of the two
+  reasons.
 - **Keep a lightweight experiment log** (corpus, N, direction, features,
   seed, result, timestamp) for every run that produces a number quoted
   anywhere outside this repo, so any reported figure can be traced back
