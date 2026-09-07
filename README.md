@@ -182,7 +182,9 @@ GitHub repositories. Full citation and license detail is in
 `CITATIONS.md`; the summary:
 
 - **`data/indus_website_real_corpus.csv`** (2,543 inscriptions, 592
-  signs, 1,622 with real iconographic motif codes) parsed from the
+  signs, 1,622 with real iconographic motif codes, 2,375 with a real
+  CISI/Mahadevan catalog number -- see "Real CISI/Mahadevan numbers
+  recovered for the core corpus" below) parsed from the
   MySQL dump in
   [yajnadevam/indus-website](https://github.com/yajnadevam/indus-website).
   Its scale (2,543 raw inscriptions, 700 total glyph codes, 52 sites)
@@ -1349,6 +1351,52 @@ result (a real corpus reads as "language-like") turned out to depend on
 a bug in one feature, not on anything about the script. The next
 result that looks exciting deserves the same scrutiny before being
 treated as a finding.
+
+## Real CISI/Mahadevan numbers recovered for the core corpus
+
+This was sitting in the source data the entire project has been built
+on, unused, until it was noticed while cross-checking a set of uploaded
+CISI photographic plates (Mohenjo-daro seals M-1 through M-52) against
+this project's data. The `indus_website` SQL dump's `SEAL` table has a
+`CISI` column, e.g. `"M-1"`, `"H-322"`, `"L-98"` -- the real
+Mahadevan/CISI catalog numbering used throughout the classic literature.
+`data/convert_indus_website_sql_to_csv.py`'s comments already correctly
+documented this column's existence and position in the schema; an
+earlier version of the script simply never read it, using only the
+database's own internal `SEALID` as `inscription_id` instead.
+
+Fixed: the converter now extracts this into a new `cisi_number` field
+(kept separate from `inscription_id` rather than replacing it, since
+7% of rows have no CISI value and every row needs a stable ID
+regardless). **2,375 of 2,543 inscriptions (93%) now carry a real,
+verifiable CISI/Mahadevan catalog number.** This is purely additive:
+sign sequences are untouched, so every existing finding in this project
+is unaffected (confirmed directly: the order-3 result is still exactly
++0.143 bits after regenerating the corpus).
+
+Spot-checked directly against the uploaded photographic plates: M-1
+through M-10 all resolve to real sign sequences of plausible length
+(M-1: 5 signs, M-3: 3 signs, the shortest inscription on that page,
+consistent with its visibly shorter sign row in the photograph; M-4: 9
+signs, the longest on that page, also consistent). This is a plausible
+sign-COUNT cross-check, not a claim of verified sign-by-sign
+transcription -- reading the actual glyphs from photographs reliably is
+a real paleographic skill this project does not have, and this project
+does not claim to have exercised it here.
+
+What this changes going forward: this project's core corpus is no
+longer just "a digitization of unclear direct correspondence to the
+classic literature's numbering." It now has a real, checkable link to
+Mahadevan's own CISI numbers for the large majority of its rows, which
+means any future comparison against CISI-numbered material (the
+uploaded photographic plates, the concordance crosswalk table
+documenting CISI/FC/excavation/museum numbers for the same objects, or
+any other CISI-numbered source) can now proceed by direct ID lookup
+rather than remaining blocked on the id-linkage problem this project
+had been carrying since very early in its development.
+
+Run the converter yourself with
+`python3 data/convert_indus_website_sql_to_csv.py`.
 
 ## Real external-language calibration: genuine Sumerian, not a synthetic control
 
