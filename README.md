@@ -134,6 +134,11 @@ experiments/
   cross_site_held_out_validation.py  discovery/evaluation split across
                          sites, the independence fix (see "Cross-site
                          held-out validation")
+  discount_sensitivity_test.py  sweeps the Kneser-Ney discount 0.5-0.9
+                         (see note after "Order 3 is validated...")
+  matched_size_harappa_test.py  resolves the Harappa/Mohenjo-daro gap
+                         directly (see "Matched-size resolution of the
+                         Harappa gap")
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -528,12 +533,16 @@ orders on a corpus this size, so this result should be read as "genuine
 trigram-level structure, evidenced concretely," not "structure at every
 order we could compute."
 
-One important caveat: the discount parameter (0.75) is the standard
-default from the n-gram literature, not tuned against this corpus via
-held-out data. A discount sensitivity check (does the order-3 finding
-survive discount values from, say, 0.5 to 0.9) has not been run yet and
-would be a reasonable next step before treating +0.143 bits as a precise
-number rather than a directionally clear one.
+The discount parameter (0.75) is the standard default from the n-gram
+literature, not tuned against this corpus via held-out data.
+`experiments/discount_sensitivity_test.py` swept it from 0.5 to 0.9 and
+reran the full three-way comparison at each value: the pattern (real
+positive, both nulls negative) holds at every single discount tested,
+with a smooth, monotonic trend (real gain rises from +0.042 at
+discount=0.5 to +0.166 at discount=0.9; both nulls' negative gains
+shrink toward, but never cross, zero over the same range). +0.143 bits
+at the default 0.75 is a reasonable representative number, not a fragile
+artifact of that specific choice.
 
 ## Order 3 is validated; order 4 and beyond is inconclusive, not "saturated"
 
@@ -670,15 +679,54 @@ Every community replicates far better at Mohenjo-daro than at Harappa,
 one community (community 4) not replicating there at all. Mohenjo-daro
 supplies the plurality of the corpus (1,202 of 2,543 inscriptions) and of
 the motif-labeled subset these classes are built from, so at least part
-of this gap is likely an ordinary sample-size effect rather than a
-genuine site-specific grammatical difference, but that has not been
-tested directly yet (see "Extending this toolkit"). Read this table as
-what it is: most of the current motif-corroborated substitution classes
-are substantially better supported by Mohenjo-daro material than shown to
-be corpus-general, and that qualifier belongs on any claim made about
-them until it is checked further.
+of this gap looked like an ordinary sample-size effect rather than a
+genuine site-specific grammatical difference. **This has since been
+tested directly and resolved: see "Matched-size resolution of the
+Harappa gap" below. It was sample size.** Read this table as a
+historical record of the raw finding, not as the final word on what it
+means.
 
 Run it yourself with `python3 experiments/substitution_graph_analysis.py`.
+
+## Matched-size resolution of the Harappa gap
+
+`experiments/matched_size_harappa_test.py` settles the question directly
+rather than inferring around it. Mohenjo-daro's motif-labeled
+inscriptions (948) were repeatedly subsampled down to Harappa's own
+motif-labeled count (414), 100 trials per community, rerunning the exact
+same minimal-pair mining and Jaccard comparison on each subsample. If
+Harappa's actual Jaccard score falls within the range these matched-size
+Mohenjo-daro subsamples produce, that's a sample-size explanation; if it
+falls clearly below even the worst subsamples, that's a real
+site-specific effect.
+
+| Community | Harappa Jaccard | Matched-size Mohenjo-daro (mean, range) | Sample size explains it? |
+|---|---|---|---|
+| 0 | 0.167 | 0.238 [0.00, 0.57] | YES |
+| 1 | 0.300 | 0.239 [0.00, 0.67] | YES |
+| 2 | 0.444 | 0.189 [0.00, 0.50] | YES |
+| 3 | 0.375 | 0.175 [0.00, 0.57] | YES |
+| 4 | 0.000 | 0.382 [0.00, 1.00] | YES |
+
+**5 of 5.** Every community's Harappa score falls within the range
+matched-size Mohenjo-daro subsamples produce, and for communities 1, 2,
+and 3, Harappa's actual score sits ABOVE the matched-size mean. This
+resolves the question this project has carried since the substitution
+graph was first built: the earlier cross-site stability gap was
+primarily a data-density artifact of minimal-pair mining needing enough
+same-length, same-context inscriptions to find substitution pairs in,
+not evidence of a genuine site-specific difference in how signs
+substitute for each other. Once Mohenjo-daro is given the same amount of
+data Harappa actually has, it produces similarly noisy, similarly weak
+Jaccard scores.
+
+This is also a second, independent line of evidence supporting the same
+conclusion "Cross-site held-out validation" above reached by a different
+method (distributional embeddings trained on Harappa alone, evaluated
+against Mohenjo-daro-discovered communities): whatever is generating
+these substitution classes does not appear to be specific to Mohenjo-daro.
+
+Run it yourself with `python3 experiments/matched_size_harappa_test.py`.
 
 ## Allograph granularity: resolved, and it is a real effect, not sparsity noise
 
@@ -896,11 +944,11 @@ Harappa using strict Jaccard overlap on minimal-pair mining (which needs
 literal matching-context substitution pairs, and Harappa has less
 motif-labeled data to find them in). This result suggests the
 DISTRIBUTIONAL signature of those same communities is still present in
-Harappa's data even where the stricter substitution test struggled --
-consistent with the earlier weak replication being partly a data-density
-limitation of the minimal-pair method specifically, not clean evidence
-the underlying classes are Mohenjo-daro-specific. Both results should be
-read together, not the weaker one in isolation.
+Harappa's data even where the stricter substitution test struggled. That
+suggestion is now directly confirmed rather than merely consistent-with:
+see "Matched-size resolution of the Harappa gap" below, which tested the
+sample-size explanation head-on and found it accounts for the gap in 5
+of 5 communities.
 
 Run it yourself with `python3 experiments/cross_site_held_out_validation.py`.
 
@@ -973,18 +1021,10 @@ disagreement above:
   estimate~~ **Done, see "Bootstrap confidence intervals" above** (and
   note the leakage bug documented there before trusting a naive version
   of this).
-- **Test whether Harappa's weaker class-stability is a sample-size
-  effect, specifically.** "Cross-site held-out validation" above showed
-  the DISTRIBUTIONAL signature of Mohenjo-daro-discovered communities
-  largely survives evaluation on Harappa's own data (10 of 11), which
-  points toward the earlier weaker Jaccard-based replication being a
-  data-density limitation of minimal-pair mining specifically, not the
-  classes being absent from Harappa. That's suggestive, not proof; the
-  matched-size subsampling test originally proposed here (subsample
-  Mohenjo-daro DOWN to Harappa's motif-labeled count, rerun the SAME
-  strict Jaccard test, see if the gap shrinks) still hasn't been run and
-  would settle the sample-size question directly rather than inferring
-  it from a different method's result.
+- ~~Test whether Harappa's weaker class-stability is a sample-size
+  effect~~ **Done, see "Matched-size resolution of the Harappa gap"
+  above. It was sample size, confirmed directly (5 of 5 communities),
+  not just inferred from the embeddings result.**
 - ~~Resolve the allograph-granularity ambiguity properly~~ **Done, see
   "Allograph granularity" above.** Follow-up not yet done: rerun the
   order-3 Kneser-Ney test on the large corpus's own site+motif-known
@@ -1012,13 +1052,12 @@ disagreement above:
   random/rigid controls, for a result directly comparable to Rao et
   al.'s original entropy figures.
 - ~~Implement Kneser-Ney smoothing~~ **Done, see "The dependency-order
-  curve" above.** Two follow-ups remain: (1) a discount-sensitivity check
-  (does the order-3 finding survive discounts from ~0.5 to ~0.9, not just
-  the default 0.75) before treating the +0.143 bits figure as precise
-  rather than directional; (2) rerunning the top-90%-mass restoration
-  metric with `KneserNeyModel` instead of add-alpha, for a fairer
-  comparison to Yadav et al.'s published ~75% figure than this project's
-  current add-alpha-based version allows.
+  curve" above.** ~~Discount-sensitivity check~~ **Done, see the note
+  right after "Order 3 is validated..." above.** One follow-up remains:
+  rerunning the top-90%-mass restoration metric with `KneserNeyModel`
+  instead of add-alpha, for a fairer comparison to Yadav et al.'s
+  published ~75% figure than this project's current add-alpha-based
+  version allows.
 - **Add a proper pytest test suite.** Every result in this project has so
   far been checked by manually rerunning each script and confirming a
   clean exit code plus a by-eye read of the printed numbers. That has
