@@ -5,7 +5,12 @@ grouped by what it's used for. If you use this repo, cite the underlying
 data sources below in addition to this repo itself: they did the actual
 transcription and research work.
 
-## Real data sources (included in this repo)
+## Real data sources
+
+Two of these five are shipped directly in this repo (`indus_website`,
+CISI/mayig); the other three (Sangam Tamil, Sanskrit, Sumerian) are not,
+per their source licenses -- see each entry below for the converter
+script that regenerates them locally.
 
 ### yajnadevam/indus-website
 
