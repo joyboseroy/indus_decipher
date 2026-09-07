@@ -95,7 +95,9 @@ data/
   convert_dcs_sanskrit_to_csv.py        real Sanskrit converter (see
                                          "A second real language: Sanskrit")
   convert_tamil_to_csv.py                real Old Tamil converter (see
-                                         "A third language, located and tried")
+                                         "Old Tamil: located, tried, and
+                                         the predicted sparsity problem
+                                         confirmed empirically")
   indus_website_real_corpus.csv         real data (2,543 inscriptions)
   cisi_real_corpus.csv                  real data (179 inscriptions)
 analysis/
@@ -1299,13 +1301,16 @@ disagreement above:
   statistics), and together they produced this project's most
   well-triangulated finding: the order-3 test's sample-size limitation
   around 2,500 examples is real and general, confirmed independently
-  twice, not an artifact of one corpus. Old Tamil was investigated and
-  set aside for a documented reason (no lemmatized/morphologically
-  segmented digital corpus found; see "A third language considered, and
-  set aside honestly"), not simply left undone. If a suitable Old Tamil
-  resource is later located, it remains the natural next addition, ideally
-  from a different language family than Sumerian and Indo-Aryan Sanskrit
-  entirely, for the strongest possible third data point.
+  twice, not an artifact of one corpus. ~~Old Tamil was investigated and
+  set aside~~ **Since located and tried, see "Old Tamil: located, tried,
+  and the predicted sparsity problem confirmed empirically" above -- the
+  predicted lemmatization gap turned out to be exactly as severe as
+  expected, confirmed empirically rather than left as a prediction.** A
+  lemmatized Old Tamil corpus, if one is ever located, remains the
+  natural next addition, ideally from a language family distinct from
+  Sumerian and Indo-Aryan Sanskrit entirely, for a genuinely third
+  calibration point rather than a fourth confirmation of the same
+  sparsity limitation.
 - ~~Implement Kneser-Ney smoothing~~ **Done, see "The dependency-order
   curve" above.** ~~Discount-sensitivity check~~ **Done, see the note
   right after "Order 3 is validated..." above.** One follow-up remains:
@@ -1489,35 +1494,29 @@ Run it yourself with `python3 experiments/sanskrit_calibration_test.py`
 `python3 data/convert_dcs_sanskrit_to_csv.py`; see CITATIONS.md for
 source and license notes).
 
-## A third language considered, and set aside honestly: Old Tamil
+## Old Tamil: located, tried, and the predicted sparsity problem confirmed empirically
 
 Sangam-era Old Tamil was the natural third external-language candidate,
-and was investigated to the same standard as Sumerian and Sanskrit
-before being set aside, rather than forced through at lower quality.
-Project Madurai (projectmadurai.org) provides real, public-domain
-digitized Sangam texts, but as plain Unicode or TSCII text with no
-lemmatization, no morphological segmentation, and no part-of-speech
+and was investigated to the same standard as Sumerian and Sanskrit. The
+first attempt found only Project Madurai's plain Unicode/TSCII text, with
+no lemmatization, no morphological segmentation, and no part-of-speech
 tagging, unlike ETCSL's TEI markup or DCS's CoNLL-U format. Classical
-Tamil is agglutinative with productive sandhi; naive whitespace
+Tamil is agglutinative with productive sandhi, so naive whitespace
 tokenization would bundle multiple morphemes into single "word" tokens
-inconsistently across the corpus, in a way this project has no principled
-basis to correct without real morphological analysis it does not have.
-Rather than build a third calibration corpus at a visibly lower and
-methodologically shakier standard than the first two, this is recorded
-as a real gap: a lemmatized or morphologically segmented digital Sangam
-corpus, if one exists and can be located, would be a genuine addition to
-## A third language, located and tried: Old Tamil, with the sparsity problem confirmed empirically
+inconsistently, in a way this project had no principled basis to correct.
+That was recorded as a real, named gap rather than forced through at
+lower quality.
 
-The gap flagged above did get filled, on a real corpus this time: the
-Sangam Literature Corpus (starhopp3r/sangam, scraped from Vaidehi
-Herbert's translations, 2,377 poems, see CITATIONS.md), a genuine,
-carefully assembled digitization with rich per-poem metadata. But the
-underlying limitation predicted above was real, not hypothetical, and
-`experiments/tamil_calibration_test.py` confirms it directly rather than
-leaving it as a theoretical concern: no lemmatized version of this
-corpus exists, so `data/convert_tamil_to_csv.py` uses raw whitespace-
-separated orthographic words, and Tamil's agglutinative morphology means
-most such "words" are functionally unique inflected forms.
+The gap later got filled, on a real corpus: the Sangam Literature Corpus
+(starhopp3r/sangam, scraped from Vaidehi Herbert's translations, 2,377
+poems, see CITATIONS.md), a genuine, carefully assembled digitization
+with rich per-poem metadata. But the underlying limitation predicted
+above was real, not hypothetical, and `experiments/tamil_calibration_test.py`
+confirms it directly rather than leaving it as a theoretical concern: no
+lemmatized version of this corpus exists either, so
+`data/convert_tamil_to_csv.py` uses raw whitespace-separated orthographic
+words, and Tamil's agglutinative morphology means most such "words" are
+functionally unique inflected forms.
 
 The severity is visible in one number before any test is even run: this
 corpus's vocabulary (35,301 distinct orthographic words) EXCEEDS its own
