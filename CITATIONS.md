@@ -12,6 +12,42 @@ CISI/mayig); the other three (Sangam Tamil, Sanskrit, Sumerian) are not,
 per their source licenses -- see each entry below for the converter
 script that regenerates them locally.
 
+### M77/IDF-80 (indusscript.in, RMRL/Indus Research Centre)
+
+Source of `data/m77_indusscript_real_corpus.csv` (3,573 usable lines
+from 2,906 texts), the actual canonical M77 corpus (Mahadevan 1977,
+digitized as IDF-80) behind Rao et al. 2009 and Yadav et al. 2010 --
+see README's "M77 obtained and verified" for the full account.
+
+- Portal: https://indusscript.in
+- Maintained by: Roja Muthiah Research Library (RMRL), Indus Research
+  Centre, in collaboration with the Department of Archaeology,
+  Government of Tamil Nadu.
+- Suggested acknowledgment (per the portal's own request): Mahadevan,
+  Iravatham & Roja Muthiah Research Library (2021), *The Indus Script
+  Web Application (IM77/IDF80)*. https://indusscript.in
+- Access method: the portal has no public bulk-download button; this
+  export was obtained via an authenticated (Google login) browser
+  session, extracting the site's own Firestore backend directly via
+  JavaScript. This is a real reproducibility limitation, stated
+  plainly: a third party cannot rerun this exact extraction without
+  their own login and browser access.
+- Verification: every specific record count, sign-occurrence count, and
+  three individually worked examples (texts 1001, 1003, 1012) were
+  independently recomputed from the raw JSON and confirmed exact before
+  this data was used for anything. See the README section for the full
+  list of checks.
+- What we use: non-empty (`posnum != 0`) records, keyed by the unique
+  `(textnum, sideline)` pair, parsed by
+  `data/convert_m77_indusscript_to_csv.py`. Signs are Mahadevan's own
+  numbering (prefixed `MSg` in this project's schema to stay visibly
+  distinct from other sign-numbering schemes used elsewhere in this
+  project). Site, object type, and motif metadata are not present in
+  this export.
+- Note on redistribution: as with the external-language corpora, the
+  raw JSON/CSV export is not included in this repository; the converter
+  script is.
+
 ### yajnadevam/indus-website
 
 Source of `data/indus_website_real_corpus.csv` (2,543 inscriptions, 592
