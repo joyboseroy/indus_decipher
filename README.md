@@ -30,7 +30,8 @@ what this is.
 
 ## How this was built
 
-This codebase was developed iteratively with the help of Claude (Anthropic), including the decision of which
+This codebase was developed iteratively with the help of Claude (Anthropic), under human
+direction and review at every step, including the decision of which
 statistical tests to run, which data sources to trust, and how to word
 every caveat in this document. Several of the more interesting findings
 below (the reading-direction correction, the two real corpora landing on
@@ -123,6 +124,8 @@ experiments/
                          dependency-order curve")
   stratified_dependency_test.py  Stage 2: does motif/site composition
                          explain the order-3 signal? (see "Stage 2")
+  allograph_granularity_test.py  resolves the CISI allograph-granularity
+                         question (see "Allograph granularity")
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -164,11 +167,14 @@ GitHub repositories. Full citation and license detail is in
   genuinely richer than a flat sign sequence: each grapheme carries a
   damage code, a line number, and a 0-100 subjective uncertainty score
   (now captured in this project's schema as `mean_uncertainty`, distinct
-  from `damaged`), plus per-sign allograph feature vectors. A second
-  export, `data/cisi_real_corpus_allograph.csv`, represents each
-  grapheme at that finer allograph level instead of collapsing to a bare
-  primary sign ID; see "Allograph granularity" below for what changes,
-  and does not cleanly resolve, when using it.
+  from `damaged`), plus per-sign allograph feature vectors. Two further
+  exports represent each grapheme at finer granularity than the bare
+  primary sign ID: `data/cisi_real_corpus_allograph.csv` (every distinct
+  allograph is its own sign) and `data/cisi_real_corpus_hierarchical.csv`
+  (an allograph is only split out when independently well-attested at
+  least 3 times corpus-wide, otherwise it collapses to the primary sign).
+  See "Allograph granularity" below: this was resolved, not left open,
+  and it turned out to be a real effect, not sparse-data noise.
 
 Regenerate either CSV from a local copy of its source repo with
 `python3 data/convert_indus_website_sql_to_csv.py <sql_path> <out.csv>` or
@@ -666,7 +672,7 @@ them until it is checked further.
 
 Run it yourself with `python3 experiments/substitution_graph_analysis.py`.
 
-## Allograph granularity: an inconclusive robustness check, reported honestly
+## Allograph granularity: resolved, and it is a real effect, not sparsity noise
 
 The mayig/CISI source data (see CITATIONS.md) carries more than plain
 sign IDs: each grapheme has a documented feature vector, damage and line
@@ -675,47 +681,70 @@ allograph-specific features per sign (for example, sign P086's own
 feature file defines branch_factor, branch_count, branch_direction, and
 final_branch_shape). Earlier versions of `convert_cisi_to_csv.py`
 collapsed every allograph of a sign down to its bare primary ID,
-discarding this. Two things were added:
+discarding this. Three things were added:
 
 - `mean_uncertainty`, a real field now carried through the schema
   (`data/loader.py`), separate from `damaged`: a grapheme can be fully
   undamaged but still visually ambiguous to the annotator, and 78 of 179
   CISI inscriptions carry a nonzero uncertainty score that was previously
   silently dropped.
-- A second output, `data/cisi_real_corpus_allograph.csv`, generated with
-  `python3 data/convert_cisi_to_csv.py <input> <output> allograph`,
-  where each grapheme becomes its primary sign ID plus its own
-  allograph-specific feature values as a suffix (e.g. `P086_3-1-0-0`),
-  so two visually distinct allographs of the same primary sign become
-  distinct sign identities instead of being silently treated as one.
+- `data/cisi_real_corpus_allograph.csv`, where each grapheme becomes its
+  primary sign ID plus its own allograph-specific feature values as a
+  suffix (e.g. `P086_3-1-0-0`), so two visually distinct allographs of
+  the same primary sign become distinct sign identities.
+- `data/cisi_real_corpus_hierarchical.csv` (`granularity="hierarchical"`
+  in the converter), a middle representation: an allograph is only split
+  out from its primary sign when that SPECIFIC allograph is independently
+  attested at least 3 times corpus-wide; rarer variants collapse back to
+  the primary sign rather than being treated as evidence of a
+  functionally distinct sign from a single annotation.
 
-This was built specifically to check a real methodological concern: does
-this project's classification of the CISI corpus survive being computed
-on this finer representation, where allographs are NOT collapsed? It
-does not, straightforwardly. At allograph granularity, the CISI corpus's
-classification flips from `civ_a_language_like` to `civ_c_mixed`.
+Last session, the full-allograph classification flip (language-like to
+mixed) was reported as inconclusive, on the reasoning that naive full
+fragmentation (230 signs over 104 inscriptions, 61% singletons) was
+plausibly just too sparse to trust. `experiments/allograph_granularity_test.py`
+was built to settle this by adding the conservative hierarchical
+representation as a tiebreaker:
 
-Before reading that as a real finding about allographs mattering,
-inspect the vocabulary: naive full fragmentation (every distinct feature
-combination becomes its own sign, with no minimum-count floor) takes a
-142-sign vocabulary over 104 non-damaged inscriptions to a 230-sign
-vocabulary over the same 104 inscriptions, meaning 61% of allograph-level
-signs occur exactly once in the entire corpus. `top_sign_final_share`,
-one of the six classifier features, literally requires one sign to
-concentrate at the final position, and collapses to exactly 0.0000 at
-this granularity, which is close to certain to be a data-sparsity
-artifact (fragmenting a single real dominant sign's occurrences across
-many now-distinct allograph variants) rather than evidence the corpus's
-underlying final-position constraint disappeared.
+| Representation | Signs | top_sign_final_share | Classification |
+|---|---|---|---|
+| Primary | 142 | 0.356 | `civ_a_language_like` |
+| Hierarchical (min_count=3) | 185 | 0.000 | `civ_c_mixed` |
+| Full allograph | 230 | 0.000 | `civ_c_mixed` |
 
-This is reported as inconclusive, not resolved, because it plausibly is
-both: allograph choices may genuinely matter, AND naive full
-fragmentation on a 104-inscription corpus is close to certain to be too
-sparse to trust regardless. Untangling which requires either substantially
-more data or a principled middle granularity (e.g. only splitting an
-allograph out when it is independently well-attested, rather than
-splitting on every distinct feature combination), neither of which is
-built yet; see "Extending this toolkit."
+The hierarchical representation agrees with full allograph, not primary,
+despite only splitting allographs that are independently well-attested
+at least 3 times across the whole corpus, specifically the check that
+should have ruled out the sparsity explanation if that's all this was.
+It didn't rule it out; the flip persisted anyway.
+
+Tracing why mechanically confirms this is a real effect: the corpus's
+single dominant final-position sign at primary granularity, P324 (37 of
+104 inscriptions' final positions), turns out to have at least six
+allograph variants that are each independently well-attested (P324_0-0-0-1-1,
+P324_1-0-1-1-0, P324_1-0-0-1-1, P324_1-0-2-1-0, P324_1-0-0-1-0,
+P324_0-0-1-1-0). Even the single most common of these reaches only 11
+final-position occurrences under the hierarchical threshold, nowhere
+close to the primary-level 37. This is not a handful of singleton
+variants creating noise; it's several genuinely common, genuinely
+distinct visual forms sharing one primary sign ID, and treating them
+as one sign is exactly what was concentrating the apparent final-position
+signal that primary-granularity classification depended on.
+
+The corrected conclusion: **CISI's primary-level "language-like"
+classification is not robust to a defensible, conservative allograph
+treatment.** Whether the primary-level or allograph-aware view is the
+"correct" one to trust for a linguistic claim is a genuine open question
+this project does not resolve, but it is no longer honest to describe
+the flip as likely sparsity noise. It survives the specific test built
+to rule that out. One remaining honest caveat: this test only ran the
+falsification-harness classification, not the order-3 Kneser-Ney gain
+test, at all three granularities; that gain came out negative (-0.012 to
+-0.037 bits) for ALL THREE representations on this 104-inscription
+corpus, meaning the order-3 finding validated on the large 2,543-inscription
+corpus does not (yet) replicate on CISI at any granularity, most likely
+because CISI is simply too small for that specific test, not because of
+anything granularity-specific.
 
 ## Stage 2: does archaeological composition explain the order-3 signal, or does it survive conditioning on it?
 
@@ -849,14 +878,11 @@ disagreement above:
   logic as "Resolved: why the two real corpora used to disagree" above,
   applied to the substitution-graph result instead of the falsification
   harness.
-- **Resolve the allograph-granularity ambiguity properly.** Naive full
-  fragmentation (see "Allograph granularity" above) is too sparse to
-  trust on 104 inscriptions. A principled middle ground, splitting an
-  allograph out only when it is independently well-attested (e.g. seen
-  at least 3 times) rather than on every distinct feature combination,
-  would need building and would need re-running every headline result
-  against it before the current allograph-level "mixed" flip can be
-  interpreted either way.
+- ~~Resolve the allograph-granularity ambiguity properly~~ **Done, see
+  "Allograph granularity" above.** Follow-up not yet done: rerun the
+  order-3 Kneser-Ney test on the large corpus's own site+motif-known
+  subset at multiple granularities, now that CISI alone was shown too
+  small for that specific test to validate at any granularity.
 - **Make the synthetic controls harder.** The three civilizations are
   deliberately quite distinct from each other, which is why the
   self-test hits 100%. A useful next test is a continuum between
