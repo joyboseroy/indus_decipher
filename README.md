@@ -50,7 +50,7 @@ earned by being wrong first and checking.
 ## Status
 
 Active exploration, not a finished study, but no longer an early-stage
-one. Four real Indus corpora anchor the analysis: `indus_website`
+one. Three real Indus corpora anchor the analysis: `indus_website`
 (2,543 inscriptions, 93% now linked to real Mahadevan/CISI catalog
 numbers), CISI at three granularities, and -- as of the most recent
 addition -- **the actual canonical M77/IDF-80 corpus** (3,573 lines,
@@ -60,8 +60,8 @@ Sanskrit, Old Tamil) are integrated alongside a five-civilization
 synthetic continuum. The headline finding -- real order-2-conditioned
 sequential structure at order 3, validated against independent nulls,
 archaeological stratification, two real languages at matched scale, and
-now the actual classic-literature corpus itself (+0.147 bits,
-essentially identical to the original +0.143) -- has survived several
+now the actual classic-literature corpus itself (+0.158 bits, compared
+with +0.143 in the independent 2,543-inscription corpus) -- has survived several
 rounds of adversarial self-checking, including two corrections where the
 initial framing overstated what the evidence showed (see "The synthetic
 continuum" and the note after "Order 3 is validated..." below). A
@@ -95,6 +95,15 @@ Tamil) are NOT shipped, due to their source licenses; regenerate them
 locally via `data/convert_etcsl_to_csv.py`, `data/convert_dcs_sanskrit_to_csv.py`,
 and `data/convert_tamil_to_csv.py` (each script's docstring has the
 source and license details; see also CITATIONS.md).
+
+Before analyzing this data yourself, three files are worth reading
+first: **`CORPUS_REGISTRY.md`** (every corpus, its real numbers, and
+what's actually been verified about it), **`CLAIM_EVIDENCE_MATRIX.md`**
+(every substantive claim this project makes, its evidence, and what it
+does NOT establish -- including two claims this project made and later
+walked back itself), and **`python3 reproduce.py`** (runs the headline
+checks against expected values in under two minutes and tells you
+PASS/FAIL/SKIPPED, rather than asking you to eyeball a console dump).
 
 ## Project layout
 
@@ -203,6 +212,14 @@ experiments/
 tests/                   pytest suite (see "Automated tests"); run with
                          `pytest tests/`
 CITATIONS.md             every data source and paper this project relies on
+CORPUS_REGISTRY.md       every corpus (real, external-language, and
+                         synthetic) in one table: N, vocab, access,
+                         verification status
+CLAIM_EVIDENCE_MATRIX.md every substantive claim this project makes,
+                         its evidence, and what it does NOT establish
+CITATION.cff             machine-readable citation metadata (GitHub/Zenodo)
+reproduce.py             runs the headline checks and reports
+                         PASS/FAIL/SKIPPED (`python3 reproduce.py`)
 ```
 
 Every analysis module takes a plain `list[list[str]]` of sign sequences,
@@ -1603,8 +1620,9 @@ Run the converter yourself with
 
 ## The replication matrix: every headline test, across every real corpus, in one table
 
-With four real Indus corpora now in hand (indus_website, CISI, and
-M77), plus WUCS as a fifth point of comparison via published statistics
+With three real Indus corpora now in hand (indus_website, CISI --
+represented at three granularities, not counted separately here -- and
+M77), plus WUCS as a fourth point of comparison via published statistics
 rather than raw data access, the individual sections above each make
 their own case in isolation. Consolidated here once, so the overall
 pattern doesn't have to be reconstructed from a dozen separate
