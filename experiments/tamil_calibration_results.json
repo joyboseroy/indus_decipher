@@ -1,0 +1,49 @@
+{
+  "indus": {
+    "order_3_gain": 0.14330785738543472,
+    "network_stats": {
+      "n_sequences": 2543,
+      "n_signs": 592,
+      "reciprocity_empirical": 0.1905697445972495,
+      "reciprocity_random_mean": 0.39779592281895193,
+      "reciprocity_random_std": 0.00565704025294714,
+      "connectivity_empirical": 0.008714161796932067,
+      "connectivity_random_mean": 0.012926434669466764,
+      "connectivity_random_std": 6.67885911739615e-05,
+      "n_solo_signs": 6,
+      "n_beginners_empirical": 115,
+      "n_beginners_random_mean": 52.1,
+      "n_beginners_random_std": 5.4580216195980755,
+      "n_enders_empirical": 44,
+      "n_enders_random_mean": 50.15,
+      "n_enders_random_std": 4.552746423863293
+    }
+  },
+  "tamil_full": {
+    "order_3_gain": 0.029785258438888462,
+    "n_lines": 33711,
+    "vocab_size": 35301
+  },
+  "tamil_matched": {
+    "order_3_gain": -0.01849338898202646,
+    "network_stats": {
+      "n_sequences": 2543,
+      "n_signs": 6529,
+      "reciprocity_empirical": 0.00855422959129792,
+      "reciprocity_random_mean": 0.015711098246916848,
+      "reciprocity_random_std": 0.001355506508125702,
+      "connectivity_empirical": 0.00022213182225203478,
+      "connectivity_random_mean": 0.00022971606748744324,
+      "connectivity_random_std": 1.304235945134327e-07,
+      "n_solo_signs": 0,
+      "n_beginners_empirical": 1089,
+      "n_beginners_random_mean": 1049.9,
+      "n_beginners_random_std": 23.205387305537478,
+      "n_enders_empirical": 1285,
+      "n_enders_random_mean": 1043.85,
+      "n_enders_random_std": 15.748888849693492
+    },
+    "n_lines": 2543
+  },
+  "verdict": "Tamil full-scale order-3 gain: +0.030; matched-scale: -0.018. Given vocabulary (35301) exceeds line count (33711) even at full scale, BOTH numbers should be read with real caution -- this is a fundamentally sparser regime than ETCSL or Sanskrit had even before subsampling, a direct consequence of using unlemmatized orthographic words for an agglutinative language, not a finding about Tamil or about the Indus comparison. Unlike the ETCSL/Sanskrit results, this one is not offered as informative evidence either way; it is reported for completeness and transparency, with the limitation stated up front rather than discovered by a careful reader."
+}
