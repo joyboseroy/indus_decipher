@@ -2,7 +2,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1001.1,MSg0 MSg67 MSg72 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1001.2,MSg393,unknown,unknown,1,False,R-L,unknown,0.0
 1002.0,MSg373 MSg244 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
-1003.0,MSg086 MSg55 MSg267 MSg99 MSg121 MSg72 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,11.11
+1003.0,MSg86 MSg55 MSg267 MSg99 MSg121 MSg72 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,11.11
 1004.0,MSg59 MSg127 MSg245 MSg343 MSg75 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,0.0
 1005.0,MSg296 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1006.0,MSg233 MSg81 MSg99 MSg389 MSg65 MSg336 MSg89 MSg87 MSg155 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
@@ -24,7 +24,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1020.0,MSg175 MSg230 MSg343 MSg336 MSg0 MSg194 MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1021.0,MSg293 MSg123 MSg345 MSg65 MSg67 MSg51 MSg130 MSg149 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1022.0,MSg267 MSg99 MSg204 MSg367 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1023.0,MSg267 MSg099 MSg53 MSg87 MSg59 MSg48 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
+1023.0,MSg267 MSg99 MSg53 MSg87 MSg59 MSg48 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
 1024.0,MSg293 MSg123 MSg343 MSg72 MSg65 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1025.0,MSg112 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 1026.0,MSg87 MSg197 MSg87 MSg99 MSg336 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -61,7 +61,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1056.0,MSg249 MSg336 MSg75 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,0.0
 1057.0,MSg267 MSg99 MSg65 MSg342 MSg139,unknown,unknown,1,False,R-L,unknown,20.0
 1058.0,MSg400 MSg396 MSg169 MSg99 MSg48 MSg193 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1059.0,MSg284 MSg99 MSg009 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+1059.0,MSg284 MSg99 MSg9 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
 1060.0,MSg54 MSg28 MSg162 MSg100 MSg65 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1061.0,MSg391 MSg98 MSg336 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 1065.0,MSg87 MSg28 MSg257 MSg99 MSg67 MSg70 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
@@ -76,20 +76,20 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1074.0,MSg391 MSg99 MSg289 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1075.0,MSg72 MSg327 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
 1076.0,MSg391 MSg99 MSg104 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
-1077.0,MSg89 MSg381 MSg307 MSg81 MSg99 MSg067 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,11.11
+1077.0,MSg89 MSg381 MSg307 MSg81 MSg99 MSg67 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,11.11
 1078.0,MSg267 MSg99 MSg124 MSg25 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1079.0,MSg391 MSg99 MSg87 MSg59 MSg67 MSg121 MSg14,unknown,unknown,1,False,R-L,unknown,0.0
 1080.0,MSg267 MSg99 MSg387 MSg67 MSg406 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
-1081.0,MSg087 MSg249 MSg162 MSg343 MSg87 MSg59 MSg127 MSg342,unknown,unknown,1,False,R-L,unknown,12.5
-1082.0,MSg267 MSg99 MSg87 MSg59 MSg296 MSg342 MSg087,unknown,unknown,1,False,R-L,unknown,14.29
+1081.0,MSg87 MSg249 MSg162 MSg343 MSg87 MSg59 MSg127 MSg342,unknown,unknown,1,False,R-L,unknown,12.5
+1082.0,MSg267 MSg99 MSg87 MSg59 MSg296 MSg342 MSg87,unknown,unknown,1,False,R-L,unknown,14.29
 1083.0,MSg54 MSg54 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1084.0,MSg1 MSg1 MSg379 MSg194,unknown,unknown,1,False,R-L,unknown,0.0
 1085.0,MSg267 MSg99 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 1086.0,MSg267 MSg99 MSg124 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1087.0,MSg87 MSg244 MSg28 MSg162 MSg99 MSg65 MSg67 MSg87 MSg59 MSg51 MSg130 MSg149 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1088.0,MSg391 MSg99 MSg387 MSg67 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
-1089.0,MSg0 MSg059 MSg192 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
-1090.0,MSg197 MSg336 MSg342 MSg205 MSg060,unknown,unknown,1,False,R-L,unknown,20.0
+1089.0,MSg0 MSg59 MSg192 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
+1090.0,MSg197 MSg336 MSg342 MSg205 MSg60,unknown,unknown,1,False,R-L,unknown,20.0
 1091.0,MSg267 MSg99 MSg102 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 1092.0,MSg28 MSg162 MSg343 MSg106 MSg287 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1093.1,MSg67,unknown,unknown,1,False,R-L,unknown,0.0
@@ -98,9 +98,9 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1094.0,MSg267 MSg99 MSg171 MSg59 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 1095.0,MSg150 MSg123 MSg70 MSg389 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1096.0,MSg267 MSg99 MSg67 MSg216 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
-1097.0,MSg086 MSg267 MSg99 MSg67 MSg348 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
+1097.0,MSg86 MSg267 MSg99 MSg67 MSg348 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
 1098.0,MSg267 MSg99 MSg65 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1099.1,MSg050 MSg403 MSg343 MSg194 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
+1099.1,MSg50 MSg403 MSg343 MSg194 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
 1099.2,MSg266,unknown,unknown,1,False,R-L,unknown,0.0
 1100.0,MSg150 MSg123 MSg293 MSg51 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1101.1,MSg17 MSg51 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,0.0
@@ -115,7 +115,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1109.0,MSg391 MSg97 MSg65 MSg67 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 1110.0,MSg391 MSg216 MSg53 MSg125 MSg59 MSg391 MSg176 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 1111.0,MSg0 MSg387 MSg17 MSg261 MSg139,unknown,unknown,1,False,R-L,unknown,0.0
-1112.1,MSg0 MSg059 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,25.0
+1112.1,MSg0 MSg59 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,25.0
 1112.2,MSg0 MSg336 MSg275,unknown,unknown,1,False,R-L,unknown,33.33
 1113.0,MSg94 MSg123 MSg124 MSg112 MSg197 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1114.0,MSg391 MSg99 MSg87 MSg59 MSg296 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -142,7 +142,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1135.2,MSg374,unknown,unknown,1,False,R-L,unknown,0.0
 1136.0,MSg216 MSg123 MSg139,unknown,unknown,1,False,R-L,unknown,0.0
 1137.0,MSg0 MSg67 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1138.0,MSg0 MSg081 MSg176,unknown,unknown,1,False,R-L,unknown,33.33
+1138.0,MSg0 MSg81 MSg176,unknown,unknown,1,False,R-L,unknown,33.33
 1139.1,MSg197 MSg400 MSg99 MSg175 MSg230 MSg53 MSg343,unknown,unknown,1,False,R-L,unknown,0.0
 1139.2,MSg244 MSg342 MSg282,unknown,unknown,1,False,R-L,unknown,0.0
 1140.0,MSg293 MSg123 MSg343 MSg136 MSg193 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -157,7 +157,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1149.0,MSg150 MSg123 MSg389 MSg72 MSg296 MSg342 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 1150.0,MSg50 MSg162 MSg99 MSg326 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1151.0,MSg17 MSg395 MSg99 MSg171 MSg59 MSg247 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1154.0,MSg059 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
+1154.0,MSg59 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
 1155.0,MSg127 MSg343 MSg67 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 1156.0,MSg72 MSg71 MSg121 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1157.0,MSg267 MSg99 MSg107 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
@@ -166,7 +166,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1160.0,MSg293 MSg123 MSg343 MSg230 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1161.0,MSg389 MSg182 MSg293 MSg327 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1162.0,MSg267 MSg99 MSg289 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1163.0,MSg204 MSg230 MSg015 MSg176,unknown,unknown,1,False,R-L,unknown,50.0
+1163.0,MSg204 MSg230 MSg15 MSg176,unknown,unknown,1,False,R-L,unknown,50.0
 1164.0,MSg379 MSg162 MSg402,unknown,unknown,1,False,R-L,unknown,33.33
 1165.0,MSg328 MSg32 MSg99 MSg72 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 1166.0,MSg387 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -188,7 +188,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1181.0,MSg267 MSg99 MSg336 MSg51 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1182.0,MSg57 MSg209 MSg343 MSg5,unknown,unknown,1,False,R-L,unknown,0.0
 1183.0,MSg265 MSg343 MSg326 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1185.0,MSg086 MSg178 MSg287 MSg402,unknown,unknown,1,False,R-L,unknown,25.0
+1185.0,MSg86 MSg178 MSg287 MSg402,unknown,unknown,1,False,R-L,unknown,25.0
 1186.0,MSg293 MSg402 MSg123 MSg230 MSg391 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 1187.0,MSg86 MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1188.0,MSg53 MSg72 MSg373 MSg287 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -243,12 +243,12 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1238.0,MSg222 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
 1239.0,MSg267 MSg99 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 1240.0,MSg244 MSg336 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-1242.0,MSg129 MSg245 MSg125 MSg059 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
+1242.0,MSg129 MSg245 MSg125 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
 1243.0,MSg109 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 1244.0,MSg327 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
 1245.0,MSg221 MSg267 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1246.0,MSg267 MSg99 MSg104 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
-1247.1,MSg087 MSg336 MSg344 MSg175 MSg230,unknown,unknown,1,False,R-L,unknown,20.0
+1247.1,MSg87 MSg336 MSg344 MSg175 MSg230,unknown,unknown,1,False,R-L,unknown,20.0
 1247.2,MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1248.0,MSg245 MSg245 MSg330 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 1249.0,MSg109 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
@@ -270,14 +270,14 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1268.0,MSg173 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 1269.0,MSg65 MSg216 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
 1270.0,MSg102 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
-1271.0,MSg327 MSg017 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+1271.0,MSg327 MSg17 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 1272.0,MSg293 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1273.0,MSg120 MSg87,unknown,unknown,1,False,R-L,unknown,0.0
 1274.0,MSg267 MSg99 MSg207,unknown,unknown,1,False,R-L,unknown,0.0
 1275.0,MSg0 MSg102 MSg287 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1276.0,MSg56 MSg95 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 1277.0,MSg65 MSg171 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
-1278.1,MSg267 MSg99 MSg343 MSg100 MSg081,unknown,unknown,1,False,R-L,unknown,20.0
+1278.1,MSg267 MSg99 MSg343 MSg100 MSg81,unknown,unknown,1,False,R-L,unknown,20.0
 1278.2,MSg87 MSg162 MSg375,unknown,unknown,1,False,R-L,unknown,0.0
 1279.0,MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1281.0,MSg0 MSg100 MSg169,unknown,unknown,1,False,R-L,unknown,33.33
@@ -295,9 +295,9 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1294.0,MSg284 MSg99 MSg348 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1295.0,MSg72 MSg48 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 1296.0,MSg289 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1297.0,MSg267 MSg402 MSg0 MSg015,unknown,unknown,1,False,R-L,unknown,25.0
+1297.0,MSg267 MSg402 MSg0 MSg15,unknown,unknown,1,False,R-L,unknown,25.0
 1298.0,MSg0 MSg135 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
-1299.0,MSg0 MSg065 MSg387 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
+1299.0,MSg0 MSg65 MSg387 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
 1300.0,MSg0 MSg249 MSg162 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1301.0,MSg17 MSg106 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 1302.1,MSg293 MSg233 MSg342 MSg175,unknown,unknown,1,False,R-L,unknown,25.0
@@ -306,7 +306,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1303.2,MSg15 MSg409 MSg96,unknown,unknown,1,False,R-L,unknown,0.0
 1305.0,MSg28 MSg267 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1306.0,MSg244 MSg81 MSg99 MSg98 MSg72 MSg65 MSg53 MSg342 MSg224,unknown,unknown,1,False,R-L,unknown,0.0
-1307.0,MSg0 MSg012,unknown,unknown,1,False,R-L,unknown,50.0
+1307.0,MSg0 MSg12,unknown,unknown,1,False,R-L,unknown,50.0
 1308.0,MSg70 MSg72 MSg388,unknown,unknown,1,False,R-L,unknown,0.0
 1309.0,MSg109 MSg169 MSg97 MSg51 MSg182,unknown,unknown,1,False,R-L,unknown,0.0
 1310.0,MSg249 MSg336 MSg99 MSg171 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -317,7 +317,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1315.0,MSg403 MSg400 MSg99 MSg249 MSg162 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 1316.0,MSg66,unknown,unknown,1,False,R-L,unknown,0.0
 1317.0,MSg267 MSg99 MSg72 MSg65 MSg204 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
-1318.0,MSg391 MSg0 MSg171 MSg008 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
+1318.0,MSg391 MSg0 MSg171 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
 1319.0,MSg54 MSg180 MSg97 MSg226 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
 1320.0,MSg67 MSg65 MSg159 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1321.1,MSg293 MSg98 MSg65 MSg59 MSg211 MSg150 MSg123 MSg135 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -360,7 +360,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1351.0,MSg267 MSg99 MSg67 MSg296 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1355.1,MSg216 MSg97 MSg135 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1355.2,MSg242,unknown,unknown,1,False,R-L,unknown,0.0
-1357.0,MSg0 MSg180 MSg227 MSg087 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
+1357.0,MSg0 MSg180 MSg227 MSg87 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
 1358.0,MSg0 MSg1 MSg245 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
 1360.0,MSg263 MSg343 MSg173 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 1361.0,MSg293 MSg123 MSg102 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
@@ -368,7 +368,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1365.0,MSg102 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 1366.0,MSg103 MSg403 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1367.0,MSg267 MSg99 MSg67 MSg175 MSg206,unknown,unknown,1,False,R-L,unknown,0.0
-1368.0,MSg059 MSg342 MSg139,unknown,unknown,1,False,R-L,unknown,66.67
+1368.0,MSg59 MSg342 MSg139,unknown,unknown,1,False,R-L,unknown,66.67
 1369.0,MSg267 MSg99 MSg65 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1370.0,MSg72 MSg51 MSg130 MSg149 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1372.0,MSg267 MSg99 MSg171 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
@@ -396,10 +396,10 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1396.2,MSg150 MSg307 MSg267,unknown,unknown,1,False,R-L,unknown,0.0
 1397.0,MSg0 MSg341 MSg336 MSg180 MSg163 MSg404,unknown,unknown,1,False,R-L,unknown,16.67
 1398.0,MSg53 MSg70 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-1399.0,MSg053 MSg171 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+1399.0,MSg53 MSg171 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
 1400.1,MSg391 MSg99 MSg65 MSg67 MSg70 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 1400.2,MSg179 MSg336 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-1400.3,MSg89 MSg375 MSg180 MSg28 MSg162 MSg267 MSg051,unknown,unknown,1,False,R-L,unknown,14.29
+1400.3,MSg89 MSg375 MSg180 MSg28 MSg162 MSg267 MSg51,unknown,unknown,1,False,R-L,unknown,14.29
 1401.0,MSg391 MSg97 MSg389 MSg67 MSg178 MSg389 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1402.0,MSg249 MSg342 MSg345 MSg97 MSg106 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 1403.0,MSg28 MSg303 MSg100 MSg66 MSg407 MSg169 MSg334 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -450,7 +450,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1449.0,MSg40 MSg97 MSg104 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 1450.0,MSg171 MSg59 MSg17 MSg261 MSg86,unknown,unknown,1,False,R-L,unknown,0.0
 1451.0,MSg267 MSg99 MSg155 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
-1452.0,MSg239 MSg293 MSg338 MSg97 MSg001 MSg0,unknown,unknown,1,False,R-L,unknown,16.67
+1452.0,MSg239 MSg293 MSg338 MSg97 MSg1 MSg0,unknown,unknown,1,False,R-L,unknown,16.67
 1453.0,MSg104 MSg169,unknown,unknown,1,False,R-L,unknown,50.0
 1454.0,MSg0 MSg70 MSg389 MSg102 MSg287 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 1455.0,MSg391 MSg97 MSg70 MSg72 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -494,11 +494,11 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1494.0,MSg267 MSg99 MSg47 MSg340 MSg342 MSg97 MSg173,unknown,unknown,1,False,R-L,unknown,0.0
 1495.0,MSg230 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 1496.0,MSg0 MSg336 MSg17,unknown,unknown,1,False,R-L,unknown,0.0
-1497.0,MSg059 MSg182 MSg293 MSg216 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
-1498.0,MSg391 MSg99 MSg059 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+1497.0,MSg59 MSg182 MSg293 MSg216 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
+1498.0,MSg391 MSg99 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
 1499.0,MSg0 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1527.11,MSg17 MSg250 MSg176,unknown,unknown,1,False,R-L,unknown,33.33
-1527.12,MSg102 MSg097 MSg149 MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,20.0
+1527.12,MSg102 MSg97 MSg149 MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,20.0
 1529.0,MSg67 MSg103 MSg403 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 1530.0,MSg67 MSg103 MSg403 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 1531.0,MSg171 MSg59 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -539,7 +539,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 1604.10,MSg63,unknown,unknown,1,False,R-L,unknown,0.0
 1605.10,MSg87 MSg403 MSg99 MSg387 MSg17 MSg261,unknown,unknown,1,False,R-L,unknown,0.0
 1606.0,MSg264 MSg387 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
-1607.10,MSg018 MSg342 MSg48 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,20.0
+1607.10,MSg18 MSg342 MSg48 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,20.0
 1608.10,MSg87 MSg403 MSg99 MSg387 MSg17 MSg261,unknown,unknown,1,False,R-L,unknown,0.0
 1609.10,MSg0 MSg336 MSg89 MSg249 MSg162 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 1610.10,MSg63,unknown,unknown,1,False,R-L,unknown,0.0
@@ -621,7 +621,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2028.0,MSg0 MSg81 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 2029.0,MSg391 MSg391 MSg97 MSg72 MSg182 MSg293 MSg342,unknown,unknown,1,False,R-L,unknown,14.29
 2031.0,MSg267 MSg99 MSg292 MSg342,unknown,unknown,1,False,R-L,unknown,50.0
-2032.0,MSg051 MSg155 MSg345 MSg112 MSg194 MSg336 MSg89 MSg0,unknown,unknown,1,False,R-L,unknown,12.5
+2032.0,MSg51 MSg155 MSg345 MSg112 MSg194 MSg336 MSg89 MSg0,unknown,unknown,1,False,R-L,unknown,12.5
 2033.0,MSg204 MSg233 MSg59 MSg99 MSg389 MSg65 MSg67 MSg121 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2034.0,MSg0 MSg123 MSg87 MSg59 MSg65 MSg155 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 2035.0,MSg328 MSg328 MSg176 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -658,7 +658,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2069.0,MSg391 MSg17 MSg391 MSg381 MSg391 MSg98 MSg171 MSg59 MSg342 MSg139,unknown,unknown,1,False,R-L,unknown,0.0
 2070.0,MSg293 MSg123 MSg343 MSg289 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2071.0,MSg293 MSg123 MSg344 MSg127 MSg98 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-2072.0,MSg0 MSg025 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,25.0
+2072.0,MSg0 MSg25 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,25.0
 2073.0,MSg25 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,0.0
 2074.0,MSg150 MSg123 MSg228 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 2075.0,MSg186 MSg333 MSg99 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
@@ -695,13 +695,13 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2107.0,MSg336 MSg51 MSg130 MSg53 MSg99 MSg124 MSg25 MSg176 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2108.0,MSg25 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 2109.0,MSg249 MSg89 MSg233 MSg123 MSg86 MSg59 MSg395 MSg99 MSg51 MSg130 MSg28,unknown,unknown,1,False,R-L,unknown,0.0
-2110.0,MSg72 MSg336 MSg089 MSg211,unknown,unknown,1,False,R-L,unknown,50.0
+2110.0,MSg72 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,50.0
 2111.0,MSg89 MSg3 MSg99 MSg336 MSg244 MSg17 MSg134 MSg86 MSg415,unknown,unknown,1,False,R-L,unknown,0.0
 2112.0,MSg175 MSg180 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 2113.0,MSg106 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 2114.0,MSg403 MSg87 MSg319 MSg249,unknown,unknown,1,False,R-L,unknown,0.0
 2115.0,MSg293 MSg123 MSg343 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-2116.0,MSg67 MSg008 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+2116.0,MSg67 MSg8 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 2117.0,MSg57 MSg343 MSg87 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2118.0,MSg70 MSg327 MSg128 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 2119.1,MSg163 MSg252 MSg261 MSg134 MSg98 MSg391 MSg391,unknown,unknown,1,False,R-L,unknown,0.0
@@ -710,7 +710,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2121.0,MSg124 MSg25 MSg176 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2122.0,MSg216 MSg123 MSg87 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2123.0,MSg387 MSg72 MSg67 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
-2124.0,MSg86 MSg012,unknown,unknown,1,False,R-L,unknown,50.0
+2124.0,MSg86 MSg12,unknown,unknown,1,False,R-L,unknown,50.0
 2125.0,MSg293 MSg56 MSg252 MSg97 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2126.0,MSg337 MSg97 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 2127.0,MSg114 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
@@ -760,7 +760,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2176.0,MSg249 MSg162 MSg391,unknown,unknown,1,False,R-L,unknown,0.0
 2177.0,MSg267 MSg99 MSg48 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 2178.0,MSg267 MSg99 MSg173 MSg403 MSg347 MSg342 MSg400 MSg307,unknown,unknown,1,False,R-L,unknown,0.0
-2179.0,MSg267 MSg99 MSg409 MSg96 MSg342 MSg001,unknown,unknown,1,False,R-L,unknown,33.33
+2179.0,MSg267 MSg99 MSg409 MSg96 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,33.33
 2180.0,MSg267 MSg99 MSg102 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 2181.0,MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2182.0,MSg249 MSg169 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -769,7 +769,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2185.0,MSg203 MSg344 MSg66 MSg375 MSg89,unknown,unknown,1,False,R-L,unknown,0.0
 2186.0,MSg65 MSg67 MSg121 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 2187.0,MSg150 MSg87 MSg277,unknown,unknown,1,False,R-L,unknown,0.0
-2188.0,MSg0 MSg123 MSg328 MSg012,unknown,unknown,1,False,R-L,unknown,25.0
+2188.0,MSg0 MSg123 MSg328 MSg12,unknown,unknown,1,False,R-L,unknown,25.0
 2189.0,MSg67 MSg244 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 2190.0,MSg302 MSg123 MSg398 MSg160 MSg307 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 2191.0,MSg181 MSg319 MSg97 MSg102 MSg190,unknown,unknown,1,False,R-L,unknown,0.0
@@ -789,7 +789,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2206.0,MSg395 MSg402 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 2207.0,MSg155 MSg343 MSg171 MSg59 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2208.0,MSg328 MSg391 MSg99 MSg70 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
-2209.0,MSg059 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
+2209.0,MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 2211.0,MSg387 MSg87 MSg60,unknown,unknown,1,False,R-L,unknown,0.0
 2213.0,MSg336 MSg89 MSg98 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2214.0,MSg112 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -907,10 +907,10 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2325.0,MSg244 MSg336 MSg326 MSg327 MSg99 MSg387 MSg65 MSg59 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2326.0,MSg391 MSg123 MSg65 MSg67 MSg296 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2327.10,MSg267 MSg99 MSg65 MSg67 MSg127 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-2327.20,MSg267 MSg099 MSg65 MSg67 MSg127 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,28.57
-2328.0,MSg0 MSg2 MSg012,unknown,unknown,1,False,R-L,unknown,33.33
+2327.20,MSg267 MSg99 MSg65 MSg67 MSg127 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,28.57
+2328.0,MSg0 MSg2 MSg12,unknown,unknown,1,False,R-L,unknown,33.33
 2331.0,MSg336 MSg251 MSg341 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-2332.1,MSg267 MSg99 MSg086 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+2332.1,MSg267 MSg99 MSg86 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
 2332.2,MSg374,unknown,unknown,1,False,R-L,unknown,100.0
 2333.0,MSg4 MSg99 MSg70 MSg72 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2334.0,MSg219 MSg178 MSg67 MSg244 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -923,7 +923,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2340.0,MSg152 MSg99 MSg53 MSg59 MSg87 MSg60,unknown,unknown,1,False,R-L,unknown,0.0
 2341.0,MSg258 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2342.0,MSg25 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
-2343.0,MSg102 MSg015,unknown,unknown,1,False,R-L,unknown,50.0
+2343.0,MSg102 MSg15,unknown,unknown,1,False,R-L,unknown,50.0
 2344.0,MSg307 MSg343 MSg65 MSg67 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 2345.0,MSg67 MSg25 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,0.0
 2346.0,MSg102 MSg216 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,0.0
@@ -956,7 +956,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2369.0,MSg51 MSg130 MSg149 MSg342 MSg98 MSg174,unknown,unknown,1,False,R-L,unknown,0.0
 2370.0,MSg175 MSg28 MSg99 MSg102 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 2371.0,MSg2 MSg14,unknown,unknown,1,False,R-L,unknown,0.0
-2372.0,MSg204 MSg245 MSg015,unknown,unknown,1,False,R-L,unknown,33.33
+2372.0,MSg204 MSg245 MSg15,unknown,unknown,1,False,R-L,unknown,33.33
 2373.1,MSg307 MSg402 MSg99 MSg171 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 2373.2,MSg242,unknown,unknown,1,False,R-L,unknown,0.0
 2374.0,MSg102 MSg59 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -984,8 +984,8 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2397.0,MSg86 MSg136 MSg267 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2398.1,MSg293 MSg98 MSg65 MSg59 MSg211 MSg150 MSg123 MSg135 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2398.2,MSg402 MSg55 MSg279 MSg404,unknown,unknown,1,False,R-L,unknown,0.0
-2399.0,MSg0 MSg059 MSg216 MSg254,unknown,unknown,1,False,R-L,unknown,25.0
-2401.0,MSg086 MSg6 MSg12,unknown,unknown,1,False,R-L,unknown,33.33
+2399.0,MSg0 MSg59 MSg216 MSg254,unknown,unknown,1,False,R-L,unknown,25.0
+2401.0,MSg86 MSg6 MSg12,unknown,unknown,1,False,R-L,unknown,33.33
 2402.0,MSg293 MSg123 MSg343 MSg67 MSg175 MSg206,unknown,unknown,1,False,R-L,unknown,0.0
 2403.0,MSg267 MSg99 MSg124 MSg25 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2404.0,MSg124 MSg409 MSg96 MSg342 MSg1 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1040,7 +1040,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2445.0,MSg391 MSg1 MSg134 MSg86 MSg415,unknown,unknown,1,False,R-L,unknown,0.0
 2446.0,MSg238 MSg267 MSg99 MSg387 MSg53 MSg72 MSg336 MSg89 MSg112 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2447.0,MSg343 MSg391 MSg99 MSg87 MSg155 MSg171 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,12.5
-2448.0,MSg0 MSg086 MSg123 MSg7,unknown,unknown,1,False,R-L,unknown,25.0
+2448.0,MSg0 MSg86 MSg123 MSg7,unknown,unknown,1,False,R-L,unknown,25.0
 2449.0,MSg28 MSg162 MSg343 MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2450.0,MSg267 MSg99 MSg98 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2451.0,MSg162 MSg216 MSg57 MSg99 MSg62 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1076,7 +1076,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2481.0,MSg267 MSg99 MSg103 MSg403 MSg48 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2482.0,MSg17 MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 2483.0,MSg0 MSg130 MSg149 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-2484.0,MSg0 MSg018 MSg226 MSg254,unknown,unknown,1,False,R-L,unknown,25.0
+2484.0,MSg0 MSg18 MSg226 MSg254,unknown,unknown,1,False,R-L,unknown,25.0
 2485.0,MSg267 MSg99 MSg174 MSg176 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 2486.0,MSg102 MSg217 MSg403 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2489.0,MSg25 MSg99 MSg87 MSg59 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1155,7 +1155,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2558.2,MSg0 MSg343 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 2559.0,MSg0 MSg303 MSg391 MSg99,unknown,unknown,1,False,R-L,unknown,0.0
 2560.0,MSg330 MSg245 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
-2561.0,MSg002 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
+2561.0,MSg2 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 2562.0,MSg0 MSg48 MSg193 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2563.0,MSg233 MSg127 MSg125 MSg59 MSg99 MSg193 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2564.1,MSg249 MSg102 MSg287 MSg99,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1206,7 +1206,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2602.0,MSg2 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 2603.0,MSg17 MSg293 MSg136 MSg193 MSg204 MSg234 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 2604.11,MSg17 MSg250 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-2604.12,MSg102 MSg097 MSg149 MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,20.0
+2604.12,MSg102 MSg97 MSg149 MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,20.0
 2605.0,MSg171 MSg59 MSg341 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2606.0,MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2607.0,MSg153 MSg153 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1271,7 +1271,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2666.0,MSg17 MSg162 MSg99 MSg124 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2667.1,MSg86 MSg59 MSg127 MSg267 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
 2667.2,MSg87 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-2669.0,MSg0 MSg059 MSg121 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
+2669.0,MSg0 MSg59 MSg121 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
 2671.0,MSg0 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2672.0,MSg0 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2673.0,MSg326,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1305,7 +1305,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2697.0,MSg104 MSg169 MSg98 MSg121 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2698.0,MSg104 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 2699.0,MSg389 MSg342 MSg91,unknown,unknown,1,False,R-L,unknown,0.0
-2700.0,MSg87 MSg59 MSg072 MSg334 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
+2700.0,MSg87 MSg59 MSg72 MSg334 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
 2701.0,MSg398 MSg402 MSg99 MSg387 MSg216 MSg254,unknown,unknown,1,False,R-L,unknown,16.67
 2702.0,MSg155 MSg402 MSg3 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 2704.0,MSg224,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1314,7 +1314,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2802.10,MSg17 MSg38 MSg176 MSg51 MSg130 MSg109 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,25.0
 2804.10,MSg397 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 2804.20,MSg397 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
-2805.10,MSg086 MSg325 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,50.0
+2805.10,MSg86 MSg325 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,50.0
 2806.10,MSg244 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2807.10,MSg336 MSg321,unknown,unknown,1,False,R-L,unknown,0.0
 2807.20,MSg202 MSg294 MSg336 MSg321,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1353,8 +1353,8 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2837.0,MSg267 MSg99 MSg98 MSg102 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 2839.10,MSg41 MSg137 MSg249 MSg65 MSg67 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 2841.10,MSg15,unknown,unknown,1,False,R-L,unknown,0.0
-2842.10,MSg201 MSg277 MSg204 MSg086 MSg0,unknown,unknown,1,False,R-L,unknown,40.0
-2843.10,MSg201 MSg277 MSg204 MSg086 MSg342 MSg106,unknown,unknown,1,False,R-L,unknown,33.33
+2842.10,MSg201 MSg277 MSg204 MSg86 MSg0,unknown,unknown,1,False,R-L,unknown,40.0
+2843.10,MSg201 MSg277 MSg204 MSg86 MSg342 MSg106,unknown,unknown,1,False,R-L,unknown,33.33
 2844.10,MSg336 MSg321 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 2844.20,MSg67 MSg87 MSg59 MSg403 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 2845.0,MSg267 MSg99 MSg67 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1405,7 +1405,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2905.20,MSg87 MSg59 MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2906.10,MSg89 MSg328 MSg287 MSg319,unknown,unknown,1,False,R-L,unknown,0.0
 2906.20,MSg87 MSg59 MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-2907.10,MSg65 MSg072 MSg62 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
+2907.10,MSg65 MSg72 MSg62 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
 2908.10,MSg112 MSg194 MSg327 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2909.10,MSg204 MSg245 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2910.10,MSg53 MSg67 MSg407 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1417,17 +1417,17 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2915.10,MSg204 MSg245 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2916.10,MSg345 MSg341 MSg18 MSg252 MSg97 MSg25 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,0.0
 2917.10,MSg102 MSg190 MSg48 MSg8 MSg342 MSg373,unknown,unknown,1,False,R-L,unknown,0.0
-2918.10,MSg051,unknown,unknown,1,False,R-L,unknown,100.0
+2918.10,MSg51,unknown,unknown,1,False,R-L,unknown,100.0
 2918.20,MSg53 MSg70 MSg336 MSg89 MSg294 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 2919.10,MSg267,unknown,unknown,1,False,R-L,unknown,100.0
 2919.20,MSg348,unknown,unknown,1,False,R-L,unknown,100.0
 2920.10,MSg295 MSg87 MSg97 MSg252 MSg97 MSg25 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,12.5
 2921.10,MSg96,unknown,unknown,1,False,R-L,unknown,0.0
 2921.20,MSg348 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-2923.10,MSg0 MSg252 MSg261 MSg134 MSg098 MSg391 MSg391,unknown,unknown,1,False,R-L,unknown,28.57
+2923.10,MSg0 MSg252 MSg261 MSg134 MSg98 MSg391 MSg391,unknown,unknown,1,False,R-L,unknown,28.57
 2923.20,MSg387 MSg12 MSg104 MSg106 MSg312,unknown,unknown,1,False,R-L,unknown,0.0
 2924.0,MSg108 MSg342 MSg1 MSg375,unknown,unknown,1,False,R-L,unknown,0.0
-2925.10,MSg163 MSg252 MSg261 MSg134 MSg098 MSg391 MSg391,unknown,unknown,1,False,R-L,unknown,14.29
+2925.10,MSg163 MSg252 MSg261 MSg134 MSg98 MSg391 MSg391,unknown,unknown,1,False,R-L,unknown,14.29
 2925.20,MSg108 MSg315,unknown,unknown,1,False,R-L,unknown,0.0
 2926.0,MSg104 MSg110,unknown,unknown,1,False,R-L,unknown,0.0
 2928.0,MSg104 MSg104,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1450,7 +1450,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2941.0,MSg86 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 2942.10,MSg6 MSg267 MSg99,unknown,unknown,1,False,R-L,unknown,0.0
 2943.10,MSg0 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-2944.10,MSg178 MSg389 MSg015,unknown,unknown,1,False,R-L,unknown,33.33
+2944.10,MSg178 MSg389 MSg15,unknown,unknown,1,False,R-L,unknown,33.33
 2945.0,MSg104 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 2946.0,MSg67 MSg386 MSg194 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 2947.0,MSg67 MSg386 MSg194 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1461,12 +1461,12 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 2952.10,MSg287 MSg319,unknown,unknown,1,False,R-L,unknown,0.0
 2952.20,MSg267 MSg99 MSg109 MSg124 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 3001.0,MSg336 MSg162 MSg100 MSg86 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
-3002.0,MSg391 MSg99 MSg080 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
+3002.0,MSg391 MSg99 MSg80 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
 3010.0,MSg102 MSg287 MSg375 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 3015.0,MSg40,unknown,unknown,1,False,R-L,unknown,0.0
 3016.0,MSg290 MSg290 MSg343 MSg67 MSg65 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 3019.0,MSg178 MSg389 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
-3020.0,MSg040,unknown,unknown,1,False,R-L,unknown,100.0
+3020.0,MSg40,unknown,unknown,1,False,R-L,unknown,100.0
 3021.0,MSg87 MSg162 MSg97 MSg104 MSg287 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 3022.0,MSg161 MSg202 MSg409 MSg336 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3023.0,MSg292 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1477,9 +1477,9 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3035.0,MSg0 MSg409 MSg96,unknown,unknown,1,False,R-L,unknown,33.33
 3036.0,MSg341 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 3037.0,MSg0 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3038.0,MSg015,unknown,unknown,1,False,R-L,unknown,100.0
+3038.0,MSg15,unknown,unknown,1,False,R-L,unknown,100.0
 3039.0,MSg267 MSg99 MSg86 MSg103 MSg403 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3041.0,MSg080 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
+3041.0,MSg80 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 3042.0,MSg267 MSg99 MSg87 MSg59 MSg194 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 3044.0,MSg391 MSg99 MSg98 MSg296 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3051.0,MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1489,12 +1489,12 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3060.0,MSg343 MSg329 MSg99 MSg171 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,16.67
 3063.0,MSg171 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 3064.0,MSg124 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3066.0,MSg0 MSg001 MSg209 MSg342,unknown,unknown,1,False,R-L,unknown,50.0
+3066.0,MSg0 MSg1 MSg209 MSg342,unknown,unknown,1,False,R-L,unknown,50.0
 3067.0,MSg186 MSg125 MSg59 MSg391 MSg97 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 3068.0,MSg216 MSg123 MSg222 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
 3069.0,MSg150 MSg123 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3070.0,MSg65 MSg68,unknown,unknown,1,False,R-L,unknown,0.0
-3072.0,MSg059 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
+3072.0,MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 3074.0,MSg65 MSg67 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 3075.0,MSg86 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 3078.10,MSg48 MSg336 MSg51 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1545,7 +1545,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3123.0,MSg0 MSg244 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 3132.0,MSg102 MSg59 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3143.0,MSg0 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3144.0,MSg0 MSg017 MSg169,unknown,unknown,1,False,R-L,unknown,33.33
+3144.0,MSg0 MSg17 MSg169,unknown,unknown,1,False,R-L,unknown,33.33
 3145.0,MSg386 MSg171 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 3147.0,MSg40,unknown,unknown,1,False,R-L,unknown,0.0
 3151.0,MSg87 MSg186 MSg177 MSg99 MSg72 MSg127 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1560,15 +1560,15 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3159.0,MSg104 MSg162 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 3160.0,MSg267 MSg99 MSg70 MSg72 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 3161.0,MSg53 MSg87 MSg59 MSg127 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3162.0,MSg0 MSg065 MSg72 MSg222 MSg254,unknown,unknown,1,False,R-L,unknown,20.0
+3162.0,MSg0 MSg65 MSg72 MSg222 MSg254,unknown,unknown,1,False,R-L,unknown,20.0
 3163.0,MSg327 MSg293,unknown,unknown,1,False,R-L,unknown,0.0
 3164.0,MSg267 MSg99 MSg87 MSg59 MSg192 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3165.0,MSg67 MSg204 MSg155 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
-3202.0,MSg150 MSg123 MSg081 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+3202.0,MSg150 MSg123 MSg81 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
 3203.0,MSg109 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 3206.10,MSg41 MSg137 MSg249 MSg65 MSg67 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 3207.0,MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3209.10,MSg041 MSg137 MSg249 MSg65 MSg67 MSg342 MSg001,unknown,unknown,1,False,R-L,unknown,28.57
+3209.10,MSg41 MSg137 MSg249 MSg65 MSg67 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,28.57
 3213.0,MSg87 MSg59 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3215.10,MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3216.10,MSg41 MSg137 MSg249 MSg65 MSg67 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1594,7 +1594,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3236.0,MSg345 MSg104 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 3237.0,MSg336 MSg249 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 3238.10,MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3239.10,MSg059 MSg336 MSg89 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
+3239.10,MSg59 MSg336 MSg89 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
 3242.0,MSg87 MSg162 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 3243.10,MSg0 MSg2 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 3244.0,MSg375 MSg375 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1606,15 +1606,15 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3249.10,MSg53 MSg171 MSg59 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 3251.0,MSg41 MSg245 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3252.0,MSg182 MSg293 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3253.0,MSg059 MSg155 MSg135,unknown,unknown,1,False,R-L,unknown,100.0
+3253.0,MSg59 MSg155 MSg135,unknown,unknown,1,False,R-L,unknown,100.0
 3301.10,MSg102 MSg190 MSg48 MSg8 MSg342 MSg373,unknown,unknown,1,False,R-L,unknown,0.0
 3302.10,MSg336 MSg89 MSg87,unknown,unknown,1,False,R-L,unknown,0.0
 3302.20,MSg72 MSg194 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 3303.10,MSg70 MSg112 MSg194 MSg18 MSg211 MSg87 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 3304.10,MSg65 MSg336 MSg89 MSg407 MSg169 MSg183 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
-3305.10,MSg059 MSg112 MSg194 MSg18 MSg211 MSg87 MSg169,unknown,unknown,1,False,R-L,unknown,14.29
+3305.10,MSg59 MSg112 MSg194 MSg18 MSg211 MSg87 MSg169,unknown,unknown,1,False,R-L,unknown,14.29
 3306.10,MSg204 MSg245 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3307.0,MSg070 MSg051 MSg130 MSg149 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
+3307.0,MSg70 MSg51 MSg130 MSg149 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
 3309.0,MSg0 MSg174,unknown,unknown,1,False,R-L,unknown,0.0
 3310.0,MSg389 MSg407 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 3312.10,MSg65 MSg336 MSg89 MSg407 MSg169 MSg183 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1643,7 +1643,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3333.0,MSg295 MSg87 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 3334.10,MSg184,unknown,unknown,1,False,R-L,unknown,0.0
 3334.20,MSg204 MSg245 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3335.10,MSg336 MSg89 MSg087,unknown,unknown,1,False,R-L,unknown,33.33
+3335.10,MSg336 MSg89 MSg87,unknown,unknown,1,False,R-L,unknown,33.33
 3335.20,MSg72 MSg194 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 3336.10,MSg336 MSg89 MSg296 MSg342 MSg98,unknown,unknown,1,False,R-L,unknown,0.0
 3337.0,MSg65 MSg336 MSg89 MSg407 MSg169 MSg183 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1663,7 +1663,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3351.10,MSg102 MSg59 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3352.10,MSg171 MSg59 MSg407 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 3353.10,MSg204 MSg245 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3354.10,MSg65 MSg336 MSg089 MSg407 MSg169 MSg183 MSg169,unknown,unknown,1,False,R-L,unknown,28.57
+3354.10,MSg65 MSg336 MSg89 MSg407 MSg169 MSg183 MSg169,unknown,unknown,1,False,R-L,unknown,28.57
 3355.10,MSg65 MSg336 MSg89 MSg407 MSg169 MSg183 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 3356.10,MSg336 MSg89 MSg296 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3357.10,MSg102 MSg190 MSg48 MSg8 MSg342 MSg373,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1701,10 +1701,10 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 3392.10,MSg336 MSg89 MSg296 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3393.10,MSg345 MSg341 MSg18 MSg252 MSg97 MSg25 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,0.0
 3395.0,MSg389 MSg72 MSg326 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
-3396.0,MSg389 MSg065 MSg72 MSg336 MSg89 MSg194 MSg169,unknown,unknown,1,False,R-L,unknown,14.29
+3396.0,MSg389 MSg65 MSg72 MSg336 MSg89 MSg194 MSg169,unknown,unknown,1,False,R-L,unknown,14.29
 3398.10,MSg184,unknown,unknown,1,False,R-L,unknown,0.0
 3398.20,MSg204 MSg245 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-3401.0,MSg345 MSg341 MSg018 MSg252 MSg97 MSg25 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,37.5
+3401.0,MSg345 MSg341 MSg18 MSg252 MSg97 MSg25 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,37.5
 3403.10,MSg204 MSg245 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
 3404.10,MSg204 MSg245 MSg358 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 3405.10,MSg389 MSg72 MSg326 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1739,7 +1739,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4008.0,MSg302 MSg214 MSg97 MSg150 MSg127 MSg293,unknown,unknown,1,False,R-L,unknown,0.0
 4009.0,MSg112 MSg59,unknown,unknown,1,False,R-L,unknown,0.0
 4010.0,MSg150 MSg197 MSg252 MSg391,unknown,unknown,1,False,R-L,unknown,0.0
-4011.0,MSg267 MSg099 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+4011.0,MSg267 MSg99 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 4012.0,MSg245 MSg245 MSg127 MSg345 MSg48 MSg342 MSg71,unknown,unknown,1,False,R-L,unknown,0.0
 4013.0,MSg72 MSg336 MSg89 MSg48 MSg247 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4014.0,MSg245 MSg245 MSg344 MSg387 MSg53 MSg171 MSg59 MSg121 MSg135 MSg342,unknown,unknown,1,False,R-L,unknown,10.0
@@ -1749,7 +1749,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4018.0,MSg296 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4019.0,MSg216 MSg123 MSg389 MSg87 MSg59 MSg51 MSg130 MSg149 MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4020.0,MSg293 MSg233 MSg59 MSg99 MSg387 MSg336 MSg89 MSg112 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-4021.0,MSg267 MSg099 MSg336 MSg89 MSg112 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,28.57
+4021.0,MSg267 MSg99 MSg336 MSg89 MSg112 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,28.57
 4022.0,MSg267 MSg99 MSg389 MSg65 MSg72 MSg222 MSg254 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 4023.0,MSg183 MSg169 MSg99 MSg389 MSg72 MSg182 MSg293 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4024.0,MSg75 MSg180 MSg391 MSg252,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1779,14 +1779,14 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4050.0,MSg197 MSg267 MSg402,unknown,unknown,1,False,R-L,unknown,0.0
 4051.0,MSg0 MSg99 MSg336 MSg51 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4052.0,MSg412 MSg123 MSg67 MSg72 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
-4053.0,MSg267 MSg99 MSg059 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+4053.0,MSg267 MSg99 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
 4054.0,MSg86 MSg124 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4055.0,MSg87 MSg322 MSg99 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4056.0,MSg150 MSg123 MSg53 MSg67 MSg72 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4057.0,MSg267 MSg99 MSg65 MSg135 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4059.0,MSg0 MSg75 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 4060.0,MSg0 MSg267 MSg99 MSg70 MSg72 MSg53 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4061.0,MSg204 MSg112 MSg342 MSg067 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
+4061.0,MSg204 MSg112 MSg342 MSg67 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
 4067.0,MSg175 MSg180 MSg99 MSg153 MSg153 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
 4069.0,MSg345 MSg341 MSg189 MSg252,unknown,unknown,1,False,R-L,unknown,0.0
 4071.0,MSg391 MSg99 MSg87 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,20.0
@@ -1864,8 +1864,8 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4141.0,MSg155 MSg162 MSg99 MSg102 MSg59 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 4142.0,MSg341 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4143.0,MSg87 MSg59 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
-4144.0,MSg0 MSg002 MSg12,unknown,unknown,1,False,R-L,unknown,33.33
-4145.0,MSg086 MSg124 MSg25 MSg176 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
+4144.0,MSg0 MSg2 MSg12,unknown,unknown,1,False,R-L,unknown,33.33
+4145.0,MSg86 MSg124 MSg25 MSg176 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
 4146.0,MSg124 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4147.0,MSg328 MSg343 MSg89 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4148.0,MSg86 MSg175 MSg176 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1875,7 +1875,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4153.0,MSg253 MSg230 MSg99 MSg65 MSg67 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4154.0,MSg267 MSg99 MSg72 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4155.0,MSg124 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-4156.0,MSg076 MSg402 MSg99,unknown,unknown,1,False,R-L,unknown,33.33
+4156.0,MSg76 MSg402 MSg99,unknown,unknown,1,False,R-L,unknown,33.33
 4158.0,MSg355 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 4159.0,MSg391 MSg99 MSg87 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4160.0,MSg104 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1885,14 +1885,14 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4164.0,MSg102 MSg59 MSg342 MSg1 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4165.0,MSg283 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 4166.0,MSg86 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
-4167.0,MSg087 MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
+4167.0,MSg87 MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
 4168.0,MSg0 MSg59 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 4169.0,MSg0 MSg294 MSg375,unknown,unknown,1,False,R-L,unknown,0.0
 4170.0,MSg0 MSg149 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
 4171.0,MSg109 MSg59,unknown,unknown,1,False,R-L,unknown,0.0
 4172.0,MSg0 MSg336 MSg89 MSg211 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
 4176.0,MSg391 MSg99 MSg67 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4177.0,MSg0 MSg002 MSg12,unknown,unknown,1,False,R-L,unknown,33.33
+4177.0,MSg0 MSg2 MSg12,unknown,unknown,1,False,R-L,unknown,33.33
 4178.0,MSg149 MSg51 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4180.0,MSg173 MSg99 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4181.0,MSg416 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1901,7 +1901,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4186.0,MSg0 MSg99 MSg301 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4188.0,MSg287 MSg136 MSg135 MSg287 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
 4189.0,MSg0 MSg72 MSg204 MSg112 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-4197.0,MSg0 MSg015,unknown,unknown,1,False,R-L,unknown,50.0
+4197.0,MSg0 MSg15,unknown,unknown,1,False,R-L,unknown,50.0
 4198.0,MSg0 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4204.1,MSg87 MSg244 MSg245 MSg245 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4204.2,MSg242,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1910,14 +1910,14 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4208.0,MSg301 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4211.0,MSg86 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4212.0,MSg267 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4217.0,MSg1 MSg001 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+4217.0,MSg1 MSg1 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 4220.0,MSg252 MSg382 MSg391,unknown,unknown,1,False,R-L,unknown,0.0
 4222.10,MSg197 MSg169 MSg345,unknown,unknown,1,False,R-L,unknown,0.0
 4222.20,MSg197 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 4223.0,MSg224 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4224.1,MSg86 MSg134 MSg7 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4224.2,MSg97 MSg216,unknown,unknown,1,False,R-L,unknown,0.0
-4225.0,MSg72 MSg017,unknown,unknown,1,False,R-L,unknown,50.0
+4225.0,MSg72 MSg17,unknown,unknown,1,False,R-L,unknown,50.0
 4227.0,MSg127 MSg55 MSg84 MSg402 MSg212,unknown,unknown,1,False,R-L,unknown,0.0
 4228.0,MSg343 MSg237 MSg81 MSg176,unknown,unknown,1,False,R-L,unknown,25.0
 4229.0,MSg89 MSg99 MSg173 MSg59 MSg398 MSg48 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1957,7 +1957,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4268.0,MSg267 MSg99 MSg87 MSg326 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4269.0,MSg319 MSg83 MSg267 MSg99 MSg87 MSg59 MSg65 MSg342 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 4270.0,MSg267 MSg99 MSg389 MSg70 MSg348 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-4271.0,MSg0 MSg054 MSg58 MSg197 MSg252 MSg99 MSg121 MSg336 MSg89 MSg67 MSg72 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,7.14
+4271.0,MSg0 MSg54 MSg58 MSg197 MSg252 MSg99 MSg121 MSg336 MSg89 MSg67 MSg72 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,7.14
 4272.0,MSg150 MSg123 MSg375 MSg385 MSg81 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4273.0,MSg336 MSg341 MSg327 MSg15,unknown,unknown,1,False,R-L,unknown,25.0
 4274.0,MSg65 MSg72 MSg99 MSg155 MSg102 MSg287 MSg87 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1967,7 +1967,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4277.0,MSg0 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4279.0,MSg389 MSg121 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4280.0,MSg54 MSg307 MSg413,unknown,unknown,1,False,R-L,unknown,0.0
-4281.0,MSg391 MSg99 MSg389 MSg067 MSg72 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,12.5
+4281.0,MSg391 MSg99 MSg389 MSg67 MSg72 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,12.5
 4282.0,MSg267 MSg99 MSg98 MSg178 MSg389 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 4283.0,MSg293 MSg293 MSg293 MSg342 MSg126,unknown,unknown,1,False,R-L,unknown,0.0
 4284.0,MSg204 MSg245 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
@@ -1976,7 +1976,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4287.0,MSg0 MSg65 MSg70 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 4288.0,MSg0 MSg65 MSg336 MSg89 MSg194 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 4289.0,MSg87 MSg59 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-4290.0,MSg0 MSg57 MSg015,unknown,unknown,1,False,R-L,unknown,33.33
+4290.0,MSg0 MSg57 MSg15,unknown,unknown,1,False,R-L,unknown,33.33
 4291.0,MSg17 MSg336 MSg244 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4292.0,MSg0 MSg48 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4293.0,MSg267 MSg99 MSg287 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
@@ -2059,9 +2059,9 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4353.10,MSg173 MSg403 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 4353.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4354.10,MSg53 MSg67 MSg72 MSg182 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4354.20,MSg086 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4354.20,MSg86 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4355.10,MSg9 MSg48 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-4355.20,MSg087 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4355.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4356.10,MSg109 MSg59 MSg211 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4356.20,MSg336 MSg267 MSg341 MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,20.0
 4357.10,MSg42 MSg15 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2095,7 +2095,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4373.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4374.10,MSg72 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4374.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-4375.10,MSg267 MSg99 MSg051 MSg245 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
+4375.10,MSg267 MSg99 MSg51 MSg245 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
 4375.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4376.10,MSg114 MSg193 MSg342 MSg98,unknown,unknown,1,False,R-L,unknown,25.0
 4376.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2105,7 +2105,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4379.0,MSg373 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4380.1,MSg102 MSg190,unknown,unknown,1,False,R-L,unknown,0.0
 4380.2,MSg374,unknown,unknown,1,False,R-L,unknown,0.0
-4381.10,MSg48 MSg047 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+4381.10,MSg48 MSg47 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 4381.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4382.0,MSg102 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 4384.10,MSg0 MSg342 MSg1 MSg176,unknown,unknown,1,False,R-L,unknown,25.0
@@ -2162,7 +2162,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4429.10,MSg40 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4430.10,MSg258 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4431.10,MSg258 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-4432.10,MSg0 MSg059 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,25.0
+4432.10,MSg0 MSg59 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,25.0
 4433.10,MSg258 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4434.10,MSg258 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4435.10,MSg258 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2239,9 +2239,9 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4474.10,MSg267 MSg89,unknown,unknown,1,False,R-L,unknown,0.0
 4474.20,MSg86 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4475.10,MSg250 MSg15 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-4475.20,MSg087 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4475.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4476.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-4476.20,MSg095 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4476.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4477.10,MSg103 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4477.20,MSg267 MSg402 MSg149 MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4478.10,MSg249 MSg336 MSg275,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2270,7 +2270,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4489.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4490.10,MSg109 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4490.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-4491.10,MSg053 MSg114 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+4491.10,MSg53 MSg114 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 4491.20,MSg86 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4492.10,MSg205 MSg267 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4492.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2296,7 +2296,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4504.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4505.10,MSg87 MSg253,unknown,unknown,1,False,R-L,unknown,0.0
 4506.10,MSg249 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4506.20,MSg51 MSg130 MSg015,unknown,unknown,1,False,R-L,unknown,33.33
+4506.20,MSg51 MSg130 MSg15,unknown,unknown,1,False,R-L,unknown,33.33
 4507.10,MSg177 MSg307 MSg149,unknown,unknown,1,False,R-L,unknown,33.33
 4507.20,MSg0 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4508.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2350,14 +2350,14 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4537.20,MSg86 MSg284,unknown,unknown,1,False,R-L,unknown,0.0
 4538.10,MSg0 MSg12 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4540.0,MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-4541.10,MSg48 MSg342 MSg176 MSg253 MSg087,unknown,unknown,1,False,R-L,unknown,20.0
+4541.10,MSg48 MSg342 MSg176 MSg253 MSg87,unknown,unknown,1,False,R-L,unknown,20.0
 4543.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4543.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4544.10,MSg171 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4544.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4545.10,MSg0 MSg149,unknown,unknown,1,False,R-L,unknown,0.0
 4545.20,MSg267 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4546.10,MSg0 MSg008 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
+4546.10,MSg0 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
 4546.20,MSg0 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4547.0,MSg7 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4548.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2368,8 +2368,8 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4550.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4551.10,MSg72 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4551.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-4552.10,MSg267 MSg099 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
-4552.20,MSg086 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4552.10,MSg267 MSg99 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+4552.20,MSg86 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4553.10,MSg103 MSg403 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4553.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4554.10,MSg103 MSg403 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2378,10 +2378,10 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4555.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4556.10,MSg87 MSg60 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4556.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-4557.10,MSg409 MSg096 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+4557.10,MSg409 MSg96 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 4557.20,MSg87 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4559.10,MSg0 MSg373 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
-4559.20,MSg087 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4559.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4560.10,MSg103,unknown,unknown,1,False,R-L,unknown,0.0
 4560.20,MSg87,unknown,unknown,1,False,R-L,unknown,0.0
 4561.10,MSg216 MSg123,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2391,7 +2391,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4564.10,MSg103 MSg403 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4564.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4566.10,MSg0 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-4566.20,MSg086 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4566.20,MSg86 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4571.10,MSg0 MSg342 MSg1 MSg176,unknown,unknown,1,False,R-L,unknown,25.0
 4571.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4572.10,MSg106 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2466,18 +2466,18 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4607.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4610.10,MSg379 MSg307 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4610.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-4613.10,MSg065 MSg249 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+4613.10,MSg65 MSg249 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 4613.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4614.0,MSg17 MSg327 MSg128 MSg342 MSg97 MSg104 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 4615.0,MSg86 MSg67 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
-4616.0,MSg0 MSg065 MSg112 MSg197 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
+4616.0,MSg0 MSg65 MSg112 MSg197 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
 4617.0,MSg70 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 4618.0,MSg106 MSg287 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4619.0,MSg287 MSg87 MSg180 MSg99 MSg67 MSg112 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
 4620.0,MSg244 MSg343 MSg102 MSg162,unknown,unknown,1,False,R-L,unknown,25.0
 4621.0,MSg0 MSg124 MSg409 MSg96 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 4622.0,MSg0 MSg89 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
-4623.0,MSg0 MSg249 MSg343 MSg341 MSg012,unknown,unknown,1,False,R-L,unknown,20.0
+4623.0,MSg0 MSg249 MSg343 MSg341 MSg12,unknown,unknown,1,False,R-L,unknown,20.0
 4624.0,MSg28 MSg162 MSg343 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4625.0,MSg0 MSg249 MSg162 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4626.0,MSg59 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
@@ -2488,13 +2488,13 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4631.0,MSg136 MSg247 MSg204 MSg110 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4632.0,MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4633.0,MSg226 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4634.0,MSg17 MSg102 MSg287 MSg381 MSg065 MSg0,unknown,unknown,1,False,R-L,unknown,16.67
+4634.0,MSg17 MSg102 MSg287 MSg381 MSg65 MSg0,unknown,unknown,1,False,R-L,unknown,16.67
 4635.10,MSg59,unknown,unknown,1,False,R-L,unknown,0.0
 4635.20,MSg171 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 4636.10,MSg233 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4636.20,MSg87 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4637.10,MSg173 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4637.20,MSg087 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
+4637.20,MSg87 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 4639.10,MSg0 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4639.20,MSg0 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4641.10,MSg0 MSg171 MSg8 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2530,7 +2530,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4660.10,MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4660.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4661.10,MSg72 MSg182 MSg293 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-4661.20,MSg086 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4661.20,MSg86 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4663.10,MSg25 MSg97,unknown,unknown,1,False,R-L,unknown,0.0
 4664.10,MSg72 MSg211 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4665.10,MSg391 MSg99 MSg40,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2538,7 +2538,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4666.10,MSg51 MSg130 MSg149 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4666.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4667.10,MSg387 MSg65 MSg72 MSg336 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-4667.20,MSg086 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+4667.20,MSg86 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 4668.0,MSg0 MSg15 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4669.0,MSg219 MSg209 MSg343 MSg106 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 4670.10,MSg67 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2551,7 +2551,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4673.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4674.10,MSg245 MSg245 MSg307 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4674.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-4675.10,MSg017 MSg336 MSg319,unknown,unknown,1,False,R-L,unknown,33.33
+4675.10,MSg17 MSg336 MSg319,unknown,unknown,1,False,R-L,unknown,33.33
 4675.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 4676.10,MSg72 MSg216,unknown,unknown,1,False,R-L,unknown,0.0
 4677.10,MSg48 MSg342 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2588,7 +2588,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4695.0,MSg278 MSg65 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4696.0,MSg391 MSg99 MSg387 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4697.0,MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-4698.0,MSg059 MSg336 MSg204 MSg8 MSg342 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,14.29
+4698.0,MSg59 MSg336 MSg204 MSg8 MSg342 MSg124 MSg169,unknown,unknown,1,False,R-L,unknown,14.29
 4699.0,MSg0 MSg99 MSg116 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4700.10,MSg112 MSg197 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4700.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2621,18 +2621,18 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4809.0,MSg89 MSg342 MSg124 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4810.0,MSg70 MSg216 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4811.0,MSg307 MSg155 MSg97 MSg211,unknown,unknown,1,False,R-L,unknown,25.0
-4812.0,MSg267 MSg99 MSg59 MSg053 MSg0,unknown,unknown,1,False,R-L,unknown,40.0
+4812.0,MSg267 MSg99 MSg59 MSg53 MSg0,unknown,unknown,1,False,R-L,unknown,40.0
 4813.0,MSg391 MSg99 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4814.0,MSg214,unknown,unknown,1,False,R-L,unknown,0.0
 4815.0,MSg12,unknown,unknown,1,False,R-L,unknown,0.0
-4816.0,MSg0 MSg012,unknown,unknown,1,False,R-L,unknown,50.0
-4817.0,MSg0 MSg015,unknown,unknown,1,False,R-L,unknown,50.0
+4816.0,MSg0 MSg12,unknown,unknown,1,False,R-L,unknown,50.0
+4817.0,MSg0 MSg15,unknown,unknown,1,False,R-L,unknown,50.0
 4819.0,MSg0 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 4820.0,MSg112 MSg331 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 4821.0,MSg118,unknown,unknown,1,False,R-L,unknown,0.0
 4823.0,MSg253 MSg230,unknown,unknown,1,False,R-L,unknown,0.0
 4824.0,MSg204 MSg230,unknown,unknown,1,False,R-L,unknown,0.0
-4826.0,MSg059 MSg059 MSg342,unknown,unknown,1,False,R-L,unknown,100.0
+4826.0,MSg59 MSg59 MSg342,unknown,unknown,1,False,R-L,unknown,100.0
 4827.0,MSg0 MSg342 MSg53 MSg373 MSg287 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
 4832.0,MSg67,unknown,unknown,1,False,R-L,unknown,0.0
 4833.0,MSg89 MSg89 MSg121 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2646,7 +2646,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 4844.0,MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 4845.0,MSg102,unknown,unknown,1,False,R-L,unknown,0.0
 4846.0,MSg253 MSg230,unknown,unknown,1,False,R-L,unknown,0.0
-4848.0,MSg0 MSg062 MSg065 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
+4848.0,MSg0 MSg62 MSg65 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 4849.0,MSg0 MSg87 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 4852.0,MSg115,unknown,unknown,1,False,R-L,unknown,0.0
 4853.0,MSg109 MSg59,unknown,unknown,1,False,R-L,unknown,50.0
@@ -2699,21 +2699,21 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5064.0,MSg293 MSg123 MSg65 MSg206 MSg86 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5065.0,MSg0 MSg99 MSg192 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5066.0,MSg0 MSg348 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-5067.0,MSg293 MSg123 MSg389 MSg53 MSg072 MSg0,unknown,unknown,1,False,R-L,unknown,16.67
-5068.0,MSg0 MSg067 MSg53 MSg342 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
+5067.0,MSg293 MSg123 MSg389 MSg53 MSg72 MSg0,unknown,unknown,1,False,R-L,unknown,16.67
+5068.0,MSg0 MSg67 MSg53 MSg342 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
 5069.0,MSg127 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5070.0,MSg395 MSg99 MSg104 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 5071.0,MSg0 MSg204 MSg112 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5072.0,MSg327 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5073.10,MSg87 MSg391 MSg87,unknown,unknown,1,False,R-L,unknown,0.0
 5073.20,MSg364 MSg51 MSg130 MSg99 MSg67 MSg244 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-5074.0,MSg076 MSg402 MSg53 MSg67 MSg72 MSg342 MSg17 MSg407 MSg169,unknown,unknown,1,False,R-L,unknown,11.11
+5074.0,MSg76 MSg402 MSg53 MSg67 MSg72 MSg342 MSg17 MSg407 MSg169,unknown,unknown,1,False,R-L,unknown,11.11
 5076.10,MSg0 MSg343 MSg204 MSg245 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5077.0,MSg328 MSg86 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 5078.0,MSg261 MSg186 MSg307 MSg97 MSg249 MSg336,unknown,unknown,1,False,R-L,unknown,0.0
 5080.0,MSg173 MSg99 MSg102 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5081.0,MSg387 MSg171 MSg59 MSg112 MSg197 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-5083.0,MSg0 MSg387 MSg067 MSg72 MSg139,unknown,unknown,1,False,R-L,unknown,40.0
+5083.0,MSg0 MSg387 MSg67 MSg72 MSg139,unknown,unknown,1,False,R-L,unknown,40.0
 5084.0,MSg267 MSg99 MSg72 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,16.67
 5085.0,MSg391 MSg99 MSg336 MSg256 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5086.0,MSg402 MSg195 MSg343 MSg65 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2721,7 +2721,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5088.0,MSg221 MSg127 MSg344,unknown,unknown,1,False,R-L,unknown,0.0
 5089.0,MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 5090.0,MSg261 MSg134 MSg86 MSg99 MSg65 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-5091.0,MSg270 MSg99 MSg389 MSg066,unknown,unknown,1,False,R-L,unknown,25.0
+5091.0,MSg270 MSg99 MSg389 MSg66,unknown,unknown,1,False,R-L,unknown,25.0
 5092.0,MSg411 MSg237 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 5093.0,MSg102 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 5094.0,MSg17 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2772,14 +2772,14 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5223.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5225.0,MSg0 MSg87 MSg261,unknown,unknown,1,False,R-L,unknown,0.0
 5226.0,MSg53 MSg171 MSg59 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-5227.10,MSg389 MSg171 MSg59 MSg182 MSg293 MSg051 MSg130 MSg149 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,18.18
+5227.10,MSg389 MSg171 MSg59 MSg182 MSg293 MSg51 MSg130 MSg149 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,18.18
 5228.0,MSg219 MSg209 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 5229.10,MSg389 MSg171 MSg59 MSg182 MSg293 MSg51 MSg130 MSg149 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,9.09
 5230.10,MSg389 MSg171 MSg59 MSg182 MSg293 MSg51 MSg130 MSg149 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5231.0,MSg389 MSg65 MSg249 MSg169 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5232.0,MSg389 MSg65 MSg249 MSg169 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-5233.0,MSg0 MSg343 MSg008 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
-5234.10,MSg389 MSg171 MSg59 MSg182 MSg293 MSg051 MSg130 MSg149 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,18.18
+5233.0,MSg0 MSg343 MSg8 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+5234.10,MSg389 MSg171 MSg59 MSg182 MSg293 MSg51 MSg130 MSg149 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,18.18
 5235.0,MSg0 MSg249 MSg162 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5236.0,MSg53 MSg171 MSg59 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5237.10,MSg267 MSg99 MSg67 MSg135 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2873,7 +2873,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5305.10,MSg127 MSg342 MSg176 MSg403 MSg340,unknown,unknown,1,False,R-L,unknown,0.0
 5306.0,MSg373 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5308.0,MSg103 MSg403 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-5309.0,MSg153 MSg153 MSg048 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+5309.0,MSg153 MSg153 MSg48 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
 5310.10,MSg293 MSg123 MSg343 MSg102 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 5310.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5311.10,MSg0 MSg135 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2883,9 +2883,9 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5314.0,MSg127,unknown,unknown,1,False,R-L,unknown,0.0
 5315.0,MSg127,unknown,unknown,1,False,R-L,unknown,0.0
 5316.0,MSg127,unknown,unknown,1,False,R-L,unknown,0.0
-5317.10,MSg065 MSg72 MSg78 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
+5317.10,MSg65 MSg72 MSg78 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,40.0
 5317.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-5318.10,MSg065 MSg72 MSg78 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
+5318.10,MSg65 MSg72 MSg78 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
 5318.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5319.10,MSg149 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 5319.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2907,7 +2907,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5328.0,MSg48 MSg0 MSg149 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5329.10,MSg177,unknown,unknown,1,False,R-L,unknown,0.0
 5329.20,MSg186 MSg173 MSg86 MSg99 MSg67 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-5331.0,MSg102 MSg025,unknown,unknown,1,False,R-L,unknown,50.0
+5331.0,MSg102 MSg25,unknown,unknown,1,False,R-L,unknown,50.0
 5332.10,MSg0 MSg230 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5333.10,MSg102 MSg25,unknown,unknown,1,False,R-L,unknown,0.0
 5334.10,MSg67 MSg135 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2948,7 +2948,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5413.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5413.30,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5414.10,MSg0 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-5414.20,MSg086 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+5414.20,MSg86 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 5415.10,MSg48 MSg342 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 5415.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5416.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2967,7 +2967,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5422.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5423.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5423.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-5425.10,MSg048 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,33.33
+5425.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,33.33
 5425.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 5426.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5426.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
@@ -2976,7 +2976,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5428.10,MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 5428.20,MSg0 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5429.10,MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-5429.20,MSg087 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+5429.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 5430.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5430.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5431.10,MSg258 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3007,7 +3007,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5447.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5447.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5449.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,33.33
-5449.20,MSg089 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
+5449.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,50.0
 5450.10,MSg171 MSg59 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 5450.20,MSg95 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5451.10,MSg0 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3024,7 +3024,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5457.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5457.20,MSg89 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5458.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
-5458.20,MSg089 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
+5458.20,MSg89 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 5459.10,MSg258 MSg347 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5460.10,MSg173 MSg59 MSg342 MSg347 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5460.20,MSg95 MSg328 MSg59,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3064,7 +3064,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5481.10,MSg67 MSg244 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 5481.20,MSg28 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5482.10,MSg0 MSg284,unknown,unknown,1,False,R-L,unknown,0.0
-5482.20,MSg409 MSg094 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+5482.20,MSg409 MSg94 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 5483.10,MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 5483.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
 5484.10,MSg328 MSg59,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3096,9 +3096,9 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 5504.0,MSg307,unknown,unknown,1,False,R-L,unknown,0.0
 5505.0,MSg87 MSg155 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 5506.0,MSg6 MSg97,unknown,unknown,1,False,R-L,unknown,0.0
-5507.0,MSg267 MSg099 MSg87 MSg403 MSg72 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,14.29
+5507.0,MSg267 MSg99 MSg87 MSg403 MSg72 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,14.29
 5508.0,MSg267 MSg99 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-5510.1,MSg0 MSg018 MSg169,unknown,unknown,1,False,R-L,unknown,33.33
+5510.1,MSg0 MSg18 MSg169,unknown,unknown,1,False,R-L,unknown,33.33
 5510.2,MSg186 MSg17,unknown,unknown,1,False,R-L,unknown,0.0
 5511.0,MSg102,unknown,unknown,1,False,R-L,unknown,0.0
 5513.0,MSg102,unknown,unknown,1,False,R-L,unknown,100.0
@@ -3125,7 +3125,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 6115.1,MSg373 MSg162 MSg402,unknown,unknown,1,False,R-L,unknown,0.0
 6115.2,MSg87 MSg162 MSg127,unknown,unknown,1,False,R-L,unknown,0.0
 6116.1,MSg261 MSg134 MSg98 MSg99 MSg87 MSg60,unknown,unknown,1,False,R-L,unknown,0.0
-6116.2,MSg100 MSg329 MSg028 MSg162,unknown,unknown,1,False,R-L,unknown,25.0
+6116.2,MSg100 MSg329 MSg28 MSg162,unknown,unknown,1,False,R-L,unknown,25.0
 6118.1,MSg149,unknown,unknown,1,False,R-L,unknown,0.0
 6118.2,MSg12 MSg93,unknown,unknown,1,False,R-L,unknown,0.0
 6120.0,MSg150 MSg123 MSg228 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3167,7 +3167,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 6218.1,MSg387 MSg375 MSg375 MSg342,unknown,unknown,1,False,R-L,unknown,25.0
 6218.2,MSg93,unknown,unknown,1,False,R-L,unknown,0.0
 6219.0,MSg267 MSg99 MSg87 MSg59 MSg67 MSg8 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-6220.1,MSg293 MSg123 MSg98 MSg67 MSg060,unknown,unknown,1,False,R-L,unknown,20.0
+6220.1,MSg293 MSg123 MSg98 MSg67 MSg60,unknown,unknown,1,False,R-L,unknown,20.0
 6220.2,MSg17 MSg245 MSg249,unknown,unknown,1,False,R-L,unknown,0.0
 6221.0,MSg353 MSg123 MSg87 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 6222.0,MSg293 MSg123 MSg343 MSg102 MSg190,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3181,7 +3181,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 6230.0,MSg186 MSg293 MSg99 MSg109 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 6231.0,MSg293 MSg123 MSg343 MSg86 MSg249 MSg162 MSg14,unknown,unknown,1,False,R-L,unknown,0.0
 6232.0,MSg327 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
-6233.10,MSg0 MSg059 MSg387 MSg87 MSg59 MSg17 MSg406 MSg162 MSg93,unknown,unknown,1,False,R-L,unknown,11.11
+6233.10,MSg0 MSg59 MSg387 MSg87 MSg59 MSg17 MSg406 MSg162 MSg93,unknown,unknown,1,False,R-L,unknown,11.11
 6234.0,MSg86 MSg336 MSg321,unknown,unknown,1,False,R-L,unknown,0.0
 6235.0,MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 6301.0,MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3203,7 +3203,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 7005.0,MSg267 MSg402 MSg99 MSg124 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
 7006.0,MSg248 MSg406 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 7007.0,MSg246 MSg407 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
-7008.0,MSg267 MSg099 MSg387 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
+7008.0,MSg267 MSg99 MSg387 MSg0,unknown,unknown,1,False,R-L,unknown,50.0
 7009.0,MSg204 MSg230 MSg67 MSg72 MSg336 MSg89 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
 7011.0,MSg216 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
 7013.0,MSg293 MSg123 MSg387 MSg87 MSg59 MSg294 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3215,7 +3215,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 7020.0,MSg249 MSg214 MSg97 MSg258 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 7021.0,MSg99 MSg380 MSg123 MSg87 MSg59 MSg72 MSg403 MSg87 MSg342,unknown,unknown,1,False,R-L,unknown,11.11
 7022.0,MSg65 MSg222 MSg254,unknown,unknown,1,False,R-L,unknown,33.33
-7023.0,MSg150 MSg123 MSg048 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,60.0
+7023.0,MSg150 MSg123 MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,60.0
 7024.0,MSg320 MSg32 MSg123 MSg67 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 7025.1,MSg162 MSg343 MSg87 MSg60,unknown,unknown,1,False,R-L,unknown,0.0
 7025.2,MSg141 MSg272,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3226,10 +3226,10 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 7030.0,MSg0 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 7031.0,MSg18 MSg162 MSg123 MSg72 MSg216 MSg254 MSg97 MSg175,unknown,unknown,1,False,R-L,unknown,0.0
 7032.0,MSg17 MSg169 MSg123 MSg102 MSg190,unknown,unknown,1,False,R-L,unknown,0.0
-7034.0,MSg0 MSg041 MSg304 MSg167 MSg169,unknown,unknown,1,False,R-L,unknown,40.0
+7034.0,MSg0 MSg41 MSg304 MSg167 MSg169,unknown,unknown,1,False,R-L,unknown,40.0
 7035.0,MSg103 MSg403 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 7036.0,MSg0 MSg17 MSg109 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
-7038.0,MSg391 MSg99 MSg87 MSg59 MSg073,unknown,unknown,1,False,R-L,unknown,20.0
+7038.0,MSg391 MSg99 MSg87 MSg59 MSg73,unknown,unknown,1,False,R-L,unknown,20.0
 7039.0,MSg17 MSg267 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 7040.0,MSg106 MSg15,unknown,unknown,1,False,R-L,unknown,0.0
 7042.0,MSg286 MSg99 MSg47 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3245,10 +3245,10 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 7048.40,MSg59,unknown,unknown,1,False,R-L,unknown,0.0
 7048.50,MSg0 MSg386 MSg186 MSg87 MSg59 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 7049.0,MSg162 MSg249 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
-7050.0,MSg0 MSg342 MSg001,unknown,unknown,1,False,R-L,unknown,66.67
+7050.0,MSg0 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,66.67
 7053.0,MSg67 MSg8 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 7054.0,MSg267 MSg99 MSg102 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-7055.10,MSg065 MSg072 MSg342 MSg223,unknown,unknown,1,False,R-L,unknown,50.0
+7055.10,MSg65 MSg72 MSg342 MSg223,unknown,unknown,1,False,R-L,unknown,50.0
 7056.0,MSg65 MSg67 MSg294 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 7057.0,MSg65 MSg72 MSg222 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
 7062.0,MSg267 MSg99 MSg375 MSg51 MSg155 MSg211,unknown,unknown,1,False,R-L,unknown,16.67
@@ -3258,7 +3258,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 7066.0,MSg267 MSg99 MSg72 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 7068.0,MSg391 MSg99 MSg67 MSg389 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
 7069.0,MSg391 MSg123 MSg128 MSg342 MSg216 MSg254,unknown,unknown,1,False,R-L,unknown,0.0
-7070.0,MSg048 MSg065,unknown,unknown,1,False,R-L,unknown,100.0
+7070.0,MSg48 MSg65,unknown,unknown,1,False,R-L,unknown,100.0
 7072.0,MSg107 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 7073.0,MSg0 MSg99 MSg32 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 7074.0,MSg120 MSg53 MSg99 MSg54 MSg254,unknown,unknown,1,False,R-L,unknown,20.0
@@ -3324,7 +3324,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 7224.0,MSg336 MSg209 MSg343 MSg98 MSg121 MSg59 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,12.5
 7225.0,MSg245 MSg245 MSg99 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 7227.10,MSg336 MSg209 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
-7227.20,MSg327 MSg343 MSg0 MSg081 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
+7227.20,MSg327 MSg343 MSg0 MSg81 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
 7227.30,MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 7228.0,MSg267 MSg99 MSg113 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 7229.0,MSg267 MSg99 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3342,7 +3342,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 7238.0,MSg328 MSg299 MSg245 MSg245 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 7239.0,MSg0 MSg209 MSg343 MSg98 MSg121 MSg59 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,12.5
 7240.0,MSg100 MSg17 MSg8 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-7241.0,MSg336 MSg209 MSg343 MSg98 MSg121 MSg059 MSg0,unknown,unknown,1,False,R-L,unknown,14.29
+7241.0,MSg336 MSg209 MSg343 MSg98 MSg121 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,14.29
 7242.0,MSg0 MSg209 MSg343 MSg98 MSg121 MSg59 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
 7243.0,MSg293 MSg123 MSg104 MSg59 MSg327 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
 7244.0,MSg204 MSg245 MSg358 MSg342 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3372,7 +3372,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 7263.10,MSg0 MSg67 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 7263.20,MSg150 MSg123 MSg67 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 7265.0,MSg336 MSg209 MSg343 MSg98 MSg121 MSg59 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,0.0
-7266.0,MSg336 MSg028 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+7266.0,MSg336 MSg28 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 7267.10,MSg72 MSg249 MSg169 MSg342,unknown,unknown,1,False,R-L,unknown,50.0
 7267.20,MSg267 MSg99 MSg66,unknown,unknown,1,False,R-L,unknown,0.0
 7268.0,MSg286 MSg99 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3434,7 +3434,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 8038.0,MSg205 MSg395 MSg99 MSg192 MSg343 MSg167 MSg127,unknown,unknown,1,False,R-L,unknown,0.0
 8039.0,MSg344 MSg217 MSg344 MSg103 MSg403 MSg347 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 8040.0,MSg17 MSg230 MSg99 MSg356 MSg180,unknown,unknown,1,False,R-L,unknown,0.0
-8041.0,MSg102 MSg59 MSg342 MSg012,unknown,unknown,1,False,R-L,unknown,25.0
+8041.0,MSg102 MSg59 MSg342 MSg12,unknown,unknown,1,False,R-L,unknown,25.0
 8042.0,MSg59,unknown,unknown,1,False,R-L,unknown,0.0
 8043.0,MSg343 MSg229 MSg233 MSg59 MSg97 MSg389 MSg48 MSg17 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 8044.1,MSg391 MSg123,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3442,7 +3442,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 8045.0,MSg0 MSg180 MSg99 MSg48 MSg193 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 8047.0,MSg417 MSg12,unknown,unknown,1,False,R-L,unknown,0.0
 8048.0,MSg70 MSg211,unknown,unknown,1,False,R-L,unknown,0.0
-8050.0,MSg391 MSg99 MSg102 MSg012,unknown,unknown,1,False,R-L,unknown,25.0
+8050.0,MSg391 MSg99 MSg102 MSg12,unknown,unknown,1,False,R-L,unknown,25.0
 8051.0,MSg244 MSg343 MSg112 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 8052.0,MSg59,unknown,unknown,1,False,R-L,unknown,0.0
 8053.0,MSg0 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3473,7 +3473,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 8111.0,MSg1 MSg1 MSg121 MSg121 MSg99 MSg172 MSg304 MSg307,unknown,unknown,1,False,R-L,unknown,0.0
 8112.0,MSg1 MSg1 MSg121 MSg121 MSg99 MSg172 MSg304 MSg307,unknown,unknown,1,False,R-L,unknown,0.0
 8113.0,MSg1 MSg1 MSg121 MSg121 MSg99 MSg172 MSg304 MSg307,unknown,unknown,1,False,R-L,unknown,0.0
-8114.10,MSg216 MSg0 MSg87 MSg053 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
+8114.10,MSg216 MSg0 MSg87 MSg53 MSg0,unknown,unknown,1,False,R-L,unknown,20.0
 8114.20,MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 8114.30,MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 8115.0,MSg1 MSg1 MSg121 MSg121 MSg99 MSg172 MSg304 MSg307,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3481,10 +3481,10 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 8116.20,MSg267 MSg99 MSg0 MSg373 MSg287 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 8117.10,MSg76 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 8117.20,MSg87 MSg328,unknown,unknown,1,False,R-L,unknown,0.0
-8118.10,MSg048 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,33.33
+8118.10,MSg48 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,33.33
 8118.20,MSg89 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 8119.10,MSg267 MSg99 MSg175 MSg230 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-8119.20,MSg267 MSg99 MSg175 MSg230 MSg053 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
+8119.20,MSg267 MSg99 MSg175 MSg230 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,33.33
 8119.30,MSg0 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 8120.0,MSg391 MSg57 MSg402 MSg123 MSg86 MSg15,unknown,unknown,1,False,R-L,unknown,16.67
 8121.1,MSg326,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3493,13 +3493,13 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 8201.0,MSg249 MSg167 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 8202.0,MSg328 MSg53 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 8204.0,MSg245 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-8205.0,MSg048 MSg342,unknown,unknown,1,False,R-L,unknown,50.0
+8205.0,MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,50.0
 8206.0,MSg0 MSg174 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-8207.0,MSg086 MSg47 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
+8207.0,MSg86 MSg47 MSg0,unknown,unknown,1,False,R-L,unknown,33.33
 8208.0,MSg0 MSg342 MSg176,unknown,unknown,1,False,R-L,unknown,0.0
 8209.0,MSg47,unknown,unknown,1,False,R-L,unknown,0.0
-8210.0,MSg214 MSg87 MSg059 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
-8211.0,MSg059,unknown,unknown,1,False,R-L,unknown,100.0
+8210.0,MSg214 MSg87 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,25.0
+8211.0,MSg59,unknown,unknown,1,False,R-L,unknown,100.0
 8212.0,MSg344 MSg216,unknown,unknown,1,False,R-L,unknown,0.0
 8213.0,MSg102 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
 8214.0,MSg269,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3509,7 +3509,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 8218.0,MSg48 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 8219.0,MSg216 MSg123 MSg98 MSg65 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 8220.0,MSg89 MSg375 MSg162,unknown,unknown,1,False,R-L,unknown,0.0
-8221.0,MSg0 MSg087 MSg211 MSg72 MSg102 MSg0,unknown,unknown,1,False,R-L,unknown,16.67
+8221.0,MSg0 MSg87 MSg211 MSg72 MSg102 MSg0,unknown,unknown,1,False,R-L,unknown,16.67
 8301.10,MSg267 MSg236 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 8301.20,MSg106,unknown,unknown,1,False,R-L,unknown,0.0
 8302.10,MSg267 MSg99 MSg67 MSg342 MSg1,unknown,unknown,1,False,R-L,unknown,20.0
@@ -3521,7 +3521,7 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 9022.20,MSg112 MSg194 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
 9022.30,MSg0 MSg180,unknown,unknown,1,False,R-L,unknown,0.0
 9031.0,MSg65,unknown,unknown,1,False,R-L,unknown,0.0
-9041.0,MSg017 MSg293 MSg249 MSg024,unknown,unknown,1,False,R-L,unknown,50.0
+9041.0,MSg17 MSg293 MSg249 MSg24,unknown,unknown,1,False,R-L,unknown,50.0
 9042.0,MSg146,unknown,unknown,1,False,R-L,unknown,0.0
 9051.0,MSg89 MSg32 MSg86 MSg261 MSg343 MSg87 MSg59 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 9061.0,MSg112 MSg169,unknown,unknown,1,False,R-L,unknown,0.0
@@ -3562,13 +3562,13 @@ inscription_id,sign_sequence,site,object_type,line_count,damaged,reading_directi
 9833.0,MSg0 MSg1 MSg0 MSg157 MSg97 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 9834.0,MSg0 MSg75 MSg0,unknown,unknown,1,False,R-L,unknown,0.0
 9842.0,MSg175 MSg12 MSg182,unknown,unknown,1,False,R-L,unknown,66.67
-9845.1,MSg175 MSg1 MSg0 MSg059 MSg51,unknown,unknown,1,False,R-L,unknown,20.0
+9845.1,MSg175 MSg1 MSg0 MSg59 MSg51,unknown,unknown,1,False,R-L,unknown,20.0
 9845.2,MSg374,unknown,unknown,1,False,R-L,unknown,0.0
 9846.0,MSg171 MSg387 MSg97 MSg341 MSg107,unknown,unknown,1,False,R-L,unknown,0.0
 9851.0,MSg327 MSg128 MSg162 MSg48 MSg15,unknown,unknown,1,False,R-L,unknown,20.0
 9852.0,MSg51 MSg103 MSg345 MSg307 MSg342,unknown,unknown,1,False,R-L,unknown,20.0
 9901.0,MSg178 MSg53 MSg97 MSg342 MSg342,unknown,unknown,1,False,R-L,unknown,0.0
-9902.0,MSg065 MSg1 MSg1 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,20.0
-9903.0,MSg018 MSg102 MSg59 MSg98 MSg294 MSg134 MSg89,unknown,unknown,1,False,R-L,unknown,28.57
+9902.0,MSg65 MSg1 MSg1 MSg245 MSg245,unknown,unknown,1,False,R-L,unknown,20.0
+9903.0,MSg18 MSg102 MSg59 MSg98 MSg294 MSg134 MSg89,unknown,unknown,1,False,R-L,unknown,28.57
 9904.0,MSg11 MSg326 MSg21 MSg21 MSg153,unknown,unknown,1,False,R-L,unknown,0.0
 9905.0,MSg59 MSg59 MSg167,unknown,unknown,1,False,R-L,unknown,0.0

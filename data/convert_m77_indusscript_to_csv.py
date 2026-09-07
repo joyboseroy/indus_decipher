@@ -42,6 +42,13 @@ SCHEMA NOTES:
   identity (treating "*086" and "086" as the same sign, not two
   different signs, which would otherwise inflate the vocabulary by 504
   spurious entries) and captured separately as `mean_uncertainty`.
+  Sign numbers are also normalized through int() to strip inconsistent
+  zero-padding in the source (e.g. sign 1 appears as both "1" and "001"
+  in different raw records; caught by checking the vocabulary count
+  against the published 417-sign inventory, which an early version of
+  this converter overshot at 458 signs -- 40 of those 458 turned out to
+  be duplicate string representations of already-counted integers, not
+  40 genuinely new signs).
 
   UNCERTAINTY: `mean_uncertainty` is computed as the percentage of
   signs in that line that were starred (0 or 100 for most lines, since
@@ -86,7 +93,16 @@ def convert(json_path: str, output_csv: str):
             continue
 
         n_starred = sum(1 for s in raw_signs if s.startswith("*"))
-        base_signs = [f"MSg{s.lstrip('*')}" for s in raw_signs]
+        # Normalize zero-padding: the source data is internally inconsistent
+        # about it (e.g. sign 1 appears as both "1" and "001" across
+        # different records, confirmed by checking directly -- 40 of the
+        # 458 raw distinct base signs turned out to be duplicate string
+        # representations of only 40 already-counted integers, not 40 new
+        # signs). Converting through int() and back strips this
+        # inconsistency; without it, the vocabulary was artificially
+        # inflated (458 instead of the corrected count) and some sign
+        # identities were silently split across two different tokens.
+        base_signs = [f"MSg{int(s.lstrip('*'))}" for s in raw_signs]
         mean_uncertainty = 100.0 * n_starred / len(raw_signs)
 
         textnum = r.get("textnum", "unknown")
