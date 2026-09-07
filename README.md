@@ -94,6 +94,8 @@ data/
                                          "Real external-language calibration")
   convert_dcs_sanskrit_to_csv.py        real Sanskrit converter (see
                                          "A second real language: Sanskrit")
+  convert_tamil_to_csv.py                real Old Tamil converter (see
+                                         "A third language, located and tried")
   indus_website_real_corpus.csv         real data (2,543 inscriptions)
   cisi_real_corpus.csv                  real data (179 inscriptions)
 analysis/
@@ -155,6 +157,9 @@ experiments/
   sanskrit_calibration_test.py  real Sanskrit calibration, confirms the
                          sample-size finding (see "A second real
                          language: Sanskrit")
+  tamil_calibration_test.py  real Old Tamil calibration, confirms the
+                         sparsity limitation empirically (see "A third
+                         language, located and tried")
   discount_sensitivity_test.py  sweeps the Kneser-Ney discount 0.5-0.9
                          (see note after "Order 3 is validated...")
   matched_size_harappa_test.py  resolves the Harappa/Mohenjo-daro gap
@@ -1501,8 +1506,59 @@ Rather than build a third calibration corpus at a visibly lower and
 methodologically shakier standard than the first two, this is recorded
 as a real gap: a lemmatized or morphologically segmented digital Sangam
 corpus, if one exists and can be located, would be a genuine addition to
-this comparison; naively tokenized raw text would not add reliable
-information and risks looking more rigorous than it is.
+## A third language, located and tried: Old Tamil, with the sparsity problem confirmed empirically
+
+The gap flagged above did get filled, on a real corpus this time: the
+Sangam Literature Corpus (starhopp3r/sangam, scraped from Vaidehi
+Herbert's translations, 2,377 poems, see CITATIONS.md), a genuine,
+carefully assembled digitization with rich per-poem metadata. But the
+underlying limitation predicted above was real, not hypothetical, and
+`experiments/tamil_calibration_test.py` confirms it directly rather than
+leaving it as a theoretical concern: no lemmatized version of this
+corpus exists, so `data/convert_tamil_to_csv.py` uses raw whitespace-
+separated orthographic words, and Tamil's agglutinative morphology means
+most such "words" are functionally unique inflected forms.
+
+The severity is visible in one number before any test is even run: this
+corpus's vocabulary (35,301 distinct orthographic words) EXCEEDS its own
+line count (33,711 lines), something that never happened with ETCSL
+(33,338 lines, 4,168 lemmas) or Sanskrit (21,231 sentences, 8,764
+lemmas). The order-3 results confirm what that implies:
+
+| Corpus | N | Order-3 gain |
+|---|---|---|
+| Indus | 2,543 | +0.143 |
+| Tamil, full scale | 33,711 | +0.030 |
+| Tamil, matched to Indus's size | 2,543 | -0.018 |
+
+Even at FULL scale, Tamil's gain (+0.030) is an order of magnitude
+smaller than ETCSL's (+0.370) or Sanskrit's (+0.157) at their own full
+scales. The WUCS-style network statistics confirm the same diagnosis
+starkly: 1,089 "beginner" signs and 1,285 "ender" signs out of a
+2,543-line sample, meaning roughly 43 to 50 percent of all tokens
+qualify as both, simply because most words in this corpus occur exactly
+once. This is not a finding about Tamil, about the Indus comparison, or
+about language generally. It is confirmation, with real numbers rather
+than a prediction, that unlemmatized orthographic tokenization of an
+agglutinative language produces a sparsity regime too severe for this
+project's methods to say anything reliable.
+
+This result is included for completeness and transparency, not as a
+third calibration point on equal footing with ETCSL and Sanskrit. Their
+two-language agreement (both show a strong positive signal at full
+scale, both lose it at Indus-matched scale) remains this project's
+actual external-calibration finding. Tamil's numbers are reported
+alongside it with the limitation stated up front, not discovered by a
+careful reader working through the appendix. If a lemmatized Old Tamil
+corpus is ever located, rerunning this specific script against it would
+be the natural way to find out whether Tamil's real signal looks more
+like Sumerian and Sanskrit's once the sparsity problem is actually fixed
+rather than just diagnosed.
+
+Run it yourself with `python3 experiments/tamil_calibration_test.py`
+(needs `data/tamil_real_corpus.csv`, generated via
+`python3 data/convert_tamil_to_csv.py`; see CITATIONS.md for source and
+license notes).
 
 ## External validation against an independently published corpus
 
