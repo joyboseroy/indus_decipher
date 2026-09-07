@@ -35,10 +35,12 @@ direction and review at every step, including the decision of which
 statistical tests to run, which data sources to trust, and how to word
 every caveat in this document. Several of the more interesting findings
 below (the reading-direction correction, the two real corpora landing on
-different sides of the falsification harness) came from actually running
-the code on real data and following up on results that looked off,
-rather than from the design phase. That back-and-forth is part of why
-this project is reasonably confident in its own honesty notes: they were
+different sides of the falsification harness, and most significantly
+"The synthetic continuum," which walked back the interpretation of this
+project's own headline order-3 result) came from actually running the
+code on real data and following up on results that looked off, rather
+than from the design phase. That back-and-forth is part of why this
+project is reasonably confident in its own honesty notes: they were
 earned by being wrong first and checking.
 
 ## Status
@@ -77,6 +79,9 @@ data/
   synthetic_corpus.py          synthetic test-fixture generator (NOT real data)
   synthetic_civilizations.py   three generators with KNOWN ground-truth
                                 structure, used by the falsification harness
+  synthetic_continuum.py       two harder generators (pure Markov,
+                                hierarchical administrative) -- see "The
+                                synthetic continuum"
   adversarial_null_model.py    statistics-matched non-linguistic generator
                                 (see "The adversarial null-model test")
   stratified_null_model.py     motif/site-stratified non-linguistic
@@ -136,6 +141,8 @@ experiments/
                          held-out validation")
   functional_class_signature_test.py  do communities have positional
                          signatures? (see "Functional-class signature")
+  synthetic_continuum_test.py  the order-3 finding's most important
+                         correction (see "The synthetic continuum")
   discount_sensitivity_test.py  sweeps the Kneser-Ney discount 0.5-0.9
                          (see note after "Order 3 is validated...")
   matched_size_harappa_test.py  resolves the Harappa/Mohenjo-daro gap
@@ -547,6 +554,24 @@ discount=0.5 to +0.166 at discount=0.9; both nulls' negative gains
 shrink toward, but never cross, zero over the same range). +0.143 bits
 at the default 0.75 is a reasonable representative number, not a fragile
 artifact of that specific choice.
+
+**Correction, added after "The synthetic continuum" below: this
+section's implicit framing needs qualifying.** Everything above
+correctly establishes that the real corpus shows real order-2-conditioned
+sequential structure, validated against nulls that specifically lack it.
+What it does NOT establish, and what an earlier reading of this section
+risked implying, is that this structure is specifically LINGUISTIC.
+Testing this directly (see "The synthetic continuum" below) found that
+this project's own reference "language-like" synthetic generator
+(civ_a) does NOT reliably show the same positive order-3 signature,
+while a synthetic generator with zero linguistic motivation at all
+(civ_e, pure bureaucratic category nesting) does. Order-3 gain, as
+measured here, does not cleanly track "morphological" in either
+direction on these synthetic generators. Read the real corpus's +0.143
+bits as evidence of real order-2-conditioned structure, full stop --
+not as evidence the underlying system is a language, which this same
+method does not reliably detect even in a generator explicitly built to
+have morphology.
 
 ## Order 3 is validated; order 4 and beyond is inconclusive, not "saturated"
 
@@ -1009,6 +1034,100 @@ is not a claim this test makes.
 
 Run it yourself with `python3 experiments/functional_class_signature_test.py`.
 
+## The synthetic continuum: the most important correction in this project so far
+
+The original three synthetic civilizations (`data/synthetic_civilizations.py`)
+are deliberately quite distinct from each other, which is why the
+falsification harness's self-test hits 100%: that number says the
+classifier can separate obviously different toy worlds, not that it can
+separate plausible alternative mechanisms. `data/synthetic_continuum.py`
+adds two harder generators chosen to attack this directly, and chosen
+specifically to stress-test the order-3 finding above:
+
+- **civ_d, pure Markov, no morphology**: a genuine, hand-designed order-2
+  transition structure (real trigram-level dependency exists by
+  construction) with no root+suffix compositional process of any kind.
+- **civ_e, hierarchical administrative**: category, then subcategory
+  conditioned on category, then item sign conditioned on subcategory --
+  a purely bureaucratic nested-filing-system mechanism, genuinely capable
+  of multi-level dependency, with zero linguistic motivation.
+
+`experiments/synthetic_continuum_test.py` ran the order-3 Kneser-Ney gain
+test (same method as "Order 3 is validated..." above) against all five
+civilizations now, averaged over 5 seeds each rather than a single point
+estimate:
+
+| Civilization | Order-3 gain (mean, range across 5 seeds) |
+|---|---|
+| civ_a, language-like (the harness's own reference) | -0.057 [-0.077, -0.036] |
+| civ_b, administrative code | -0.041 [-0.049, -0.028] |
+| civ_c, mixed | +0.004 [-0.017, +0.019] |
+| civ_d, pure Markov, no morphology | -0.140 [-0.157, -0.129] |
+| civ_e, hierarchical administrative | **+0.009 [+0.000, +0.018]** |
+| Real corpus (for reference) | **+0.143** |
+
+The result is more complicated, and more important, than a simple
+"a non-linguistic system also shows the signal" finding. **Both
+directions of the expected pattern broke.** civ_e, which has no
+linguistic motivation at all, DOES show a small but consistently
+positive gain across all 5 seeds. And civ_a, this project's OWN
+reference "language-like" generator, explicitly built with root+suffix
+morphology, does NOT reliably show a positive gain either, stable and
+negative across all 5 seeds tested.
+
+Order-3 Kneser-Ney gain, as measured by this project's method, does not
+cleanly track "morphological" in either direction on these synthetic
+generators. It is more likely sensitive to specific structural
+properties, such as how much of a system's predictive power concentrates
+at order-1 versus is genuinely distributed to order-2, than to
+"linguistic-ness" as a category. civ_a's root-then-suffix design happens
+to concentrate most of its real dependency at order-1 (root predicts the
+immediately following suffix strongly); civ_e's nested administrative
+structure happens to distribute real dependency across two steps back
+(item depends on category, two positions earlier) more consistently.
+Whether real human morphology behaves more like civ_a's design or is
+simply a design choice that doesn't capture what matters is an open
+question this project cannot currently answer.
+
+**Consequence for how the order-3 finding should be described going
+forward**, and the correction now added to "Order 3 is validated..."
+above: the real corpus's +0.143 bits is evidence of real order-2-
+conditioned sequential structure, full stop. It is not evidence the
+underlying system is specifically linguistic, since this project's own
+method does not reliably produce a positive signal even for a generator
+explicitly built to have morphology. This is a real downgrade from how
+that section originally read, and it is the most important correction
+in this project's history: not a bug this time, but a case where the
+metric works exactly as designed and still doesn't support as specific a
+claim as it looked like it did.
+
+One more honest number worth keeping in view: civ_e's positive gain
+(+0.009 mean) is roughly 16 times smaller than the real corpus's +0.143.
+None of the five synthetic civilizations tested come close to real
+data's magnitude in either direction. This comparison establishes that a
+non-linguistic mechanism CAN produce the same sign of effect, not that
+any of these five specific mechanisms are a good quantitative match for
+what the real corpus shows.
+
+Classifying the two new civilizations against the original three (Test 1
+in the script) is a secondary result: both land closest to `civ_c_mixed`
+rather than `civ_a_language_like`, meaning the six-feature classifier's
+"language-like" label is not simply triggered by any structured
+mechanism either. That's a separate, more reassuring data point about
+the classifier's specificity, but it does not offset the order-3 finding
+above, which used a more direct and more targeted method.
+
+What this project has NOT yet built, and should before treating the
+continuum as complete: corrupted/noisy variants of each mechanism,
+small-N sweeps (N=100, 300, 600, 1000) to check whether these patterns
+hold at real-corpus-comparable sample sizes, and a true alpha-continuum
+interpolating between mechanisms rather than discrete alternatives. The
+two generators built here were chosen as the sharpest available test of
+one specific question, not as a complete implementation of the harder
+continuum this project's own "Extending this toolkit" section calls for.
+
+Run it yourself with `python3 experiments/synthetic_continuum_test.py`.
+
 ## Automated tests
 
 Every result in this project was, until now, checked by manually
@@ -1129,14 +1248,14 @@ disagreement above:
   order-3 Kneser-Ney test on the large corpus's own site+motif-known
   subset at multiple granularities, now that CISI alone was shown too
   small for that specific test to validate at any granularity.
-- **Make the synthetic controls harder.** The three civilizations are
-  deliberately quite distinct from each other, which is why the
-  self-test hits 100%. A useful next test is a continuum between
-  `civ_a_language_like` and `civ_b_administrative_code` (mixing
-  parameter alpha from 0 to 1) to find the point at which this
-  classifier's features stop being able to tell them apart, and multiple
-  independent generator variants per class, so the classifier is checked
-  against variation within a category, not just between categories.
+- **Make the synthetic controls harder.** ~~Started~~, see "The synthetic
+  continuum" above: two harder generators (pure Markov with no
+  morphology, hierarchical administrative nesting) were added and
+  produced this project's most important correction so far. Still not
+  done: a true alpha-continuum interpolating between mechanisms rather
+  than discrete alternatives, corrupted/noisy variants of each, and
+  small-N sweeps (N=100, 300, 600, 1000) to check whether these patterns
+  hold at real-corpus-comparable sample sizes.
 - ~~Build an adversarial, statistics-matched null model~~ **Done, see
   "The adversarial null-model test" above.**
 - ~~Add permutation controls to locate where the classifiable signal
