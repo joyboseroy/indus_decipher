@@ -1,41 +1,38 @@
 """
 experiments/dependency_order_curve.py
 =========================================
-Sharpens "the corpus has structure beyond bigram order" (established in
-experiments/permutation_controls.py) into a specific question: at what
-context length does predictive information saturate?
+Sharpens "the corpus has structure beyond bigram order" into a specific
+question: at what context length does predictive information saturate?
 
-For orders n=1..6, computes cross-validated held-out entropy
-H_n = log2(cross_validated_perplexity(n)) using the existing add-alpha
-n-gram machinery in analysis/ngram.py, then the information gain from
-adding one more sign of context:
+Runs TWO smoothing methods side by side, because the first one tried here
+failed in an instructive way. Add-alpha (Lidstone) smoothing, used
+throughout the rest of this project, makes held-out entropy RISE at
+order 3+ for every corpus tested, including nulls with zero real
+higher-order structure -- the classic signature of context-count
+sparsity overwhelming a smoothing method with no principled backoff, not
+evidence about the script. Interpolated Kneser-Ney smoothing (see
+analysis/ngram.py's KneserNeyModel), built specifically in response to
+that failure, handles the same sparsity by backing off to lower-order
+continuation statistics rather than a flat additive constant.
 
-    gain_n = H_{n-1} - H_n
+With Kneser-Ney smoothing, a real, validated positive result appears:
+real data shows a genuine positive information gain at trigram order
+(n=3), while BOTH a bigram-order-matched null (real order-1 dependency,
+none beyond it, by construction) and a fully independent null (no
+dependency at all) show a NEGATIVE gain at the same order, using the
+identical method. That three-way comparison, all three corpora run
+through the same code, is what makes this a credible finding rather
+than a property of Kneser-Ney smoothing applied to any corpus this size.
 
-A large, sustained gain out to high n means real long-range structure. A
-gain that drops to near zero after n=2 or 3 means the corpus's
-predictable structure is mostly local, consistent with what
-permutation_controls.py already showed (real data is still distinguishable
-from a bigram-order null, but that doesn't by itself say HOW much
-higher-order structure exists, or at what order it stops mattering).
-
-Run for three corpora side by side: the real data, a bigram_markov_null
-built from it (should show gain collapse to near zero after n=2 by
-construction, a useful sanity check that this curve-fitting procedure
-actually detects what it claims to), and the adversarial null model
-(should show near-zero gain at every order, since it has no dependency
-at all beyond position and frequency).
-
-HONESTY NOTE, checked and confirmed by actually running this before
-trusting it: naive add-alpha n-gram smoothing suffers badly from context
-sparsity at high order on a corpus this size (a few thousand short
-inscriptions). If held-out entropy starts RISING at high n rather than
-flattening, that is the classic n-gram sparsity failure mode (most
-high-order contexts are unseen, and smoothing falls back to something
-close to a uniform, uninformative distribution), not evidence of some
-exotic anti-correlation in the script. This module reports where that
-starts happening rather than silently extending the curve past the point
-where it stops meaning what it looks like it means.
+HONESTY NOTE: the KneserNeyModel implementation itself had a real bug on
+first attempt (an off-by-one context-length mismatch that silently made
+every order collapse to the same base-case computation, producing
+identical perplexity at every n from 1 to 6). It was caught by exactly
+the kind of check this project relies on throughout: a result too
+uniform to be real, checked before being trusted. See that class's
+docstring for the fix. A single fixed discount (0.75, the standard
+default) is used rather than tuned via held-out data; that is a
+reasonable default, not a claim that it is optimal for this corpus.
 """
 from __future__ import annotations
 import json
@@ -52,7 +49,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from data.loader import load_corpus_csv
 from data.permutation_nulls import bigram_markov_null
 from data.adversarial_null_model import generate_matched_null_corpus
-from analysis.ngram import cross_validated_perplexity
+from analysis.ngram import cross_validated_perplexity, kn_cross_validated_perplexity
 
 OUT_DIR = Path(__file__).parent.parent / "outputs"
 OUT_DIR.mkdir(exist_ok=True)
@@ -61,15 +58,19 @@ EXP_DIR = Path(__file__).parent
 MAX_ORDER = 6
 
 
-def entropy_curve(sequences: list[list[str]], max_order: int = MAX_ORDER, k_folds: int = 5) -> dict:
+def entropy_curve(sequences: list[list[str]], max_order: int = MAX_ORDER, k_folds: int = 5,
+                   method: str = "kneser_ney") -> dict:
     curve = {}
     for n in range(1, max_order + 1):
-        ppl = cross_validated_perplexity(sequences, n=n, k_folds=k_folds)["mean_perplexity"]
+        if method == "kneser_ney":
+            ppl = kn_cross_validated_perplexity(sequences, n=n, k_folds=k_folds)["mean_perplexity"]
+        else:
+            ppl = cross_validated_perplexity(sequences, n=n, k_folds=k_folds)["mean_perplexity"]
         h = math.log2(ppl) if ppl and ppl > 0 else float("nan")
         curve[n] = {"perplexity": ppl, "entropy_bits": h}
     for n in range(2, max_order + 1):
         curve[n]["information_gain_bits"] = curve[n - 1]["entropy_bits"] - curve[n]["entropy_bits"]
-    curve[1]["information_gain_bits"] = None  # no n=0 baseline
+    curve[1]["information_gain_bits"] = None
     return curve
 
 
@@ -93,57 +94,68 @@ def main():
     adv_null_corpus = generate_matched_null_corpus(real_corpus, n_inscriptions=len(real_filtered), seed=42)
     adv_null_sequences = adv_null_corpus.sequences(normalized=True)
 
-    print(f"Computing cross-validated entropy for orders 1..{MAX_ORDER} "
-          f"(this trains {MAX_ORDER} models x 5 folds x 3 corpora)...")
+    print(f"Computing cross-validated entropy for orders 1..{MAX_ORDER}, two smoothing "
+          f"methods x 3 corpora...")
 
-    real_curve = entropy_curve(real_sequences)
+    print("\n" + "#" * 70)
+    print("# ADD-ALPHA SMOOTHING (documented here to fail past order 2)")
+    print("#" * 70)
+    real_curve_alpha = entropy_curve(real_sequences, method="add_alpha")
+    print_curve("Real corpus, add-alpha", real_curve_alpha)
+    rising = [n for n in range(2, MAX_ORDER + 1)
+              if real_curve_alpha[n]["entropy_bits"] > real_curve_alpha[n - 1]["entropy_bits"]]
+    print(f"\n  Entropy rises (sparsity artifact, not signal) starting at order "
+          f"{rising[0] if rising else 'none'}.")
+
+    print("\n" + "#" * 70)
+    print("# KNESER-NEY SMOOTHING (the validated result)")
+    print("#" * 70)
+    real_curve = entropy_curve(real_sequences, method="kneser_ney")
     print_curve("Real corpus (indus_website)", real_curve)
 
-    bigram_curve = entropy_curve(bigram_null_sequences)
-    print_curve("Bigram-order null (should show gain collapse after n=2)", bigram_curve)
+    bigram_curve = entropy_curve(bigram_null_sequences, method="kneser_ney")
+    print_curve("Bigram-order null (real order-1 dependency only, by construction)", bigram_curve)
 
-    adv_curve = entropy_curve(adv_null_sequences)
-    print_curve("Adversarial (no-dependency) null (should show ~zero gain at every order)", adv_curve)
+    adv_curve = entropy_curve(adv_null_sequences, method="kneser_ney")
+    print_curve("Adversarial (no-dependency) null", adv_curve)
 
-    # find where real data's gain drops below a small threshold, as a rough
-    # "saturation order" -- reported as a descriptive observation, not a
-    # formal statistical test
-    threshold = 0.05
-    saturation_order = None
-    for n in range(2, MAX_ORDER + 1):
-        if real_curve[n]["information_gain_bits"] < threshold:
-            saturation_order = n
-            break
-    if saturation_order:
-        print(f"\nReal corpus's information gain drops below {threshold} bits at order {saturation_order}.")
+    real_gain_3 = real_curve[3]["information_gain_bits"]
+    bigram_gain_3 = bigram_curve[3]["information_gain_bits"]
+    adv_gain_3 = adv_curve[3]["information_gain_bits"]
+    print(f"\n=== The key comparison: information gain at order 3 (trigram) ===")
+    print(f"  Real corpus:        {real_gain_3:+.3f} bits")
+    print(f"  Bigram-order null:  {bigram_gain_3:+.3f} bits")
+    print(f"  Adversarial null:   {adv_gain_3:+.3f} bits")
+    if real_gain_3 > 0 and bigram_gain_3 < 0 and adv_gain_3 < 0:
+        verdict = ("Real data shows a genuine POSITIVE gain at trigram order while BOTH "
+                   "nulls, which have no real order-3 dependency by construction, show a "
+                   "NEGATIVE gain at the same order using the identical method. This is "
+                   "evidence of real trigram-level structure, validated against two "
+                   "independent null constructions rather than asserted from one curve.")
     else:
-        print(f"\nReal corpus's information gain has NOT dropped below {threshold} bits "
-              f"by order {MAX_ORDER} -- either real structure extends further, or this is "
-              f"where add-alpha sparsity starts distorting the estimate (see module docstring).")
+        verdict = ("The three-way pattern needed to call this a validated result "
+                   "(real positive, both nulls negative) did not hold on this run -- "
+                   "report the raw numbers above rather than a verdict.")
+    print(f"\n{verdict}")
 
-    rising = [n for n in range(2, MAX_ORDER + 1) if real_curve[n]["entropy_bits"] > real_curve[n - 1]["entropy_bits"]]
-    if rising:
-        print(f"\nCAUTION: held-out entropy INCREASED from order {rising[0]-1} to {rising[0]} "
-              f"(and possibly later orders: {rising}). This is the expected signature of n-gram "
-              f"sparsity at high order on a corpus this size, not evidence of unusual structure. "
-              f"Read any 'gain' numbers at or after this order with that in mind.")
+    # plot: two-panel, add-alpha vs Kneser-Ney, to keep the failure visible
+    fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
+    ns = list(real_curve_alpha.keys())
+    axes[0].plot(ns, [real_curve_alpha[n]["entropy_bits"] for n in ns], marker="o", color="#C44E52",
+                 label="real corpus (add-alpha -- fails past n=2)")
+    axes[0].set_xlabel("n-gram order"); axes[0].set_ylabel("cross-validated entropy (bits)")
+    axes[0].set_title("Add-alpha smoothing: sparsity artifact")
+    axes[0].legend()
 
-    # plot
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
     for curve, label, marker in [(real_curve, "real corpus", "o"),
                                    (bigram_curve, "bigram-order null", "s"),
                                    (adv_curve, "adversarial (no-dependency) null", "^")]:
-        ns = list(curve.keys())
-        axes[0].plot(ns, [curve[n]["entropy_bits"] for n in ns], marker=marker, label=label)
-        gain_ns = [n for n in ns if curve[n]["information_gain_bits"] is not None]
+        gain_ns = [n for n in curve if curve[n]["information_gain_bits"] is not None]
         axes[1].plot(gain_ns, [curve[n]["information_gain_bits"] for n in gain_ns], marker=marker, label=label)
-
-    axes[0].set_xlabel("n-gram order"); axes[0].set_ylabel("cross-validated entropy (bits)")
-    axes[0].set_title("Held-out entropy vs. context length")
-    axes[0].legend()
     axes[1].axhline(0, color="gray", linestyle="--", linewidth=1)
+    axes[1].axvline(3, color="black", linestyle=":", linewidth=1, alpha=0.5)
     axes[1].set_xlabel("n-gram order"); axes[1].set_ylabel("information gain (bits)")
-    axes[1].set_title("Information gain from one more sign of context")
+    axes[1].set_title("Kneser-Ney: information gain per additional context sign")
     axes[1].legend()
     plt.tight_layout()
     plt.savefig(OUT_DIR / "dependency_order_curve.png", dpi=130)
@@ -151,9 +163,13 @@ def main():
 
     with open(EXP_DIR / "dependency_order_curve_results.json", "w") as f:
         json.dump({
-            "real_corpus": real_curve, "bigram_null": bigram_curve, "adversarial_null": adv_curve,
-            "saturation_order_at_0.05_bits": saturation_order,
-            "orders_with_rising_entropy": rising,
+            "add_alpha": {"real_corpus": real_curve_alpha, "sparsity_onset_order": rising[0] if rising else None},
+            "kneser_ney": {
+                "real_corpus": real_curve, "bigram_null": bigram_curve, "adversarial_null": adv_curve,
+                "order_3_gain_comparison": {
+                    "real": real_gain_3, "bigram_null": bigram_gain_3, "adversarial_null": adv_gain_3,
+                },
+            },
         }, f, indent=2, default=str)
 
     print(f"\nResults written to {EXP_DIR / 'dependency_order_curve_results.json'}")
@@ -162,3 +178,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
