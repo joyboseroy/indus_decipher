@@ -131,6 +131,9 @@ experiments/
   sign_embeddings_analysis.py  cross-validates embeddings against the
                          substitution graph (see "Contextual sign
                          embeddings")
+  cross_site_held_out_validation.py  discovery/evaluation split across
+                         sites, the independence fix (see "Cross-site
+                         held-out validation")
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -833,9 +836,14 @@ Result: **all 10 tested communities show higher internal similarity than
 the random baseline**, several by a wide margin (community 7: 0.80
 internal similarity vs. 0.20 baseline). Two structurally independent
 methods, one local and strict, one global and loose, agree on which
-signs cluster together. That is real convergent evidence these are
-genuine functional classes rather than an artifact specific to how the
-minimal-pair miner happens to work.
+signs cluster together. That is convergent evidence these communities
+capture reproducible distributional and substitutional structure, not
+an artifact specific to how the minimal-pair miner happens to work.
+(An earlier draft of this section said "genuine functional classes" --
+downgraded per external review, since "functional class" quietly smuggles
+in an interpretation the next paragraph explicitly disclaims. The
+weaker, more precise phrasing is the one this project should stand
+behind.)
 
 What this does NOT establish: what these classes mean. A sign class
 found this way could be a morphological paradigm, a semantic category,
@@ -843,7 +851,58 @@ an administrative code family, or something else entirely; distributional
 and substitutional agreement says the classes are real and stable, not
 what function they serve. That is future work, not something claimed here.
 
+**A more important limitation than the wording, flagged by the same
+review: this test evaluates embeddings on the SAME corpus used to
+discover the communities.** That isn't circular in the strict sense
+(minimal pairs and PPMI co-occurrence are genuinely different signals),
+but it does leave open a real confound: larger substitution communities
+likely also skew toward higher-frequency signs, and higher-frequency
+signs get less noisy embeddings for reasons that have nothing to do with
+any real functional relationship. See "Cross-site held-out validation"
+below for the actual fix, not just an acknowledgment of the problem.
+
 Run it yourself with `python3 experiments/sign_embeddings_analysis.py`.
+
+## Cross-site held-out validation: the fix for the independence concern above
+
+The corroboration above has a real limitation, raised in external
+review: embeddings were evaluated on the SAME corpus used to discover
+the communities. Not circular in the strict sense (minimal pairs and
+PPMI co-occurrence are genuinely different signals), but a real
+confound remains open: larger communities likely skew toward
+higher-frequency signs, and higher-frequency signs get less noisy
+embeddings for reasons unrelated to any real functional relationship.
+
+`experiments/cross_site_held_out_validation.py` fixes this properly, and
+happens to make progress on the long-open Harappa/Mohenjo-daro stability
+question at the same time, since both need the identical fix: discover
+substitution communities using ONLY Mohenjo-daro inscriptions, train
+PPMI+SVD embeddings using ONLY Harappa inscriptions (a fully disjoint
+corpus, different site, no overlap with discovery at all), then test
+whether the Mohenjo-daro-discovered communities still show elevated
+internal similarity measured against Harappa's own, much smaller
+(335-sign) vocabulary.
+
+Result: **10 of 11 testable communities survive the fully disjoint
+split** (one community's members simply weren't present in Harappa's
+vocabulary in testable numbers, and one, community 2, did not
+corroborate). That is a considerably harder bar than the original
+same-corpus test, and most of the original result survives it.
+
+This also reframes, rather than just confirms, the earlier cross-site
+finding in "Stage 2: does archaeological composition..." above. That
+section found substitution-graph communities replicate more weakly at
+Harappa using strict Jaccard overlap on minimal-pair mining (which needs
+literal matching-context substitution pairs, and Harappa has less
+motif-labeled data to find them in). This result suggests the
+DISTRIBUTIONAL signature of those same communities is still present in
+Harappa's data even where the stricter substitution test struggled --
+consistent with the earlier weak replication being partly a data-density
+limitation of the minimal-pair method specifically, not clean evidence
+the underlying classes are Mohenjo-daro-specific. Both results should be
+read together, not the weaker one in isolation.
+
+Run it yourself with `python3 experiments/cross_site_held_out_validation.py`.
 
 ## Known limitations and other honesty notes
 
@@ -915,14 +974,17 @@ disagreement above:
   note the leakage bug documented there before trusting a naive version
   of this).
 - **Test whether Harappa's weaker class-stability is a sample-size
-  effect.** The cross-site stability table above shows every substitution
-  class replicating worse at Harappa than at Mohenjo-daro, and
-  Mohenjo-daro supplies more of the corpus. Before concluding anything
-  site-specific, subsample Mohenjo-daro DOWN to Harappa's motif-labeled
-  count and see whether the gap shrinks or persists. This is the same
-  logic as "Resolved: why the two real corpora used to disagree" above,
-  applied to the substitution-graph result instead of the falsification
-  harness.
+  effect, specifically.** "Cross-site held-out validation" above showed
+  the DISTRIBUTIONAL signature of Mohenjo-daro-discovered communities
+  largely survives evaluation on Harappa's own data (10 of 11), which
+  points toward the earlier weaker Jaccard-based replication being a
+  data-density limitation of minimal-pair mining specifically, not the
+  classes being absent from Harappa. That's suggestive, not proof; the
+  matched-size subsampling test originally proposed here (subsample
+  Mohenjo-daro DOWN to Harappa's motif-labeled count, rerun the SAME
+  strict Jaccard test, see if the gap shrinks) still hasn't been run and
+  would settle the sample-size question directly rather than inferring
+  it from a different method's result.
 - ~~Resolve the allograph-granularity ambiguity properly~~ **Done, see
   "Allograph granularity" above.** Follow-up not yet done: rerun the
   order-3 Kneser-Ney test on the large corpus's own site+motif-known
