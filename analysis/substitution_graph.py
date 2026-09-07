@@ -105,6 +105,52 @@ class StabilityResult:
     testable: bool
 
 
+def test_class_stability_subsampled(full_corpus: Corpus, full_class: set[str],
+                                      source_site: str, target_size: int, n_trials: int,
+                                      tier: str = "motif", min_edge_weight: int = 1,
+                                      seed: int = 0) -> list[float]:
+    """Same idea as test_class_stability_by_site, but instead of using a
+    DIFFERENT site's full data, repeatedly subsamples `target_size`
+    inscriptions from `source_site` (matched to another site's motif-
+    labeled count, e.g. Harappa's), reruns the same minimal-pair mining
+    and Jaccard comparison on each subsample, and returns the resulting
+    distribution of Jaccard scores. This directly tests whether a site's
+    weaker replication (measured via test_class_stability_by_site) is
+    explained by sample size alone: if subsampling the LARGER site down
+    to the smaller site's count reproduces similarly low Jaccard scores,
+    that is real evidence for a sample-size explanation, not a genuine
+    site-specific difference.
+    """
+    import random
+    rng = random.Random(seed)
+    filtered = full_corpus.filter(exclude_damaged=True)
+    source_inscriptions = [ins for ins in filtered.inscriptions if ins.site == source_site]
+
+    jaccards = []
+    for trial in range(n_trials):
+        sample = rng.sample(source_inscriptions, min(target_size, len(source_inscriptions)))
+        sample_corpus = Corpus(sample)
+        sample_vocab = set(sign for ins in sample for sign in ins.normalized_signs())
+        class_at_sample = full_class & sample_vocab
+
+        if len(class_at_sample) < 2:
+            continue
+
+        sample_pairs = find_minimal_pairs(sample_corpus)
+        sample_graph = build_substitution_graph_nx(sample_pairs, tier=tier)
+        sample_classes = connected_component_classes(sample_graph, min_edge_weight=min_edge_weight)
+
+        best_overlap = 0.0
+        for c in sample_classes:
+            inter = len(class_at_sample & c)
+            union = len(class_at_sample | c) or 1
+            jac = inter / union
+            best_overlap = max(best_overlap, jac)
+        jaccards.append(best_overlap)
+
+    return jaccards
+
+
 def test_class_stability_by_site(full_corpus: Corpus, full_class: set[str],
                                    site: str, tier: str = "motif",
                                    min_edge_weight: int = 1) -> StabilityResult:
