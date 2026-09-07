@@ -1,0 +1,63 @@
+{
+  "indus": {
+    "order_3_gain": 0.14330785738543472,
+    "network_stats": {
+      "n_sequences": 2543,
+      "n_signs": 592,
+      "reciprocity_empirical": 0.1905697445972495,
+      "reciprocity_random_mean": 0.39779592281895193,
+      "reciprocity_random_std": 0.00565704025294714,
+      "connectivity_empirical": 0.008714161796932067,
+      "connectivity_random_mean": 0.012926434669466764,
+      "connectivity_random_std": 6.67885911739615e-05,
+      "n_solo_signs": 6,
+      "n_beginners_empirical": 115,
+      "n_beginners_random_mean": 52.1,
+      "n_beginners_random_std": 5.4580216195980755,
+      "n_enders_empirical": 44,
+      "n_enders_random_mean": 50.15,
+      "n_enders_random_std": 4.552746423863293
+    }
+  },
+  "etcsl_full": {
+    "order_3_gain": 0.36987157086529265,
+    "n_lines": 33338
+  },
+  "etcsl_matched": {
+    "order_3_gain": -0.018914714234847807,
+    "network_stats": {
+      "n_sequences": 2543,
+      "n_signs": 1613,
+      "reciprocity_empirical": 0.11080848623853211,
+      "reciprocity_random_mean": 0.16466667574477656,
+      "reciprocity_random_std": 0.0038017376088535335,
+      "connectivity_empirical": 0.0026812526400306867,
+      "connectivity_random_mean": 0.003037990690180412,
+      "connectivity_random_std": 7.832972632698586e-06,
+      "n_solo_signs": 0,
+      "n_beginners_empirical": 291,
+      "n_beginners_random_mean": 183.4,
+      "n_beginners_random_std": 8.76013698523031,
+      "n_enders_empirical": 97,
+      "n_enders_random_mean": 187.35,
+      "n_enders_random_std": 13.372639978702784
+    },
+    "n_lines": 2543
+  },
+  "wucs_reference": {
+    "n_sequences": 1821,
+    "n_signs": 593,
+    "reciprocity_empirical": 0.148,
+    "reciprocity_random_mean": 0.338,
+    "reciprocity_random_std": 0.007,
+    "connectivity_empirical": 0.0077,
+    "connectivity_random_mean": 0.011,
+    "n_solo_signs": 21,
+    "n_beginners_empirical": 128,
+    "n_beginners_random_mean": 66.26,
+    "n_beginners_random_std": 6.59,
+    "n_enders_empirical": 43,
+    "n_enders_random_mean": 62.61,
+    "n_enders_random_std": 6.71
+  }
+}
