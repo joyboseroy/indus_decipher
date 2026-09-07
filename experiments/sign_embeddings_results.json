@@ -1,0 +1,163 @@
+{
+  "n_communities_tested": 10,
+  "n_corroborated": 10,
+  "results": [
+    {
+      "community_index": 0,
+      "size": 15,
+      "members": [
+        "G191",
+        "G219",
+        "G220",
+        "G235",
+        "G33",
+        "G416",
+        "G42",
+        "G49",
+        "G717",
+        "G803",
+        "G806",
+        "G831",
+        "G879",
+        "G912",
+        "G97"
+      ],
+      "internal_similarity": 0.305994772569995,
+      "random_baseline": 0.19463121918085544,
+      "corroborated": true
+    },
+    {
+      "community_index": 1,
+      "size": 12,
+      "members": [
+        "G142",
+        "G16",
+        "G161",
+        "G17",
+        "G3",
+        "G31",
+        "G4",
+        "G5",
+        "G740",
+        "G843",
+        "G844",
+        "G871"
+      ],
+      "internal_similarity": 0.24256394695315853,
+      "random_baseline": 0.19405176798557583,
+      "corroborated": true
+    },
+    {
+      "community_index": 2,
+      "size": 11,
+      "members": [
+        "G141",
+        "G176",
+        "G215",
+        "G243",
+        "G255",
+        "G384",
+        "G388",
+        "G61",
+        "G910",
+        "G923",
+        "G927"
+      ],
+      "internal_similarity": 0.3136044435520454,
+      "random_baseline": 0.19479098599801148,
+      "corroborated": true
+    },
+    {
+      "community_index": 3,
+      "size": 8,
+      "members": [
+        "G154",
+        "G156",
+        "G390",
+        "G405",
+        "G407",
+        "G430",
+        "G617",
+        "G892"
+      ],
+      "internal_similarity": 0.25466960064951044,
+      "random_baseline": 0.19675179123197828,
+      "corroborated": true
+    },
+    {
+      "community_index": 4,
+      "size": 6,
+      "members": [
+        "G58",
+        "G621",
+        "G690",
+        "G731",
+        "G792",
+        "G832"
+      ],
+      "internal_similarity": 0.4962297616266096,
+      "random_baseline": 0.19182876380259142,
+      "corroborated": true
+    },
+    {
+      "community_index": 5,
+      "size": 3,
+      "members": [
+        "G175",
+        "G231",
+        "G233"
+      ],
+      "internal_similarity": 0.5932991466204328,
+      "random_baseline": 0.20302405060117185,
+      "corroborated": true
+    },
+    {
+      "community_index": 6,
+      "size": 3,
+      "members": [
+        "G817",
+        "G820",
+        "G861"
+      ],
+      "internal_similarity": 0.5130932194169232,
+      "random_baseline": 0.20302405060117185,
+      "corroborated": true
+    },
+    {
+      "community_index": 7,
+      "size": 3,
+      "members": [
+        "G48",
+        "G519",
+        "G772"
+      ],
+      "internal_similarity": 0.8008883139863913,
+      "random_baseline": 0.20302405060117185,
+      "corroborated": true
+    },
+    {
+      "community_index": 8,
+      "size": 3,
+      "members": [
+        "G240",
+        "G460",
+        "G776"
+      ],
+      "internal_similarity": 0.35736012956057434,
+      "random_baseline": 0.20302405060117185,
+      "corroborated": true
+    },
+    {
+      "community_index": 9,
+      "size": 2,
+      "members": [
+        "G137",
+        "G90"
+      ],
+      "internal_similarity": 0.26863315198499865,
+      "random_baseline": 0.184618845372586,
+      "corroborated": true
+    }
+  ],
+  "verdict": "Most substitution-graph communities ARE corroborated by an independent, structurally different method (distributional context similarity). This is convergent evidence these are real functional classes, not artifacts of the minimal-pair mining procedure alone."
+}
