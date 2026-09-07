@@ -36,7 +36,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from data.loader import Corpus, load_corpus_csv
 from data.permutation_nulls import (within_inscription_shuffle, global_shuffle,
-                                     position_preserving_shuffle, bigram_markov_null)
+                                     position_preserving_shuffle, bigram_markov_null,
+                                     trigram_markov_null)
 from analysis.falsification import extract_features, leave_one_out_accuracy, FEATURE_NAMES
 
 OUT_DIR = Path(__file__).parent.parent / "outputs"
@@ -58,6 +59,8 @@ CONTROLS = {
     "global_shuffle": lambda real_corpus, sample, seed: global_shuffle(sample, seed=seed),
     "position_preserving_shuffle": lambda real_corpus, sample, seed: position_preserving_shuffle(sample, seed=seed),
     "bigram_markov_null": lambda real_corpus, sample, seed: bigram_markov_null(
+        real_corpus, n_inscriptions=len(sample.inscriptions), seed=seed),
+    "trigram_markov_null": lambda real_corpus, sample, seed: trigram_markov_null(
         real_corpus, n_inscriptions=len(sample.inscriptions), seed=seed),
 }
 

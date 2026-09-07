@@ -47,7 +47,7 @@ import math
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from data.loader import load_corpus_csv
-from data.permutation_nulls import bigram_markov_null
+from data.permutation_nulls import bigram_markov_null, trigram_markov_null
 from data.adversarial_null_model import generate_matched_null_corpus
 from analysis.ngram import cross_validated_perplexity, kn_cross_validated_perplexity
 
@@ -91,6 +91,9 @@ def main():
     bigram_null_corpus = bigram_markov_null(real_corpus, n_inscriptions=len(real_filtered), seed=42)
     bigram_null_sequences = bigram_null_corpus.sequences(normalized=True)
 
+    trigram_null_corpus = trigram_markov_null(real_corpus, n_inscriptions=len(real_filtered), seed=42)
+    trigram_null_sequences = trigram_null_corpus.sequences(normalized=True)
+
     adv_null_corpus = generate_matched_null_corpus(real_corpus, n_inscriptions=len(real_filtered), seed=42)
     adv_null_sequences = adv_null_corpus.sequences(normalized=True)
 
@@ -116,13 +119,16 @@ def main():
     bigram_curve = entropy_curve(bigram_null_sequences, method="kneser_ney")
     print_curve("Bigram-order null (real order-1 dependency only, by construction)", bigram_curve)
 
+    trigram_curve = entropy_curve(trigram_null_sequences, method="kneser_ney")
+    print_curve("Trigram-order null (real order-1 AND order-2 dependency, by construction)", trigram_curve)
+
     adv_curve = entropy_curve(adv_null_sequences, method="kneser_ney")
     print_curve("Adversarial (no-dependency) null", adv_curve)
 
     real_gain_3 = real_curve[3]["information_gain_bits"]
     bigram_gain_3 = bigram_curve[3]["information_gain_bits"]
     adv_gain_3 = adv_curve[3]["information_gain_bits"]
-    print(f"\n=== The key comparison: information gain at order 3 (trigram) ===")
+    print(f"\n=== The order-3 comparison (from last session, unchanged) ===")
     print(f"  Real corpus:        {real_gain_3:+.3f} bits")
     print(f"  Bigram-order null:  {bigram_gain_3:+.3f} bits")
     print(f"  Adversarial null:   {adv_gain_3:+.3f} bits")
@@ -138,6 +144,31 @@ def main():
                    "report the raw numbers above rather than a verdict.")
     print(f"\n{verdict}")
 
+    real_gain_4 = real_curve[4]["information_gain_bits"]
+    bigram_gain_4 = bigram_curve[4]["information_gain_bits"]
+    trigram_gain_4 = trigram_curve[4]["information_gain_bits"]
+    adv_gain_4 = adv_curve[4]["information_gain_bits"]
+    print(f"\n=== The decisive order-4 comparison: does structure extend past trigram? ===")
+    print(f"  Real corpus:                          {real_gain_4:+.3f} bits")
+    print(f"  Trigram-order null (has real order 1+2): {trigram_gain_4:+.3f} bits")
+    print(f"  Bigram-order null (has real order 1 only): {bigram_gain_4:+.3f} bits")
+    print(f"  Adversarial null (no real dependency):   {adv_gain_4:+.3f} bits")
+    print("""
+  Unlike order 3, this is NOT a clean three-way split. All four values are
+  small and negative (-0.045 to -0.142 bits). Real data's order-4 gain
+  (-0.088) sits in between the trigram-order null's (-0.045, the closest
+  to zero of all four) and the two nulls lacking real order-2 dependency
+  (-0.140, -0.142). There is no validated positive signal at order 4 the
+  way there was at order 3: real data does not clearly separate from a
+  null that already has real order-1-and-2 structure baked in. The
+  honest reading is that this project's evidence for real sequential
+  structure is validated specifically at order 3, and NOT validated
+  (not refuted either -- genuinely inconclusive) at order 4 and beyond.
+  Building 4-gram and 5-gram null generators to chase this further is
+  probably not worth the effort until there is a specific reason to
+  expect a real order-4 effect; the data as it stands is most simply
+  read as saturating around order 3.""")
+
     # plot: two-panel, add-alpha vs Kneser-Ney, to keep the failure visible
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
     ns = list(real_curve_alpha.keys())
@@ -149,6 +180,7 @@ def main():
 
     for curve, label, marker in [(real_curve, "real corpus", "o"),
                                    (bigram_curve, "bigram-order null", "s"),
+                                   (trigram_curve, "trigram-order null", "D"),
                                    (adv_curve, "adversarial (no-dependency) null", "^")]:
         gain_ns = [n for n in curve if curve[n]["information_gain_bits"] is not None]
         axes[1].plot(gain_ns, [curve[n]["information_gain_bits"] for n in gain_ns], marker=marker, label=label)
@@ -165,9 +197,14 @@ def main():
         json.dump({
             "add_alpha": {"real_corpus": real_curve_alpha, "sparsity_onset_order": rising[0] if rising else None},
             "kneser_ney": {
-                "real_corpus": real_curve, "bigram_null": bigram_curve, "adversarial_null": adv_curve,
+                "real_corpus": real_curve, "bigram_null": bigram_curve,
+                "trigram_null": trigram_curve, "adversarial_null": adv_curve,
                 "order_3_gain_comparison": {
                     "real": real_gain_3, "bigram_null": bigram_gain_3, "adversarial_null": adv_gain_3,
+                },
+                "order_4_gain_comparison": {
+                    "real": real_gain_4, "trigram_null": trigram_gain_4,
+                    "bigram_null": bigram_gain_4, "adversarial_null": adv_gain_4,
                 },
             },
         }, f, indent=2, default=str)
