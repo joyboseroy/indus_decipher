@@ -50,20 +50,22 @@ earned by being wrong first and checking.
 ## Status
 
 Active exploration, not a finished study, but no longer an early-stage
-one. Three real corpora anchor the analysis: `indus_website` (2,543
-inscriptions, 93% now linked to real Mahadevan/CISI catalog numbers)
-and CISI at three granularities. Three genuine external-language
-calibration corpora (Sumerian, Sanskrit, Old Tamil) are integrated
-alongside a five-civilization synthetic continuum. The headline finding
--- real order-2-conditioned sequential structure at order 3, validated
-against independent nulls, archaeological stratification, and two real
-languages at matched scale -- has survived several rounds of adversarial
-self-checking, including two corrections where the initial framing
-overstated what the evidence showed (see "The synthetic continuum" and
-the note after "Order 3 is validated..." below). A 28-test automated
-suite (`pytest tests/`) now guards the shared modules. M77/EBUDS itself,
-the classic literature's actual corpus, is still not directly obtained;
-see "Other real-data leads" for what was tried and what came of it.
+one. Four real Indus corpora anchor the analysis: `indus_website`
+(2,543 inscriptions, 93% now linked to real Mahadevan/CISI catalog
+numbers), CISI at three granularities, and -- as of the most recent
+addition -- **the actual canonical M77/IDF-80 corpus** (3,573 lines,
+obtained and independently verified; see "M77 obtained and verified"
+below). Three genuine external-language calibration corpora (Sumerian,
+Sanskrit, Old Tamil) are integrated alongside a five-civilization
+synthetic continuum. The headline finding -- real order-2-conditioned
+sequential structure at order 3, validated against independent nulls,
+archaeological stratification, two real languages at matched scale, and
+now the actual classic-literature corpus itself (+0.147 bits,
+essentially identical to the original +0.143) -- has survived several
+rounds of adversarial self-checking, including two corrections where the
+initial framing overstated what the evidence showed (see "The synthetic
+continuum" and the note after "Order 3 is validated..." below). A
+28-test automated suite (`pytest tests/`) now guards the shared modules.
 
 ## Quick start
 
@@ -122,8 +124,11 @@ data/
                                          "Old Tamil: located, tried, and
                                          the predicted sparsity problem
                                          confirmed empirically")
+  convert_m77_indusscript_to_csv.py     real M77 converter (see "M77
+                                         obtained and verified")
   indus_website_real_corpus.csv         real data (2,543 inscriptions)
   cisi_real_corpus.csv                  real data (179 inscriptions)
+  m77_indusscript_real_corpus.csv       real M77 data (3,573 lines)
 analysis/
   positional.py         unigram counts, Zipf-Mandelbrot fit, initial/final
                          positional asymmetry, sign-doubling rate
@@ -253,16 +258,16 @@ Regenerate either CSV from a local copy of its source repo with
 `python3 data/convert_indus_website_sql_to_csv.py <sql_path> <out.csv>` or
 `python3 data/convert_cisi_to_csv.py <json_glob> <out.csv>`.
 
-## Other real-data leads (M77/EBUDS: extensively investigated, still not directly obtained)
+## Other real-data leads (M77: obtained -- see below for the full story)
 
 **Mahadevan's M77 concordance / EBUDS** (2,906 texts, 417 signs), the
-corpus behind Yadav et al. 2010 and Rao et al. 2009, remains the single
-highest-value missing piece: every headline statistical claim in the
-classic literature was made on this exact corpus, not on either corpus
-this project currently has. This was investigated substantially, not
-just noted as a gap, and it is worth recording what was actually tried
-and what came of each attempt, since several leads that looked
-promising did not pan out and future effort shouldn't repeat them:
+corpus behind Yadav et al. 2010 and Rao et al. 2009, **was obtained and
+independently verified** (see "M77 obtained and verified: the headline
+finding replicates on the actual canonical corpus" below for the full
+account, including the verification process and the replication
+result). It is worth recording what was tried before that, and what
+came of each attempt, since most of it did not pan out and future
+effort on a *different* corpus shouldn't repeat the same dead ends:
 
 - **Sukii/decipher-ivc** (GitHub): real repository, but contains scanned
   PDF pages and a handful of PNG images, not machine-readable sequence
@@ -275,14 +280,13 @@ promising did not pan out and future effort shouldn't repeat them:
 - **A claimed Kaggle dataset** ("IM-417-150"): no evidence found that it
   exists at all; treated as unverified, not pursued.
 - **indusscript.in** (the RMRL/Indus Research Centre's official portal):
-  confirmed real and confirmed to host the actual IM77/IDF-80 data, but
-  it is a Google-login-gated interactive web application with no public
-  bulk export. Extracting a usable subset requires either manual
-  copy-paste through the UI or a scripted session reusing real login
-  cookies (Playwright/Selenium) -- both are tasks for a human with
-  browser access, not something this environment can do; the sandbox
-  this project has been developed in also cannot reach the domain
-  directly regardless.
+  confirmed real and confirmed to host the actual IM77/IDF-80 data,
+  gated behind a Google login with no public bulk-download button. This
+  is the lead that ultimately worked: a logged-in browser session plus
+  JavaScript extraction of the site's own Firestore backend produced a
+  full 3,916-record raw export, done by a human with browser access,
+  not by this project's own tools (this environment still cannot reach
+  the domain directly). See "M77 obtained and verified" below.
 - **CISI photographic plates** (uploaded directly, Mohenjo-daro seals
   M-1 through M-52): genuine primary-source photographs with real,
   visible sign impressions. Transcribing them into correct Mahadevan
@@ -315,9 +319,10 @@ Adhikari's deep-learning seal-segmentation pipeline. This is the
 vision/OCR layer, not sign-sequence data, and would only matter if this
 project extends into image processing.
 
-Once a real bulk M77/EBUDS export is obtained by any route, converting
-it into the schema in `data/loader.py` is the only integration work
-needed. Nothing else in the codebase changes.
+M77/EBUDS itself is done (see above). The general principle that made it
+straightforward once the data arrived still holds for any future real
+export: converting it into the schema in `data/loader.py` is the only
+integration work needed. Nothing else in the codebase changes.
 
 ## The reading-direction diagnostic
 
@@ -1477,6 +1482,95 @@ chance-exceeding uniqueness that hypothesis predicts.
 
 Run it yourself with `python3 experiments/uniqueness_significance_test.py`.
 
+## M77 obtained and verified: the headline finding replicates on the actual canonical corpus
+
+This is the single most consequential addition to this project since it
+began, and it needs the same standard of verification everything else
+here has had, not less, because "the corpus everyone has been waiting
+for arrived" is exactly the kind of claim that most deserves independent
+checking before being trusted.
+
+**Provenance:** obtained via an authenticated browser session on
+indusscript.in (the RMRL/Indus Research Centre's official portal),
+using JavaScript to extract the site's own Firestore backend, then
+exported as raw JSON. This is a real limitation worth stating plainly:
+reproducing this exact extraction requires a login and browser access
+neither this project's sandbox nor an anonymous third party has: it is
+not a one-command reproducible data source the way ETCSL, DCS, and the
+Sangam corpus are. The raw export itself, once obtained, is fully
+reproducible from here on.
+
+**Verification performed before trusting this data.** Every specific
+number and worked example claimed about this export was independently
+recomputed from the raw JSON, not accepted from a secondhand summary:
+3,916 total records; 343 with `posnum=0` (all of which also have
+`dir=0`, confirming they are a consistent, identifiable placeholder
+category); exactly 3,573 non-empty records; exactly **2,906 distinct
+`textnum`s, matching the published M77 text count exactly**; 14,153
+total sign occurrences; 562 distinct raw tokens; 504 starred
+occurrences; 458 distinct base signs. Three specific worked examples
+(text 1001's two-line split into a 5-sign and a 1-sign record with
+different `sideline` values; text 1003's starred sign `*086`; text
+1012's 10-sign-then-3-sign split) were checked against the raw JSON and
+matched exactly. This is real, internally consistent data.
+
+**Schema decisions, documented in `data/convert_m77_indusscript_to_csv.py`:**
+the natural unit is the individual M77 LINE (a unique `(textnum,
+sideline)` pair, verified to have zero duplicates across all 3,573
+non-empty records), not the whole text, since a single text can contain
+multiple sequentially separate line records that were never adjacent in
+the original inscription. Signs are prefixed `MSg` to keep this
+project's several sign-numbering schemes visibly distinct from each
+other. A leading `*` in the source (an uncertain/starred reading) is
+stripped from the primary sign identity, rather than treated as a
+different sign, and captured instead as `mean_uncertainty` (percentage
+of starred signs in that line). Site, object type, and motif are not
+available in this export and are left `"unknown"` rather than guessed.
+
+**Reading direction, determined empirically, not assumed:** the `dir`
+field has 7 undecoded values, so rather than guess a mapping, the data
+was loaded as-stored and `analysis/direction_test.py` was run on it,
+the same diagnostic used for both other real corpora. Result: as-stored
+is correct (final position entropy 4.67 bits, clearly lower than
+initial position's 6.50 bits), matching the classic published fingerprint
+directly, no reversal needed.
+
+**The replication, the actual point of all this:**
+
+| Test | This project's other corpus (N=2,543) | Real M77 (N=3,573) |
+|---|---|---|
+| Order-3 gain, real | +0.143 | **+0.147** |
+| Order-3 gain, bigram-order null | -0.140 | -0.147 |
+| Order-3 gain, adversarial null | -0.179 | -0.188 |
+| Conditional entropy | 3.26 bits | 3.37 bits |
+| Whole-corpus uniqueness vs. null distribution | below null range | below null range |
+
+The headline finding -- real data positive, both nulls negative, at a
+magnitude too close to be coincidence -- replicates almost exactly on
+the actual canonical corpus behind Rao et al. 2009 and Yadav et al.
+2010, obtained completely independently of this project's other corpus
+(different digitization project, different sign-encoding scheme, larger
+N). The conditional-entropy figure (3.37 bits) sits close to both this
+project's own indus_website result (3.26 bits) and Rao/Yadav's published
+figure (~3.23 bits). The uniqueness-versus-null result (see "Whole-
+sequence uniqueness" above) also replicates in the same direction.
+
+**One real, honestly-reported divergence, not smoothed over:** the
+falsification harness classifies real M77 as `civ_c_mixed`, not
+`civ_a_language_like` the way the indus_website corpus does (distances:
+mixed 3.93, language-like 4.29, administrative 5.65 -- close enough
+between mixed and language-like that this should not be read as a clean
+disagreement, but it is a real difference in the classifier's output,
+not something to paper over). This project does not currently have an
+explanation for this divergence and is not offering a speculative one;
+it is recorded as an open question for whoever investigates next,
+possibly related to this corpus's shorter mean length (3.96 signs vs.
+4.44) or its different sign-encoding granularity, neither of which has
+been tested against it yet.
+
+Run the converter yourself with
+`python3 data/convert_m77_indusscript_to_csv.py`.
+
 ## Real CISI/Mahadevan numbers recovered for the core corpus
 
 This was sitting in the source data the entire project has been built
@@ -1734,12 +1828,15 @@ license notes).
 
 ## External validation against an independently published corpus
 
-The highest-priority missing piece remains M77/EBUDS itself (see
-CITATIONS.md and "Other real-data leads"), which needs either a
-successful data request or a bulk download the sandbox environment this
-project has been developed in cannot reach directly. While that's
-pending, `experiments/wucs_comparison_test.py` does something achievable
-right now: Sinha, Izhar, Pan and Wells (2010, arXiv:1005.4997) published
+This section was written while M77/EBUDS was still the highest-priority
+missing piece; it has since been obtained (see "M77 obtained and
+verified" above). Kept here as it stood, since the WUCS comparison below
+remains a real, independent line of evidence in its own right, not
+redundant with the M77 result -- WUCS is a third corpus, compiled by
+Bryan Wells using an entirely different methodology from both this
+project's own digitizations and Mahadevan's own M77.
+`experiments/wucs_comparison_test.py`: Sinha, Izhar, Pan and Wells
+(2010, arXiv:1005.4997) published
 exact network statistics computed on the WUCS corpus (Wells Unique
 Complete Single-line dataset, 1,821 sequences, 593 signs, compiled
 independently by Bryan Wells from site reports and photographic
@@ -1758,13 +1855,10 @@ as significant evidence of syntactic constraint. The quantitative values
 land close too, given how independent the two corpora are: 592 signs
 here versus 593 in WUCS; connectivity 0.0087 versus 0.0077.
 
-This is not a substitute for running this project's own toolkit on the
-actual classic M77/EBUDS corpus, which remains the single most valuable
-still-missing piece (every headline statistical claim in the field's
-literature was made on that corpus specifically, not on WUCS or on
-either corpus this project currently has). But it is real, independently
-useful evidence: the qualitative structural patterns this project has
-been finding are not an artifact of the indus_website corpus's specific
+This was, at the time it was run, real independent evidence pending the
+still-missing M77 corpus; the qualitative structural patterns this
+project has been finding are not an artifact of the indus_website
+corpus's specific
 digitization choices, since a corpus built by a completely different
 research group, with a completely different sign encoding scheme, shows
 the identical pattern using the identical method.
