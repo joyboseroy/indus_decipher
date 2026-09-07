@@ -57,6 +57,29 @@ with a motif derived from the seal description).
   inscriptions transcribed as of integration, covering roughly the M-1
   through M-199 range from Mohenjo-daro), not a complete corpus.
 
+### Digital Corpus of Sanskrit (DCS) / Rigveda
+
+Source of `data/dcs_sanskrit_real_corpus.csv` (21,231 usable sentences
+from the Rigveda), the second real external-language calibration corpus
+(see README's "A second real language: Sanskrit").
+
+- Repository: https://github.com/OliverHellwig/sanskrit
+- Citation: Hellwig, Oliver. *Digital Corpus of Sanskrit (DCS).*
+  Ongoing since 1999; open-sourced 2018. https://github.com/OliverHellwig/sanskrit
+- License: no explicit license file found in the repository at time of
+  integration; the maintainer has repeatedly and publicly announced data
+  releases (INDOLOGY mailing list, 2018-2025) specifically encouraging
+  downstream NLP research use. Treated here as intended for reuse on
+  that basis, but this should be confirmed against the repository's
+  current terms before any redistribution beyond this project's own
+  local, non-commercial use.
+- What we use: `dcs/data/conllu/files/Ṛgveda/*.conllu`, standard
+  CoNLL-U format, the LEMMA column (field 3) specifically, parsed by
+  `data/convert_dcs_sanskrit_to_csv.py`.
+- Note on redistribution: as with ETCSL, the raw CoNLL-U files and the
+  derived CSV are not included in this repository; regenerate locally
+  from a clone of the source repository.
+
 ### Electronic Text Corpus of Sumerian Literature (ETCSL)
 
 Source of `data/etcsl_real_corpus.csv` (33,338 usable lines from 394
