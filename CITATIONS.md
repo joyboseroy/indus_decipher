@@ -57,6 +57,35 @@ with a motif derived from the seal description).
   inscriptions transcribed as of integration, covering roughly the M-1
   through M-199 range from Mohenjo-daro), not a complete corpus.
 
+### Electronic Text Corpus of Sumerian Literature (ETCSL)
+
+Source of `data/etcsl_real_corpus.csv` (33,338 usable lines from 394
+literary compositions), used as a genuine external-language calibration
+corpus (see README's "Real external-language calibration").
+
+- Website: https://etcsl.orinst.ox.ac.uk
+- Citation: Black, J.A., Cunningham, G., Ebeling, J., Flückiger-Hawker,
+  E., Robson, E., Taylor, J., and Zólyomi, G. *The Electronic Text
+  Corpus of Sumerian Literature.* Oxford, 1998-2006.
+  https://etcsl.orinst.ox.ac.uk
+- License: CC BY-NC-SA 3.0 (Attribution-NonCommercial-ShareAlike),
+  distributed via the Faculty of Linguistics, Philology and Phonetics,
+  University of Oxford (successor to the Oxford Text Archive's original
+  hosting; the corpus's OTA handle migrated from
+  `ota.bodleian.ox.ac.uk` to `llds.ling-phil.ox.ac.uk` at some point
+  after this project's initial research, and a mirror is also available
+  via LINDAT/CLARIAH-CZ, http://hdl.handle.net/11372/LRT-874).
+- What we use: the `transliterations/*.xml` files' `<w lemma="...">`
+  attributes, parsed by `data/convert_etcsl_to_csv.py`. The `<w
+  form="...">` attribute (exact inflected surface form, rather than
+  dictionary lemma) is available as an alternative granularity; see that
+  script's docstring for the methodological reasoning behind using lemma
+  as the default.
+- Note on redistribution: the raw ETCSL XML files are NOT included in
+  this repository (respecting the NC-SA license's terms and the
+  project's small-file-footprint practice elsewhere); obtain them
+  directly from the sources above and run the converter locally.
+
 ## Foundational academic literature (methodology this toolkit implements)
 
 - Mahadevan, I. (1977). *The Indus Script: Texts, Concordance and
@@ -89,12 +118,21 @@ with a motif derived from the seal description).
   the Farmer-Sproat-Witzel non-linguistic-symbol hypothesis; the
   conceptual basis for this toolkit's `analysis/entropy.py` comparisons
   against random and rigid-fixed controls.
-- Sinha, S., Pan, R. K., Yadav, N., Vahia, M., and Mahadevan, I. (2009).
+- Sinha, S., Izhar, A. M., Pan, R. K., and Wells, B. K. (2010).
   "Network Analysis of a Corpus of Undeciphered Indus Civilization
-  Inscriptions Indicates Syntactic Organization." Describes the Wells
-  W09IMSc / WUCS datasets as an alternative corpus to M77; not directly
-  used here but a reference for corpus provenance terminology used in
-  this project's documentation.
+  Inscriptions Indicates Syntactic Organization." arXiv:1005.4997.
+  https://arxiv.org/abs/1005.4997
+  Describes the Wells W09IMSc (3,896 artifacts, 695 signs) and WUCS
+  (Wells Unique Complete Single-line, 1,821 sequences, 593 signs)
+  datasets as an alternative corpus to M77, with a full sign-frequency
+  appendix and concrete network statistics (reciprocity, connectivity,
+  beginner/ender sign counts, both empirical and randomized-baseline).
+  Those published statistics are directly used in
+  `experiments/wucs_comparison_test.py` as an external validation point
+  for this project's own corpus (see README's "External validation
+  against an independently published corpus"); the earlier 2009
+  conference version of this work by an overlapping set of authors is a
+  separate, distinct citation, not superseded by this one.
 - Farmer, S., Sproat, R., and Witzel, M. (2004). "The Collapse of the
   Indus-Script Thesis: The Myth of a Literate Harappan Civilization."
   *Electronic Journal of Vedic Studies*, 11(2). The non-linguistic-symbol
