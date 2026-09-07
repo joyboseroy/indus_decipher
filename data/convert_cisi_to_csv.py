@@ -48,6 +48,7 @@ import csv
 import glob
 import json
 import sys
+from collections import Counter
 
 SITE_PREFIX_MAP = {"M": "Mohenjo-daro", "H": "Harappa", "L": "Lothal", "K": "Kalibangan"}
 
@@ -79,7 +80,8 @@ def motif_from_description(desc: str) -> str:
     return "_".join(parts) if parts else "unknown"
 
 
-def grapheme_sign_id(grapheme: dict, granularity: str) -> str:
+def grapheme_sign_id(grapheme: dict, granularity: str, allograph_counts: dict = None,
+                      min_count: int = 3) -> str:
     primary = grapheme["id"]
     if granularity == "primary":
         return primary
@@ -88,51 +90,79 @@ def grapheme_sign_id(grapheme: dict, granularity: str) -> str:
     if not allograph_features:
         return primary
     suffix = "-".join(str(f) for f in allograph_features)
-    return f"{primary}_{suffix}"
+    full_id = f"{primary}_{suffix}"
+    if granularity == "allograph":
+        return full_id
+    if granularity == "hierarchical":
+        # only keep the finer allograph identity if it is independently
+        # well-attested across the WHOLE corpus (>= min_count occurrences);
+        # otherwise collapse back to the primary sign, on the reasoning
+        # that a feature combination seen once or twice is not a
+        # trustworthy basis for treating it as a functionally distinct
+        # sign versus ordinary annotation noise
+        if allograph_counts is not None and allograph_counts.get(full_id, 0) >= min_count:
+            return full_id
+        return primary
+    raise ValueError(f"unknown granularity: {granularity}")
 
 
-def convert(input_glob: str, output_csv: str, granularity: str = "primary"):
-    assert granularity in ("primary", "allograph")
-    rows = []
+def convert(input_glob: str, output_csv: str, granularity: str = "primary", min_count: int = 3):
+    assert granularity in ("primary", "allograph", "hierarchical")
+
+    all_sides = []
     for path in sorted(glob.glob(input_glob)):
         with open(path, encoding="utf-8") as f:
             sides = json.load(f)
-        for side in sides:
-            ins_id = side["id"]
-            graphemes = side.get("graphemes", [])
-            signs = [grapheme_sign_id(g, granularity) for g in graphemes]
-            if not signs:
-                continue
+        all_sides.extend(sides)
 
-            damaged = any(
-                len(g.get("features", [])) > 0 and g["features"][0] not in (0, None)
-                for g in graphemes
-            )
-            lines = [g["features"][1] for g in graphemes if len(g.get("features", [])) > 1]
-            line_count = max(lines) if lines else 1
-            uncertainties = [g["features"][2] for g in graphemes if len(g.get("features", [])) > 2]
-            mean_uncertainty = sum(uncertainties) / len(uncertainties) if uncertainties else 0.0
+    allograph_counts = None
+    if granularity == "hierarchical":
+        # first pass: count every full allograph identity across the
+        # WHOLE corpus (not per-inscription) so the min_count threshold
+        # reflects genuine corpus-wide attestation
+        allograph_counts = Counter()
+        for side in all_sides:
+            for g in side.get("graphemes", []):
+                full_id = grapheme_sign_id(g, "allograph")
+                allograph_counts[full_id] += 1
 
-            site = SITE_PREFIX_MAP.get(ins_id[0], "unknown")
-            rows.append({
-                "inscription_id": ins_id,
-                "sign_sequence": " ".join(signs),
-                "site": site,
-                "object_type": object_type_from_description(side.get("description", "")),
-                "line_count": line_count,
-                "damaged": damaged,
-                # CORRECTED based on analysis/direction_test.py evidence: the
-                # published Rao/Yadav fingerprint (final position more
-                # constrained than initial) only appeared when this corpus's
-                # sign order was reversed relative to the original hardcoded
-                # "R-L" (which meant "kept as-stored" -- see data/loader.py's
-                # normalized_signs()). "L-R" makes the loader reverse it.
-                # Still a heuristic correction, not verified ground truth for
-                # how mayig's corpus actually orders graphemes -- rerun
-                # analysis.direction_test on any new export to confirm.
-                "reading_direction": "L-R",
-                "motif": motif_from_description(side.get("description", "")),
-                "mean_uncertainty": round(mean_uncertainty, 2),
+    rows = []
+    for side in all_sides:
+        ins_id = side["id"]
+        graphemes = side.get("graphemes", [])
+        signs = [grapheme_sign_id(g, granularity, allograph_counts, min_count) for g in graphemes]
+        if not signs:
+            continue
+
+        damaged = any(
+            len(g.get("features", [])) > 0 and g["features"][0] not in (0, None)
+            for g in graphemes
+        )
+        lines = [g["features"][1] for g in graphemes if len(g.get("features", [])) > 1]
+        line_count = max(lines) if lines else 1
+        uncertainties = [g["features"][2] for g in graphemes if len(g.get("features", [])) > 2]
+        mean_uncertainty = sum(uncertainties) / len(uncertainties) if uncertainties else 0.0
+
+        site = SITE_PREFIX_MAP.get(ins_id[0], "unknown")
+        rows.append({
+            "inscription_id": ins_id,
+            "sign_sequence": " ".join(signs),
+            "site": site,
+            "object_type": object_type_from_description(side.get("description", "")),
+            "line_count": line_count,
+            "damaged": damaged,
+            # CORRECTED based on analysis/direction_test.py evidence: the
+            # published Rao/Yadav fingerprint (final position more
+            # constrained than initial) only appeared when this corpus's
+            # sign order was reversed relative to the original hardcoded
+            # "R-L" (which meant "kept as-stored" -- see data/loader.py's
+            # normalized_signs()). "L-R" makes the loader reverse it.
+            # Still a heuristic correction, not verified ground truth for
+            # how mayig's corpus actually orders graphemes -- rerun
+            # analysis.direction_test on any new export to confirm.
+            "reading_direction": "L-R",
+            "motif": motif_from_description(side.get("description", "")),
+            "mean_uncertainty": round(mean_uncertainty, 2),
             })
 
     fieldnames = ["inscription_id", "sign_sequence", "site", "object_type",
