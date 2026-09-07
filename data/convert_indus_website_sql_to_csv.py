@@ -64,6 +64,19 @@ def convert(sql_path: str, output_csv: str):
         block_after("INSERT INTO SEAL ("), n_fields=8)
     # SEAL: SEALID, SITEID, MATERIAL, CISI, MUSEUM, WIDTH, HEIGHT, THICKNESS
     site_by_seal = {r[0]: site_name_by_id.get(r[1], r[1]) for r in seal_rows}
+    # CISI (Corpus of Indus Seals and Inscriptions) catalog number, e.g.
+    # "M-1", "H-322", "L-98" -- the real Mahadevan/CISI numbering scheme
+    # used throughout the classic literature. Present for 2,375 of 2,543
+    # seals (93%) in this database. An earlier version of this converter
+    # discarded this field entirely, using only the database's own
+    # internal SEALID as inscription_id; that meant this project's core
+    # 2,543-inscription corpus carried no verifiable link to the
+    # published CISI numbering despite that link being present in the
+    # source data the whole time. Fixed here: kept as a separate
+    # "cisi_number" field rather than replacing inscription_id outright,
+    # since 7% of rows have no CISI value and inscription_id must stay
+    # populated for every row.
+    cisi_by_seal = {r[0]: r[3] for r in seal_rows if r[3] and r[3].upper() != "NULL"}
 
     insc_rows = _parse_tuples(
         block_after("INSERT INTO INSCRIPTION ("), n_fields=3)
@@ -85,7 +98,7 @@ def convert(sql_path: str, output_csv: str):
         glyphs_by_seal.setdefault(seal_id, []).append((int(idx), f"G{glyph_id}"))
 
     fieldnames = ["inscription_id", "sign_sequence", "site", "object_type",
-                  "line_count", "damaged", "reading_direction", "motif"]
+                  "line_count", "damaged", "reading_direction", "motif", "cisi_number"]
     rows_out = []
     for seal_id, glyph_list in glyphs_by_seal.items():
         glyph_list.sort(key=lambda t: t[0])
@@ -114,6 +127,7 @@ def convert(sql_path: str, output_csv: str):
             "damaged": (is_complete == "N"),
             "reading_direction": reading_direction,
             "motif": motif_by_seal.get(seal_id, "unknown"),
+            "cisi_number": cisi_by_seal.get(seal_id, "unknown"),
         })
 
     with open(output_csv, "w", newline="", encoding="utf-8") as f:

@@ -30,6 +30,19 @@ Each inscription is a row with:
                               Distinct from `damaged`: a grapheme can be
                               fully undamaged but still visually ambiguous,
                               or vice versa.
+    cisi_number       : str  the real CISI (Corpus of Indus Seals and
+                              Inscriptions) catalog number, e.g. "M-1",
+                              "H-322" -- the Mahadevan/CISI numbering used
+                              throughout the classic literature. OPTIONAL,
+                              defaults to "unknown"; present for ~93% of
+                              indus_website corpus rows (was silently
+                              discarded by an earlier version of that
+                              corpus's converter despite being present in
+                              the source data), not currently populated
+                              for the CISI/mayig-sourced corpus (which
+                              already uses CISI-derived inscription IDs
+                              directly, e.g. "M-1A", making a separate
+                              crosswalk field redundant there).
 
 WHERE TO GET REAL DATA
 -----------------------
@@ -72,6 +85,7 @@ class Inscription:
     reading_direction: str = "R-L"
     motif: str = "unknown"
     mean_uncertainty: float = 0.0
+    cisi_number: str = "unknown"
 
     def normalized_signs(self) -> List[str]:
         """Return signs in canonical reading order (right-to-left convention,
@@ -143,6 +157,7 @@ def load_corpus_csv(path: str | Path) -> Corpus:
                 reading_direction=row.get("reading_direction", "R-L") or "R-L",
                 motif=row.get("motif", "unknown") or "unknown",
                 mean_uncertainty=float(row.get("mean_uncertainty") or 0.0),
+                cisi_number=row.get("cisi_number", "unknown") or "unknown",
             ))
     return Corpus(inscriptions)
 
@@ -163,13 +178,14 @@ def load_corpus_json(path: str | Path) -> Corpus:
             reading_direction=row.get("reading_direction", "R-L"),
             motif=row.get("motif", "unknown"),
             mean_uncertainty=float(row.get("mean_uncertainty", 0.0)),
+            cisi_number=row.get("cisi_number", "unknown"),
         ))
     return Corpus(inscriptions)
 
 
 def save_corpus_csv(corpus: Corpus, path: str | Path) -> None:
     fieldnames = ["inscription_id", "sign_sequence", "site", "object_type",
-                  "line_count", "damaged", "reading_direction", "motif", "mean_uncertainty"]
+                  "line_count", "damaged", "reading_direction", "motif", "mean_uncertainty", "cisi_number"]
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -184,4 +200,5 @@ def save_corpus_csv(corpus: Corpus, path: str | Path) -> None:
                 "reading_direction": ins.reading_direction,
                 "motif": ins.motif,
                 "mean_uncertainty": ins.mean_uncertainty,
+                "cisi_number": ins.cisi_number,
             })
