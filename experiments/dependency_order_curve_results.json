@@ -1,0 +1,105 @@
+{
+  "real_corpus": {
+    "1": {
+      "perplexity": 124.13664107025934,
+      "entropy_bits": 6.9557852044213915,
+      "information_gain_bits": null
+    },
+    "2": {
+      "perplexity": 97.07747173234051,
+      "entropy_bits": 6.601064630583747,
+      "information_gain_bits": 0.35472057383764444
+    },
+    "3": {
+      "perplexity": 178.56993290625346,
+      "entropy_bits": 7.480345373824347,
+      "information_gain_bits": -0.8792807432406002
+    },
+    "4": {
+      "perplexity": 215.8401395322256,
+      "entropy_bits": 7.7538193758198775,
+      "information_gain_bits": -0.2734740019955302
+    },
+    "5": {
+      "perplexity": 223.22355474468478,
+      "entropy_bits": 7.802345459416562,
+      "information_gain_bits": -0.04852608359668498
+    },
+    "6": {
+      "perplexity": 224.14204832055947,
+      "entropy_bits": 7.8082695089180385,
+      "information_gain_bits": -0.00592404950147607
+    }
+  },
+  "bigram_null": {
+    "1": {
+      "perplexity": 116.73200856256828,
+      "entropy_bits": 6.8670564000289955,
+      "information_gain_bits": null
+    },
+    "2": {
+      "perplexity": 68.63986277406224,
+      "entropy_bits": 6.100974763468152,
+      "information_gain_bits": 0.7660816365608438
+    },
+    "3": {
+      "perplexity": 172.42740116679144,
+      "entropy_bits": 7.429845247184434,
+      "information_gain_bits": -1.3288704837162824
+    },
+    "4": {
+      "perplexity": 226.8289651843787,
+      "entropy_bits": 7.825461068413197,
+      "information_gain_bits": -0.3956158212287626
+    },
+    "5": {
+      "perplexity": 237.65139187850014,
+      "entropy_bits": 7.892703041027131,
+      "information_gain_bits": -0.06724197261393439
+    },
+    "6": {
+      "perplexity": 239.11371089003174,
+      "entropy_bits": 7.901553046992516,
+      "information_gain_bits": -0.008850005965385321
+    }
+  },
+  "adversarial_null": {
+    "1": {
+      "perplexity": 115.48888541455172,
+      "entropy_bits": 6.851610203936572,
+      "information_gain_bits": null
+    },
+    "2": {
+      "perplexity": 196.88161261641153,
+      "entropy_bits": 7.6211845695473714,
+      "information_gain_bits": -0.7695743656107998
+    },
+    "3": {
+      "perplexity": 319.72906816176163,
+      "entropy_bits": 8.32070610244629,
+      "information_gain_bits": -0.6995215328989177
+    },
+    "4": {
+      "perplexity": 328.65223911341445,
+      "entropy_bits": 8.360418003963876,
+      "information_gain_bits": -0.03971190151758641
+    },
+    "5": {
+      "perplexity": 328.640707567666,
+      "entropy_bits": 8.360367382687775,
+      "information_gain_bits": 5.06212761006708e-05
+    },
+    "6": {
+      "perplexity": 328.640707567666,
+      "entropy_bits": 8.360367382687775,
+      "information_gain_bits": 0.0
+    }
+  },
+  "saturation_order_at_0.05_bits": 3,
+  "orders_with_rising_entropy": [
+    3,
+    4,
+    5,
+    6
+  ]
+}
