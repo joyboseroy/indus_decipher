@@ -57,6 +57,32 @@ with a motif derived from the seal description).
   inscriptions transcribed as of integration, covering roughly the M-1
   through M-199 range from Mohenjo-daro), not a complete corpus.
 
+### Sangam Literature Corpus (Old Tamil)
+
+Source of `data/tamil_real_corpus.csv` (33,711 usable lines from 2,377
+poems), the third real external-language calibration corpus (see
+README's "A third language, located and tried: Old Tamil").
+
+- Dataset: https://huggingface.co/datasets/starhopp3r/sangam
+- Underlying translations: Vaidehi Herbert,
+  https://sangamtranslationsbyvaidehi.com
+- Citation: the dataset card requests crediting Vaidehi Herbert and
+  linking to her site for any use.
+- License: the Old Tamil source texts are public domain (ancient
+  works); Vaidehi Herbert's English translations, notes, glossaries,
+  and Tamil prose explanations are her own copyright, all rights
+  reserved, redistributed by the dataset for research and educational
+  use with attribution. This project uses only the `tamil_text` column
+  (the original Old Tamil verses); the `meanings`, `notes`, and
+  `english_translation` columns are not used and are not redistributed.
+- What we use: `tamil_text`, tokenized as raw whitespace-separated
+  orthographic words (NOT lemmatized -- no lemmatized digital Sangam
+  corpus was found; see the README section above for what this
+  limitation does to the results).
+- Note on redistribution: as with ETCSL and DCS, the derived CSV is not
+  included in this repository; regenerate locally via
+  `data/convert_tamil_to_csv.py` from your own copy of the dataset.
+
 ### Digital Corpus of Sanskrit (DCS) / Rigveda
 
 Source of `data/dcs_sanskrit_real_corpus.csv` (21,231 usable sentences
