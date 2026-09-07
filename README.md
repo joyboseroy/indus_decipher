@@ -139,6 +139,8 @@ experiments/
   matched_size_harappa_test.py  resolves the Harappa/Mohenjo-daro gap
                          directly (see "Matched-size resolution of the
                          Harappa gap")
+tests/                   pytest suite (see "Automated tests"); run with
+                         `pytest tests/`
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -944,13 +946,63 @@ Harappa using strict Jaccard overlap on minimal-pair mining (which needs
 literal matching-context substitution pairs, and Harappa has less
 motif-labeled data to find them in). This result suggests the
 DISTRIBUTIONAL signature of those same communities is still present in
-Harappa's data even where the stricter substitution test struggled. That
-suggestion is now directly confirmed rather than merely consistent-with:
-see "Matched-size resolution of the Harappa gap" below, which tested the
-sample-size explanation head-on and found it accounts for the gap in 5
-of 5 communities.
+Harappa's data even where the stricter substitution test struggled.
+
+**Precision note, per external review:** an earlier draft of this
+paragraph said the matched-size test below "directly confirms" that
+suggestion. That overstated the relationship between two separate
+results. What "Matched-size resolution of the Harappa gap" below
+actually shows is that sample size accounts for the Jaccard gap in 5 of
+5 communities, tested head-on with its own method. What THIS section
+shows is that most substitution communities have elevated distributional
+similarity in Harappa specifically. These are complementary results that
+point the same direction, not one confirming the literal content of the
+other; both are worth citing together, but as two separate lines of
+evidence, not as a single confirmed claim.
 
 Run it yourself with `python3 experiments/cross_site_held_out_validation.py`.
+
+## Automated tests
+
+Every result in this project was, until now, checked by manually
+rerunning each script and confirming a clean exit code plus a by-eye
+read of the printed numbers. That worked, and this project's whole
+narrative is arguably a demonstration of what that manual discipline can
+catch: the reading-direction bug, the sample-size-encoding feature bug,
+the bootstrap cross-validation leakage bug, and the Kneser-Ney
+context-length off-by-one bug were all caught exactly that way. But it
+doesn't scale, and it depends on remembering to do it every time.
+
+`tests/` (run with `pytest tests/`) converts the sanity checks already
+implicit in that process into real automated tests, 28 in total, covering
+`data/loader.py`'s CSV schema round-trip (every field, including the
+ones added mid-project), `analysis/ngram.py`'s add-alpha and Kneser-Ney
+models, all four permutation-null and three stratified-null generators,
+the reading-direction diagnostic (against a corpus with a deliberately
+known, planted direction fingerprint), the falsification harness's
+feature set, and an end-to-end smoke test of `main.py`.
+
+Most directly, `tests/test_ngram.py::test_kneser_ney_backoff_uses_correct_context_length`
+is a precise regression test for the exact context-length bug found
+while building "The dependency-order curve" earlier: a small, deliberately
+constructed corpus where a specific higher-order context was never seen
+in training (forcing the model to back off), with a strong, unambiguous
+signal the correct backoff should recover. Verified directly before
+trusting it: reintroducing the original bug makes this specific test
+fail with the exact symptom the bug produced (two probabilities that
+should differ by orders of magnitude come out bit-for-bit identical),
+while every other test still passes, confirming this test is actually
+sensitive to the bug it claims to catch, not just present in the suite
+for coverage's sake.
+
+What this suite deliberately does NOT do: rerun the full pipeline
+against the real, large data files (main.py --extended on all three
+corpora, every experiments/*.py script). Those runs take minutes each
+and are already covered by this project's established practice of
+manually rerunning every affected script before any delivery; duplicating
+them as slow automated tests would mostly just make `pytest` slow to
+run without adding real protection beyond what the smoke tests against
+the always-available synthetic corpus already provide.
 
 ## Known limitations and other honesty notes
 
@@ -1058,17 +1110,7 @@ disagreement above:
   instead of add-alpha, for a fairer comparison to Yadav et al.'s
   published ~75% figure than this project's current add-alpha-based
   version allows.
-- **Add a proper pytest test suite.** Every result in this project has so
-  far been checked by manually rerunning each script and confirming a
-  clean exit code plus a by-eye read of the printed numbers. That has
-  worked, but it doesn't scale and depends on remembering to do it.
-  Converting the sanity checks already implicit in this process (does
-  main.py run on all three corpora, does the falsification harness still
-  hit 100% self-test, does KneserNeyModel give non-identical perplexity
-  across orders, the exact kind of check that caught that bug) into real
-  automated tests would catch a regression the next time a shared module
-  like analysis/ngram.py or data/loader.py changes, rather than relying
-  on remembering to rerun everything by hand.
+- ~~Add a proper pytest test suite~~ **Done, see "Automated tests" below.**
 - **Keep a lightweight experiment log** (corpus, N, direction, features,
   seed, result, timestamp) for every run that produces a number quoted
   anywhere outside this repo, so any reported figure can be traced back
