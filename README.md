@@ -92,6 +92,8 @@ data/
   convert_cisi_to_csv.py                real-data converter (see below)
   convert_etcsl_to_csv.py               real Sumerian converter (see
                                          "Real external-language calibration")
+  convert_dcs_sanskrit_to_csv.py        real Sanskrit converter (see
+                                         "A second real language: Sanskrit")
   indus_website_real_corpus.csv         real data (2,543 inscriptions)
   cisi_real_corpus.csv                  real data (179 inscriptions)
 analysis/
@@ -150,6 +152,9 @@ experiments/
   etcsl_calibration_test.py  real Sumerian calibration, the biggest
                          remaining gap this project had (see "Real
                          external-language calibration")
+  sanskrit_calibration_test.py  real Sanskrit calibration, confirms the
+                         sample-size finding (see "A second real
+                         language: Sanskrit")
   discount_sensitivity_test.py  sweeps the Kneser-Ney discount 0.5-0.9
                          (see note after "Order 3 is validated...")
   matched_size_harappa_test.py  resolves the Harappa/Mohenjo-daro gap
@@ -1282,16 +1287,20 @@ disagreement above:
   cross-site stability testing~~ **Done, see "The substitution graph
   upgrade" above** (though see the follow-up bullet above about
   Mohenjo-daro sample-size confound).
-- **Add real external control corpora** ~~(Sumerian~~, Old Tamil, Vedic
-  Sanskrit) to `analysis/entropy.py`'s comparisons via
-  `external_control_entropy()`. Sumerian is done, see "Real
-  external-language calibration" above, and it went well beyond a simple
-  entropy comparison (order-3 gain, WUCS-style network statistics). Old
-  Tamil and Vedic Sanskrit are still open, and are now higher-value than
-  before: with genuine Sumerian data showing how much the order-3 test's
-  sample-size sensitivity matters, a second and third real language
-  would help establish whether that sensitivity is a general property of
-  the method or specific to Sumerian's particular structure.
+- ~~Add real external control corpora (Sumerian, Vedic Sanskrit)~~
+  **Done, see "Real external-language calibration" and "A second real
+  language: Sanskrit" above.** Both went well beyond a simple entropy
+  comparison (order-3 gain at full and matched scale, WUCS-style network
+  statistics), and together they produced this project's most
+  well-triangulated finding: the order-3 test's sample-size limitation
+  around 2,500 examples is real and general, confirmed independently
+  twice, not an artifact of one corpus. Old Tamil was investigated and
+  set aside for a documented reason (no lemmatized/morphologically
+  segmented digital corpus found; see "A third language considered, and
+  set aside honestly"), not simply left undone. If a suitable Old Tamil
+  resource is later located, it remains the natural next addition, ideally
+  from a different language family than Sumerian and Indo-Aryan Sanskrit
+  entirely, for the strongest possible third data point.
 - ~~Implement Kneser-Ney smoothing~~ **Done, see "The dependency-order
   curve" above.** ~~Discount-sensitivity check~~ **Done, see the note
   right after "Order 3 is validated..." above.** One follow-up remains:
@@ -1419,6 +1428,81 @@ Run it yourself with `python3 experiments/etcsl_calibration_test.py`
 `python3 data/convert_etcsl_to_csv.py`; the raw ETCSL XML files
 themselves are not redistributed in this repository, see CITATIONS.md
 for how to obtain them).
+
+## A second real language: Sanskrit, and the sample-size finding is now well triangulated
+
+`experiments/sanskrit_calibration_test.py` repeats the identical test
+against a second, unrelated real language: the Rigveda portion of the
+Digital Corpus of Sanskrit (Hellwig, see `data/convert_dcs_sanskrit_to_csv.py`
+and CITATIONS.md), 21,231 sentences, lemma-tokenized from standard
+CoNLL-U files rather than ETCSL's custom TEI/SGML scheme. Rigveda
+sentences run longer on average (8.0 tokens) than Indus inscriptions or
+ETCSL lines, a real difference reported as-is rather than adjusted away.
+
+| Corpus | N | Order-3 gain |
+|---|---|---|
+| Indus | 2,543 | +0.143 |
+| Sanskrit, full scale | 21,231 | +0.157 |
+| Sanskrit, matched to Indus's size | 2,543 | **-0.030** |
+
+This closely mirrors ETCSL's own pattern (+0.370 full scale, -0.019
+matched) rather than being a one-off. Two independent real languages,
+different families, different digitization projects, different
+tokenization schemes, BOTH show a clear positive order-3 signal at their
+own full scale and BOTH lose that signal when subsampled to Indus's
+corpus size. That is no longer a single data point; it is now a
+reasonably well-triangulated finding that the order-3 Kneser-Ney test
+has a genuine, general sample-size limitation somewhere in the vicinity
+of 2,500 short sequences, not an artifact specific to one corpus or one
+language's particular structure. Indus's own positive result at exactly
+that scale (+0.143) is correspondingly more notable: it succeeded where
+two real, unambiguous languages, tested identically at the identical
+scale, both did not.
+
+The WUCS-style network statistics extend to four data points now:
+
+| Metric | WUCS | Indus | ETCSL (Sumerian) | Sanskrit |
+|---|---|---|---|---|
+| Reciprocity | 0.148 | 0.191 | 0.111 | 0.117 |
+| Connectivity | 0.0077 | 0.0087 | 0.0027 | 0.0013 |
+| Beginners (empirical) | 128 | 115 | 291 | 210 |
+| Enders (empirical) | 43 | 44 | 97 | **293** |
+
+One genuine qualitative difference worth flagging rather than smoothing
+over: Sanskrit shows MORE enders than beginners (293 vs. 210), the
+opposite direction from Indus, WUCS, and ETCSL, all of which show
+beginners well in excess of enders. This could reflect something real
+about Rigvedic sentence-final morphology (case-marked nominals and
+finite verbs both cluster in specific clause-final positions in a way
+that isn't true of ETCSL's shorter, more fragmentary lines), or it could
+be an artifact of comparing a sentence-level unit to a line-level or
+inscription-level one across corpora with different natural boundaries.
+This is left as an open observation, not resolved here.
+
+Run it yourself with `python3 experiments/sanskrit_calibration_test.py`
+(needs `data/dcs_sanskrit_real_corpus.csv`, generated via
+`python3 data/convert_dcs_sanskrit_to_csv.py`; see CITATIONS.md for
+source and license notes).
+
+## A third language considered, and set aside honestly: Old Tamil
+
+Sangam-era Old Tamil was the natural third external-language candidate,
+and was investigated to the same standard as Sumerian and Sanskrit
+before being set aside, rather than forced through at lower quality.
+Project Madurai (projectmadurai.org) provides real, public-domain
+digitized Sangam texts, but as plain Unicode or TSCII text with no
+lemmatization, no morphological segmentation, and no part-of-speech
+tagging, unlike ETCSL's TEI markup or DCS's CoNLL-U format. Classical
+Tamil is agglutinative with productive sandhi; naive whitespace
+tokenization would bundle multiple morphemes into single "word" tokens
+inconsistently across the corpus, in a way this project has no principled
+basis to correct without real morphological analysis it does not have.
+Rather than build a third calibration corpus at a visibly lower and
+methodologically shakier standard than the first two, this is recorded
+as a real gap: a lemmatized or morphologically segmented digital Sangam
+corpus, if one exists and can be located, would be a genuine addition to
+this comparison; naively tokenized raw text would not add reliable
+information and risks looking more rigorous than it is.
 
 ## External validation against an independently published corpus
 
