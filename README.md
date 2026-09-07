@@ -403,6 +403,11 @@ own tokens rather than resampled marginals:
    trained end-of-sequence token so that stopping behavior itself comes
    from real data rather than an externally fixed length. Destroys only
    dependency beyond order-1 (trigram and higher).
+5. `trigram_markov_null`: same idea one order higher, sampling from the
+   real order-2 transition table with backoff to bigram then unigram
+   statistics for the many order-2 contexts too sparse to estimate
+   directly (added later, alongside "Where the complexity ladder stops"
+   below). Destroys only dependency beyond order-2.
 
 An earlier version of control 4 fixed each generated sequence's length to
 a real observed value and let the chain run exactly that many steps. That
@@ -433,6 +438,19 @@ section alone is: **the real corpus is distinguishable from a
 bigram-order-matched null**, full stop, without a claim about which
 order the distinguishing information lives at. See "The dependency-order
 curve" below for the direct attempt to settle this, and why it could not.
+
+**Follow-up confirming why this classifier is the wrong tool for the
+order question at all:** once `trigram_markov_null` existed (see "Where
+the complexity ladder stops" below), it was added to this same test.
+It also scores 93.8%, identical to the bigram-order null, despite having
+real order-1 AND order-2 dependency built in. If this classifier were
+tracking the order of missing structure, a null with MORE real structure
+built in should be harder to distinguish from real data, not equally
+easy. It isn't harder here, which confirms this six-feature classifier
+is picking up on something other than a clean measure of dependency
+order, and is why "The dependency-order curve" below uses a different,
+more direct method (cross-validated entropy at each order) rather than
+extending this classifier test further.
 
 Run it yourself with `python3 experiments/permutation_controls.py`.
 
@@ -498,6 +516,38 @@ held-out data. A discount sensitivity check (does the order-3 finding
 survive discount values from, say, 0.5 to 0.9) has not been run yet and
 would be a reasonable next step before treating +0.143 bits as a precise
 number rather than a directionally clear one.
+
+## Where the complexity ladder stops: order 3, not further (so far)
+
+The natural follow-up to the order-3 finding is whether it keeps going:
+does real data still show an edge at order 4 over a null that already
+has real order-1 AND order-2 dependency baked in? `data/permutation_nulls.py`
+gained a `trigram_markov_null` generator for exactly this (same design as
+`bigram_markov_null`, one order higher, with backoff to bigram then
+unigram statistics for the many order-2 contexts too sparse to estimate
+directly, the generation-side version of the same sparsity problem
+Kneser-Ney solves on the evaluation side).
+
+The result at order 4 is not a clean three-way split the way order 3
+was. All four corpora (real, trigram-order null, bigram-order null,
+adversarial null) show small NEGATIVE gains, ranging from -0.045 to
+-0.142 bits. Real data's own order-4 gain (-0.088) sits in between the
+trigram-order null's (-0.045, closest to zero of the four) and the two
+nulls lacking real order-2 dependency (-0.140, -0.142). There is no
+validated positive signal here: real data does not clearly separate from
+a null that already has real order-1-and-2 structure built in, the way
+it clearly separated from bigram-only and no-dependency nulls at order 3.
+
+Read plainly: this project's evidence for real sequential structure is
+validated specifically at order 3, and genuinely inconclusive, not
+refuted, at order 4 and beyond. Building 4-gram and 5-gram null
+generators to chase this further is probably not worth the effort
+without a specific reason to expect a real order-4 effect first; the
+data as it currently stands is most simply read as saturating around
+order 3. If a future finding (a structural or archaeological hypothesis)
+predicts a specific order-4+ pattern, that would be a reason to revisit
+this with a targeted test rather than another blind extension of the
+curve.
 
 Run it yourself with `python3 experiments/dependency_order_curve.py`.
 
