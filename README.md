@@ -99,6 +99,8 @@ analysis/
                          including real iconographic motif matching
   substitution_graph.py    weighted, attributed substitution graph and
                          cross-site stability testing (networkx-based)
+  sign_embeddings.py       PPMI+SVD distributional sign embeddings (see
+                         "Contextual sign embeddings")
   falsification.py        feature-vector classification against three known
                          synthetic generative systems
 models/
@@ -126,6 +128,9 @@ experiments/
                          explain the order-3 signal? (see "Stage 2")
   allograph_granularity_test.py  resolves the CISI allograph-granularity
                          question (see "Allograph granularity")
+  sign_embeddings_analysis.py  cross-validates embeddings against the
+                         substitution graph (see "Contextual sign
+                         embeddings")
 CITATIONS.md             every data source and paper this project relies on
 ```
 
@@ -799,6 +804,46 @@ own, which is the relevant test here, not a claim that motif and site
 are irrelevant to everything in this corpus.
 
 Run it yourself with `python3 experiments/stratified_dependency_test.py`.
+
+## Contextual sign embeddings: two independent methods agree
+
+Stage 2's last item: does distributional similarity corroborate the
+substitution-graph communities, or are minimal pairs finding something
+those communities alone can't be checked against?
+
+`analysis/sign_embeddings.py` builds PPMI (positive pointwise mutual
+information) plus truncated SVD embeddings per sign, the classic
+distributional-semantics technique (essentially LSA applied to signs).
+Chosen over reading out `models/transformer_mlm.py`'s own embedding
+table deliberately: PPMI+SVD has no training dynamics to second-guess
+and is fully deterministic given the corpus and a context window, so
+there's no risk of mistaking a toy-scale model's optimization noise for
+real distributional structure.
+
+The two methods ask genuinely different questions. Minimal pairs (the
+substitution graph) ask: do these two signs substitute for each other in
+an otherwise-identical local context? Embeddings ask: do these two signs
+tend to co-occur with similar OTHER signs, in general, across the whole
+corpus? `experiments/sign_embeddings_analysis.py` tests whether they
+agree: for each of the ten largest motif-corroborated substitution-graph
+communities, compare the mean pairwise cosine similarity among the
+community's own members against a random-pair baseline of the same size.
+
+Result: **all 10 tested communities show higher internal similarity than
+the random baseline**, several by a wide margin (community 7: 0.80
+internal similarity vs. 0.20 baseline). Two structurally independent
+methods, one local and strict, one global and loose, agree on which
+signs cluster together. That is real convergent evidence these are
+genuine functional classes rather than an artifact specific to how the
+minimal-pair miner happens to work.
+
+What this does NOT establish: what these classes mean. A sign class
+found this way could be a morphological paradigm, a semantic category,
+an administrative code family, or something else entirely; distributional
+and substitutional agreement says the classes are real and stable, not
+what function they serve. That is future work, not something claimed here.
+
+Run it yourself with `python3 experiments/sign_embeddings_analysis.py`.
 
 ## Known limitations and other honesty notes
 
