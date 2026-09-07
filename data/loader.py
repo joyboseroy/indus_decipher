@@ -21,6 +21,15 @@ Each inscription is a row with:
                               doesn't carry motif/iconography information.
                               Used by analysis/minimal_pairs.py for stronger
                               seal-twin corroboration (see that module).
+    mean_uncertainty : float mean, across this inscription's graphemes, of
+                              the source annotator's own 0-100 subjective
+                              uncertainty about each grapheme's identity --
+                              OPTIONAL, defaults to 0.0 when the source data
+                              doesn't carry this (e.g. the indus_website
+                              corpus has no per-grapheme uncertainty field).
+                              Distinct from `damaged`: a grapheme can be
+                              fully undamaged but still visually ambiguous,
+                              or vice versa.
 
 WHERE TO GET REAL DATA
 -----------------------
@@ -62,6 +71,7 @@ class Inscription:
     damaged: bool = False
     reading_direction: str = "R-L"
     motif: str = "unknown"
+    mean_uncertainty: float = 0.0
 
     def normalized_signs(self) -> List[str]:
         """Return signs in canonical reading order (right-to-left convention,
@@ -132,6 +142,7 @@ def load_corpus_csv(path: str | Path) -> Corpus:
                 damaged=str(row.get("damaged", "")).strip().lower() in ("1", "true", "yes"),
                 reading_direction=row.get("reading_direction", "R-L") or "R-L",
                 motif=row.get("motif", "unknown") or "unknown",
+                mean_uncertainty=float(row.get("mean_uncertainty") or 0.0),
             ))
     return Corpus(inscriptions)
 
@@ -151,13 +162,14 @@ def load_corpus_json(path: str | Path) -> Corpus:
             damaged=bool(row.get("damaged", False)),
             reading_direction=row.get("reading_direction", "R-L"),
             motif=row.get("motif", "unknown"),
+            mean_uncertainty=float(row.get("mean_uncertainty", 0.0)),
         ))
     return Corpus(inscriptions)
 
 
 def save_corpus_csv(corpus: Corpus, path: str | Path) -> None:
     fieldnames = ["inscription_id", "sign_sequence", "site", "object_type",
-                  "line_count", "damaged", "reading_direction", "motif"]
+                  "line_count", "damaged", "reading_direction", "motif", "mean_uncertainty"]
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -171,4 +183,5 @@ def save_corpus_csv(corpus: Corpus, path: str | Path) -> None:
                 "damaged": ins.damaged,
                 "reading_direction": ins.reading_direction,
                 "motif": ins.motif,
+                "mean_uncertainty": ins.mean_uncertainty,
             })
