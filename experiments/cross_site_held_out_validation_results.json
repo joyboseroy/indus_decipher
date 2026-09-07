@@ -1,0 +1,119 @@
+{
+  "n_communities": 13,
+  "n_testable": 11,
+  "n_corroborated": 10,
+  "results": [
+    {
+      "community_index": 0,
+      "md_size": 11,
+      "n_in_harappa_vocab": 9,
+      "testable": true,
+      "internal_similarity": 0.25885301615290696,
+      "random_baseline": 0.17652096770628867,
+      "corroborated": true
+    },
+    {
+      "community_index": 1,
+      "md_size": 10,
+      "n_in_harappa_vocab": 9,
+      "testable": true,
+      "internal_similarity": 0.4193479623387322,
+      "random_baseline": 0.17652096770628867,
+      "corroborated": true
+    },
+    {
+      "community_index": 2,
+      "md_size": 8,
+      "n_in_harappa_vocab": 5,
+      "testable": true,
+      "internal_similarity": 0.16454659173880487,
+      "random_baseline": 0.17538801651424593,
+      "corroborated": false
+    },
+    {
+      "community_index": 3,
+      "md_size": 8,
+      "n_in_harappa_vocab": 6,
+      "testable": true,
+      "internal_similarity": 0.20098573696347194,
+      "random_baseline": 0.1744932827853168,
+      "corroborated": true
+    },
+    {
+      "community_index": 4,
+      "md_size": 6,
+      "n_in_harappa_vocab": 4,
+      "testable": true,
+      "internal_similarity": 0.3147561563851636,
+      "random_baseline": 0.18182078842840013,
+      "corroborated": true
+    },
+    {
+      "community_index": 5,
+      "md_size": 5,
+      "n_in_harappa_vocab": 5,
+      "testable": true,
+      "internal_similarity": 0.29666435675579467,
+      "random_baseline": 0.17538801651424593,
+      "corroborated": true
+    },
+    {
+      "community_index": 6,
+      "md_size": 3,
+      "n_in_harappa_vocab": 3,
+      "testable": true,
+      "internal_similarity": 0.33683155420421684,
+      "random_baseline": 0.1896922968251902,
+      "corroborated": true
+    },
+    {
+      "community_index": 7,
+      "md_size": 3,
+      "n_in_harappa_vocab": 3,
+      "testable": true,
+      "internal_similarity": 0.37513005267850225,
+      "random_baseline": 0.1896922968251902,
+      "corroborated": true
+    },
+    {
+      "community_index": 8,
+      "md_size": 3,
+      "n_in_harappa_vocab": 3,
+      "testable": true,
+      "internal_similarity": 0.3087173817442231,
+      "random_baseline": 0.1896922968251902,
+      "corroborated": true
+    },
+    {
+      "community_index": 9,
+      "md_size": 2,
+      "n_in_harappa_vocab": 2,
+      "testable": true,
+      "internal_similarity": 0.6884639380958021,
+      "random_baseline": 0.18571989364977703,
+      "corroborated": true
+    },
+    {
+      "community_index": 10,
+      "md_size": 2,
+      "n_in_harappa_vocab": 1,
+      "testable": false
+    },
+    {
+      "community_index": 11,
+      "md_size": 2,
+      "n_in_harappa_vocab": 1,
+      "testable": false
+    },
+    {
+      "community_index": 12,
+      "md_size": 2,
+      "n_in_harappa_vocab": 2,
+      "testable": true,
+      "internal_similarity": 0.7189997271972194,
+      "random_baseline": 0.18571989364977703,
+      "corroborated": true
+    }
+  ],
+  "verdict": "A majority of testable communities survive the fully disjoint split. This is meaningfully stronger evidence than the same-corpus test alone -- these communities generalize to an independent site's own distributional statistics, not just the corpus they were discovered on."
+}
