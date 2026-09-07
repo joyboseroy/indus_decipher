@@ -210,9 +210,10 @@ so you can call them directly from a notebook without touching `main.py`.
 
 ## Real data (included)
 
-Two real, non-synthetic corpora are included, both converted from public
-GitHub repositories. Full citation and license detail is in
-`CITATIONS.md`; the summary:
+Three real, non-synthetic Indus corpora are included directly, all
+converted from public sources (a fourth, M77, is documented in its own
+dedicated section further down given its more involved provenance).
+Full citation and license detail is in `CITATIONS.md`; the summary:
 
 - **`data/indus_website_real_corpus.csv`** (2,543 inscriptions, 592
   signs, 1,622 with real iconographic motif codes, 2,375 with a real
@@ -253,10 +254,18 @@ GitHub repositories. Full citation and license detail is in
   least 3 times corpus-wide, otherwise it collapses to the primary sign).
   See "Allograph granularity" below: this was resolved, not left open,
   and it turned out to be a real effect, not sparse-data noise.
+- **`data/m77_indusscript_real_corpus.csv`** (3,573 lines, 418 signs,
+  the actual canonical M77/IDF-80 corpus) parsed from a real export of
+  [indusscript.in](https://indusscript.in)'s Firestore backend. See "M77
+  obtained and verified" below for the full provenance and verification
+  account; its more involved access method (an authenticated browser
+  session, not a one-command public download) is why it gets a longer
+  dedicated writeup rather than a short bullet here.
 
-Regenerate either CSV from a local copy of its source repo with
-`python3 data/convert_indus_website_sql_to_csv.py <sql_path> <out.csv>` or
-`python3 data/convert_cisi_to_csv.py <json_glob> <out.csv>`.
+Regenerate any of these from a local copy of its source with
+`python3 data/convert_indus_website_sql_to_csv.py <sql_path> <out.csv>`,
+`python3 data/convert_cisi_to_csv.py <json_glob> <out.csv>`, or
+`python3 data/convert_m77_indusscript_to_csv.py <json_path> <out.csv>`.
 
 ## Other real-data leads (M77: obtained -- see below for the full story)
 
@@ -1507,12 +1516,29 @@ recomputed from the raw JSON, not accepted from a secondhand summary:
 `dir=0`, confirming they are a consistent, identifiable placeholder
 category); exactly 3,573 non-empty records; exactly **2,906 distinct
 `textnum`s, matching the published M77 text count exactly**; 14,153
-total sign occurrences; 562 distinct raw tokens; 504 starred
-occurrences; 458 distinct base signs. Three specific worked examples
-(text 1001's two-line split into a 5-sign and a 1-sign record with
-different `sideline` values; text 1003's starred sign `*086`; text
-1012's 10-sign-then-3-sign split) were checked against the raw JSON and
-matched exactly. This is real, internally consistent data.
+total sign occurrences. Three specific worked examples (text 1001's
+two-line split into a 5-sign and a 1-sign record with different
+`sideline` values; text 1003's starred sign `*086`; text 1012's
+10-sign-then-3-sign split) were checked against the raw JSON and matched
+exactly. This is real, internally consistent data.
+
+**A real bug caught by checking the vocabulary count against the
+published inventory, not assumed correct.** The first version of the
+converter reported 458 distinct base signs against a published
+417-sign inventory, a gap worth explaining rather than shrugging off.
+Checking directly found the cause: the source data is internally
+inconsistent about zero-padding (sign 1 appears as both `"1"` and
+`"001"` in different raw records; 40 of the 458 "distinct" signs turned
+out to be duplicate string representations of already-counted
+integers, not real additional signs). Fixed by normalizing every sign
+number through `int()` before use. Corrected vocabulary: **418 signs**,
+exactly the count of integers from 0 to 417 inclusive, a clean internal
+consistency check that the fix is right (the published "417 signs"
+figure most likely excludes sign 0 as a special marker rather than
+counting it as the 418th ordinary sign, which would reconcile the two
+counts exactly, though this project has not independently confirmed
+that specific detail). All downstream numbers below reflect the
+corrected, 418-sign version.
 
 **Schema decisions, documented in `data/convert_m77_indusscript_to_csv.py`:**
 the natural unit is the individual M77 LINE (a unique `(textnum,
@@ -1531,29 +1557,33 @@ available in this export and are left `"unknown"` rather than guessed.
 field has 7 undecoded values, so rather than guess a mapping, the data
 was loaded as-stored and `analysis/direction_test.py` was run on it,
 the same diagnostic used for both other real corpora. Result: as-stored
-is correct (final position entropy 4.67 bits, clearly lower than
-initial position's 6.50 bits), matching the classic published fingerprint
-directly, no reversal needed.
+is correct (final position entropy clearly lower than initial position's,
+gap 1.80 bits after the sign-normalization fix), matching the classic
+published fingerprint directly, no reversal needed.
 
-**The replication, the actual point of all this:**
+**The replication, the actual point of all this, with corrected numbers:**
 
-| Test | This project's other corpus (N=2,543) | Real M77 (N=3,573) |
+| Test | This project's other corpus (N=2,543) | Real M77 (N=3,573, corrected) |
 |---|---|---|
-| Order-3 gain, real | +0.143 | **+0.147** |
-| Order-3 gain, bigram-order null | -0.140 | -0.147 |
-| Order-3 gain, adversarial null | -0.179 | -0.188 |
+| Order-3 gain, real | +0.143 | **+0.158** |
+| Order-3 gain, bigram-order null | -0.140 | -0.145 |
+| Order-3 gain, adversarial null | -0.179 | -0.202 |
 | Conditional entropy | 3.26 bits | 3.37 bits |
-| Whole-corpus uniqueness vs. null distribution | below null range | below null range |
+| Whole-corpus uniqueness | 0.766 | 0.675 |
+| Uniqueness null distribution (200/50 trials) | mean 0.958, real below entire range | mean 0.886, real below entire range |
 
 The headline finding -- real data positive, both nulls negative, at a
-magnitude too close to be coincidence -- replicates almost exactly on
-the actual canonical corpus behind Rao et al. 2009 and Yadav et al.
-2010, obtained completely independently of this project's other corpus
-(different digitization project, different sign-encoding scheme, larger
-N). The conditional-entropy figure (3.37 bits) sits close to both this
-project's own indus_website result (3.26 bits) and Rao/Yadav's published
-figure (~3.23 bits). The uniqueness-versus-null result (see "Whole-
-sequence uniqueness" above) also replicates in the same direction.
+magnitude too close to be coincidence -- replicates, and if anything
+slightly strengthens, on the actual canonical corpus behind Rao et al.
+2009 and Yadav et al. 2010, obtained completely independently of this
+project's other corpus (different digitization project, different
+sign-encoding scheme, larger N). The conditional-entropy figure (3.37
+bits) sits close to both this project's own indus_website result (3.26
+bits) and Rao/Yadav's published figure (~3.23 bits). The
+uniqueness-versus-null result replicates in the same direction too:
+real uniqueness sits below the entire null distribution's range on both
+corpora, the same anti-registration-code signal found before (see
+"Whole-sequence uniqueness" above).
 
 **One real, honestly-reported divergence, not smoothed over:** the
 falsification harness classifies real M77 as `civ_c_mixed`, not
@@ -1570,6 +1600,41 @@ been tested against it yet.
 
 Run the converter yourself with
 `python3 data/convert_m77_indusscript_to_csv.py`.
+
+## The replication matrix: every headline test, across every real corpus, in one table
+
+With four real Indus corpora now in hand (indus_website, CISI, and
+M77), plus WUCS as a fifth point of comparison via published statistics
+rather than raw data access, the individual sections above each make
+their own case in isolation. Consolidated here once, so the overall
+pattern doesn't have to be reconstructed from a dozen separate
+narratives:
+
+| Test | indus_website (N=2,543) | CISI primary (N=104) | M77 (N=3,573) | WUCS (published, N=1,821) |
+|---|---|---|---|---|
+| Reading direction | resolved (as-stored, after a real bug fix) | resolved (as-stored, after a real bug fix) | resolved (as-stored, no bug found) | not tested (no raw sequence access) |
+| Conditional entropy | 3.26 bits | 1.77 bits (not directly comparable -- 142-sign vocabulary vs. 592/418) | 3.37 bits | not tested |
+| Order-3 Kneser-Ney gain | **+0.143** (validated vs. 2 nulls) | negative at all 3 granularities tested (inconclusive, too small a corpus) | **+0.158** (validated vs. 2 nulls) | not tested |
+| Whole-corpus uniqueness vs. null | below entire null range | statistically indistinguishable from null (p=0.980) | below entire null range | not tested |
+| Reciprocity / connectivity below random | below random | not tested | not tested | below random (published) |
+| Beginner-excess / ender-deficit asymmetry | present | not tested | not tested | present (published) |
+| Substitution-graph structure | 18 components, 19 motif-corroborated communities, cross-site validated | not built at this scale | 7 candidate classes, all-pairs tier only (no motif/site metadata available to corroborate) | not tested |
+| Falsification classification | `civ_a_language_like` | `civ_a_language_like` (primary) / `civ_c_mixed` (allograph) | `civ_c_mixed` | not tested |
+
+Reading this honestly rather than as a scoreboard: the two large,
+independently-sourced corpora (indus_website and M77) agree closely on
+every test where both were run -- order-3 gain, uniqueness-versus-null,
+conditional entropy in the same range -- which is the core replication
+result this project has been building toward. CISI, the smallest
+corpus by a wide margin, disagrees or comes back inconclusive on
+several tests, consistent with what this project already knows about
+its own sample-size sensitivity (see "Order 3 is validated..." and "A
+second real language: Sanskrit," both of which found real languages
+also lose the order-3 signal below roughly 2,500 examples). The one
+genuine, unresolved disagreement is the falsification classification
+(M77 mixed vs. indus_website language-like), which does not fit that
+same sample-size story (M77 is the larger corpus of the two) and is
+recorded as open, not explained away.
 
 ## Real CISI/Mahadevan numbers recovered for the core corpus
 
