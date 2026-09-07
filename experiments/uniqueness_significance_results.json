@@ -1,0 +1,46 @@
+{
+  "indus_large": {
+    "n_sequences": 2543,
+    "n_signs": 592,
+    "whole_corpus": {
+      "real": 0.7660243806527723,
+      "null_mean": 0.9582756586708612,
+      "null_sd": 0.004078563686368931,
+      "null_min": 0.9484860401101062,
+      "null_max": 0.9665749115218246,
+      "empirical_p_null_gte_real": 1.0,
+      "verdict": "Real uniqueness is NOT distinguishable from what a zero-dependency null with the same vocabulary/length/frequency produces. High uniqueness here is consistent with being a mechanical consequence of the vocabulary and length regime, not evidence of a deliberate identifier system."
+    },
+    "length_stratified": {
+      "real": 0.7660243806527723,
+      "null_mean": 0.9582756586708612,
+      "null_sd": 0.004078563686368931,
+      "null_min": 0.9484860401101062,
+      "null_max": 0.9665749115218246,
+      "empirical_p_null_gte_real": 1.0,
+      "verdict": "Real uniqueness is NOT distinguishable from what a zero-dependency null with the same vocabulary/length/frequency produces. High uniqueness here is consistent with being a mechanical consequence of the vocabulary and length regime, not evidence of a deliberate identifier system."
+    }
+  },
+  "cisi_primary": {
+    "n_sequences": 104,
+    "n_signs": 142,
+    "whole_corpus": {
+      "real": 0.9903846153846154,
+      "null_mean": 0.9987019230769231,
+      "null_sd": 0.0038071945090296837,
+      "null_min": 0.9807692307692307,
+      "null_max": 1.0,
+      "empirical_p_null_gte_real": 0.98,
+      "verdict": "Real uniqueness is NOT distinguishable from what a zero-dependency null with the same vocabulary/length/frequency produces. High uniqueness here is consistent with being a mechanical consequence of the vocabulary and length regime, not evidence of a deliberate identifier system."
+    },
+    "length_stratified": {
+      "real": 0.9903846153846154,
+      "null_mean": 0.9987019230769231,
+      "null_sd": 0.0038071945090296837,
+      "null_min": 0.9807692307692307,
+      "null_max": 1.0,
+      "empirical_p_null_gte_real": 0.98,
+      "verdict": "Real uniqueness is NOT distinguishable from what a zero-dependency null with the same vocabulary/length/frequency produces. High uniqueness here is consistent with being a mechanical consequence of the vocabulary and length regime, not evidence of a deliberate identifier system."
+    }
+  }
+}
