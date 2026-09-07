@@ -177,6 +177,10 @@ experiments/
                          correction (see "The synthetic continuum")
   wucs_comparison_test.py  external validation against a published,
                          independent corpus (see "External validation")
+  uniqueness_significance_test.py  tests the registration-code
+                         hypothesis's uniqueness claim against a proper
+                         null distribution (see "Whole-sequence
+                         uniqueness")
   etcsl_calibration_test.py  real Sumerian calibration, the biggest
                          remaining gap this project had (see "Real
                          external-language calibration")
@@ -1432,6 +1436,46 @@ result (a real corpus reads as "language-like") turned out to depend on
 a bug in one feature, not on anything about the script. The next
 result that looks exciting deserves the same scrutiny before being
 treated as a finding.
+
+## Whole-sequence uniqueness: tested properly against a null distribution, and it cuts against the registration-code hypothesis
+
+The registration-code hypothesis (see the Kriger/Hunt discussion above)
+rests substantially on one empirical claim: whole-sequence uniqueness
+(98.3% on their 179-inscription CISI subset) is high enough to indicate
+deliberately distinct identifiers. That claim is only as strong as its
+null. `experiments/uniqueness_significance_test.py` tests it properly:
+not a single comparison point, but a full null DISTRIBUTION, generating
+200 trials from this project's own adversarial null model (matched
+length distribution, matched initial/final/overall sign marginals, zero
+real sequential dependency) and asking where the real corpus's own
+uniqueness rate falls within it.
+
+| Corpus | Real uniqueness | Null distribution | Verdict |
+|---|---|---|---|
+| Indus, large corpus (N=2,543) | 0.766 | mean 0.958, range [0.949, 0.967] | Real is BELOW the entire null range |
+| CISI primary (N=104, the Kriger/Hunt corpus) | 0.990 | mean 0.999, range [0.981, 1.000] | Statistically indistinguishable (p=0.980) |
+
+Two things worth separating here. First, replicating and sharpening what
+the ad-hoc check in the Kriger/Hunt discussion already found: on their
+own corpus, real uniqueness is not distinguishable from a null with zero
+real structure, across a properly constructed 200-trial distribution,
+not just one comparison point. Second, and new: on this project's own
+larger corpus, real uniqueness is not merely unremarkable, it is
+**lower than every single one of 200 null trials.** A registration-code
+system built to generate distinct identifiers should show uniqueness at
+or above what chance predicts, not reliably below it. This result
+points the opposite direction.
+
+This does not, by itself, positively establish what the system is; a
+lower-than-chance uniqueness rate is also consistent with several other
+explanations (formulaic repeated phrases, a small number of very common
+short inscriptions, genuine linguistic structure that favors certain
+whole sequences). What it does is remove one of the registration-code
+hypothesis's more specific, checkable empirical claims: at the scale of
+this project's corpus, the data does not show the elevated,
+chance-exceeding uniqueness that hypothesis predicts.
+
+Run it yourself with `python3 experiments/uniqueness_significance_test.py`.
 
 ## Real CISI/Mahadevan numbers recovered for the core corpus
 
