@@ -37,3 +37,11 @@ abstract: >-
   direction, not the implementation labor, and anyone citing this work
   should feel free to describe that division of labor explicitly rather
   than assume a conventional single-author model applies.
+references:
+  - type: dataset
+    title: "Indus Script Sequences with Null Baselines"
+    authors:
+      - family-names: Bose
+        given-names: Joy
+    year: 2026
+    url: "https://huggingface.co/datasets/joyboseroy/indus-sequences-nulls"
