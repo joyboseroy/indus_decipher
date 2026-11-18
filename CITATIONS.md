@@ -281,3 +281,11 @@ transparency, but nothing from them is used as data or methodology here:
 - No deep learning framework (PyTorch, TensorFlow) is used;
   `models/transformer_mlm.py` is a from-scratch NumPy implementation, by
   design, to keep this repo dependency-light and fully inspectable.
+
+### Hugging Face packaging of the above
+
+- Joy Bose (2026). Indus Script Sequences with Null Baselines. Hugging Face Datasets.
+  https://huggingface.co/datasets/joyboseroy/indus-sequences-nulls
+  Repackages the `cisi` and `indus_website` corpora above with a train/test split, plus null
+  corpora from `data/permutation_nulls.py`, `data/adversarial_null_model.py` and
+  `data/stratified_null_model.py`. Source licences and caveats are the ones recorded in this file.
